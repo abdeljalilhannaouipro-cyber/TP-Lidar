@@ -1,5 +1,8 @@
 # TP LD06 — Extraction, visualisation et cartographie 2D
 
+**Rapport de synthèse du TP 1 :** [version PDF illustrée](rapport/rapport_TP1.pdf)
+et [source Markdown](rapport/rapport_TP1.md).
+
 Le projet réunit les cinq étapes du TP : acquisitions réelles, affichage des scans
 avec poses indépendantes, grille d'occupation, manipulation de segments et carte
 vectorielle. Le **recalcul complet utilise 17 scans contrôlés** : les six captures
