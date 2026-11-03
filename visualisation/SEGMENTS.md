@@ -6,7 +6,7 @@ décrite séparément dans le [guide de l'étape 5](VECTORIELLE.md).
 
 ## Utiliser l'atelier
 
-1. Ouvrir `index.html` dans Chrome ou Edge, puis **Charger mes 6 scans** ou ses
+1. Ouvrir `index.html` dans Chrome ou Edge, puis **6 anciens scans** ou ses
    propres CSV. Régler les poses avant d'extraire les segments.
 2. Dans **Atelier de segments**, choisir les seuils et cliquer sur **Extraire
    du scan sélectionné** ou **Extraire des scans visibles**. L'extraction remplace
@@ -184,7 +184,7 @@ node visualisation/test_grid.cjs
 node visualisation/test_segments.cjs
 ```
 
-Résultat : **10 + 17 + 38 = 65 contrôles réussis**. Les contrôles de segments
+Résultat : **12 + 17 + 38 = 67 contrôles réussis**. Les contrôles de segments
 couvrent notamment les extrémités de A et B, les intersections hors segment,
 la colinéarité, l'égalité exacte, l'égalité à EPS près, le sens inversé du premier
 segment, les segments dégénérés, l'absence de mutation du coupeur et les scans réels.

@@ -1,0 +1,53 @@
+{
+  "name": "groupe_06",
+  "description": "Composante 6, référence scan_20261103_112700_205708.csv. Liens retenus avec contrôle d'ambiguïté et de cohérence.",
+  "scanCount": 1,
+  "validPoints": 454,
+  "segments": 31,
+  "grid": {
+    "resolution": 0.1,
+    "x": -11,
+    "y": -3,
+    "width": 18,
+    "height": 14,
+    "nx": 180,
+    "ny": 140,
+    "free": 4102,
+    "occupied": 209,
+    "unknown": 20889
+  },
+  "vector": {
+    "features": 31,
+    "scans": 1,
+    "confirmed": 0,
+    "contradicted": 0,
+    "totalLengthM": 14.75385983650867
+  },
+  "gridReports": [
+    {
+      "name": "scan_20261103_112700_205708.csv",
+      "duplicate": false,
+      "accepted": 454,
+      "filtered": 0,
+      "clipped": 0
+    }
+  ],
+  "vectorReports": [
+    {
+      "name": "scan_20261103_112700_205708.csv",
+      "duplicate": false,
+      "step": 1,
+      "accepted": 454,
+      "filtered": 0,
+      "extracted": 31,
+      "added": 31,
+      "merges": 0,
+      "contradicted": 0,
+      "trimmed": 0,
+      "removed": 0,
+      "before": 0,
+      "after": 31
+    }
+  ],
+  "caveat": "Automatic estimated poses, not measured ground truth. See alignment quality; order-dependent updates. Group frames are separate."
+}

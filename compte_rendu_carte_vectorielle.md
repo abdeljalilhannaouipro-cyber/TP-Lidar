@@ -27,7 +27,7 @@ séparé montre sa réduction et son retrait progressifs, sans les présenter co
 une observation de disparition physique d'un obstacle.
 
 La version comprend les exports JSON, CSV et PNG, un générateur d'exemple et
-**25 contrôles dédiés à la carte vectorielle**, soit **90 contrôles au total**
+**25 contrôles dédiés à la carte vectorielle**, soit **92 contrôles au total**
 avec les étapes précédentes. Les images représentent les primitives calculées.
 Les commandes ont aussi été vérifiées dans un DOM minimal ; la validation
 graphique de l'interface dans le navigateur reste distincte de ces contrôles.

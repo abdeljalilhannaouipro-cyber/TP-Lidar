@@ -77,7 +77,12 @@
     return [pose.x + c * point[0] - s * point[1], pose.y + s * point[0] + c * point[1]];
   }
   const palette = ['#1669c9', '#df5b16', '#008668', '#aa3691', '#9b7304', '#6b48ce'];
-  function color(index) { return palette[index] || `hsl(${(index * 137.508) % 360},65%,38%)`; }
+  function color(index) {
+    if(palette[index])return palette[index];
+    const hue=((index*137.508)%360)/60,c=(1-Math.abs(2*.38-1))*.65,x=c*(1-Math.abs(hue%2-1)),m=.38-c/2;
+    const rgb=hue<1?[c,x,0]:hue<2?[x,c,0]:hue<3?[0,c,x]:hue<4?[0,x,c]:hue<5?[x,0,c]:[c,0,x];
+    return '#'+rgb.map(v=>Math.round(255*(v+m)).toString(16).padStart(2,'0')).join('');
+  }
   function csvCell(value) { const s = String(value); return /[",\r\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; }
   function exportPoints(scans) {
     const rows = [['source_scan', 'point_index', 'local_x_m', 'local_y_m', 'aligned_x_m', 'aligned_y_m']];

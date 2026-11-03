@@ -1,0 +1,97 @@
+{
+  "name": "groupe_03",
+  "description": "Composante 3, référence scan_20261103_133628_543217.csv. Liens retenus avec contrôle d'ambiguïté et de cohérence.",
+  "scanCount": 3,
+  "validPoints": 1369,
+  "segments": 62,
+  "grid": {
+    "resolution": 0.1,
+    "x": -12,
+    "y": -4,
+    "width": 16,
+    "height": 18,
+    "nx": 160,
+    "ny": 180,
+    "free": 5366,
+    "occupied": 411,
+    "unknown": 23023
+  },
+  "vector": {
+    "features": 37,
+    "scans": 3,
+    "confirmed": 7,
+    "contradicted": 4,
+    "totalLengthM": 17.43373980715706
+  },
+  "gridReports": [
+    {
+      "name": "scan_20261103_133628_543217.csv",
+      "duplicate": false,
+      "accepted": 449,
+      "filtered": 7,
+      "clipped": 0
+    },
+    {
+      "name": "scan_20261103_133845_500246.csv",
+      "duplicate": false,
+      "accepted": 456,
+      "filtered": 0,
+      "clipped": 0
+    },
+    {
+      "name": "scan_20261103_135134_531993_tour_controle.csv",
+      "duplicate": false,
+      "accepted": 457,
+      "filtered": 0,
+      "clipped": 0
+    }
+  ],
+  "vectorReports": [
+    {
+      "name": "scan_20261103_133628_543217.csv",
+      "duplicate": false,
+      "step": 1,
+      "accepted": 449,
+      "filtered": 7,
+      "extracted": 21,
+      "added": 20,
+      "merges": 1,
+      "contradicted": 0,
+      "trimmed": 0,
+      "removed": 0,
+      "before": 0,
+      "after": 20
+    },
+    {
+      "name": "scan_20261103_133845_500246.csv",
+      "duplicate": false,
+      "step": 2,
+      "accepted": 456,
+      "filtered": 0,
+      "extracted": 21,
+      "added": 16,
+      "merges": 6,
+      "contradicted": 1,
+      "trimmed": 1,
+      "removed": 1,
+      "before": 20,
+      "after": 34
+    },
+    {
+      "name": "scan_20261103_135134_531993_tour_controle.csv",
+      "duplicate": false,
+      "step": 3,
+      "accepted": 457,
+      "filtered": 0,
+      "extracted": 20,
+      "added": 9,
+      "merges": 11,
+      "contradicted": 10,
+      "trimmed": 10,
+      "removed": 6,
+      "before": 34,
+      "after": 37
+    }
+  ],
+  "caveat": "Automatic estimated poses, not measured ground truth. See alignment quality; order-dependent updates. Group frames are separate."
+}

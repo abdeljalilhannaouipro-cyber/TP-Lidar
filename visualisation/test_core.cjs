@@ -43,6 +43,7 @@ test('Sauvegarde/rechargement des poses avec contrôle du scan', () => {
   assert.throws(() => C.readPoses(JSON.stringify(invalid), [b]));
 });
 test('Six couleurs différentes', () => assert.equal(new Set(Array.from({length:6}, (_,i) => C.color(i))).size, 6));
+test('Dix-sept couleurs distinctes compatibles avec l’export JSON de segments',()=>{const colors=Array.from({length:17},(_,i)=>C.color(i));assert.equal(new Set(colors).size,17);assert.ok(colors.every(c=>/^#[0-9a-f]{6}$/i.test(c)));});
 test('Six vrais scans, séquences contrôlées, coordonnées métriques fidèles', () => {
   const sandbox = { window: {} }; vm.runInNewContext(fs.readFileSync(path.join(__dirname, 'examples.js'), 'utf8'), sandbox);
   const scans = Array.from(sandbox.window.LIDAR_EXAMPLES, e => C.parseScan(e.text, e.name));
@@ -53,5 +54,11 @@ test('Six vrais scans, séquences contrôlées, coordonnées métriques fidèles
   assert.equal(scans[0].points[0][0], Number(raw[1][h.indexOf('x_lib_mm')])/1000);
   const poses = scans.map(s => ({...s.pose})); scans[3].pose.theta = 17;
   assert.deepEqual(scans[2].pose, poses[2]);
+});
+test('Onze nouveaux scans contrôlés, 17 acquisitions et 7745 points valides',()=>{
+ const sandbox={window:{}};for(const file of ['examples.js','new-examples.js'])vm.runInNewContext(fs.readFileSync(path.join(__dirname,file),'utf8'),sandbox);
+ const all=Array.from(sandbox.window.LIDAR_EXAMPLES).concat(Array.from(sandbox.window.LIDAR_NEW_EXAMPLES));
+ assert.equal(sandbox.window.LIDAR_NEW_EXAMPLES.length,11);assert.equal(all.length,17);
+ const scans=all.map(e=>C.parseScan(e.text,e.name));assert.equal(scans.reduce((n,s)=>n+s.points.length,0),7745);assert.equal(scans.reduce((n,s)=>n+s.invalid,0),15);assert.equal(scans.reduce((n,s)=>n+s.wraps,0),0);
 });
 console.log(`${passed} checks passed.`);

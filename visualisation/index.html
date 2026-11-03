@@ -12,11 +12,12 @@
 <header><div><div class="eyebrow">TP Robotique · Jour 1 / Étapes 2 à 5</div><h1>Scans &amp; cartes LD06</h1><p>Nuages de points, grille d’occupation, géométrie et carte vectorielle.</p></div><div class="badge">Traitement local dans le navigateur</div></header>
 <div class="toolbar">
 <button class="primary" id="open">＋ Charger des CSV</button><input id="files" type="file" accept=".csv,text/csv" multiple>
-<button id="examples">Charger mes 6 scans</button><div class="spacer"></div>
+<button class="primary" id="examplesAll">Charger les 17 scans</button><button id="examples">6 anciens scans</button><button id="examplesNew">11 nouveaux scans</button><div class="spacer"></div>
 <label for="angleMode">CSV polaires seuls</label><select id="angleMode"><option value="cw">Angles horaires · y = −r sin(α)</option><option value="ccw">Angles antihoraires · y = r sin(α)</option></select>
 <button id="loadPoses">Ouvrir des poses</button><input id="poseFile" type="file" accept=".json,application/json">
 </div>
-<div id="notice" role="status" aria-live="polite">Chargez vos CSV ou les six captures réelles. Chaque pose commence à (0, 0, 0°).</div>
+<div class="toolbar"><label for="posePreset">Poses estimées des 17 scans</label><select id="posePreset" style="max-width:370px"><option value="">Choisir un groupe…</option></select><button id="applyPreset">Charger ce groupe</button><span class="hint">Repères séparés pour les groupes. La fusion des 17 reste exploratoire.</span></div>
+<div id="notice" role="status" aria-live="polite">Chargez les 17 scans contrôlés ou vos CSV. Les poses commencent à zéro ; charger ensuite les poses du groupe d’alignement souhaité.</div>
 <main class="layout">
 <aside>
 <details class="grid-panel" open><summary style="font-weight:600;cursor:pointer">Carte vectorielle · Étape 5</summary>
@@ -93,5 +94,5 @@
 <div class="plot"><canvas id="canvas" tabindex="0" aria-label="Nuages de points cartésiens ; X et Y en mètres. Les poses sont réglables dans la liste des scans." role="img"></canvas><div id="empty" class="empty"><div><h2>Un repère, plusieurs scans</h2><p>Chargez vos mesures pour comparer leurs contours.<br>Une couleur par scan, une pose indépendante.</p></div></div></div>
 <div class="status"><span id="metrics">Aucun scan chargé</span><span>Molette : zoom · Flèches : scan sélectionné ±0,10 m · Q / E : ±1°</span></div>
 </section></main>
-<script src="core.js"></script><script src="examples.js"></script><script src="grid.js"></script><script src="segments.js"></script><script src="vector-map.js"></script><script src="viewer.js"></script><script src="segments-ui.js"></script><script src="vector-ui.js"></script>
+<script src="core.js"></script><script src="examples.js"></script><script src="new-examples.js"></script><script src="pose-presets.js"></script><script src="grid.js"></script><script src="segments.js"></script><script src="vector-map.js"></script><script src="viewer.js"></script><script src="segments-ui.js"></script><script src="vector-ui.js"></script>
 </body></html>

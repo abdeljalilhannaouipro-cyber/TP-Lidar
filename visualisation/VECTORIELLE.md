@@ -202,7 +202,7 @@ node visualisation/test_segments.cjs
 node visualisation/test_vector.cjs
 ```
 
-**90 contrôles réussis** : 10 pour le lecteur/poses, 17 pour la grille, 38 pour
+**92 contrôles réussis** : 12 pour le lecteur/poses, 17 pour la grille, 38 pour
 les segments et 25 pour la carte vectorielle. Les contrôles de carte couvrent
 fusion, confirmations distinctes, doublons, changement de pose, rayons traversants,
 marge d'impact, colinéarité, extrémités, réduction, retrait, rechargement et données réelles.

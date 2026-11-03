@@ -55,8 +55,9 @@ l'opérateur. Aucune pose physique mesurée n'est donc attribuée à cette séri
 La première position peut définir un repère local arbitraire ; les suivantes
 devront être réglées ou estimées avant fusion des cartes.
 
-Dans le visualiseur, utiliser **Charger des CSV** et sélectionner les onze fichiers
-contrôlés indiqués par le manifeste. Le bouton des six scans préchargés correspond
-encore à l'ancienne série ; cette nouvelle série ne la remplace pas automatiquement.
+Dans le visualiseur mis à jour, **11 nouveaux scans** charge directement ces
+fichiers contrôlés ; **Charger les 17 scans** les ajoute aux six anciens.
+On peut aussi utiliser **Charger des CSV** et les sélectionner selon le manifeste.
+Les poses doivent être réglées ou chargées avant la cartographie.
 Chaque image PNG correspond aux points cartésiens du fichier contrôlé associé,
 en mètres, avec l'origine locale du lidar indiquée en rouge.

@@ -194,11 +194,25 @@ $('files').onchange = async event => {
   }
   renderCards(); fit(); notice(`${loaded} scan(s) ajouté(s), ${duplicates} doublon(s) ignoré(s). ${errors.join(' ')}`, !!errors.length); event.target.value = '';
 };
-$('examples').onclick = () => {
+function loadExampleSet(data,description){
   let loaded = 0;
-  for (const data of window.LIDAR_EXAMPLES || []) if (add(Core.parseScan(data.text, data.name))) loaded++;
-  renderCards(); fit(); notice(`${loaded} scan(s) réel(s) ajouté(s). Les deux captures longues sont remplacées par leurs séquences contrôlées « tour2 ». Poses initiales nulles : ajustez-les manuellement.`);
+  for (const item of data) if (add(Core.parseScan(item.text, item.name))) loaded++;
+  renderCards(); fit(); notice(`${loaded} scan(s) réel(s) ajouté(s). ${description} Les nouvelles poses commencent à zéro : les régler ou charger un groupe de poses avant la cartographie.`);
+}
+$('examples').onclick=()=>loadExampleSet(window.LIDAR_EXAMPLES||[],'Six captures anciennes, avec leurs séquences contrôlées.');
+$('examplesNew').onclick=()=>loadExampleSet(window.LIDAR_NEW_EXAMPLES||[],'Onze nouvelles acquisitions ; trois blocs longs remplacés par leur tour contrôlé.');
+$('examplesAll').onclick=()=>loadExampleSet([...(window.LIDAR_EXAMPLES||[]),...(window.LIDAR_NEW_EXAMPLES||[])],'Jeu complet de 17 acquisitions, sans doublonner les blocs bruts et leurs copies.');
+$('applyPreset').onclick=()=>{
+  try{
+    const preset=(window.LIDAR_POSE_PRESETS||[]).find(p=>p.id===$('posePreset').value);if(!preset)throw new Error('Choisir un groupe de poses.');
+    for(const data of [...(window.LIDAR_EXAMPLES||[]),...(window.LIDAR_NEW_EXAMPLES||[])])add(Core.parseScan(data.text,data.name));
+    const updates=Core.readPoses(JSON.stringify(preset.poses),state.scans);state.scans.forEach(scan=>scan.visible=false);
+    updates.forEach(update=>{update.scan.pose=update.pose;update.scan.visible=update.visible;});state.selected=state.scans.find(scan=>scan.visible)?.id??null;renderCards();$('viewMode').value='points';fit();
+    notice(`${preset.description} Les cartes existantes restent figées : les recréer pour utiliser ces poses.`,preset.id==='exploratoire_17_scans');
+  }catch(error){notice(error.message,true);}
 };
+for(const preset of window.LIDAR_POSE_PRESETS||[]){const option=document.createElement('option');option.value=preset.id;option.textContent=preset.title;$('posePreset').append(option);}
+$('posePreset').value='';
 $('fit').onclick = fit; $('zoomIn').onclick = () => zoom(1.25); $('zoomOut').onclick = () => zoom(.8);
 $('savePoses').onclick = () => download('poses_manuelles.json', Core.savePoses(state.scans), 'application/json');
 $('exportCSV').onclick = () => download('points_transformes.csv', Core.exportPoints(state.scans), 'text/csv;charset=utf-8');
@@ -220,7 +234,7 @@ $('gridFile').onchange=async event=>{
 };
 $('loadPoses').onclick = () => $('poseFile').click();
 $('poseFile').onchange = async event => {
-  try { const file = event.target.files[0]; if (!file) return; const updates = Core.readPoses(await file.text(), state.scans); updates.forEach(u => { u.scan.pose = u.pose; u.scan.visible = u.visible; }); renderCards(); fit(); notice(`${updates.length} pose(s) restaurée(s).`); }
+  try { const file = event.target.files[0]; if (!file) return; const updates = Core.readPoses(await file.text(), state.scans); updates.forEach(u => { u.scan.pose = u.pose; u.scan.visible = u.visible; }); if(!state.scans.some(s=>s.id===state.selected&&s.visible))state.selected=state.scans.find(s=>s.visible)?.id??null;renderCards(); fit(); notice(`${updates.length} pose(s) restaurée(s).`); }
   catch (error) { notice(error.message, true); } finally { event.target.value = ''; }
 };
 canvas.addEventListener('wheel', event => { event.preventDefault(); const rect = canvas.getBoundingClientRect(); zoom(Math.exp(-event.deltaY * .001), [event.clientX - rect.left, event.clientY - rect.top]); }, { passive: false });
@@ -258,4 +272,4 @@ new ResizeObserver(entries => { const r = entries[0].contentRect; state.width = 
   const dpr = window.devicePixelRatio || 1; canvas.width = Math.round(r.width * dpr); canvas.height = Math.round(r.height * dpr); ctx.setTransform(dpr, 0, 0, dpr, 0, 0); draw();
 }).observe(canvas.parentElement);
 draw();
-if (new URLSearchParams(location.search).has('demo')) $('examples').click();
+if (new URLSearchParams(location.search).has('demo')) $('examplesAll').click();

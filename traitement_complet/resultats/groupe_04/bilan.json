@@ -1,0 +1,75 @@
+{
+  "name": "groupe_04",
+  "description": "Composante 4, référence scan_20261103_113456_758311.csv. Liens retenus avec contrôle d'ambiguïté et de cohérence.",
+  "scanCount": 2,
+  "validPoints": 907,
+  "segments": 57,
+  "grid": {
+    "resolution": 0.1,
+    "x": -10,
+    "y": -3,
+    "width": 17,
+    "height": 15,
+    "nx": 170,
+    "ny": 150,
+    "free": 7017,
+    "occupied": 342,
+    "unknown": 18141
+  },
+  "vector": {
+    "features": 42,
+    "scans": 2,
+    "confirmed": 8,
+    "contradicted": 9,
+    "totalLengthM": 22.995379844351977
+  },
+  "gridReports": [
+    {
+      "name": "scan_20261103_113456_758311.csv",
+      "duplicate": false,
+      "accepted": 456,
+      "filtered": 0,
+      "clipped": 0
+    },
+    {
+      "name": "scan_20261103_135540_914531.csv",
+      "duplicate": false,
+      "accepted": 450,
+      "filtered": 1,
+      "clipped": 0
+    }
+  ],
+  "vectorReports": [
+    {
+      "name": "scan_20261103_113456_758311.csv",
+      "duplicate": false,
+      "step": 1,
+      "accepted": 456,
+      "filtered": 0,
+      "extracted": 31,
+      "added": 31,
+      "merges": 0,
+      "contradicted": 0,
+      "trimmed": 0,
+      "removed": 0,
+      "before": 0,
+      "after": 31
+    },
+    {
+      "name": "scan_20261103_135540_914531.csv",
+      "duplicate": false,
+      "step": 2,
+      "accepted": 450,
+      "filtered": 1,
+      "extracted": 26,
+      "added": 16,
+      "merges": 11,
+      "contradicted": 13,
+      "trimmed": 13,
+      "removed": 4,
+      "before": 31,
+      "after": 42
+    }
+  ],
+  "caveat": "Automatic estimated poses, not measured ground truth. See alignment quality; order-dependent updates. Group frames are separate."
+}

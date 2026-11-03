@@ -6,7 +6,7 @@ la manipulation ; elles ne constituent pas un recalage réel de la salle.
 
 ## Reproduire dans l'outil
 
-1. Ouvrir `visualisation/index.html` et cliquer sur **Charger mes 6 scans**.
+1. Ouvrir `visualisation/index.html` et cliquer sur **6 anciens scans**.
 2. Cliquer sur **Ouvrir des poses**, puis choisir `poses_avant.json` dans ce dossier.
    Seuls S1 et S2 sont visibles pour faciliter la comparaison. Toutes les poses
    sont nulles.

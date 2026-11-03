@@ -5,14 +5,15 @@
 Ouvrir **`index.html` dans Chrome ou Edge** par un double-clic. Aucun serveur,
 compte, accès série, installation Python ou connexion Internet n'est nécessaire.
 Conserver dans le même dossier `index.html`, `core.js`, `viewer.js`, `grid.js`,
-`segments.js`, `segments-ui.js`, `vector-map.js`, `vector-ui.js` et `examples.js`.
+`segments.js`, `segments-ui.js`, `vector-map.js`, `vector-ui.js`, `examples.js`,
+`new-examples.js` et `pose-presets.js`.
 Les données restent dans la mémoire du navigateur jusqu'à la fermeture de la page.
 Sauvegarder les poses avant de quitter pour ne pas perdre les réglages.
 
 ## Utilisation
 
-1. Cliquer sur **Charger mes 6 scans**, ou **Charger des CSV** pour choisir plusieurs
-   fichiers réels. Chaque scan possède une couleur et une origine fléchée.
+1. Cliquer sur **Charger les 17 scans**, **6 anciens scans**, **11 nouveaux scans**,
+   ou **Charger des CSV** pour choisir ses fichiers. Chaque scan possède une couleur et une origine fléchée.
    Les doublons de données sont ignorés.
 2. Modifier **X**, **Y** (mètres) et **Angle** (degrés) dans la fiche d'un scan.
    Le nuage est mis à jour immédiatement, indépendamment des autres scans.
@@ -37,12 +38,23 @@ Sauvegarder les poses avant de quitter pour ne pas perdre les réglages.
 
 ## Données et choix techniques
 
-Les six jeux embarqués sont les captures réelles du 3 novembre. Les blocs longs
+Le bouton **6 anciens scans** charge les premières captures du 3 novembre. Les blocs longs
 de 11:37 et 11:42 sont remplacés par les fichiers contrôlés `_tour2` de 456 et
 457 points. Le bouton charge donc **2737 points valides** ; quatre retours de
 distance nulle sont exclus. Les données originales restent archivées ailleurs
-dans le dépôt. Aucun recalage automatique n'est exécuté par cet outil : toutes
-les poses initiales valent `(0,0,0°)` et les ajustements sont manuels.
+dans le dépôt.
+
+Les **11 nouveaux scans** ajoutent 5008 points valides. Le jeu complet contient
+donc **17 scans, 7745 points valides et 15 retours nuls exclus**. Les blocs longs
+nouveaux sont remplacés par leur copie `_tour_controle`, jamais chargés en double.
+
+Toutes les poses initiales valent `(0,0,0°)`. Elles peuvent être ajustées manuellement
+ou chargées avec **Poses estimées des 17 scans → Charger ce groupe**. Les sept
+groupes ont des repères indépendants ; la fusion exploratoire des 17 inclut des
+liaisons ambiguës et n'est pas une carte validée. Le recalage a été calculé par
+le script Python du dépôt, pas automatiquement par la page à chaque chargement.
+Le [rapport complet](../traitement_complet/README.md) contient les méthodes,
+les cartes rechargeables et les images du nouveau traitement.
 
 Le lecteur accepte les CSV LD06 `angle_deg,dist_mm`, les noms d'en-tête Arduino
 `Angle(°),Distance(mm)` et les distances métriques `distance_m` / `r_m`.
@@ -141,4 +153,4 @@ La carte se sauvegarde et se recharge en JSON, avec export géométrique CSV et
 image PNG. Le [guide et compte rendu](VECTORIELLE.md) suit la méthode du cours,
 explique les seuils et les limites. L'[exemple sur deux scans réels](exemple_vectorielle/README.md)
 contient les cartes avant/après et les fichiers rechargeables. Les 25 tests de
-carte se lancent avec `node visualisation/test_vector.cjs` ; total : 90 contrôles.
+carte se lancent avec `node visualisation/test_vector.cjs` ; total : 92 contrôles.

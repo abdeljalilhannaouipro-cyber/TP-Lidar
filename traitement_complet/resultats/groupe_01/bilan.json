@@ -1,0 +1,141 @@
+{
+  "name": "groupe_01",
+  "description": "Composante 1, référence scan_20261103_112833_263525.csv. Liens retenus avec contrôle d'ambiguïté et de cohérence.",
+  "scanCount": 5,
+  "validPoints": 2284,
+  "segments": 116,
+  "grid": {
+    "resolution": 0.1,
+    "x": -3,
+    "y": -9,
+    "width": 15,
+    "height": 17,
+    "nx": 150,
+    "ny": 170,
+    "free": 11410,
+    "occupied": 515,
+    "unknown": 13575
+  },
+  "vector": {
+    "features": 35,
+    "scans": 5,
+    "confirmed": 13,
+    "contradicted": 18,
+    "totalLengthM": 51.260055532598514
+  },
+  "gridReports": [
+    {
+      "name": "scan_20261103_112833_263525.csv",
+      "duplicate": false,
+      "accepted": 457,
+      "filtered": 0,
+      "clipped": 0
+    },
+    {
+      "name": "scan_20261103_114251_824188_tour2.csv",
+      "duplicate": false,
+      "accepted": 457,
+      "filtered": 0,
+      "clipped": 0
+    },
+    {
+      "name": "scan_20261103_135232_589873_tour_controle.csv",
+      "duplicate": false,
+      "accepted": 457,
+      "filtered": 0,
+      "clipped": 0
+    },
+    {
+      "name": "scan_20261103_135347_223669.csv",
+      "duplicate": false,
+      "accepted": 456,
+      "filtered": 0,
+      "clipped": 0
+    },
+    {
+      "name": "scan_20261103_135448_962801_tour_controle.csv",
+      "duplicate": false,
+      "accepted": 457,
+      "filtered": 0,
+      "clipped": 0
+    }
+  ],
+  "vectorReports": [
+    {
+      "name": "scan_20261103_112833_263525.csv",
+      "duplicate": false,
+      "step": 1,
+      "accepted": 457,
+      "filtered": 0,
+      "extracted": 14,
+      "added": 9,
+      "merges": 5,
+      "contradicted": 0,
+      "trimmed": 0,
+      "removed": 0,
+      "before": 0,
+      "after": 9
+    },
+    {
+      "name": "scan_20261103_114251_824188_tour2.csv",
+      "duplicate": false,
+      "step": 2,
+      "accepted": 457,
+      "filtered": 0,
+      "extracted": 23,
+      "added": 12,
+      "merges": 11,
+      "contradicted": 0,
+      "trimmed": 0,
+      "removed": 0,
+      "before": 9,
+      "after": 21
+    },
+    {
+      "name": "scan_20261103_135232_589873_tour_controle.csv",
+      "duplicate": false,
+      "step": 3,
+      "accepted": 457,
+      "filtered": 0,
+      "extracted": 37,
+      "added": 19,
+      "merges": 18,
+      "contradicted": 5,
+      "trimmed": 5,
+      "removed": 2,
+      "before": 21,
+      "after": 38
+    },
+    {
+      "name": "scan_20261103_135347_223669.csv",
+      "duplicate": false,
+      "step": 4,
+      "accepted": 456,
+      "filtered": 0,
+      "extracted": 26,
+      "added": 5,
+      "merges": 23,
+      "contradicted": 18,
+      "trimmed": 18,
+      "removed": 3,
+      "before": 38,
+      "after": 38
+    },
+    {
+      "name": "scan_20261103_135448_962801_tour_controle.csv",
+      "duplicate": false,
+      "step": 5,
+      "accepted": 457,
+      "filtered": 0,
+      "extracted": 16,
+      "added": 1,
+      "merges": 15,
+      "contradicted": 14,
+      "trimmed": 14,
+      "removed": 4,
+      "before": 38,
+      "after": 35
+    }
+  ],
+  "caveat": "Automatic estimated poses, not measured ground truth. See alignment quality; order-dependent updates. Group frames are separate."
+}
