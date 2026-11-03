@@ -1,0 +1,56 @@
+[
+  {
+    "source": "scan_20261103_113714_728775.csv",
+    "original_count": 1061,
+    "original_indices_contiguous": true,
+    "zero_wrap_after_index": 604,
+    "abnormal_reverse_jumps": [
+      {
+        "from_index": 412,
+        "to_index": 413,
+        "angle_before": 35.31,
+        "angle_after": 150.44,
+        "delta_deg": 115.13
+      }
+    ],
+    "net_unwrapped_span_deg": -718.83,
+    "raw_status": "Not a single clean revolution; repeated angular coverage and an anomalous reversal",
+    "extracted": "scan_20261103_113714_728775_tour2.csv",
+    "source_first_index": 605,
+    "source_last_index": 1060,
+    "extracted_count": 456,
+    "first_angle_deg": 358.74,
+    "last_angle_deg": 0.67,
+    "monotonic_span_deg": 358.07,
+    "max_step_deg": 1.57,
+    "closing_gap_deg": 1.93,
+    "validation": "Angularly consistent near-full sweep; physical timing/pose not independently verified"
+  },
+  {
+    "source": "scan_20261103_114251_824188.csv",
+    "original_count": 956,
+    "original_indices_contiguous": true,
+    "zero_wrap_after_index": 498,
+    "abnormal_reverse_jumps": [
+      {
+        "from_index": 332,
+        "to_index": 333,
+        "angle_before": 98.8,
+        "angle_after": 130.57,
+        "delta_deg": 31.769999999999996
+      }
+    ],
+    "net_unwrapped_span_deg": -719.39,
+    "raw_status": "Not a single clean revolution; repeated angular coverage and an anomalous reversal",
+    "extracted": "scan_20261103_114251_824188_tour2.csv",
+    "source_first_index": 499,
+    "source_last_index": 955,
+    "extracted_count": 457,
+    "first_angle_deg": 359.57,
+    "last_angle_deg": 0.24,
+    "monotonic_span_deg": 359.33,
+    "max_step_deg": 1.6,
+    "closing_gap_deg": 0.67,
+    "validation": "Angularly consistent near-full sweep; physical timing/pose not independently verified"
+  }
+]
