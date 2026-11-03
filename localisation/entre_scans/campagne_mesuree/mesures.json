@@ -1,0 +1,46 @@
+{
+  "format": "tp2-measured-scan-pair-v1",
+  "status": "captured_with_operator_nominal_reference_uncertainty_unknown",
+  "units": "metres/degrees-counterclockwise",
+  "reference": {
+    "label": "A",
+    "file": "A/scan_20261103_180804_809310.csv",
+    "validPoints": 456,
+    "angularSpanDeg": 359.17,
+    "poseDefinition": {
+      "x": 0,
+      "y": 0,
+      "theta": 0
+    },
+    "poseRole": "Definition of reference frame at A, not an absolute physical pose measurement."
+  },
+  "query": {
+    "label": "B",
+    "file": "B/scan_20261103_181437_335740.csv",
+    "validPoints": 456,
+    "angularSpanDeg": 359.45
+  },
+  "measuredRelativePose": {
+    "x": 0.5,
+    "y": 0.0,
+    "theta": 0.0
+  },
+  "uncertaintyBounds": {
+    "xM": null,
+    "yM": null,
+    "angleDeg": null
+  },
+  "instrument": {
+    "type": "metre ou regle",
+    "smallestGraduationM": 0.01,
+    "source": "Operator response: 1 cm."
+  },
+  "frameDefinitionVerified": true,
+  "notes": [
+    "A position declared by operator; immobility requested, not independently measured.",
+    "Instrument graduation alone is not total pose uncertainty.",
+    "Graduation 1 cm; total placement and angular uncertainties explicitly unknown. Do not substitute zero or a half-graduation bound for total uncertainty."
+  ],
+  "measurementSource": "Operator reports 50 cm from A to B toward the LD06 zero-angle triangle, same orientation.",
+  "uncertaintyStatus": "Not quantified: operator cannot bound centering/placement and orientation error."
+}

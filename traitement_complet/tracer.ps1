@@ -1,4 +1,4 @@
-param([string]$Resultats = (Join-Path $PSScriptRoot 'resultats'))
+﻿param([string]$Resultats = (Join-Path $PSScriptRoot 'resultats'))
 $ErrorActionPreference='Stop'
 Add-Type -AssemblyName System.Drawing
 $font=[System.Drawing.Font]::new('Arial',16);$small=[System.Drawing.Font]::new('Arial',13);$title=[System.Drawing.Font]::new('Arial',25,[System.Drawing.FontStyle]::Bold)
@@ -14,7 +14,7 @@ foreach($folder in Get-ChildItem -LiteralPath $Resultats -Directory){
  $exploratory=$folder.Name.StartsWith('exploratoire')
  foreach($kind in @('alignement','grille','vectorielle')){
   $bmp=[System.Drawing.Bitmap]::new(1400,1370);$g=[System.Drawing.Graphics]::FromImage($bmp);$g.SmoothingMode=[System.Drawing.Drawing2D.SmoothingMode]::AntiAlias;$g.Clear([System.Drawing.Color]::White)
-  $prefix=if($exploratory){'EXPLORATORY - unvalidated 17-scan frame'}else{$folder.Name+' - estimated local frame'}
+  $prefix=if($exploratory){('EXPLORATORY - unvalidated '+$data.summary.scanCount+'-scan frame')}else{$folder.Name+' - estimated local frame'}
   $subject=switch($kind){'alignement'{'Aligned point clouds'}'grille'{'Occupancy grid'}'vectorielle'{'Vector map'}}
   $g.DrawString($subject,$title,$ink,55,25);$g.DrawString($prefix,$font,$ink,55,75)
   $g.DrawString(($data.summary.scanCount.ToString()+' scans | '+$data.summary.validPoints+' valid points | '+$data.summary.vector.features+' vector primitives'),$small,$ink,55,110)

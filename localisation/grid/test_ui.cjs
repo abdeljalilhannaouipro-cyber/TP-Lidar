@@ -16,7 +16,7 @@ Object.assign(ids.viewMode,{value:'points'});ids.dragMode.value='pan';ids.angleM
 const sandbox={console,performance,Blob,Uint8Array,Float32Array,Uint8ClampedArray,URLSearchParams,setTimeout,location:{search:''},ResizeObserver:class{observe(){}},URL:{createObjectURL(){return'blob:test';},revokeObjectURL(){}},devicePixelRatio:1,
  document:{getElementById:id=>{assert.ok(ids[id],`Unknown element ${id}`);return ids[id];},createElement:tag=>new Element(tag),querySelectorAll:()=>nodes.filter(n=>n.className==='card'),querySelector:()=>null},addEventListener(){}};
 sandbox.window=sandbox;vm.createContext(sandbox);
-for(const file of ['core.js','examples.js','new-examples.js','pose-presets.js','grid.js','segments.js','vector-map.js','grid-localisation.js','grid-brute-force.js','grid-optimisation.js','grid-localisation-example.js','viewer.js','segments-ui.js','vector-ui.js','grid-localisation-ui.js','vector-localisation.js','vector-gradient.js','vector-multiresolution.js','vector-annealing.js','vector-direct.js','vector-localisation-example.js','vector-localisation-ui.js'])vm.runInContext(fs.readFileSync(path.join(base,file),'utf8'),sandbox,{filename:file});
+for(const file of ['core.js','examples.js','new-examples.js','pose-presets.js','integration-19.js','grid.js','segments.js','vector-map.js','grid-localisation.js','grid-brute-force.js','grid-optimisation.js','grid-localisation-example.js','viewer.js','segments-ui.js','vector-ui.js','grid-localisation-ui.js','vector-localisation.js','vector-gradient.js','vector-multiresolution.js','vector-annealing.js','vector-direct.js','vector-localisation-example.js','vector-localisation-ui.js','scan-matching.js','scan-matching-example.js','scan-matching-measured-example.js','scan-matching-ui.js'])vm.runInContext(fs.readFileSync(path.join(base,file),'utf8'),sandbox,{filename:file});
 const run=code=>vm.runInContext(code,sandbox);
 async function main(){
  ids.examples.click();assert.equal(run('state.scans.length'),6);
@@ -80,6 +80,16 @@ async function main(){
  ids.vlDemo.click();const vectorPending=ids.vlRun.onclick();ids.vlCancel.click();await vectorPending;assert.ok(ids.notice.textContent.includes('annulée'));assert.equal(run('vectorLocResult'),null);
  await ids.vlRun.onclick();run('state.vector.version++');ids.vlApply.click();assert.ok(ids.notice.textContent.includes('périmé'));
  ids.vlDemo.click();run('state.vector.scans.push({checksum:state.scans.find(s=>s.id===state.selected).checksum})');await ids.vlRun.onclick();assert.ok(ids.notice.textContent.includes('déjà'));
- console.log('UI handler integration passed: TP1 regression, grid methods and vector matching; demos, explicit apply, preserved maps, cancellation, stale results and duplicate rejection. Visual rendering not tested.');
+ ids.s2Demo.click();assert.equal(run('state.scans.filter(s=>s.visible).length'),2);ids.s2Method.value='gradient';
+ run('state.scans.find(s=>String(s.id)===$("s2Ref").value).pose={x:3,y:-2,theta:40}; state.scans.find(s=>s.id===state.selected).pose=LidarScanMatching.compose(state.scans.find(s=>String(s.id)===$("s2Ref").value).pose,LIDAR_SCAN_MATCHING_EXAMPLE.initial)');ids.s2Copy.click();
+ const fixedPose=run('JSON.stringify(state.scans.find(s=>String(s.id)===$("s2Ref").value).pose)'),queryPose=run('JSON.stringify(state.scans.find(s=>s.id===state.selected).pose)');
+ await ids.s2Run.onclick();assert.ok(run('scanMatchResult'),ids.notice.textContent);assert.equal(run('JSON.stringify(state.scans.find(s=>s.id===state.selected).pose)'),queryPose);
+ const expectedPose=run('JSON.stringify(LidarScanMatching.compose(scanMatchResult.referencePose,scanMatchResult.result.pose))');ids.s2Apply.click();assert.equal(run('JSON.stringify(state.scans.find(s=>s.id===state.selected).pose)'),expectedPose);assert.equal(run('JSON.stringify(state.scans.find(s=>String(s.id)===$("s2Ref").value).pose)'),fixedPose);
+ ids.s2Demo.click();const scanPending=ids.s2Run.onclick();ids.s2Cancel.click();await scanPending;assert.ok(ids.notice.textContent.includes('annulée'));assert.equal(run('scanMatchResult'),null);
+ await ids.s2Run.onclick();run('scanMatchResult.reference.pose.x+=1');ids.s2Apply.click();assert.ok(ids.notice.textContent.includes('périmé'));
+ ids.s2Demo.click();ids.s2Ref.value=String(run('state.selected'));await ids.s2Run.onclick();assert.ok(ids.notice.textContent.includes('différentes'));
+ ids.s2MeasuredDemo.click();assert.equal(run('state.scans.find(s=>s.id===state.selected).points.length'),456);assert.equal(run('state.scans.find(s=>String(s.id)===$("s2Ref").value).points.length'),456);assert.ok(ids.s2Report.textContent.includes('incertitude totale'));
+ ids.examples19.click();assert.equal(run('state.scans.length'),19);ids.posePreset.value='19_groupe_01';ids.applyPreset.click();assert.equal(run('state.scans.filter(s=>s.visible).length'),7);assert.equal(run('state.scans.filter(s=>s.visible).reduce((n,s)=>n+s.points.length,0)'),3196);
+ console.log('UI handler integration passed: TP1, grid, vector and between-scan matching; frame composition, explicit apply, preserved references, cancellation, stale results and duplicates. Visual rendering not tested.');
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});

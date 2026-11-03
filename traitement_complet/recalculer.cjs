@@ -2,7 +2,7 @@
 // Consomme les poses retenues par alignement.py, sans modifier les sources.
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const C=require('../visualisation/core.js'),S=require('../visualisation/segments.js'),{Grid}=require('../visualisation/grid.js'),{VectorMap}=require('../visualisation/vector-map.js');
-const root=path.resolve(__dirname,'..'),folder=path.join(__dirname,'resultats');
+const root=path.resolve(__dirname,'..'),folder=path.resolve(__dirname,process.argv[2]||'resultats');
 const alignment=JSON.parse(fs.readFileSync(path.join(folder,'alignement.json'),'utf8'));
 const sources=alignment.inputs.map(record=>{
  const scan=C.parseScan(fs.readFileSync(path.join(root,record.path),'utf8'),record.name);
@@ -49,6 +49,6 @@ function buildSet(name,records,description){
 }
 const reports=[];
 for(const group of alignment.components)reports.push(buildSet(`groupe_${String(group.component).padStart(2,'0')}`,group.scans,`Composante ${group.component}, référence ${group.reference}. Liens retenus avec contrôle d'ambiguïté et de cohérence.`));
-reports.push(buildSet('exploratoire_17_scans',alignment.exploratory.scans,'Tous les scans dans un repère provisoire : liens faibles inclus, ne pas présenter comme carte validée.'));
+reports.push(buildSet(`exploratoire_${sources.length}_scans`,alignment.exploratory.scans,'Tous les scans dans un repère provisoire : liens faibles inclus, ne pas présenter comme carte validée.'));
 fs.writeFileSync(path.join(folder,'synthese.json'),JSON.stringify({totalScans:sources.length,validPoints:sources.reduce((n,s)=>n+s.points.length,0),groups:reports},null,2));
 console.log('Reload/geometry checks passed for every generated group.');

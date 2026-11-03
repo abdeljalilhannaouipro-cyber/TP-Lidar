@@ -1,0 +1,196 @@
+{
+  "format": "tp-lidar-poses-v1",
+  "units": "metres/degrees-counterclockwise",
+  "scans": [
+    {
+      "name": "scan_20261103_112700_205708.csv",
+      "checksum": "bcb87322",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": false
+    },
+    {
+      "name": "scan_20261103_112833_263525.csv",
+      "checksum": "7d5f683c",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": false
+    },
+    {
+      "name": "scan_20261103_113456_758311.csv",
+      "checksum": "7cf785fd",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": false
+    },
+    {
+      "name": "scan_20261103_113714_728775_tour2.csv",
+      "checksum": "13508fb9",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": false
+    },
+    {
+      "name": "scan_20261103_113903_422823.csv",
+      "checksum": "d2bd2d4",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": false
+    },
+    {
+      "name": "scan_20261103_114251_824188_tour2.csv",
+      "checksum": "ce73d242",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": false
+    },
+    {
+      "name": "scan_20261103_133628_543217.csv",
+      "checksum": "98d3b17f",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": false
+    },
+    {
+      "name": "scan_20261103_133845_500246.csv",
+      "checksum": "36c99a02",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": false
+    },
+    {
+      "name": "scan_20261103_134110_737612.csv",
+      "checksum": "3bb6ca60",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": true
+    },
+    {
+      "name": "scan_20261103_134622_010623.csv",
+      "checksum": "f41e7f67",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": false
+    },
+    {
+      "name": "scan_20261103_134930_813109.csv",
+      "checksum": "d3160068",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": false
+    },
+    {
+      "name": "scan_20261103_135038_480202.csv",
+      "checksum": "e0854e27",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": false
+    },
+    {
+      "name": "scan_20261103_135134_531993_tour_controle.csv",
+      "checksum": "6a541bee",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": false
+    },
+    {
+      "name": "scan_20261103_135232_589873_tour_controle.csv",
+      "checksum": "9a848183",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": false
+    },
+    {
+      "name": "scan_20261103_135347_223669.csv",
+      "checksum": "e5782215",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": false
+    },
+    {
+      "name": "scan_20261103_135448_962801_tour_controle.csv",
+      "checksum": "4c28c733",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": false
+    },
+    {
+      "name": "scan_20261103_135540_914531.csv",
+      "checksum": "7ead9087",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": false
+    },
+    {
+      "name": "scan_20261103_180804_809310.csv",
+      "checksum": "6b06aa10",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": false
+    },
+    {
+      "name": "scan_20261103_181437_335740.csv",
+      "checksum": "d38b089c",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": false
+    }
+  ]
+}

@@ -1,16 +1,17 @@
 // Contrôle des résultats générés, indépendant de la procédure de calcul.
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),vm=require('node:vm');
 const C=require('../visualisation/core.js'),S=require('../visualisation/segments.js'),{Grid}=require('../visualisation/grid.js'),{VectorMap}=require('../visualisation/vector-map.js');
-const root=path.resolve(__dirname,'..'),folder=path.join(__dirname,'resultats');
+const root=path.resolve(__dirname,'..'),folder=path.resolve(__dirname,process.argv[2]||'resultats');
+const extended=path.basename(folder)==='resultats_19_scans',expectedScans=extended?19:17,expectedPoints=extended?8657:7745;
 const alignment=JSON.parse(fs.readFileSync(path.join(folder,'alignement.json'),'utf8'));
 const source=alignment.inputs.map(r=>C.parseScan(fs.readFileSync(path.join(root,r.path),'utf8'),r.name));
-assert.equal(source.length,17);assert.equal(source.reduce((n,s)=>n+s.points.length,0),7745);
+assert.equal(source.length,expectedScans);assert.equal(source.reduce((n,s)=>n+s.points.length,0),expectedPoints);
 const datasets=alignment.components.map(group=>({name:`groupe_${String(group.component).padStart(2,'0')}`,records:group.scans}));
-datasets.push({name:'exploratoire_17_scans',records:alignment.exploratory.scans});
+datasets.push({name:`exploratoire_${expectedScans}_scans`,records:alignment.exploratory.scans});
 for(const dataset of datasets){
  const directory=path.join(folder,dataset.name),summary=JSON.parse(fs.readFileSync(path.join(directory,'bilan.json'),'utf8'));
  const poses=C.readPoses(fs.readFileSync(path.join(directory,'poses.json'),'utf8'),source);
- assert.equal(poses.length,17);assert.equal(poses.filter(p=>p.visible).length,dataset.records.length);
+ assert.equal(poses.length,expectedScans);assert.equal(poses.filter(p=>p.visible).length,dataset.records.length);
  const grid=Grid.load(fs.readFileSync(path.join(directory,'grille.json'),'utf8')),map=VectorMap.load(fs.readFileSync(path.join(directory,'carte_vectorielle.json'),'utf8'));
  assert.equal(grid.scans.length,dataset.records.length);assert.equal(map.scans.length,dataset.records.length);
  assert.deepEqual(grid.counts(),{free:summary.grid.free,occupied:summary.grid.occupied,unknown:summary.grid.unknown});
@@ -27,4 +28,5 @@ for(const dataset of datasets){
 }
 const sandbox={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,'visualisation/pose-presets.js'),'utf8'),sandbox);
 assert.equal(sandbox.window.LIDAR_POSE_PRESETS.length,8);
-console.log('17 source scans, 8 complete result sets, pose presets and rigid-distance checks verified.');
+if(extended){vm.runInNewContext(fs.readFileSync(path.join(root,'visualisation/integration-19.js'),'utf8'),sandbox);assert.equal(sandbox.window.LIDAR_POSE_PRESETS.length,16);assert.equal(sandbox.window.LIDAR_AB_EXAMPLES.length,2);assert.equal(alignment.measuredReference.uncertaintyBounds.xM,null);assert.equal(alignment.components[0].scans.length,7);}
+console.log(`${expectedScans} source scans, 8 complete result sets, pose presets and rigid-distance checks verified.`);

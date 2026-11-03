@@ -1,0 +1,840 @@
+1/252 S1 proche_a exhaustive seed=20261103 OK 1072 ms
+2/252 S1 proche_a gradient seed=20261103 OK 19 ms
+3/252 S1 proche_a multiresolution seed=20261103 OK 336 ms
+4/252 S1 proche_a annealing seed=20261103 OK 192 ms
+5/252 S1 proche_a annealing seed=20261104 OK 194 ms
+6/252 S1 proche_a annealing seed=20261105 OK 194 ms
+7/252 S1 proche_a direct seed=20261103 OK 3 ms
+8/252 S1 proche_b gradient seed=20261103 OK 11 ms
+9/252 S1 proche_b multiresolution seed=20261103 OK 295 ms
+10/252 S1 proche_b annealing seed=20261103 OK 209 ms
+11/252 S1 proche_b annealing seed=20261104 OK 226 ms
+12/252 S1 proche_b annealing seed=20261105 OK 239 ms
+13/252 S1 proche_b direct seed=20261103 OK 1 ms
+14/252 S1 proche_b exhaustive seed=20261103 OK 1024 ms
+15/252 S1 moyenne_a multiresolution seed=20261103 OK 268 ms
+16/252 S1 moyenne_a annealing seed=20261103 OK 211 ms
+17/252 S1 moyenne_a annealing seed=20261104 OK 192 ms
+18/252 S1 moyenne_a annealing seed=20261105 OK 214 ms
+19/252 S1 moyenne_a direct seed=20261103 FAIL 1 ms
+20/252 S1 moyenne_a exhaustive seed=20261103 OK 942 ms
+21/252 S1 moyenne_a gradient seed=20261103 OK 8 ms
+22/252 S1 moyenne_b annealing seed=20261103 OK 192 ms
+23/252 S1 moyenne_b annealing seed=20261104 OK 211 ms
+24/252 S1 moyenne_b annealing seed=20261105 OK 198 ms
+25/252 S1 moyenne_b direct seed=20261103 FAIL 2 ms
+26/252 S1 moyenne_b exhaustive seed=20261103 OK 1482 ms
+27/252 S1 moyenne_b gradient seed=20261103 OK 12 ms
+28/252 S1 moyenne_b multiresolution seed=20261103 OK 331 ms
+29/252 S1 difficile_a direct seed=20261103 FAIL 2 ms
+30/252 S1 difficile_a exhaustive seed=20261103 OK 1018 ms
+31/252 S1 difficile_a gradient seed=20261103 OK 10 ms
+32/252 S1 difficile_a multiresolution seed=20261103 OK 206 ms
+33/252 S1 difficile_a annealing seed=20261103 OK 184 ms
+34/252 S1 difficile_a annealing seed=20261104 OK 261 ms
+35/252 S1 difficile_a annealing seed=20261105 OK 262 ms
+36/252 S1 difficile_b exhaustive seed=20261103 OK 1172 ms
+37/252 S1 difficile_b gradient seed=20261103 OK 11 ms
+38/252 S1 difficile_b multiresolution seed=20261103 OK 328 ms
+39/252 S1 difficile_b annealing seed=20261103 OK 248 ms
+40/252 S1 difficile_b annealing seed=20261104 OK 196 ms
+41/252 S1 difficile_b annealing seed=20261105 OK 186 ms
+42/252 S1 difficile_b direct seed=20261103 FAIL 1 ms
+43/252 S2 proche_a gradient seed=20261103 OK 10 ms
+44/252 S2 proche_a multiresolution seed=20261103 OK 380 ms
+45/252 S2 proche_a annealing seed=20261103 OK 243 ms
+46/252 S2 proche_a annealing seed=20261104 OK 209 ms
+47/252 S2 proche_a annealing seed=20261105 OK 278 ms
+48/252 S2 proche_a direct seed=20261103 OK 1 ms
+49/252 S2 proche_a exhaustive seed=20261103 OK 1330 ms
+50/252 S2 proche_b multiresolution seed=20261103 OK 407 ms
+51/252 S2 proche_b annealing seed=20261103 OK 239 ms
+52/252 S2 proche_b annealing seed=20261104 OK 214 ms
+53/252 S2 proche_b annealing seed=20261105 OK 263 ms
+54/252 S2 proche_b direct seed=20261103 OK 2 ms
+55/252 S2 proche_b exhaustive seed=20261103 OK 1355 ms
+56/252 S2 proche_b gradient seed=20261103 OK 8 ms
+57/252 S2 moyenne_a annealing seed=20261103 OK 224 ms
+58/252 S2 moyenne_a annealing seed=20261104 OK 257 ms
+59/252 S2 moyenne_a annealing seed=20261105 OK 237 ms
+60/252 S2 moyenne_a direct seed=20261103 FAIL 2 ms
+61/252 S2 moyenne_a exhaustive seed=20261103 OK 1298 ms
+62/252 S2 moyenne_a gradient seed=20261103 OK 9 ms
+63/252 S2 moyenne_a multiresolution seed=20261103 OK 300 ms
+64/252 S2 moyenne_b direct seed=20261103 FAIL 2 ms
+65/252 S2 moyenne_b exhaustive seed=20261103 OK 1194 ms
+66/252 S2 moyenne_b gradient seed=20261103 OK 11 ms
+67/252 S2 moyenne_b multiresolution seed=20261103 OK 346 ms
+68/252 S2 moyenne_b annealing seed=20261103 OK 226 ms
+69/252 S2 moyenne_b annealing seed=20261104 OK 207 ms
+70/252 S2 moyenne_b annealing seed=20261105 OK 217 ms
+71/252 S2 difficile_a exhaustive seed=20261103 OK 1147 ms
+72/252 S2 difficile_a gradient seed=20261103 OK 8 ms
+73/252 S2 difficile_a multiresolution seed=20261103 OK 228 ms
+74/252 S2 difficile_a annealing seed=20261103 OK 217 ms
+75/252 S2 difficile_a annealing seed=20261104 OK 171 ms
+76/252 S2 difficile_a annealing seed=20261105 OK 191 ms
+77/252 S2 difficile_a direct seed=20261103 FAIL 2 ms
+78/252 S2 difficile_b gradient seed=20261103 OK 8 ms
+79/252 S2 difficile_b multiresolution seed=20261103 OK 154 ms
+80/252 S2 difficile_b annealing seed=20261103 OK 180 ms
+81/252 S2 difficile_b annealing seed=20261104 OK 171 ms
+82/252 S2 difficile_b annealing seed=20261105 OK 180 ms
+83/252 S2 difficile_b direct seed=20261103 FAIL 1 ms
+84/252 S2 difficile_b exhaustive seed=20261103 OK 1029 ms
+85/252 S3 proche_a multiresolution seed=20261103 OK 288 ms
+86/252 S3 proche_a annealing seed=20261103 OK 202 ms
+87/252 S3 proche_a annealing seed=20261104 OK 198 ms
+88/252 S3 proche_a annealing seed=20261105 OK 213 ms
+89/252 S3 proche_a direct seed=20261103 OK 1 ms
+90/252 S3 proche_a exhaustive seed=20261103 OK 1110 ms
+91/252 S3 proche_a gradient seed=20261103 OK 9 ms
+92/252 S3 proche_b annealing seed=20261103 OK 225 ms
+93/252 S3 proche_b annealing seed=20261104 OK 217 ms
+94/252 S3 proche_b annealing seed=20261105 OK 217 ms
+95/252 S3 proche_b direct seed=20261103 OK 1 ms
+96/252 S3 proche_b exhaustive seed=20261103 OK 1112 ms
+97/252 S3 proche_b gradient seed=20261103 OK 8 ms
+98/252 S3 proche_b multiresolution seed=20261103 OK 283 ms
+99/252 S3 moyenne_a direct seed=20261103 FAIL 2 ms
+100/252 S3 moyenne_a exhaustive seed=20261103 OK 1045 ms
+101/252 S3 moyenne_a gradient seed=20261103 OK 8 ms
+102/252 S3 moyenne_a multiresolution seed=20261103 OK 290 ms
+103/252 S3 moyenne_a annealing seed=20261103 OK 221 ms
+104/252 S3 moyenne_a annealing seed=20261104 OK 207 ms
+105/252 S3 moyenne_a annealing seed=20261105 OK 204 ms
+106/252 S3 moyenne_b exhaustive seed=20261103 OK 1101 ms
+107/252 S3 moyenne_b gradient seed=20261103 OK 13 ms
+108/252 S3 moyenne_b multiresolution seed=20261103 OK 495 ms
+109/252 S3 moyenne_b annealing seed=20261103 OK 290 ms
+110/252 S3 moyenne_b annealing seed=20261104 OK 216 ms
+111/252 S3 moyenne_b annealing seed=20261105 OK 213 ms
+112/252 S3 moyenne_b direct seed=20261103 FAIL 1 ms
+113/252 S3 difficile_a gradient seed=20261103 OK 9 ms
+114/252 S3 difficile_a multiresolution seed=20261103 OK 201 ms
+115/252 S3 difficile_a annealing seed=20261103 OK 185 ms
+116/252 S3 difficile_a annealing seed=20261104 OK 170 ms
+117/252 S3 difficile_a annealing seed=20261105 OK 168 ms
+118/252 S3 difficile_a direct seed=20261103 FAIL 2 ms
+119/252 S3 difficile_a exhaustive seed=20261103 OK 1182 ms
+120/252 S3 difficile_b multiresolution seed=20261103 OK 208 ms
+121/252 S3 difficile_b annealing seed=20261103 OK 196 ms
+122/252 S3 difficile_b annealing seed=20261104 OK 248 ms
+123/252 S3 difficile_b annealing seed=20261105 OK 272 ms
+124/252 S3 difficile_b direct seed=20261103 FAIL 1 ms
+125/252 S3 difficile_b exhaustive seed=20261103 OK 1079 ms
+126/252 S3 difficile_b gradient seed=20261103 OK 11 ms
+127/252 R1 proche_a annealing seed=20261103 OK 394 ms
+128/252 R1 proche_a annealing seed=20261104 OK 384 ms
+129/252 R1 proche_a annealing seed=20261105 OK 373 ms
+130/252 R1 proche_a direct seed=20261103 OK 2 ms
+131/252 R1 proche_a exhaustive seed=20261103 OK 1441 ms
+132/252 R1 proche_a gradient seed=20261103 OK 60 ms
+133/252 R1 proche_a multiresolution seed=20261103 OK 601 ms
+134/252 R1 proche_b direct seed=20261103 OK 3 ms
+135/252 R1 proche_b exhaustive seed=20261103 OK 1823 ms
+136/252 R1 proche_b gradient seed=20261103 OK 56 ms
+137/252 R1 proche_b multiresolution seed=20261103 OK 495 ms
+138/252 R1 proche_b annealing seed=20261103 OK 405 ms
+139/252 R1 proche_b annealing seed=20261104 OK 389 ms
+140/252 R1 proche_b annealing seed=20261105 OK 443 ms
+141/252 R1 moyenne_a exhaustive seed=20261103 OK 1582 ms
+142/252 R1 moyenne_a gradient seed=20261103 OK 36 ms
+143/252 R1 moyenne_a multiresolution seed=20261103 OK 501 ms
+144/252 R1 moyenne_a annealing seed=20261103 OK 382 ms
+145/252 R1 moyenne_a annealing seed=20261104 OK 438 ms
+146/252 R1 moyenne_a annealing seed=20261105 OK 437 ms
+147/252 R1 moyenne_a direct seed=20261103 FAIL 2 ms
+148/252 R1 moyenne_b gradient seed=20261103 OK 16 ms
+149/252 R1 moyenne_b multiresolution seed=20261103 OK 561 ms
+150/252 R1 moyenne_b annealing seed=20261103 OK 453 ms
+151/252 R1 moyenne_b annealing seed=20261104 OK 395 ms
+152/252 R1 moyenne_b annealing seed=20261105 OK 408 ms
+153/252 R1 moyenne_b direct seed=20261103 FAIL 2 ms
+154/252 R1 moyenne_b exhaustive seed=20261103 OK 1369 ms
+155/252 R1 difficile_a multiresolution seed=20261103 OK 365 ms
+156/252 R1 difficile_a annealing seed=20261103 OK 321 ms
+157/252 R1 difficile_a annealing seed=20261104 OK 363 ms
+158/252 R1 difficile_a annealing seed=20261105 OK 356 ms
+159/252 R1 difficile_a direct seed=20261103 FAIL 2 ms
+160/252 R1 difficile_a exhaustive seed=20261103 OK 1250 ms
+161/252 R1 difficile_a gradient seed=20261103 OK 30 ms
+162/252 R1 difficile_b annealing seed=20261103 OK 324 ms
+163/252 R1 difficile_b annealing seed=20261104 OK 333 ms
+164/252 R1 difficile_b annealing seed=20261105 OK 341 ms
+165/252 R1 difficile_b direct seed=20261103 FAIL 2 ms
+166/252 R1 difficile_b exhaustive seed=20261103 OK 1316 ms
+167/252 R1 difficile_b gradient seed=20261103 OK 51 ms
+168/252 R1 difficile_b multiresolution seed=20261103 OK 427 ms
+169/252 R2 proche_a direct seed=20261103 OK 2 ms
+170/252 R2 proche_a exhaustive seed=20261103 OK 1238 ms
+171/252 R2 proche_a gradient seed=20261103 OK 9 ms
+172/252 R2 proche_a multiresolution seed=20261103 OK 347 ms
+173/252 R2 proche_a annealing seed=20261103 OK 279 ms
+174/252 R2 proche_a annealing seed=20261104 OK 316 ms
+175/252 R2 proche_a annealing seed=20261105 OK 271 ms
+176/252 R2 proche_b exhaustive seed=20261103 OK 1200 ms
+177/252 R2 proche_b gradient seed=20261103 OK 9 ms
+178/252 R2 proche_b multiresolution seed=20261103 OK 367 ms
+179/252 R2 proche_b annealing seed=20261103 OK 294 ms
+180/252 R2 proche_b annealing seed=20261104 OK 305 ms
+181/252 R2 proche_b annealing seed=20261105 OK 292 ms
+182/252 R2 proche_b direct seed=20261103 OK 1 ms
+183/252 R2 moyenne_a gradient seed=20261103 OK 11 ms
+184/252 R2 moyenne_a multiresolution seed=20261103 OK 386 ms
+185/252 R2 moyenne_a annealing seed=20261103 OK 290 ms
+186/252 R2 moyenne_a annealing seed=20261104 OK 352 ms
+187/252 R2 moyenne_a annealing seed=20261105 OK 270 ms
+188/252 R2 moyenne_a direct seed=20261103 FAIL 2 ms
+189/252 R2 moyenne_a exhaustive seed=20261103 OK 1256 ms
+190/252 R2 moyenne_b multiresolution seed=20261103 OK 339 ms
+191/252 R2 moyenne_b annealing seed=20261103 OK 271 ms
+192/252 R2 moyenne_b annealing seed=20261104 OK 275 ms
+193/252 R2 moyenne_b annealing seed=20261105 OK 273 ms
+194/252 R2 moyenne_b direct seed=20261103 FAIL 1 ms
+195/252 R2 moyenne_b exhaustive seed=20261103 OK 1163 ms
+196/252 R2 moyenne_b gradient seed=20261103 OK 13 ms
+197/252 R2 difficile_a annealing seed=20261103 OK 278 ms
+198/252 R2 difficile_a annealing seed=20261104 OK 232 ms
+199/252 R2 difficile_a annealing seed=20261105 OK 239 ms
+200/252 R2 difficile_a direct seed=20261103 FAIL 1 ms
+201/252 R2 difficile_a exhaustive seed=20261103 OK 1173 ms
+202/252 R2 difficile_a gradient seed=20261103 OK 12 ms
+203/252 R2 difficile_a multiresolution seed=20261103 OK 265 ms
+204/252 R2 difficile_b direct seed=20261103 FAIL 2 ms
+205/252 R2 difficile_b exhaustive seed=20261103 OK 1299 ms
+206/252 R2 difficile_b gradient seed=20261103 OK 22 ms
+207/252 R2 difficile_b multiresolution seed=20261103 OK 415 ms
+208/252 R2 difficile_b annealing seed=20261103 OK 359 ms
+209/252 R2 difficile_b annealing seed=20261104 OK 305 ms
+210/252 R2 difficile_b annealing seed=20261105 OK 315 ms
+211/252 R3 proche_a exhaustive seed=20261103 OK 963 ms
+212/252 R3 proche_a gradient seed=20261103 OK 20 ms
+213/252 R3 proche_a multiresolution seed=20261103 OK 337 ms
+214/252 R3 proche_a annealing seed=20261103 OK 231 ms
+215/252 R3 proche_a annealing seed=20261104 OK 215 ms
+216/252 R3 proche_a annealing seed=20261105 OK 222 ms
+217/252 R3 proche_a direct seed=20261103 OK 1 ms
+218/252 R3 proche_b gradient seed=20261103 OK 32 ms
+219/252 R3 proche_b multiresolution seed=20261103 OK 351 ms
+220/252 R3 proche_b annealing seed=20261103 OK 278 ms
+221/252 R3 proche_b annealing seed=20261104 OK 224 ms
+222/252 R3 proche_b annealing seed=20261105 OK 244 ms
+223/252 R3 proche_b direct seed=20261103 OK 1 ms
+224/252 R3 proche_b exhaustive seed=20261103 OK 1001 ms
+225/252 R3 moyenne_a multiresolution seed=20261103 OK 323 ms
+226/252 R3 moyenne_a annealing seed=20261103 OK 217 ms
+227/252 R3 moyenne_a annealing seed=20261104 OK 220 ms
+228/252 R3 moyenne_a annealing seed=20261105 OK 225 ms
+229/252 R3 moyenne_a direct seed=20261103 FAIL 1 ms
+230/252 R3 moyenne_a exhaustive seed=20261103 OK 908 ms
+231/252 R3 moyenne_a gradient seed=20261103 OK 22 ms
+232/252 R3 moyenne_b annealing seed=20261103 OK 222 ms
+233/252 R3 moyenne_b annealing seed=20261104 OK 215 ms
+234/252 R3 moyenne_b annealing seed=20261105 OK 213 ms
+235/252 R3 moyenne_b direct seed=20261103 FAIL 2 ms
+236/252 R3 moyenne_b exhaustive seed=20261103 OK 986 ms
+237/252 R3 moyenne_b gradient seed=20261103 OK 17 ms
+238/252 R3 moyenne_b multiresolution seed=20261103 OK 284 ms
+239/252 R3 difficile_a direct seed=20261103 FAIL 1 ms
+240/252 R3 difficile_a exhaustive seed=20261103 OK 937 ms
+241/252 R3 difficile_a gradient seed=20261103 FAIL 24 ms
+242/252 R3 difficile_a multiresolution seed=20261103 OK 252 ms
+243/252 R3 difficile_a annealing seed=20261103 OK 219 ms
+244/252 R3 difficile_a annealing seed=20261104 OK 237 ms
+245/252 R3 difficile_a annealing seed=20261105 OK 230 ms
+246/252 R3 difficile_b exhaustive seed=20261103 OK 1010 ms
+247/252 R3 difficile_b gradient seed=20261103 OK 21 ms
+248/252 R3 difficile_b multiresolution seed=20261103 OK 216 ms
+249/252 R3 difficile_b annealing seed=20261103 OK 193 ms
+250/252 R3 difficile_b annealing seed=20261104 OK 184 ms
+251/252 R3 difficile_b annealing seed=20261105 OK 177 ms
+252/252 R3 difficile_b direct seed=20261103 FAIL 1 ms
+[
+  {
+    "dataset": "simulation",
+    "method": "exhaustive",
+    "trials": 18,
+    "returned": 18,
+    "rejected": 0,
+    "success": 18,
+    "successRate": 1,
+    "meanPositionM": 0.03806525151357087,
+    "meanAngleDeg": 0.4722222222222222,
+    "meanTimeMs": 1149.5198888888885,
+    "maxPositionM": 0.0646374504447693,
+    "byInitialLevel": [
+      {
+        "level": "proche",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 6,
+        "successRate": 1,
+        "meanPositionM": 0.023138713836406463,
+        "meanAngleDeg": 0.4166666666666667,
+        "meanTimeMs": 1167.0139499999996,
+        "maxPositionM": 0.0278926513619627
+      },
+      {
+        "level": "moyenne",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 6,
+        "successRate": 1,
+        "meanPositionM": 0.05115294890310185,
+        "meanAngleDeg": 0.6833333333333181,
+        "meanTimeMs": 1177.1312166666671,
+        "maxPositionM": 0.05232590180780455
+      },
+      {
+        "level": "difficile",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 6,
+        "successRate": 1,
+        "meanPositionM": 0.03990409180120425,
+        "meanAngleDeg": 0.3166666666666818,
+        "meanTimeMs": 1104.4144999999987,
+        "maxPositionM": 0.0646374504447693
+      }
+    ]
+  },
+  {
+    "dataset": "simulation",
+    "method": "gradient",
+    "trials": 18,
+    "returned": 18,
+    "rejected": 0,
+    "success": 18,
+    "successRate": 1,
+    "meanPositionM": 0.008693192349764865,
+    "meanAngleDeg": 0.2902533067309542,
+    "meanTimeMs": 10.122555555555373,
+    "maxPositionM": 0.023491848435984453,
+    "byInitialLevel": [
+      {
+        "level": "proche",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 6,
+        "successRate": 1,
+        "meanPositionM": 0.007909112083997773,
+        "meanAngleDeg": 0.29582568344007615,
+        "meanTimeMs": 10.725733333333247,
+        "maxPositionM": 0.01242430108702224
+      },
+      {
+        "level": "moyenne",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 6,
+        "successRate": 1,
+        "meanPositionM": 0.007946945485174965,
+        "meanAngleDeg": 0.31504170010233185,
+        "meanTimeMs": 10.115583333333083,
+        "maxPositionM": 0.012441552243781209
+      },
+      {
+        "level": "difficile",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 6,
+        "successRate": 1,
+        "meanPositionM": 0.010223519480121858,
+        "meanAngleDeg": 0.25989253665045453,
+        "meanTimeMs": 9.52634999999979,
+        "maxPositionM": 0.023491848435984453
+      }
+    ]
+  },
+  {
+    "dataset": "simulation",
+    "method": "multiresolution",
+    "trials": 18,
+    "returned": 18,
+    "rejected": 0,
+    "success": 18,
+    "successRate": 1,
+    "meanPositionM": 0.014680189282321097,
+    "meanAngleDeg": 0.3500000000000101,
+    "meanTimeMs": 296.8003555555554,
+    "maxPositionM": 0.018384776310850216,
+    "byInitialLevel": [
+      {
+        "level": "proche",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 6,
+        "successRate": 1,
+        "meanPositionM": 0.014286355854519558,
+        "meanAngleDeg": 0.3333333333333333,
+        "meanTimeMs": 331.1853666666662,
+        "maxPositionM": 0.0183847763108502
+      },
+      {
+        "level": "moyenne",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 6,
+        "successRate": 1,
+        "meanPositionM": 0.01456630484409145,
+        "meanAngleDeg": 0.3583333333333485,
+        "meanTimeMs": 338.4320999999997,
+        "maxPositionM": 0.018384776310850216
+      },
+      {
+        "level": "difficile",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 6,
+        "successRate": 1,
+        "meanPositionM": 0.01518790714835228,
+        "meanAngleDeg": 0.3583333333333485,
+        "meanTimeMs": 220.78360000000035,
+        "maxPositionM": 0.018384776310850184
+      }
+    ]
+  },
+  {
+    "dataset": "simulation",
+    "method": "annealing",
+    "trials": 54,
+    "returned": 54,
+    "rejected": 0,
+    "success": 54,
+    "successRate": 1,
+    "meanPositionM": 0.008003268202805875,
+    "meanAngleDeg": 0.3506774741474306,
+    "meanTimeMs": 214.63918333333336,
+    "maxPositionM": 0.014108970555872414,
+    "byInitialLevel": [
+      {
+        "level": "proche",
+        "trials": 18,
+        "returned": 18,
+        "rejected": 0,
+        "success": 18,
+        "successRate": 1,
+        "meanPositionM": 0.008204784792235638,
+        "meanAngleDeg": 0.3555585402108679,
+        "meanTimeMs": 220.54242222222274,
+        "maxPositionM": 0.014108970555872414
+      },
+      {
+        "level": "moyenne",
+        "trials": 18,
+        "returned": 18,
+        "rejected": 0,
+        "success": 18,
+        "successRate": 1,
+        "meanPositionM": 0.007700516804410479,
+        "meanAngleDeg": 0.3556344600741757,
+        "meanTimeMs": 218.6882722222219,
+        "maxPositionM": 0.013026596847576026
+      },
+      {
+        "level": "difficile",
+        "trials": 18,
+        "returned": 18,
+        "rejected": 0,
+        "success": 18,
+        "successRate": 1,
+        "meanPositionM": 0.008104503011771519,
+        "meanAngleDeg": 0.3408394221572482,
+        "meanTimeMs": 204.68685555555547,
+        "maxPositionM": 0.01314161793943415
+      }
+    ],
+    "bySeed": [
+      {
+        "seed": 20261103,
+        "trials": 18,
+        "returned": 18,
+        "rejected": 0,
+        "success": 18,
+        "successRate": 1,
+        "meanPositionM": 0.007936309915031758,
+        "meanAngleDeg": 0.3555256438754163,
+        "meanTimeMs": 215.751094444445,
+        "maxPositionM": 0.012776968336917443
+      },
+      {
+        "seed": 20261104,
+        "trials": 18,
+        "returned": 18,
+        "rejected": 0,
+        "success": 18,
+        "successRate": 1,
+        "meanPositionM": 0.008091023224355825,
+        "meanAngleDeg": 0.34584287378493805,
+        "meanTimeMs": 209.07908888888835,
+        "maxPositionM": 0.014108970555872414
+      },
+      {
+        "seed": 20261105,
+        "trials": 18,
+        "returned": 18,
+        "rejected": 0,
+        "success": 18,
+        "successRate": 1,
+        "meanPositionM": 0.007982471469030058,
+        "meanAngleDeg": 0.35066390478193754,
+        "meanTimeMs": 219.08736666666675,
+        "maxPositionM": 0.01314161793943415
+      }
+    ]
+  },
+  {
+    "dataset": "simulation",
+    "method": "direct",
+    "trials": 18,
+    "returned": 18,
+    "rejected": 0,
+    "success": 6,
+    "successRate": 0.3333333333333333,
+    "meanPositionM": 0.5664036039903938,
+    "meanAngleDeg": 7.613821087034125,
+    "meanTimeMs": 1.6412833333335786,
+    "maxPositionM": 1.1971209999681403,
+    "byInitialLevel": [
+      {
+        "level": "proche",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 6,
+        "successRate": 1,
+        "meanPositionM": 0.08048393643508997,
+        "meanAngleDeg": 1.7410583375047963,
+        "meanTimeMs": 1.7312666666665184,
+        "maxPositionM": 0.0933802642781497
+      },
+      {
+        "level": "moyenne",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 0,
+        "successRate": 0,
+        "meanPositionM": 0.45653026913208267,
+        "meanAngleDeg": 7.268993817225635,
+        "meanTimeMs": 1.5933000000003024,
+        "maxPositionM": 0.5003801277120636
+      },
+      {
+        "level": "difficile",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 0,
+        "successRate": 0,
+        "meanPositionM": 1.1621966064040088,
+        "meanAngleDeg": 13.831411106371945,
+        "meanTimeMs": 1.599283333333915,
+        "maxPositionM": 1.1971209999681403
+      }
+    ]
+  },
+  {
+    "dataset": "reel",
+    "method": "exhaustive",
+    "trials": 18,
+    "returned": 18,
+    "rejected": 0,
+    "success": 18,
+    "successRate": 1,
+    "meanPositionM": 0.052854520024050826,
+    "meanAngleDeg": 0.550000000000005,
+    "meanTimeMs": 1217.5189333333333,
+    "maxPositionM": 0.11374532957444891,
+    "byInitialLevel": [
+      {
+        "level": "proche",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 6,
+        "successRate": 1,
+        "meanPositionM": 0.05052337654491477,
+        "meanAngleDeg": 0.5833333333333334,
+        "meanTimeMs": 1277.741333333334,
+        "maxPositionM": 0.11374532957444891
+      },
+      {
+        "level": "moyenne",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 6,
+        "successRate": 1,
+        "meanPositionM": 0.0530461769704031,
+        "meanAngleDeg": 0.4833333333333485,
+        "meanTimeMs": 1210.723650000001,
+        "maxPositionM": 0.05565968020030295
+      },
+      {
+        "level": "difficile",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 6,
+        "successRate": 1,
+        "meanPositionM": 0.05499400655683459,
+        "meanAngleDeg": 0.5833333333333334,
+        "meanTimeMs": 1164.0918166666645,
+        "maxPositionM": 0.11374532957444891
+      }
+    ]
+  },
+  {
+    "dataset": "reel",
+    "method": "gradient",
+    "trials": 18,
+    "returned": 18,
+    "rejected": 0,
+    "success": 17,
+    "successRate": 0.9444444444444444,
+    "meanPositionM": 0.09517811892367287,
+    "meanAngleDeg": 0.41570075642859666,
+    "meanTimeMs": 25.597938888888976,
+    "maxPositionM": 1.132532509930199,
+    "byInitialLevel": [
+      {
+        "level": "proche",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 6,
+        "successRate": 1,
+        "meanPositionM": 0.036675134503330285,
+        "meanAngleDeg": 0.3792568973820494,
+        "meanTimeMs": 30.90951666666903,
+        "maxPositionM": 0.09038381720444308
+      },
+      {
+        "level": "moyenne",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 6,
+        "successRate": 1,
+        "meanPositionM": 0.03684064218506117,
+        "meanAngleDeg": 0.3874794552575243,
+        "meanTimeMs": 19.267049999999774,
+        "maxPositionM": 0.09038125766774276
+      },
+      {
+        "level": "difficile",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 5,
+        "successRate": 0.8333333333333334,
+        "meanPositionM": 0.2120185800826271,
+        "meanAngleDeg": 0.48036591664621636,
+        "meanTimeMs": 26.61724999999812,
+        "maxPositionM": 1.132532509930199
+      }
+    ]
+  },
+  {
+    "dataset": "reel",
+    "method": "multiresolution",
+    "trials": 18,
+    "returned": 18,
+    "rejected": 0,
+    "success": 18,
+    "successRate": 1,
+    "meanPositionM": 0.039003292828242116,
+    "meanAngleDeg": 0.3638888888888737,
+    "meanTimeMs": 379.48483333333326,
+    "maxPositionM": 0.09580187889597987,
+    "byInitialLevel": [
+      {
+        "level": "proche",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 6,
+        "successRate": 1,
+        "meanPositionM": 0.04091719049114784,
+        "meanAngleDeg": 0.3916666666666515,
+        "meanTimeMs": 416.34433333333317,
+        "maxPositionM": 0.09580187889597987
+      },
+      {
+        "level": "moyenne",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 6,
+        "successRate": 1,
+        "meanPositionM": 0.038923602128593575,
+        "meanAngleDeg": 0.3499999999999848,
+        "meanTimeMs": 398.89591666666456,
+        "maxPositionM": 0.08782368700982669
+      },
+      {
+        "level": "difficile",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 6,
+        "successRate": 1,
+        "meanPositionM": 0.03716908586498495,
+        "meanAngleDeg": 0.3499999999999848,
+        "meanTimeMs": 323.2142500000021,
+        "maxPositionM": 0.08895504482602434
+      }
+    ]
+  },
+  {
+    "dataset": "reel",
+    "method": "annealing",
+    "trials": 54,
+    "returned": 54,
+    "rejected": 0,
+    "success": 54,
+    "successRate": 1,
+    "meanPositionM": 0.038106249649244445,
+    "meanAngleDeg": 0.40250784727407174,
+    "meanTimeMs": 298.5209259259257,
+    "maxPositionM": 0.09167874311076159,
+    "byInitialLevel": [
+      {
+        "level": "proche",
+        "trials": 18,
+        "returned": 18,
+        "rejected": 0,
+        "success": 18,
+        "successRate": 1,
+        "meanPositionM": 0.038396071261584355,
+        "meanAngleDeg": 0.40555936320808744,
+        "meanTimeMs": 308.8113722222224,
+        "maxPositionM": 0.09167874311076159
+      },
+      {
+        "level": "moyenne",
+        "trials": 18,
+        "returned": 18,
+        "rejected": 0,
+        "success": 18,
+        "successRate": 1,
+        "meanPositionM": 0.037825495195473686,
+        "meanAngleDeg": 0.399284479649326,
+        "meanTimeMs": 308.7495611111101,
+        "maxPositionM": 0.08957641531477818
+      },
+      {
+        "level": "difficile",
+        "trials": 18,
+        "returned": 18,
+        "rejected": 0,
+        "success": 18,
+        "successRate": 1,
+        "meanPositionM": 0.03809718249067526,
+        "meanAngleDeg": 0.4026796989648018,
+        "meanTimeMs": 278.0018444444447,
+        "maxPositionM": 0.09080380014853393
+      }
+    ],
+    "bySeed": [
+      {
+        "seed": 20261103,
+        "trials": 18,
+        "returned": 18,
+        "rejected": 0,
+        "success": 18,
+        "successRate": 1,
+        "meanPositionM": 0.03774276108177873,
+        "meanAngleDeg": 0.39460923996667435,
+        "meanTimeMs": 300.49804444444453,
+        "maxPositionM": 0.09105278733317183
+      },
+      {
+        "seed": 20261104,
+        "trials": 18,
+        "returned": 18,
+        "rejected": 0,
+        "success": 18,
+        "successRate": 1,
+        "meanPositionM": 0.03855621492371001,
+        "meanAngleDeg": 0.4061118276253208,
+        "meanTimeMs": 298.9849333333328,
+        "maxPositionM": 0.09017227138276514
+      },
+      {
+        "seed": 20261105,
+        "trials": 18,
+        "returned": 18,
+        "rejected": 0,
+        "success": 18,
+        "successRate": 1,
+        "meanPositionM": 0.038019772942244554,
+        "meanAngleDeg": 0.4068024742302201,
+        "meanTimeMs": 296.0797999999999,
+        "maxPositionM": 0.09167874311076159
+      }
+    ]
+  },
+  {
+    "dataset": "reel",
+    "method": "direct",
+    "trials": 18,
+    "returned": 18,
+    "rejected": 0,
+    "success": 6,
+    "successRate": 0.3333333333333333,
+    "meanPositionM": 0.5863629195637317,
+    "meanAngleDeg": 7.8135988988633915,
+    "meanTimeMs": 1.6209111111101164,
+    "maxPositionM": 1.1728280098272377,
+    "byInitialLevel": [
+      {
+        "level": "proche",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 6,
+        "successRate": 1,
+        "meanPositionM": 0.08924334869088328,
+        "meanAngleDeg": 1.6032182000100004,
+        "meanTimeMs": 1.6913333333322953,
+        "maxPositionM": 0.1121709000329272
+      },
+      {
+        "level": "moyenne",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 0,
+        "successRate": 0,
+        "meanPositionM": 0.5283191714581582,
+        "meanAngleDeg": 7.338744379474709,
+        "meanTimeMs": 1.6155499999986205,
+        "maxPositionM": 0.6172611770355773
+      },
+      {
+        "level": "difficile",
+        "trials": 6,
+        "returned": 6,
+        "rejected": 0,
+        "success": 0,
+        "successRate": 0,
+        "meanPositionM": 1.141526238542154,
+        "meanAngleDeg": 14.498834117105465,
+        "meanTimeMs": 1.5558499999994335,
+        "maxPositionM": 1.1728280098272377
+      }
+    ]
+  }
+]

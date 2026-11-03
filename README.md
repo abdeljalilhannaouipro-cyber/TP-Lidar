@@ -30,6 +30,16 @@ Un [calcul direct vectoriel](localisation/vectorielle/CALCUL_DIRECT.md) complèt
 les approches : association des segments une fois, orientation fermée et
 résolution linéaire de la translation, avec vérification de l'observabilité.
 
+**TP 2, étape 3 :** [localisation entre scans](localisation/entre_scans/README.md).
+Cinq méthodes point-à-point sont comparées sur les mêmes six initialisations,
+avec poses connues en simulation et références TP 1 explicitement estimées.
+Le protocole contient 252 exécutions, erreurs en mètres/degrés, temps et taux de
+réussite à 20 cm / 2°, y compris les échecs.
+Une [nouvelle paire A/B](localisation/entre_scans/campagne_mesuree/README.md)
+ajoute 42 essais sur un déplacement de 50 cm déclaré par l'opérateur ; la règle
+est graduée au centimètre, mais l'incertitude totale de placement et d'angle reste
+inconnue. Le visualiseur propose les deux exemples séparément.
+
 Le projet réunit les cinq étapes du TP : acquisitions réelles, affichage des scans
 avec poses indépendantes, grille d'occupation, manipulation de segments et carte
 vectorielle. Le **recalcul complet utilise 17 scans contrôlés** : les six captures
@@ -107,3 +117,7 @@ La [procédure de reproduction](traitement_complet/README.md#reproduire) détail
 le recalage Python/NumPy, les cartes calculées avec les mêmes modules JavaScript
 que l'interface et le tracé PowerShell/.NET. Le visualiseur lui-même n'a pas
 besoin de ces outils de recalcul pour ouvrir les données déjà fournies.
+
+## Ajout des captures A/B : 19 scans et contexte réel
+
+Les nouvelles captures sont intégrées aux 17 précédentes : [résultats et limites](traitement_complet/resultats_19_scans/README.md), [photos de la salle](traitement_complet/contexte_salle/README.md). Le groupe principal contient 7 scans ; les sept groupes restent dans des repères indépendants. Le visualiseur propose le bouton **19 scans avec A/B** et des poses supplémentaires.

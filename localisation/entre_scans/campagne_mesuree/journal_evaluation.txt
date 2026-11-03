@@ -1,0 +1,99 @@
+proche_a exhaustive 20261103 NOMINAL_OK {"x":0.513,"y":0.013000000000000012,"theta":-1.7000000000000455}
+proche_a gradient 20261103 NOMINAL_OK {"x":0.5020725549076546,"y":0.035458694141230596,"theta":-1.13150448493343}
+proche_a multiresolution 20261103 NOMINAL_OK {"x":0.513,"y":0.03800000000000001,"theta":-1.2000000000000455}
+proche_a annealing 20261103 NOMINAL_OK {"x":0.5006017482191774,"y":0.035825020029389906,"theta":-1.1322381964303077}
+proche_a annealing 20261104 NOMINAL_OK {"x":0.5012698946387811,"y":0.036342994694834804,"theta":-1.1265403658223931}
+proche_a annealing 20261105 NOMINAL_OK {"x":0.5016751530651375,"y":0.037750207176704464,"theta":-1.1061608267742713}
+proche_a direct 20261103 NOMINAL_OK {"x":0.5237305686196811,"y":-0.044950056581884903,"theta":1.2543905801842357}
+proche_b exhaustive 20261103 NOMINAL_OK {"x":0.473,"y":-0.007000000000000006,"theta":-1.2000000000000455}
+proche_b gradient 20261103 NOMINAL_OK {"x":0.5020844624712235,"y":0.03546002060359696,"theta":-1.1318670790659553}
+proche_b multiresolution 20261103 NOMINAL_OK {"x":0.498,"y":0.043,"theta":-1.2000000000000455}
+proche_b annealing 20261103 NOMINAL_OK {"x":0.5012570219837758,"y":0.0358639612822625,"theta":-1.1489752350983053}
+proche_b annealing 20261104 NOMINAL_OK {"x":0.5008884070373796,"y":0.038073075080001524,"theta":-1.1205251870007942}
+proche_b annealing 20261105 NOMINAL_OK {"x":0.5013293914138705,"y":0.035978247325428765,"theta":-1.1287776225777861}
+proche_b direct 20261103 NOMINAL_OK {"x":0.4592712139314878,"y":0.057139862801060454,"theta":-1.7773734063943039}
+moyenne_a exhaustive 20261103 NOMINAL_OK {"x":0.537,"y":0.03700000000000003,"theta":-1.7000000000000455}
+moyenne_a gradient 20261103 NOMINAL_OK {"x":0.5020709180250961,"y":0.035441832668440476,"theta":-1.1317586863744964}
+moyenne_a multiresolution 20261103 NOMINAL_OK {"x":0.512,"y":0.03700000000000003,"theta":-1.2000000000000455}
+moyenne_a annealing 20261103 NOMINAL_OK {"x":0.5028306087438181,"y":0.03450091097335595,"theta":-1.1312875802034341}
+moyenne_a annealing 20261104 NOMINAL_OK {"x":0.5008175073406799,"y":0.03780223786042314,"theta":-1.1182050331010487}
+moyenne_a annealing 20261105 NOMINAL_OK {"x":0.503150870699872,"y":0.03528257963020753,"theta":-1.1128359075469234}
+moyenne_a direct 20261103 NOMINAL_FAIL {"x":0.8876038393668765,"y":-0.32691101750921325,"theta":7.060127789064609}
+moyenne_b exhaustive 20261103 NOMINAL_OK {"x":0.48300000000000004,"y":0.05299999999999999,"theta":-1.2000000000000455}
+moyenne_b gradient 20261103 NOMINAL_OK {"x":0.5020720931331364,"y":0.03545613412618143,"theta":-1.1321881745880091}
+moyenne_b multiresolution 20261103 NOMINAL_OK {"x":0.508,"y":0.02799999999999999,"theta":-1.2000000000000455}
+moyenne_b annealing 20261103 NOMINAL_OK {"x":0.5034046725914583,"y":0.0361018329630845,"theta":-1.122623366561129}
+moyenne_b annealing 20261104 NOMINAL_OK {"x":0.5022632003040701,"y":0.03531250151627274,"theta":-1.1180226650953955}
+moyenne_b annealing 20261105 NOMINAL_OK {"x":0.5011201728140029,"y":0.034973910978327694,"theta":-1.131893548992366}
+moyenne_b direct 20261103 NOMINAL_FAIL {"x":0.15126062301978943,"y":0.43103604546620683,"theta":-7.970636575347726}
+difficile_a exhaustive 20261103 NOMINAL_OK {"x":0.513,"y":0.013000000000000012,"theta":-0.7000000000000455}
+difficile_a gradient 20261103 NOMINAL_FAIL {"x":1.2251036299191689,"y":-0.7396242037071711,"theta":20.125432306923926}
+difficile_a multiresolution 20261103 NOMINAL_OK {"x":0.513,"y":0.03800000000000001,"theta":-0.7000000000000455}
+difficile_a annealing 20261103 NOMINAL_OK {"x":0.502307356351355,"y":0.04251747803035333,"theta":-0.6952090837760352}
+difficile_a annealing 20261104 NOMINAL_OK {"x":0.5039974506478517,"y":0.039256772728871625,"theta":-0.6970021734489364}
+difficile_a annealing 20261105 NOMINAL_OK {"x":0.5078355030673558,"y":0.04103957721161977,"theta":-0.6948531193320377}
+difficile_a direct 20261103 NOMINAL_FAIL {"x":1.421198970471935,"y":-0.8083914658437611,"theta":14.378359381231803}
+difficile_b exhaustive 20261103 NOMINAL_OK {"x":0.537,"y":0.04699999999999993,"theta":-1.2000000000000455}
+difficile_b gradient 20261103 NOMINAL_FAIL {"x":0.5390976061602653,"y":1.0247289814668992,"theta":-2.920962806776515}
+difficile_b multiresolution 20261103 NOMINAL_OK {"x":0.512,"y":0.04699999999999993,"theta":-0.9500000000000455}
+difficile_b annealing 20261103 NOMINAL_OK {"x":0.502237907565753,"y":0.03411341487334596,"theta":-1.1453573840849458}
+difficile_b annealing 20261104 NOMINAL_OK {"x":0.5017153507961047,"y":0.03424372543915888,"theta":-1.1334040276252608}
+difficile_b annealing 20261105 NOMINAL_OK {"x":0.5037969404221083,"y":0.03575788007783387,"theta":-1.124045712785687}
+difficile_b direct 20261103 NOMINAL_FAIL {"x":-0.27947740052148456,"y":0.8539055550423716,"theta":-13.474207730280568}
+[
+  {
+    "method": "exhaustive",
+    "trials": 6,
+    "returned": 6,
+    "rejected": 0,
+    "successNominal": 6,
+    "meanPositionM": 0.03874402861778724,
+    "meanAngleDeg": 1.2833333333333787,
+    "meanTimeMs": 2195.9563666666663,
+    "referenceUncertainty": "unknown"
+  },
+  {
+    "method": "gradient",
+    "trials": 6,
+    "returned": 6,
+    "rejected": 0,
+    "successNominal": 4,
+    "meanPositionM": 0.3672173024317266,
+    "meanAngleDeg": 4.595618923110389,
+    "meanTimeMs": 42.26099999999966,
+    "referenceUncertainty": "unknown"
+  },
+  {
+    "method": "multiresolution",
+    "trials": 6,
+    "returned": 6,
+    "rejected": 0,
+    "successNominal": 6,
+    "meanPositionM": 0.039982716764894954,
+    "meanAngleDeg": 1.0750000000000455,
+    "meanTimeMs": 696.532033333334,
+    "referenceUncertainty": "unknown"
+  },
+  {
+    "method": "annealing",
+    "trials": 18,
+    "returned": 18,
+    "rejected": 0,
+    "successNominal": 18,
+    "meanPositionM": 0.0368165305270958,
+    "meanAngleDeg": 1.054886502014281,
+    "meanTimeMs": 517.0728944444442,
+    "referenceUncertainty": "unknown"
+  },
+  {
+    "method": "direct",
+    "trials": 6,
+    "returned": 6,
+    "rejected": 0,
+    "successNominal": 2,
+    "meanPositionM": 0.5940470229108626,
+    "meanAngleDeg": 7.652515910417208,
+    "meanTimeMs": 5.281666666665842,
+    "referenceUncertainty": "unknown"
+  }
+]

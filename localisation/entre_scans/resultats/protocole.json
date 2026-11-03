@@ -1,0 +1,232 @@
+{
+  "referenceUncertainty": "Real poses were not measured on the robot; physical uncertainty unknown, no measured standard deviation or covariance available. TP1 pair residuals are only registration diagnostics.",
+  "thresholds": {
+    "positionM": 0.2,
+    "angleDeg": 2
+  },
+  "options": {
+    "windowXY": 1,
+    "windowTheta": 15,
+    "voxelM": 0.1,
+    "capM": 0.5,
+    "stepXY": 0.1,
+    "stepTheta": 1
+  },
+  "initials": [
+    {
+      "id": "proche_a",
+      "level": "proche",
+      "dx": 0.113,
+      "dy": -0.087,
+      "angle": 2.3
+    },
+    {
+      "id": "proche_b",
+      "level": "proche",
+      "dx": -0.127,
+      "dy": 0.093,
+      "angle": -2.2
+    },
+    {
+      "id": "moyenne_a",
+      "level": "moyenne",
+      "dx": 0.437,
+      "dy": -0.363,
+      "angle": 7.3
+    },
+    {
+      "id": "moyenne_b",
+      "level": "moyenne",
+      "dx": -0.417,
+      "dy": 0.453,
+      "angle": -8.2
+    },
+    {
+      "id": "difficile_a",
+      "level": "difficile",
+      "dx": 0.913,
+      "dy": -0.787,
+      "angle": 14.3
+    },
+    {
+      "id": "difficile_b",
+      "level": "difficile",
+      "dx": -0.863,
+      "dy": 0.847,
+      "angle": -14.2
+    }
+  ],
+  "seeds": [
+    20261103,
+    20261104,
+    20261105
+  ],
+  "pairs": [
+    {
+      "id": "S1",
+      "dataset": "simulation",
+      "truth": {
+        "x": 0.17653823752660927,
+        "y": 0.03652739644429205,
+        "theta": 5
+      },
+      "spacingM": 0.18027756377319942,
+      "referenceType": "known_simulated_poses",
+      "uncertainty": "Poses exactes du simulateur ; bruit de portée indépendant déterministe ±4 mm.",
+      "reference": {
+        "name": "scene_synthetique.csv",
+        "checksum": "cb56ee71",
+        "rawPoints": 360
+      },
+      "query": {
+        "name": "scene_synthetique.csv",
+        "checksum": "f891485c",
+        "rawPoints": 360
+      }
+    },
+    {
+      "id": "S2",
+      "dataset": "simulation",
+      "truth": {
+        "x": 0.1310303260164884,
+        "y": 0.33590333976311215,
+        "theta": 6
+      },
+      "spacingM": 0.3605551275463989,
+      "referenceType": "known_simulated_poses",
+      "uncertainty": "Poses exactes du simulateur ; bruit de portée indépendant déterministe ±4 mm.",
+      "reference": {
+        "name": "scene_synthetique.csv",
+        "checksum": "ba00952",
+        "rawPoints": 360
+      },
+      "query": {
+        "name": "scene_synthetique.csv",
+        "checksum": "8dd4f3cb",
+        "rawPoints": 360
+      }
+    },
+    {
+      "id": "S3",
+      "dataset": "simulation",
+      "truth": {
+        "x": 0.05544885728646899,
+        "y": -0.2862261766953274,
+        "theta": 8
+      },
+      "spacingM": 0.291547594742265,
+      "referenceType": "known_simulated_poses",
+      "uncertainty": "Poses exactes du simulateur ; bruit de portée indépendant déterministe ±4 mm.",
+      "reference": {
+        "name": "scene_synthetique.csv",
+        "checksum": "1e282e32",
+        "rawPoints": 360
+      },
+      "query": {
+        "name": "scene_synthetique.csv",
+        "checksum": "42b74931",
+        "rawPoints": 360
+      }
+    },
+    {
+      "id": "R1",
+      "dataset": "reel",
+      "truth": {
+        "x": 0.041338385695696575,
+        "y": -0.002933562901461178,
+        "theta": 8.02458348478558
+      },
+      "spacingM": 0.041442344567157396,
+      "component": 1,
+      "sourcePaths": {
+        "reference": "scan_20261103_112833_263525.csv",
+        "query": "nouvelle_serie/scan_20261103_135448_962801_tour_controle.csv"
+      },
+      "referenceType": "TP1_estimated_relative_pose_not_measured",
+      "uncertainty": "Incertitude physique inconnue : aucune pose mesurée ni covariance de mesure disponible. Les résidus de recalage ne sont pas une incertitude de pose.",
+      "registrationDiagnostics": {
+        "inlierRmseM": 0.04892277291887423,
+        "movingOverlap": 0.9850746268656716,
+        "fixedOverlap": 0.991044776119403,
+        "accepted": true
+      },
+      "reference": {
+        "name": "scan_20261103_112833_263525.csv",
+        "checksum": "7d5f683c",
+        "rawPoints": 457
+      },
+      "query": {
+        "name": "scan_20261103_135448_962801_tour_controle.csv",
+        "checksum": "4c28c733",
+        "rawPoints": 457
+      }
+    },
+    {
+      "id": "R2",
+      "dataset": "reel",
+      "truth": {
+        "x": -0.015271290005928787,
+        "y": 0.054490248691188424,
+        "theta": -0.588477090664469
+      },
+      "spacingM": 0.05658974731232454,
+      "component": 2,
+      "sourcePaths": {
+        "reference": "controle_scans/scan_20261103_113714_728775_tour2.csv",
+        "query": "scan_20261103_113903_422823.csv"
+      },
+      "referenceType": "TP1_estimated_relative_pose_not_measured",
+      "uncertainty": "Incertitude physique inconnue : aucune pose mesurée ni covariance de mesure disponible. Les résidus de recalage ne sont pas une incertitude de pose.",
+      "registrationDiagnostics": {
+        "inlierRmseM": 0.05151043540182489,
+        "movingOverlap": 0.9194630872483222,
+        "fixedOverlap": 0.935374149659864,
+        "accepted": true
+      },
+      "reference": {
+        "name": "scan_20261103_113714_728775_tour2.csv",
+        "checksum": "13508fb9",
+        "rawPoints": 456
+      },
+      "query": {
+        "name": "scan_20261103_113903_422823.csv",
+        "checksum": "d2bd2d4",
+        "rawPoints": 457
+      }
+    },
+    {
+      "id": "R3",
+      "dataset": "reel",
+      "truth": {
+        "x": 0.7195404664256217,
+        "y": 0.14852590307312774,
+        "theta": 99.73139023559872
+      },
+      "spacingM": 0.7347097567799746,
+      "component": 4,
+      "sourcePaths": {
+        "reference": "scan_20261103_113456_758311.csv",
+        "query": "nouvelle_serie/scan_20261103_135540_914531.csv"
+      },
+      "referenceType": "TP1_estimated_relative_pose_not_measured",
+      "uncertainty": "Incertitude physique inconnue : aucune pose mesurée ni covariance de mesure disponible. Les résidus de recalage ne sont pas une incertitude de pose.",
+      "registrationDiagnostics": {
+        "inlierRmseM": 0.08246880067897548,
+        "movingOverlap": 0.48826291079812206,
+        "fixedOverlap": 0.4801762114537445,
+        "accepted": true
+      },
+      "reference": {
+        "name": "scan_20261103_113456_758311.csv",
+        "checksum": "7cf785fd",
+        "rawPoints": 456
+      },
+      "query": {
+        "name": "scan_20261103_135540_914531.csv",
+        "checksum": "7ead9087",
+        "rawPoints": 451
+      }
+    }
+  ],
+  "warmup": "One excluded fixed run per method; method order rotated across configurations."
+}

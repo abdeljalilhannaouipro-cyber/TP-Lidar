@@ -12,14 +12,30 @@
 <header><div><div class="eyebrow">TP Robotique · Cartographie et localisation</div><h1>Scans &amp; cartes LD06</h1><p>Nuages de points, cartes et estimation de pose.</p></div><div class="badge">Traitement local dans le navigateur</div></header>
 <div class="toolbar">
 <button class="primary" id="open">＋ Charger des CSV</button><input id="files" type="file" accept=".csv,text/csv" multiple>
-<button class="primary" id="examplesAll">Charger les 17 scans</button><button id="examples">6 anciens scans</button><button id="examplesNew">11 nouveaux scans</button><div class="spacer"></div>
+<button class="primary" id="examples19">19 scans avec A/B</button><button id="examplesAll">Charger les 17 scans</button><button id="examples">6 anciens scans</button><button id="examplesNew">11 nouveaux scans</button><div class="spacer"></div>
 <label for="angleMode">CSV polaires seuls</label><select id="angleMode"><option value="cw">Angles horaires · y = −r sin(α)</option><option value="ccw">Angles antihoraires · y = r sin(α)</option></select>
 <button id="loadPoses">Ouvrir des poses</button><input id="poseFile" type="file" accept=".json,application/json">
 </div>
-<div class="toolbar"><label for="posePreset">Poses estimées des 17 scans</label><select id="posePreset" style="max-width:370px"><option value="">Choisir un groupe…</option></select><button id="applyPreset">Charger ce groupe</button><span class="hint">Repères séparés pour les groupes. La fusion des 17 reste exploratoire.</span></div>
+<div class="toolbar"><label for="posePreset">Poses estimées : 17 ou 19 scans</label><select id="posePreset" style="max-width:370px"><option value="">Choisir un groupe…</option></select><button id="applyPreset">Charger ce groupe</button><span class="hint">Repères séparés pour les groupes. Les fusions globales restent exploratoires.</span></div>
 <div id="notice" role="status" aria-live="polite">Chargez les 17 scans contrôlés ou vos CSV. Les poses commencent à zéro ; charger ensuite les poses du groupe d’alignement souhaité.</div>
 <main class="layout">
 <aside>
+<details class="grid-panel" open><summary style="font-weight:600;cursor:pointer">TP 2 · Localisation entre scans</summary>
+<p class="hint">Choisir un scan de référence et sélectionner le scan à localiser dans la liste. Les deux captures doivent couvrir une zone commune.</p>
+<button id="s2MeasuredDemo" class="primary">Mes captures A/B : 50 cm déclarés</button><button id="s2Demo">Exemple historique (poses estimées)</button>
+<label for="s2Ref" class="hint" style="display:block;margin-top:10px">Scan de référence (fixe)</label><select id="s2Ref" style="width:100%;padding:8px"></select>
+<div id="s2Target" class="grid-state"></div>
+<label for="s2Method" class="hint">Méthode</label><select id="s2Method" style="width:100%;padding:8px"><option value="multiresolution">Multi-résolution</option><option value="exhaustive">Recherche exhaustive</option><option value="gradient">Descente de gradient</option><option value="annealing">Probabiliste : recuit simulé</option><option value="direct">Calcul direct (une association)</option></select>
+<div class="grid-fields" style="margin-top:10px">
+<label>X relatif initial (m)<input id="s2X" type="number" value="0" step="0.05"></label><label>Y relatif initial (m)<input id="s2Y" type="number" value="0" step="0.05"></label>
+<label>Angle relatif initial (°)<input id="s2Theta" type="number" value="0" step="1"></label><label>Fenêtre XY ± (m)<input id="s2XY" type="number" value="1" min="0.1" max="3" step="0.1"></label>
+<label>Fenêtre angulaire ± (°)<input id="s2Angle" type="number" value="15" min="1" max="45" step="1"></label><label>Regroupement commun (m)<input id="s2Voxel" type="number" value="0.1" min="0" max="0.5" step="0.05"></label>
+</div>
+<div class="grid-actions"><button id="s2Copy">Copier la pose relative affichée</button><button id="s2Run" class="primary">Estimer</button><button id="s2Cancel">Annuler</button></div>
+<div class="grid-actions"><button id="s2Apply">Appliquer au scan sélectionné</button><button id="s2Export">Exporter le résultat JSON</button></div>
+<div id="s2Report" class="grid-state" role="status" style="white-space:pre-line">La pose estimée transforme le scan sélectionné vers le repère local de la référence. Les CSV restent intacts.</div>
+<div class="footnote">Évaluation commune : localisation/entre_scans/README.md. Les poses réelles disponibles sont estimées, avec une incertitude physique inconnue.</div>
+</details>
 <details class="grid-panel" open><summary style="font-weight:600;cursor:pointer">TP 2 · Localisation sur carte vectorielle</summary>
 <p class="hint">Localiser le scan sur les segments finis d’une carte fixe, construite sans ce scan.</p>
 <button id="vlDemo">Exemple vectoriel : 4 scans + 1 test</button>
@@ -147,5 +163,5 @@
 <div class="plot"><canvas id="canvas" tabindex="0" aria-label="Nuages de points cartésiens ; X et Y en mètres. Les poses sont réglables dans la liste des scans." role="img"></canvas><div id="empty" class="empty"><div><h2>Un repère, plusieurs scans</h2><p>Chargez vos mesures pour comparer leurs contours.<br>Une couleur par scan, une pose indépendante.</p></div></div></div>
 <div class="status"><span id="metrics">Aucun scan chargé</span><span>Molette : zoom · Flèches : scan sélectionné ±0,10 m · Q / E : ±1°</span></div>
 </section></main>
-<script src="core.js"></script><script src="examples.js"></script><script src="new-examples.js"></script><script src="pose-presets.js"></script><script src="grid.js"></script><script src="segments.js"></script><script src="vector-map.js"></script><script src="grid-localisation.js"></script><script src="grid-brute-force.js"></script><script src="grid-optimisation.js"></script><script src="grid-localisation-example.js"></script><script src="viewer.js"></script><script src="segments-ui.js"></script><script src="vector-ui.js"></script><script src="grid-localisation-ui.js"></script><script src="vector-localisation.js"></script><script src="vector-gradient.js"></script><script src="vector-multiresolution.js"></script><script src="vector-annealing.js"></script><script src="vector-direct.js"></script><script src="vector-localisation-example.js"></script><script src="vector-localisation-ui.js"></script>
+<script src="core.js"></script><script src="examples.js"></script><script src="new-examples.js"></script><script src="pose-presets.js"></script><script src="integration-19.js"></script><script src="grid.js"></script><script src="segments.js"></script><script src="vector-map.js"></script><script src="grid-localisation.js"></script><script src="grid-brute-force.js"></script><script src="grid-optimisation.js"></script><script src="grid-localisation-example.js"></script><script src="viewer.js"></script><script src="segments-ui.js"></script><script src="vector-ui.js"></script><script src="grid-localisation-ui.js"></script><script src="vector-localisation.js"></script><script src="vector-gradient.js"></script><script src="vector-multiresolution.js"></script><script src="vector-annealing.js"></script><script src="vector-direct.js"></script><script src="vector-localisation-example.js"></script><script src="vector-localisation-ui.js"></script><script src="scan-matching.js"></script><script src="scan-matching-example.js"></script><script src="scan-matching-measured-example.js"></script><script src="scan-matching-ui.js"></script>
 </body></html>

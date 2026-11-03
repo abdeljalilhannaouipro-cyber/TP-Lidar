@@ -40,6 +40,7 @@ function draw() {
   const showVector = ['vector','vectorPoints'].includes($('viewMode').value) && state.vector;
   if (showGrid) drawGrid();
   updateGridStatus();
+  if(typeof updateScanMatchingStatus==='function')updateScanMatchingStatus();
   if(typeof updateVectorLocalisationStatus==='function')updateVectorLocalisationStatus();
   if(typeof updateLocalisationStatus==='function')updateLocalisationStatus();
   if(typeof updateSegmentsStatus==='function')updateSegmentsStatus();
@@ -203,14 +204,15 @@ function loadExampleSet(data,description){
 }
 $('examples').onclick=()=>loadExampleSet(window.LIDAR_EXAMPLES||[],'Six captures anciennes, avec leurs séquences contrôlées.');
 $('examplesNew').onclick=()=>loadExampleSet(window.LIDAR_NEW_EXAMPLES||[],'Onze nouvelles acquisitions ; trois blocs longs remplacés par leur tour contrôlé.');
+$('examples19').onclick=()=>loadExampleSet([...(window.LIDAR_EXAMPLES||[]),...(window.LIDAR_NEW_EXAMPLES||[]),...(window.LIDAR_AB_EXAMPLES||[])],'19 captures incluant A/B. Choisir ensuite un groupe de poses 19 acquisitions ; les groupes restent indépendants.');
 $('examplesAll').onclick=()=>loadExampleSet([...(window.LIDAR_EXAMPLES||[]),...(window.LIDAR_NEW_EXAMPLES||[])],'Jeu complet de 17 acquisitions, sans doublonner les blocs bruts et leurs copies.');
 $('applyPreset').onclick=()=>{
   try{
     const preset=(window.LIDAR_POSE_PRESETS||[]).find(p=>p.id===$('posePreset').value);if(!preset)throw new Error('Choisir un groupe de poses.');
-    for(const data of [...(window.LIDAR_EXAMPLES||[]),...(window.LIDAR_NEW_EXAMPLES||[])])add(Core.parseScan(data.text,data.name));
+    for(const data of [...(window.LIDAR_EXAMPLES||[]),...(window.LIDAR_NEW_EXAMPLES||[]),...(preset.includeAB?(window.LIDAR_AB_EXAMPLES||[]):[])])add(Core.parseScan(data.text,data.name));
     const updates=Core.readPoses(JSON.stringify(preset.poses),state.scans);state.scans.forEach(scan=>scan.visible=false);
     updates.forEach(update=>{update.scan.pose=update.pose;update.scan.visible=update.visible;});state.selected=state.scans.find(scan=>scan.visible)?.id??null;renderCards();$('viewMode').value='points';fit();
-    notice(`${preset.description} Les cartes existantes restent figées : les recréer pour utiliser ces poses.`,preset.id==='exploratoire_17_scans');
+    notice(`${preset.description} Les cartes existantes restent figées : les recréer pour utiliser ces poses.`,preset.id.includes('exploratoire'));
   }catch(error){notice(error.message,true);}
 };
 for(const preset of window.LIDAR_POSE_PRESETS||[]){const option=document.createElement('option');option.value=preset.id;option.textContent=preset.title;$('posePreset').append(option);}

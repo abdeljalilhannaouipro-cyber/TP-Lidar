@@ -1,0 +1,25 @@
+{
+  "scanCount": 19,
+  "validPoints": 8657,
+  "pairCount": 171,
+  "acceptedEdges": 22,
+  "componentCount": 7,
+  "largestComponent": 7,
+  "relativeABGraphEstimate": {
+    "x": 0.5053299419911126,
+    "y": 0.015779324661070328,
+    "theta": -1.2257537548554467
+  },
+  "nominalAB": {
+    "x": 0.5,
+    "y": 0,
+    "theta": 0
+  },
+  "deviationFromNominal": {
+    "positionM": 0.016655190433858373,
+    "angleDeg": 1.2257537548554467
+  },
+  "physicalUncertainty": "unknown",
+  "photoUsage": "qualitative only; no metric constraint",
+  "allSourcesUnmodified": true
+}
