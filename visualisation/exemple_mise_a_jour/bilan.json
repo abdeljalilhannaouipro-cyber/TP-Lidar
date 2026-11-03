@@ -1,0 +1,36 @@
+{
+  "reference": "scan_20261103_113714_728775_tour2.csv",
+  "new_scan": "scan_20261103_113903_422823.csv",
+  "resolution_m": 0.1,
+  "dimensions_cells": [
+    200,
+    200
+  ],
+  "first_scan_points": 456,
+  "new_scan_points": 457,
+  "before": {
+    "free": 3612,
+    "occupied": 264,
+    "unknown": 36124
+  },
+  "after": {
+    "free": 3884,
+    "occupied": 308,
+    "unknown": 35808
+  },
+  "changed_cells": 390,
+  "transitions": {
+    "127->255": 70,
+    "127->0": 246,
+    "255->0": 50,
+    "0->255": 24
+  },
+  "encoding": {
+    "free": 0,
+    "unknown": 127,
+    "occupied": 255
+  },
+  "procedure": "integrate first scan -> save JSON -> load existing grid -> integrate second scan -> save updated grid",
+  "assertions": "Initial map unchanged; saved/reloaded cells identical; updated map has two scan records; repeated second scan ignored.",
+  "caveat": "Second scan pose estimated automatically, not measured. State changes can reflect noise as well as scene changes."
+}

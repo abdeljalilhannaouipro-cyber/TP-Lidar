@@ -1,0 +1,14 @@
+{
+  "reference": "scan_20261103_113714_728775_tour2.csv",
+  "moving": "scan_20261103_113903_422823.csv",
+  "pose": {
+    "x": -0.01958114335985975,
+    "y": 0.05923925441525838,
+    "theta": -0.973384434211539
+  },
+  "overlap_moving": 0.9299363057324841,
+  "overlap_reference": 0.9211356466876972,
+  "inlier_rmse_m": 0.05215210093883655,
+  "alternative_score": 0.3773503798031081,
+  "note": "Estimated rigid pose for an incremental-map example, not measured ground truth"
+}

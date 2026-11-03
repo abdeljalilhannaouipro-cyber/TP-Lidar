@@ -1,5 +1,9 @@
 # Étape 3 — Construction et mise à jour d'une grid map 2D
 
+Un [exemple complet avec deux scans réels](exemple_mise_a_jour/README.md) présente
+la sauvegarde, le rechargement et la mise à jour d'une carte existante, avec les
+matrices avant/après, des images et un script de reproduction.
+
 ## Utilisation
 
 Ouvrir `index.html` dans Chrome ou Edge. Le panneau **Grille d'occupation** est
