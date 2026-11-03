@@ -1,0 +1,17 @@
+{
+  "raw_file": "scan_20261103_134930_813109.csv",
+  "validated_file": "scan_20261103_134930_813109.csv",
+  "raw_points": 456,
+  "points": 456,
+  "positive_distances": 452,
+  "invalid_distances": 4,
+  "first_angle_deg": 359.49,
+  "last_angle_deg": 0.2,
+  "angular_span_deg": 359.29,
+  "max_step_deg": 1.92,
+  "internal_zero_wraps": 0,
+  "backward_jumps": 0,
+  "source_index_start": 0,
+  "source_index_end": 455,
+  "validation": "Indices continus et progression angulaire monotone sur un balayage quasi complet ; immobilité et temps de rotation non mesurés"
+}

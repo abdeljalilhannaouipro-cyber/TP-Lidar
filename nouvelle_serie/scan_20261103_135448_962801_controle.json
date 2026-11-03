@@ -1,0 +1,17 @@
+{
+  "raw_file": "scan_20261103_135448_962801.csv",
+  "validated_file": "scan_20261103_135448_962801_tour_controle.csv",
+  "raw_points": 987,
+  "points": 457,
+  "positive_distances": 457,
+  "invalid_distances": 0,
+  "first_angle_deg": 359.88,
+  "last_angle_deg": 0.27,
+  "angular_span_deg": 359.61,
+  "max_step_deg": 2.03,
+  "internal_zero_wraps": 0,
+  "backward_jumps": 0,
+  "source_index_start": 530,
+  "source_index_end": 986,
+  "validation": "Indices continus et progression angulaire monotone sur un balayage quasi complet ; immobilité et temps de rotation non mesurés"
+}
