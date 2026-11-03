@@ -1,0 +1,38 @@
+{
+  "format": "tp-lidar-segments-v1",
+  "units": "metres",
+  "linearToleranceM": 1e-9,
+  "parallelSinTolerance": 1e-12,
+  "items": [
+    {
+      "label": "A",
+      "color": "#d94b35",
+      "segment": {
+        "a": [
+          0,
+          0
+        ],
+        "b": [
+          4,
+          0
+        ]
+      },
+      "sources": []
+    },
+    {
+      "label": "B",
+      "color": "#226dc2",
+      "segment": {
+        "a": [
+          1,
+          -1
+        ],
+        "b": [
+          1,
+          1
+        ]
+      },
+      "sources": []
+    }
+  ]
+}

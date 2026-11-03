@@ -1,10 +1,11 @@
-# Étapes 2 et 3 — Visualisation et carte d'occupation
+# Étapes 2, 3 et 4 — Visualisation, grille et segments
 
 ## Ouvrir l'outil
 
 Ouvrir **`index.html` dans Chrome ou Edge** par un double-clic. Aucun serveur,
 compte, accès série, installation Python ou connexion Internet n'est nécessaire.
-Conserver dans le même dossier `index.html`, `core.js`, `viewer.js`, `grid.js` et `examples.js`.
+Conserver dans le même dossier `index.html`, `core.js`, `viewer.js`, `grid.js`,
+`segments.js`, `segments-ui.js` et `examples.js`.
 Les données restent dans la mémoire du navigateur jusqu'à la fermeture de la page.
 Sauvegarder les poses avant de quitter pour ne pas perdre les réglages.
 
@@ -113,3 +114,17 @@ rechargeable en JSON, avec un export CSV et PNG.
 La procédure, les choix techniques, les hypothèses et les limites suivant le
 document du cours sont détaillés dans [`GRID.md`](GRID.md). Cette version ne
 construit pas de carte vectorielle.
+
+## Étape 4 — Atelier de segments
+
+L'atelier extrait des segments à partir des scans positionnés. Deux listes
+permettent de choisir A et B, puis d'analyser leurs angles, leur proximité et leur
+intersection, de fusionner les segments proches, ou de découper A par B en
+conservant le plus long côté. Les exemples géométriques intégrés montrent les
+cas limites ; les modifications sont annulables et exportables en JSON/CSV.
+
+Le [guide et compte rendu de l'étape 4](SEGMENTS.md) explique la tolérance de
+1e-9 m, les règles d'intersection, l'égalité des côtés et les limites de l'extraction.
+Les [exemples](exemple_segments/README.md) incluent les images de calcul et les
+fichiers rechargeables. Les 38 contrôles supplémentaires se lancent avec
+`node visualisation/test_segments.cjs` depuis la racine du dépôt.

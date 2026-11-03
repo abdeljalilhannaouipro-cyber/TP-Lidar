@@ -1,0 +1,45 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const S=require('./segments.js'),C=require('./core.js');
+let passed=0;function test(name,fn){fn();passed++;console.log('OK',name);}
+const seg=(a,b)=>S.segment(a,b),horizontal=()=>seg([0,0],[4,0]),vertical=(x,lo=-1,hi=1)=>seg([x,lo],[x,hi]);
+function near(a,b,tol=1e-8){assert.ok(Math.abs(a-b)<=tol,`${a} != ${b}`);}
+function same(a,b){for(const key of ['a','b'])for(let i=0;i<2;i++)near(a[key][i],b[key][i]);}
+test('Angle des supports 0°, directions 180° pour un sens inversé',()=>{near(S.angleDeg(horizontal(),seg([4,0],[0,0])),0);near(S.endpointAngleDeg(horizontal(),seg([4,0],[0,0])),180);});
+test('Angle perpendiculaire : 90°',()=>near(S.angleDeg(horizontal(),vertical(2)),90));
+test('Angle aigu 30° indépendant du sens des extrémités',()=>{const b=seg([0,0],[Math.cos(Math.PI/6),.5]);near(S.angleDeg(horizontal(),b),30);near(S.angleDeg(horizontal(),seg(b.b,b.a)),30);});
+test('Distance entre segments parallèles et disjoints',()=>{near(S.separation(horizontal(),seg([1,.2],[3,.2])),.2);near(S.separation(horizontal(),seg([5,0],[6,0])),1);});
+test('Proximité : les deux critères doivent passer',()=>{assert.equal(S.proximity(horizontal(),seg([4.05,0],[5,0])).close,true);assert.equal(S.proximity(horizontal(),seg([0,.5],[4,.5])).close,false);assert.equal(S.proximity(horizontal(),vertical(2)).close,false);});
+test('Proximité aux seuils et seuils invalides',()=>{assert.equal(S.proximity(horizontal(),seg([0,.12],[4,.12]),{angularDeg:0,positionM:.12}).close,true);assert.throws(()=>S.proximity(horizontal(),vertical(0),{angularDeg:91}));});
+test('Fusion colinéaire : étendue et sens de A conservés',()=>{const a=seg([2,0],[0,0]),b=seg([2.05,0],[4,0]);const merged=S.merge(a,b);same(merged,seg([4,0],[0,0]));near(S.length(merged),4);});
+test('Fusion refusée lorsque la position ou l’angle ne convient pas',()=>{assert.throws(()=>S.merge(horizontal(),vertical(1)));assert.throws(()=>S.merge(horizontal(),seg([8,0],[9,0])));});
+test('Intersection intérieure sur les deux segments',()=>{const hit=S.intersection(horizontal(),vertical(1));assert.equal(hit.kind,'point');assert.deepEqual(hit.point,[1,0]);});
+test('Croisement de supports hors de B : pas d’intersection',()=>assert.equal(S.intersection(horizontal(),vertical(1,1,2)).kind,'none'));
+test('Croisement hors de A : pas d’intersection',()=>assert.equal(S.intersection(horizontal(),vertical(5)).kind,'none'));
+test('Parallèles non colinéaires',()=>assert.equal(S.intersection(horizontal(),seg([0,1],[4,1])).kind,'parallel'));
+test('Colinéaires superposés : intersection non ponctuelle',()=>{const hit=S.intersection(horizontal(),seg([1,0],[3,0]));assert.equal(hit.kind,'collinear');assert.equal(hit.point,null);assert.ok(hit.overlap);near(S.separation(horizontal(),seg([1,0],[3,0])),0);});
+test('Colinéaires disjoints : aucun recouvrement',()=>{const hit=S.intersection(horizontal(),seg([5,0],[6,0]));assert.equal(hit.kind,'collinear');assert.equal(hit.overlap,null);});
+test('Découpage asymétrique : conserver le plus long côté',()=>{const result=S.cutLongest(horizontal(),vertical(1));assert.equal(result.changed,true);same(result.segment,seg([1,0],[4,0]));near(result.keptLength,3);});
+test('Découpage : le côté du premier point peut être le plus long',()=>same(S.cutLongest(horizontal(),vertical(3)).segment,seg([0,0],[3,0])));
+test('Égalité exacte : conserver le premier point',()=>{const r=S.cutLongest(horizontal(),vertical(2));same(r.segment,seg([0,0],[2,0]));assert.equal(r.reason,'tie-keeps-first');});
+test('Égalité à EPS près, côté du premier point légèrement plus court',()=>{const r=S.cutLongest(horizontal(),vertical(2-S.EPS/4));assert.equal(r.reason,'tie-keeps-first');assert.deepEqual(r.segment.a,[0,0]);});
+test('Différence supérieure à EPS : conserver le vrai côté le plus long',()=>{const r=S.cutLongest(horizontal(),vertical(2-2*S.EPS));assert.equal(r.reason,'longest-second');assert.deepEqual(r.segment.b,[4,0]);});
+test('Sens inversé de A : égalité conserve son premier point original',()=>same(S.cutLongest(seg([4,0],[0,0]),vertical(2)).segment,seg([4,0],[2,0])));
+test('Intersection à chacune des extrémités de A : aucun changement',()=>{for(const x of [0,4]){const r=S.cutLongest(horizontal(),vertical(x));assert.equal(r.changed,false);assert.equal(r.reason,'target-endpoint');same(r.segment,horizontal());}});
+test('Intersection à moins de EPS d’une extrémité : aucun changement',()=>{for(const x of [S.EPS/2,4-S.EPS/2])assert.equal(S.cutLongest(horizontal(),vertical(x)).changed,false);});
+test('Intersection à l’extrémité de B mais intérieure à A : découpage autorisé',()=>{const r=S.cutLongest(horizontal(),vertical(1,0,2));assert.equal(r.changed,true);same(r.segment,seg([1,0],[4,0]));});
+test('Croisement hors d’un segment : aucun découpage',()=>{for(const b of [vertical(1,1,2),vertical(5)]){const r=S.cutLongest(horizontal(),b);assert.equal(r.changed,false);same(r.segment,horizontal());}});
+test('Segments colinéaires : ne jamais découper, même au contact',()=>{for(const b of [seg([1,0],[3,0]),seg([4,0],[5,0]),seg([5,0],[6,0])]){const r=S.cutLongest(horizontal(),b);assert.equal(r.changed,false);assert.equal(r.reason,'collinear');}});
+test('Tolérance de parallélisme sur les directions normalisées',()=>{const b=seg([0,1],[4,1+1e-13]);assert.equal(S.intersection(horizontal(),b).kind,'parallel');});
+test('Segment dégénéré : pas de découpage et angle indéfini',()=>{const zero=seg([1,0],[1,0]);assert.equal(S.cutLongest(horizontal(),zero).changed,false);assert.equal(S.cutLongest(zero,horizontal()).changed,false);assert.throws(()=>S.angleDeg(horizontal(),zero));});
+test('Aucune mutation des entrées et du segment coupeur',()=>{const a=horizontal(),b=vertical(1),before=JSON.stringify([a,b]);const result=S.cutLongest(a,b);assert.equal(JSON.stringify([a,b]),before);result.segment.a[0]=999;assert.equal(a.a[0],0);assert.equal(b.a[0],1);});
+test('Coordonnées non finies refusées',()=>{assert.throws(()=>seg([NaN,0],[1,0]));assert.throws(()=>S.intersection({a:[0,0],b:[Infinity,1]},horizontal()));});
+test('Géométrie translatée et tournée : même règle de découpage',()=>{const pose={x:12,y:-7,theta:37},f=s=>seg(C.transform(s.a,pose),C.transform(s.b,pose));same(S.cutLongest(f(horizontal()),f(vertical(1))).segment,f(seg([1,0],[4,0])));});
+test('Extraction d’un mur droit bruité',()=>{const pts=Array.from({length:30},(_,i)=>[i*.05,1+.005*Math.sin(i)]);const lines=S.extract(pts);assert.equal(lines.length,1);assert.ok(S.length(lines[0])>1.4);assert.ok(lines[0].maxResidualM<.05);});
+test('Discontinuité spatiale : deux segments séparés',()=>{const pts=[...Array.from({length:20},(_,i)=>[i*.05,1]),...Array.from({length:20},(_,i)=>[3+i*.05,1])];assert.equal(S.extract(pts).length,2);});
+test('Coin en L : séparation en deux supports perpendiculaires',()=>{const pts=[...Array.from({length:21},(_,i)=>[i*.05,0]),...Array.from({length:20},(_,i)=>[1,(i+1)*.05])];const lines=S.extract(pts,{residual:.02});assert.equal(lines.length,2);near(S.angleDeg(lines[0],lines[1]),90);});
+test('Nuages vides ou trop courts et nuage dégénéré',()=>{assert.deepEqual(S.extract([]),[]);assert.deepEqual(S.extract([[0,0],[.1,0]]),[]);assert.deepEqual(S.extract(Array.from({length:10},()=>[1,1])),[]);});
+test('Seuils d’extraction invalides refusés',()=>{assert.throws(()=>S.extract([],{minPoints:1}));assert.throws(()=>S.extract([],{residual:0}));});
+test('Sauvegarde et rechargement des segments',()=>{const items=[{label:'A',color:'#1565c0',segment:horizontal(),sources:[]}];const restored=S.load(S.save(items));same(restored[0].segment,items[0].segment);assert.equal(restored[0].label,'A');assert.equal(S.csv(items).split('\r\n').length,2);});
+test('Import géométrique invalide ou dégénéré refusé',()=>{assert.throws(()=>S.load('{"format":"wrong"}'));assert.throws(()=>S.load(S.save([{segment:seg([1,0],[1,0])}])));});
+test('Extraction sur les six scans réels contrôlés',()=>{const sandbox={window:{}};vm.runInNewContext(fs.readFileSync(path.join(__dirname,'examples.js'),'utf8'),sandbox);let count=0;for(const item of sandbox.window.LIDAR_EXAMPLES){const scan=C.parseScan(item.text,item.name);const lines=S.extract(scan.points);assert.ok(lines.length>0);for(const line of lines){assert.ok(S.length(line)>=.15);assert.ok(line.pointCount>=5);assert.ok(line.maxResidualM<=.05);}count+=lines.length;}console.log('Segments extraits sur six scans :',count);});
+console.log(`${passed} segment checks passed. EPS=${S.EPS} m; parallel tolerance=${S.ANGLE_EPS}.`);

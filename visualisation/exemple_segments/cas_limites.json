@@ -1,0 +1,491 @@
+{
+  "linearToleranceM": 1e-9,
+  "parallelSinTolerance": 1e-12,
+  "cases": [
+    {
+      "name": "interieur_plus_long",
+      "a": {
+        "a": [
+          0,
+          0
+        ],
+        "b": [
+          4,
+          0
+        ]
+      },
+      "b": {
+        "a": [
+          1,
+          -1
+        ],
+        "b": [
+          1,
+          1
+        ]
+      },
+      "intersection": {
+        "kind": "point",
+        "point": [
+          1,
+          0
+        ],
+        "alongA": 1,
+        "alongB": 1
+      },
+      "cut": {
+        "segment": {
+          "a": [
+            1,
+            0
+          ],
+          "b": [
+            4,
+            0
+          ]
+        },
+        "changed": true,
+        "reason": "longest-second",
+        "intersection": [
+          1,
+          0
+        ],
+        "keptLength": 3,
+        "discardedLength": 1
+      }
+    },
+    {
+      "name": "egalite_exacte",
+      "a": {
+        "a": [
+          0,
+          0
+        ],
+        "b": [
+          4,
+          0
+        ]
+      },
+      "b": {
+        "a": [
+          2,
+          -1
+        ],
+        "b": [
+          2,
+          1
+        ]
+      },
+      "intersection": {
+        "kind": "point",
+        "point": [
+          2,
+          0
+        ],
+        "alongA": 2,
+        "alongB": 1
+      },
+      "cut": {
+        "segment": {
+          "a": [
+            0,
+            0
+          ],
+          "b": [
+            2,
+            0
+          ]
+        },
+        "changed": true,
+        "reason": "tie-keeps-first",
+        "intersection": [
+          2,
+          0
+        ],
+        "keptLength": 2,
+        "discardedLength": 2
+      }
+    },
+    {
+      "name": "egalite_tolerance",
+      "a": {
+        "a": [
+          0,
+          0
+        ],
+        "b": [
+          4,
+          0
+        ]
+      },
+      "b": {
+        "a": [
+          1.99999999975,
+          -1
+        ],
+        "b": [
+          1.99999999975,
+          1
+        ]
+      },
+      "intersection": {
+        "kind": "point",
+        "point": [
+          1.99999999975,
+          0
+        ],
+        "alongA": 1.99999999975,
+        "alongB": 1
+      },
+      "cut": {
+        "segment": {
+          "a": [
+            0,
+            0
+          ],
+          "b": [
+            1.99999999975,
+            0
+          ]
+        },
+        "changed": true,
+        "reason": "tie-keeps-first",
+        "intersection": [
+          1.99999999975,
+          0
+        ],
+        "keptLength": 1.99999999975,
+        "discardedLength": 2.00000000025
+      }
+    },
+    {
+      "name": "sens_inverse_egalite",
+      "a": {
+        "a": [
+          4,
+          0
+        ],
+        "b": [
+          0,
+          0
+        ]
+      },
+      "b": {
+        "a": [
+          2,
+          -1
+        ],
+        "b": [
+          2,
+          1
+        ]
+      },
+      "intersection": {
+        "kind": "point",
+        "point": [
+          2,
+          0
+        ],
+        "alongA": 2,
+        "alongB": 1
+      },
+      "cut": {
+        "segment": {
+          "a": [
+            4,
+            0
+          ],
+          "b": [
+            2,
+            0
+          ]
+        },
+        "changed": true,
+        "reason": "tie-keeps-first",
+        "intersection": [
+          2,
+          0
+        ],
+        "keptLength": 2,
+        "discardedLength": 2
+      }
+    },
+    {
+      "name": "extremite_A",
+      "a": {
+        "a": [
+          0,
+          0
+        ],
+        "b": [
+          4,
+          0
+        ]
+      },
+      "b": {
+        "a": [
+          4,
+          -1
+        ],
+        "b": [
+          4,
+          1
+        ]
+      },
+      "intersection": {
+        "kind": "point",
+        "point": [
+          4,
+          0
+        ],
+        "alongA": 4,
+        "alongB": 1
+      },
+      "cut": {
+        "segment": {
+          "a": [
+            0,
+            0
+          ],
+          "b": [
+            4,
+            0
+          ]
+        },
+        "changed": false,
+        "reason": "target-endpoint"
+      }
+    },
+    {
+      "name": "proche_extremite_A",
+      "a": {
+        "a": [
+          0,
+          0
+        ],
+        "b": [
+          4,
+          0
+        ]
+      },
+      "b": {
+        "a": [
+          5e-10,
+          -1
+        ],
+        "b": [
+          5e-10,
+          1
+        ]
+      },
+      "intersection": {
+        "kind": "point",
+        "point": [
+          5e-10,
+          0
+        ],
+        "alongA": 5e-10,
+        "alongB": 1
+      },
+      "cut": {
+        "segment": {
+          "a": [
+            0,
+            0
+          ],
+          "b": [
+            4,
+            0
+          ]
+        },
+        "changed": false,
+        "reason": "target-endpoint"
+      }
+    },
+    {
+      "name": "croisement_hors_B",
+      "a": {
+        "a": [
+          0,
+          0
+        ],
+        "b": [
+          4,
+          0
+        ]
+      },
+      "b": {
+        "a": [
+          1,
+          1
+        ],
+        "b": [
+          1,
+          2
+        ]
+      },
+      "intersection": {
+        "kind": "none",
+        "point": null
+      },
+      "cut": {
+        "segment": {
+          "a": [
+            0,
+            0
+          ],
+          "b": [
+            4,
+            0
+          ]
+        },
+        "changed": false,
+        "reason": "no-intersection-on-both"
+      }
+    },
+    {
+      "name": "croisement_hors_A",
+      "a": {
+        "a": [
+          0,
+          0
+        ],
+        "b": [
+          4,
+          0
+        ]
+      },
+      "b": {
+        "a": [
+          5,
+          -1
+        ],
+        "b": [
+          5,
+          1
+        ]
+      },
+      "intersection": {
+        "kind": "none",
+        "point": null
+      },
+      "cut": {
+        "segment": {
+          "a": [
+            0,
+            0
+          ],
+          "b": [
+            4,
+            0
+          ]
+        },
+        "changed": false,
+        "reason": "no-intersection-on-both"
+      }
+    },
+    {
+      "name": "colineaires",
+      "a": {
+        "a": [
+          0,
+          0
+        ],
+        "b": [
+          4,
+          0
+        ]
+      },
+      "b": {
+        "a": [
+          1,
+          0
+        ],
+        "b": [
+          3,
+          0
+        ]
+      },
+      "intersection": {
+        "kind": "collinear",
+        "point": null,
+        "overlap": [
+          [
+            1,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      },
+      "cut": {
+        "segment": {
+          "a": [
+            0,
+            0
+          ],
+          "b": [
+            4,
+            0
+          ]
+        },
+        "changed": false,
+        "reason": "collinear"
+      }
+    },
+    {
+      "name": "extremite_B_dans_A",
+      "a": {
+        "a": [
+          0,
+          0
+        ],
+        "b": [
+          4,
+          0
+        ]
+      },
+      "b": {
+        "a": [
+          1,
+          0
+        ],
+        "b": [
+          1,
+          1
+        ]
+      },
+      "intersection": {
+        "kind": "point",
+        "point": [
+          1,
+          0
+        ],
+        "alongA": 1,
+        "alongB": 0
+      },
+      "cut": {
+        "segment": {
+          "a": [
+            1,
+            0
+          ],
+          "b": [
+            4,
+            0
+          ]
+        },
+        "changed": true,
+        "reason": "longest-second",
+        "intersection": [
+          1,
+          0
+        ],
+        "keptLength": 3,
+        "discardedLength": 1
+      }
+    }
+  ]
+}

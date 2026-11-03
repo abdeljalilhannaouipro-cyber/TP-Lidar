@@ -1,0 +1,101 @@
+{
+  "source": "scan_20261103_113903_422823.csv",
+  "pose": {
+    "x": 0,
+    "y": 0,
+    "theta": 0
+  },
+  "realPoints": 457,
+  "extractedSegments": 28,
+  "parameters": {
+    "gap": 0.3,
+    "residual": 0.05,
+    "minPoints": 5,
+    "minLength": 0.15
+  },
+  "angularConvention": "Support angle 0..90 degrees, endpoint-direction angle 0..180 degrees",
+  "linearToleranceM": 1e-9,
+  "parallelSinTolerance": 1e-12,
+  "exampleCut": {
+    "a": {
+      "a": [
+        0,
+        0
+      ],
+      "b": [
+        4,
+        0
+      ]
+    },
+    "b": {
+      "a": [
+        1,
+        -1
+      ],
+      "b": [
+        1,
+        1
+      ]
+    },
+    "result": {
+      "segment": {
+        "a": [
+          1,
+          0
+        ],
+        "b": [
+          4,
+          0
+        ]
+      },
+      "changed": true,
+      "reason": "longest-second",
+      "intersection": [
+        1,
+        0
+      ],
+      "keptLength": 3,
+      "discardedLength": 1
+    }
+  },
+  "exampleMerge": {
+    "a": {
+      "a": [
+        0,
+        0
+      ],
+      "b": [
+        2,
+        0
+      ]
+    },
+    "b": {
+      "a": [
+        2.05,
+        0.04
+      ],
+      "b": [
+        4,
+        0.04
+      ]
+    },
+    "proximity": {
+      "close": true,
+      "angleDeg": 0,
+      "distanceM": 0.06403124237432835,
+      "angularThresholdDeg": 8,
+      "positionThresholdM": 0.12
+    },
+    "merged": {
+      "a": [
+        0.000003783554097136488,
+        -0.0003737355039729641
+      ],
+      "b": [
+        3.9999987783725066,
+        0.04012067108207619
+      ]
+    }
+  },
+  "limitations": "Approximate piecewise linear extraction; not a complete vector map. Synthetic cut/merge examples are distinct from real measurements."
+}
