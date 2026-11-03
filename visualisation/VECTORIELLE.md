@@ -169,6 +169,26 @@ des six captures de la salle. Les autres scans peuvent être intégrés dans l'o
 une fois leurs poses réglées correctement. Les anciennes estimations globales
 présentaient des ambiguïtés ; elles ne sont pas appliquées comme vérité terrain.
 
+## Extension aux 17 scans acquis
+
+Le [recalcul complet](../traitement_complet/README.md) applique les mêmes fonctions
+aux **17 scans et 7 745 points valides**. L'estimation des poses est réalisée
+séparément de la construction vectorielle. Les correspondances insuffisantes ou
+ambiguës ne permettent pas de valider un repère commun aux 17 scans : les résultats
+sont donc conservés dans **7 groupes avec des repères locaux indépendants**.
+Ces groupes sont issus de critères numériques, sans mesure de pose de référence.
+
+Dans le groupe de cinq scans, **116 segments extraits** donnent une carte de
+**35 primitives finales**, après ajout, fusion et nettoyage. Parmi elles,
+**13 sont confirmées par au moins deux scans** et **18 portent des contradictions**.
+Ces deux compteurs peuvent se recouvrir : une primitive déjà confirmée peut être
+contredite par un scan ultérieur. Une contradiction peut venir d'une erreur de pose
+ou de mesure ; elle ne démontre pas qu'un obstacle a réellement disparu.
+
+La fusion exploratoire des 17 scans contient **85 primitives**. Elle illustre le
+traitement complet mais ne constitue pas une carte globale validée de la salle.
+Les exports et images par groupe sont dans `traitement_complet/resultats/`.
+
 ## Hypothèses, difficultés et limites
 
 - Les poses doivent être cohérentes et le lidar immobile pendant chaque balayage.
