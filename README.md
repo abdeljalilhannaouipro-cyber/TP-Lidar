@@ -23,6 +23,9 @@ complète cette étape, avec gradient analytique, trace du coût et comparaison
 La [multi-résolution vectorielle](localisation/vectorielle/MULTI_RESOLUTION.md)
 ajoute un sous-échantillonnage progressif du scan et une recherche de pose affinée,
 avec ses bilans et figures des trois niveaux.
+Le [recuit simulé vectoriel](localisation/vectorielle/PROBABILISTE.md) complète
+les pistes probabilistes, avec trajectoires, graines reproductibles et 72 essais
+calculatoires répartis sur trois graines.
 
 Le projet réunit les cinq étapes du TP : acquisitions réelles, affichage des scans
 avec poses indépendantes, grille d'occupation, manipulation de segments et carte

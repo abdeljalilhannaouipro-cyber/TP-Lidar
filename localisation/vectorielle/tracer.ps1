@@ -18,7 +18,7 @@ $scale=[Math]::Min(650/($xmax-$xmin),625/($ymax-$ymin))
 $bmp=[System.Drawing.Bitmap]::new(1600,1030);$g=[System.Drawing.Graphics]::FromImage($bmp);$g.Clear([System.Drawing.Color]::White);$g.SmoothingMode=[System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
 $title=[System.Drawing.Font]::new('Segoe UI',23,[System.Drawing.FontStyle]::Bold);$font=[System.Drawing.Font]::new('Segoe UI',14);$small=[System.Drawing.Font]::new('Segoe UI',11)
 $ink=[System.Drawing.SolidBrush]::new([System.Drawing.Color]::FromArgb(23,51,77));$wall=[System.Drawing.Pen]::new([System.Drawing.Color]::FromArgb(45,60,75),3);$grid=[System.Drawing.Pen]::new([System.Drawing.Color]::FromArgb(232,237,242),1)
-$headingTitle=switch($trial.result.method){'gradient-point-to-finite-segments'{'TP 2 - Carte vectorielle : descente de gradient'}'multiresolution-point-to-finite-segments'{'TP 2 - Carte vectorielle : multi-resolution'}default{'TP 2 - Carte vectorielle : recherche exhaustive'}}
+$headingTitle=switch($trial.result.method){'gradient-point-to-finite-segments'{'TP 2 - Carte vectorielle : descente de gradient'}'multiresolution-point-to-finite-segments'{'TP 2 - Carte vectorielle : multi-resolution'}'annealing-point-to-finite-segments'{'TP 2 - Carte vectorielle : recuit simule'}default{'TP 2 - Carte vectorielle : recherche exhaustive'}}
 $g.DrawString($headingTitle,$title,$ink,45,20)
 $g.DrawString('Reference : segments de 4 scans ; scan test exclu. Les deux panneaux utilisent le meme repere et la meme echelle.',$font,$ink,45,65)
 foreach($panel in 0,1){
@@ -38,7 +38,7 @@ foreach($panel in 0,1){
  $g.DrawString(('Cout={0:F4} m2 ; impacts proches des segments={1:F1} %' -f $m.cost,($m.nearFraction*100)),$font,$ink,$left,865)
  $brush.Dispose();$pen.Dispose()
 }
-$details=if($trial.result.complete){$trial.result.tested.ToString()+' poses testees.'}elseif($trial.result.levels){'3 niveaux ; '+$trial.result.tested+' poses evaluees.'}else{$trial.result.iterations.ToString()+' iterations ; '+$trial.result.tested+' evaluations du cout.'}
+$details=if($trial.result.complete){$trial.result.tested.ToString()+' poses testees.'}elseif($trial.result.levels){'3 niveaux ; '+$trial.result.tested+' poses evaluees.'}elseif($trial.result.attemptedMoves){$trial.result.attemptedMoves.ToString()+' tentatives ; graine '+$trial.result.seed+'.'}else{$trial.result.iterations.ToString()+' iterations ; '+$trial.result.tested+' evaluations du cout.'}
 $g.DrawString(('Traits sombres = segments ; points colores = scan test ; X/Y en metres. '+$details),$small,$ink,45,925)
 $g.DrawString('Trace calcule, pas une capture du navigateur. Poses TP 1 utilisees comme pseudo-reference, sans precision physique certifiee.',$small,$ink,45,955)
 $bmp.Save((Join-Path $folder $OutputFile),[System.Drawing.Imaging.ImageFormat]::Png)
