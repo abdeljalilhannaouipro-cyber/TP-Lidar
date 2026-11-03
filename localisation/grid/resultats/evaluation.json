@@ -1,0 +1,2250 @@
+{
+  "format": "tp2-grid-evaluation-v1",
+  "created": "2026-11-03T15:28:34.765Z",
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "win32",
+    "cpu": "Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz"
+  },
+  "successCriterion": "translation <= 0.20 m and angle <= 2 deg relative to indicated reference",
+  "syntheticSummary": {
+    "cases": 9,
+    "success": 9,
+    "meanInitialTranslationM": 0.6202052217835037,
+    "meanFinalTranslationM": 0.080769535961181,
+    "meanFinalAngleDeg": 0.1888888888888813,
+    "meanScore": 0.9398720830654498,
+    "meanCoverage": 1,
+    "meanElapsedMs": 238.04122222222225,
+    "maxFinalTranslationM": 0.08768124086713212
+  },
+  "realSummary": {
+    "cases": 15,
+    "success": 15,
+    "meanInitialTranslationM": 0.6202052217835038,
+    "meanFinalTranslationM": 0.014704002604955298,
+    "meanFinalAngleDeg": 0.18333333333331817,
+    "meanScore": 0.6290391051265399,
+    "meanCoverage": 0.9445289006615735,
+    "meanElapsedMs": 213.69717333333332,
+    "maxFinalTranslationM": 0.018384776310850566
+  },
+  "synthetic": [
+    {
+      "label": "S1-1",
+      "kind": "synthetic",
+      "referencePose": {
+        "x": 1.8,
+        "y": -1.5,
+        "theta": 22
+      },
+      "referenceType": "synthetic_ground_truth",
+      "initialError": {
+        "translationM": 0.6774496291238191,
+        "angleDeg": 7.2999999999999545
+      },
+      "finalError": {
+        "translationM": 0.08768124086713197,
+        "angleDeg": 0.2999999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 2.337,
+          "y": -1.913,
+          "theta": 29.299999999999955
+        },
+        "pose": {
+          "x": 1.862,
+          "y": -1.438,
+          "theta": 22.299999999999955
+        },
+        "before": {
+          "score": 0.013338565252793326,
+          "coverage": 0.37222222222222223,
+          "inside": 0.9888888888888889,
+          "nearFraction": 0.022222222222222223,
+          "rmseM": 0.5412562862481407
+        },
+        "after": {
+          "score": 0.925956875686955,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0
+        },
+        "tested": 5772,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3461
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 980
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 254.5131,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.33777185518309893,
+        "alternative": {
+          "x": 1.612,
+          "y": -1.438,
+          "theta": 22.049999999999955
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    },
+    {
+      "label": "S1-2",
+      "kind": "synthetic",
+      "referencePose": {
+        "x": 1.8,
+        "y": -1.5,
+        "theta": 22
+      },
+      "referenceType": "synthetic_ground_truth",
+      "initialError": {
+        "translationM": 0.7284023613360957,
+        "angleDeg": 8.200000000000045
+      },
+      "finalError": {
+        "translationM": 0.08273451516749206,
+        "angleDeg": 0.049999999999954525
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 1.333,
+          "y": -0.941,
+          "theta": 13.799999999999955
+        },
+        "pose": {
+          "x": 1.8579999999999999,
+          "y": -1.441,
+          "theta": 22.049999999999955
+        },
+        "before": {
+          "score": 0.0313183127757129,
+          "coverage": 0.6416666666666667,
+          "inside": 0.9944444444444445,
+          "nearFraction": 0.06388888888888888,
+          "rmseM": 0.5433980285272094
+        },
+        "after": {
+          "score": 0.9443353697363169,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0
+        },
+        "tested": 5794,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3483
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 980
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 193.78930000000003,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.34653284339647117,
+        "alternative": {
+          "x": 1.6079999999999999,
+          "y": -1.441,
+          "theta": 22.049999999999955
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    },
+    {
+      "label": "S1-3",
+      "kind": "synthetic",
+      "referencePose": {
+        "x": 1.8,
+        "y": -1.5,
+        "theta": 22
+      },
+      "referenceType": "synthetic_ground_truth",
+      "initialError": {
+        "translationM": 0.4547636748905964,
+        "angleDeg": 5.399999999999977
+      },
+      "finalError": {
+        "translationM": 0.05966573556070538,
+        "angleDeg": 0.10000000000002274
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 2.063,
+          "y": -1.129,
+          "theta": 27.399999999999977
+        },
+        "pose": {
+          "x": 1.8380000000000003,
+          "y": -1.454,
+          "theta": 21.899999999999977
+        },
+        "before": {
+          "score": 0.14998628051447302,
+          "coverage": 0.5472222222222223,
+          "inside": 1,
+          "nearFraction": 0.3138888888888889,
+          "rmseM": 0.2537035378247858
+        },
+        "after": {
+          "score": 0.9547500457386464,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0
+        },
+        "tested": 5602,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3221
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 188.65980000000002,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.3486969093625495,
+        "alternative": {
+          "x": 1.5880000000000003,
+          "y": -1.4539999999999997,
+          "theta": 21.899999999999977
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    },
+    {
+      "label": "S2-1",
+      "kind": "synthetic",
+      "referencePose": {
+        "x": -2,
+        "y": 1.5,
+        "theta": -35
+      },
+      "referenceType": "synthetic_ground_truth",
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "finalError": {
+        "translationM": 0.08768124086713182,
+        "angleDeg": 0.20000000000004547
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": -1.463,
+          "y": 1.087,
+          "theta": -27.700000000000045
+        },
+        "pose": {
+          "x": -1.9380000000000002,
+          "y": 1.562,
+          "theta": -35.200000000000045
+        },
+        "before": {
+          "score": 0.032163559420841085,
+          "coverage": 0.5972222222222222,
+          "inside": 1,
+          "nearFraction": 0.08611111111111111,
+          "rmseM": 0.4942459816341862
+        },
+        "after": {
+          "score": 0.9261131006221686,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0
+        },
+        "tested": 5882,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3501
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 181.75340000000006,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.3836230429684512,
+        "alternative": {
+          "x": -1.9380000000000002,
+          "y": 1.312,
+          "theta": -35.200000000000045
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    },
+    {
+      "label": "S2-2",
+      "kind": "synthetic",
+      "referencePose": {
+        "x": -2,
+        "y": 1.5,
+        "theta": -35
+      },
+      "referenceType": "synthetic_ground_truth",
+      "initialError": {
+        "translationM": 0.7284023613360958,
+        "angleDeg": 8.200000000000045
+      },
+      "finalError": {
+        "translationM": 0.08273451516749221,
+        "angleDeg": 0.20000000000004547
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": -2.467,
+          "y": 2.059,
+          "theta": -43.19999999999999
+        },
+        "pose": {
+          "x": -1.9420000000000002,
+          "y": 1.5590000000000002,
+          "theta": -35.19999999999999
+        },
+        "before": {
+          "score": 0.01545300614227118,
+          "coverage": 0.39166666666666666,
+          "inside": 0.9888888888888889,
+          "nearFraction": 0.041666666666666664,
+          "rmseM": 0.5566715248335852
+        },
+        "after": {
+          "score": 0.9475229408824916,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0
+        },
+        "tested": 6006,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3625
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 403.5757000000001,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.39463172939204694,
+        "alternative": {
+          "x": -1.9420000000000002,
+          "y": 1.3090000000000002,
+          "theta": -35.19999999999999
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    },
+    {
+      "label": "S2-3",
+      "kind": "synthetic",
+      "referencePose": {
+        "x": -2,
+        "y": 1.5,
+        "theta": -35
+      },
+      "referenceType": "synthetic_ground_truth",
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.399999999999977
+      },
+      "finalError": {
+        "translationM": 0.07800640999302569,
+        "angleDeg": 0.10000000000002274
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": -1.737,
+          "y": 1.871,
+          "theta": -29.600000000000023
+        },
+        "pose": {
+          "x": -1.937,
+          "y": 1.5460000000000003,
+          "theta": -35.10000000000002
+        },
+        "before": {
+          "score": 0.09694487405917535,
+          "coverage": 0.5611111111111111,
+          "inside": 1,
+          "nearFraction": 0.2361111111111111,
+          "rmseM": 0.3245058848302166
+        },
+        "after": {
+          "score": 0.9426643332624112,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0
+        },
+        "tested": 6186,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3805
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 325.81870000000004,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.41006804827053167,
+        "alternative": {
+          "x": -1.937,
+          "y": 1.2960000000000003,
+          "theta": -35.10000000000002
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    },
+    {
+      "label": "S3-1",
+      "kind": "synthetic",
+      "referencePose": {
+        "x": -2,
+        "y": -2,
+        "theta": 110
+      },
+      "referenceType": "synthetic_ground_truth",
+      "initialError": {
+        "translationM": 0.6774496291238189,
+        "angleDeg": 7.2999999999999545
+      },
+      "finalError": {
+        "translationM": 0.08768124086713212,
+        "angleDeg": 0.5499999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": -1.463,
+          "y": -2.413,
+          "theta": 117.29999999999995
+        },
+        "pose": {
+          "x": -1.938,
+          "y": -1.9379999999999997,
+          "theta": 110.54999999999995
+        },
+        "before": {
+          "score": 0.0705746905868334,
+          "coverage": 0.42777777777777776,
+          "inside": 1,
+          "nearFraction": 0.15,
+          "rmseM": 0.3345364457502123
+        },
+        "after": {
+          "score": 0.9098473112110353,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0.01178511319538766
+        },
+        "tested": 6142,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3761
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 190.4574,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.3358811951876506,
+        "alternative": {
+          "x": -2.013,
+          "y": -1.9129999999999998,
+          "theta": 106.54999999999995
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    },
+    {
+      "label": "S3-2",
+      "kind": "synthetic",
+      "referencePose": {
+        "x": -2,
+        "y": -2,
+        "theta": 110
+      },
+      "referenceType": "synthetic_ground_truth",
+      "initialError": {
+        "translationM": 0.7284023613360958,
+        "angleDeg": 8.200000000000045
+      },
+      "finalError": {
+        "translationM": 0.08273451516749221,
+        "angleDeg": 0.049999999999954525
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": -2.467,
+          "y": -1.4409999999999998,
+          "theta": 101.79999999999995
+        },
+        "pose": {
+          "x": -1.9420000000000002,
+          "y": -1.9409999999999998,
+          "theta": 110.04999999999995
+        },
+        "before": {
+          "score": 0.06340199573541366,
+          "coverage": 0.5638888888888889,
+          "inside": 1,
+          "nearFraction": 0.125,
+          "rmseM": 0.4055334876325235
+        },
+        "after": {
+          "score": 0.9517169236033088,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0
+        },
+        "tested": 5920,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3609
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 980
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 198.97609999999986,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.3746635308246298,
+        "alternative": {
+          "x": -1.6920000000000002,
+          "y": -1.9409999999999998,
+          "theta": 109.79999999999995
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    },
+    {
+      "label": "S3-3",
+      "kind": "synthetic",
+      "referencePose": {
+        "x": -2,
+        "y": -2,
+        "theta": 110
+      },
+      "referenceType": "synthetic_ground_truth",
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.399999999999977
+      },
+      "finalError": {
+        "translationM": 0.07800640999302555,
+        "angleDeg": 0.14999999999997726
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": -1.737,
+          "y": -1.629,
+          "theta": 115.39999999999998
+        },
+        "pose": {
+          "x": -1.937,
+          "y": -1.954,
+          "theta": 110.14999999999998
+        },
+        "before": {
+          "score": 0.12763334434019644,
+          "coverage": 0.6722222222222223,
+          "inside": 1,
+          "nearFraction": 0.3,
+          "rmseM": 0.3123491459818443
+        },
+        "after": {
+          "score": 0.9559418468457144,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0
+        },
+        "tested": 6106,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3725
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 204.82749999999987,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.37009996341701323,
+        "alternative": {
+          "x": -1.687,
+          "y": -1.9539999999999997,
+          "theta": 110.14999999999998
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    }
+  ],
+  "real": [
+    {
+      "label": "R1-1",
+      "kind": "real_leave_one_out",
+      "referencePose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "finalError": {
+        "translationM": 0.0176918060129541,
+        "angleDeg": 0.049999999999954525
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 0.537,
+          "y": -0.413,
+          "theta": 7.2999999999999545
+        },
+        "pose": {
+          "x": 0.012000000000000004,
+          "y": -0.012999999999999956,
+          "theta": 0.049999999999954525
+        },
+        "before": {
+          "score": 0.1372399792925085,
+          "coverage": 0.7155361050328227,
+          "inside": 1,
+          "nearFraction": 0.24070021881838075,
+          "rmseM": 0.4608877767273224
+        },
+        "after": {
+          "score": 0.7833312778126326,
+          "coverage": 0.9234135667396062,
+          "inside": 1,
+          "nearFraction": 0.9234135667396062,
+          "rmseM": 0.04101785603845067
+        },
+        "tested": 6278,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3897
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 240,
+        "elapsedMs": 207.89429999999993,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.241727695808443,
+        "alternative": {
+          "x": -0.013000000000000053,
+          "y": 0.2620000000000001,
+          "theta": 0.049999999999954525
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    },
+    {
+      "label": "R1-2",
+      "kind": "real_leave_one_out",
+      "referencePose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "initialError": {
+        "translationM": 0.7284023613360957,
+        "angleDeg": 8.200000000000045
+      },
+      "finalError": {
+        "translationM": 0.012041594578792307,
+        "angleDeg": 0.049999999999954525
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": -0.467,
+          "y": 0.559,
+          "theta": -8.200000000000045
+        },
+        "pose": {
+          "x": 0.008000000000000056,
+          "y": 0.008999999999999966,
+          "theta": 0.049999999999954525
+        },
+        "before": {
+          "score": 0.09403137396484697,
+          "coverage": 0.3676148796498906,
+          "inside": 1,
+          "nearFraction": 0.17943107221006566,
+          "rmseM": 0.42947367469466546
+        },
+        "after": {
+          "score": 0.7875672533209643,
+          "coverage": 0.925601750547046,
+          "inside": 1,
+          "nearFraction": 0.925601750547046,
+          "rmseM": 0.03734700923625057
+        },
+        "tested": 5819,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3438
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 240,
+        "elapsedMs": 214.65189999999984,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.24748795941371815,
+        "alternative": {
+          "x": -0.017,
+          "y": 0.259,
+          "theta": 0.049999999999954525
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    },
+    {
+      "label": "R1-3",
+      "kind": "real_leave_one_out",
+      "referencePose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "initialError": {
+        "translationM": 0.4547636748905963,
+        "angleDeg": 5.399999999999977
+      },
+      "finalError": {
+        "translationM": 0.013601470508735449,
+        "angleDeg": 0.14999999999997726
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 0.263,
+          "y": 0.371,
+          "theta": 5.399999999999977
+        },
+        "pose": {
+          "x": 0.012999999999999998,
+          "y": -0.004000000000000024,
+          "theta": 0.14999999999997726
+        },
+        "before": {
+          "score": 0.11011686437899577,
+          "coverage": 0.6695842450765864,
+          "inside": 1,
+          "nearFraction": 0.22975929978118162,
+          "rmseM": 0.39971011443567667
+        },
+        "after": {
+          "score": 0.7911190268560743,
+          "coverage": 0.9321663019693655,
+          "inside": 1,
+          "nearFraction": 0.9321663019693655,
+          "rmseM": 0.03906176708211268
+        },
+        "tested": 6134,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3753
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 240,
+        "elapsedMs": 255.8492000000001,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.24573048114048068,
+        "alternative": {
+          "x": -0.012000000000000004,
+          "y": 0.24600000000000002,
+          "theta": 0.14999999999997726
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    },
+    {
+      "label": "R2-1",
+      "kind": "real_leave_one_out",
+      "referencePose": {
+        "x": 3.2162682227295947,
+        "y": 1.3246240083357195,
+        "theta": -92.1245634897957
+      },
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "finalError": {
+        "translationM": 0.018384776310850566,
+        "angleDeg": 0.2999999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 3.7532682227295946,
+          "y": 0.9116240083357194,
+          "theta": -84.82456348979571
+        },
+        "pose": {
+          "x": 3.2032682227295943,
+          "y": 1.3116240083357193,
+          "theta": -91.82456348979571
+        },
+        "before": {
+          "score": 0.0794383294590357,
+          "coverage": 0.7789934354485777,
+          "inside": 1,
+          "nearFraction": 0.1422319474835886,
+          "rmseM": 1.3081132868723397
+        },
+        "after": {
+          "score": 0.5438804696371135,
+          "coverage": 0.949671772428884,
+          "inside": 1,
+          "nearFraction": 0.6652078774617067,
+          "rmseM": 1.2983232507794744
+        },
+        "tested": 5826,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3445
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 240,
+        "elapsedMs": 229.31899999999996,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.2020156554369939,
+        "alternative": {
+          "x": 3.2032682227295943,
+          "y": 1.5616240083357193,
+          "theta": -91.57456348979571
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    },
+    {
+      "label": "R2-2",
+      "kind": "real_leave_one_out",
+      "referencePose": {
+        "x": 3.2162682227295947,
+        "y": 1.3246240083357195,
+        "theta": -92.1245634897957
+      },
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "initialError": {
+        "translationM": 0.7284023613360956,
+        "angleDeg": 8.200000000000045
+      },
+      "finalError": {
+        "translationM": 0.017888543819998333,
+        "angleDeg": 0.5499999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 2.7492682227295946,
+          "y": 1.8836240083357194,
+          "theta": -100.32456348979571
+        },
+        "pose": {
+          "x": 3.2242682227295942,
+          "y": 1.3086240083357192,
+          "theta": -91.57456348979571
+        },
+        "before": {
+          "score": 0.08429912233771532,
+          "coverage": 0.5426695842450766,
+          "inside": 1,
+          "nearFraction": 0.1422319474835886,
+          "rmseM": 1.9391103936393088
+        },
+        "after": {
+          "score": 0.545102801519157,
+          "coverage": 0.9606126914660832,
+          "inside": 1,
+          "nearFraction": 0.6673960612691466,
+          "rmseM": 1.287503904148846
+        },
+        "tested": 5962,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3581
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 240,
+        "elapsedMs": 199.05449999999973,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.20095918290661352,
+        "alternative": {
+          "x": 3.1992682227295943,
+          "y": 1.5586240083357192,
+          "theta": -91.57456348979571
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    },
+    {
+      "label": "R2-3",
+      "kind": "real_leave_one_out",
+      "referencePose": {
+        "x": 3.2162682227295947,
+        "y": 1.3246240083357195,
+        "theta": -92.1245634897957
+      },
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.400000000000091
+      },
+      "finalError": {
+        "translationM": 0.012649110640673599,
+        "angleDeg": 0.15000000000009095
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 3.4792682227295946,
+          "y": 1.6956240083357195,
+          "theta": -86.72456348979568
+        },
+        "pose": {
+          "x": 3.2042682227295947,
+          "y": 1.3206240083357192,
+          "theta": -91.97456348979568
+        },
+        "before": {
+          "score": 0.11436054239799778,
+          "coverage": 0.7264770240700219,
+          "inside": 1,
+          "nearFraction": 0.20350109409190373,
+          "rmseM": 1.4108095289795186
+        },
+        "after": {
+          "score": 0.545966601706912,
+          "coverage": 0.9562363238512035,
+          "inside": 1,
+          "nearFraction": 0.6652078774617067,
+          "rmseM": 1.2950632206921202
+        },
+        "tested": 5992,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3681
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 980
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 240,
+        "elapsedMs": 220.93110000000024,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.20443962658472525,
+        "alternative": {
+          "x": 3.2042682227295947,
+          "y": 1.5706240083357192,
+          "theta": -91.72456348979568
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    },
+    {
+      "label": "R3-1",
+      "kind": "real_leave_one_out",
+      "referencePose": {
+        "x": 2.9820777772150278,
+        "y": 2.3296138030212745,
+        "theta": 4.337474888004696
+      },
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "finalError": {
+        "translationM": 0.01697056274847684,
+        "angleDeg": 0.2999999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 3.5190777772150277,
+          "y": 1.9166138030212745,
+          "theta": 11.637474888004704
+        },
+        "pose": {
+          "x": 2.9940777772150273,
+          "y": 2.3416138030212745,
+          "theta": 4.637474888004704
+        },
+        "before": {
+          "score": 0.06536655901367358,
+          "coverage": 0.7177242888402626,
+          "inside": 1,
+          "nearFraction": 0.1137855579868709,
+          "rmseM": 1.288022938027088
+        },
+        "after": {
+          "score": 0.40813923668226926,
+          "coverage": 0.9781181619256017,
+          "inside": 1,
+          "nearFraction": 0.562363238512035,
+          "rmseM": 1.0601530303742985
+        },
+        "tested": 5602,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3221
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 240,
+        "elapsedMs": 253.47019999999975,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.11228380111735342,
+        "alternative": {
+          "x": 2.969077777215028,
+          "y": 2.5916138030212745,
+          "theta": 4.137474888004704
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    },
+    {
+      "label": "R3-2",
+      "kind": "real_leave_one_out",
+      "referencePose": {
+        "x": 2.9820777772150278,
+        "y": 2.3296138030212745,
+        "theta": 4.337474888004696
+      },
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "initialError": {
+        "translationM": 0.7284023613360958,
+        "angleDeg": 8.200000000000045
+      },
+      "finalError": {
+        "translationM": 0.012041594578791929,
+        "angleDeg": 0.2999999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 2.5150777772150277,
+          "y": 2.8886138030212747,
+          "theta": -3.8625251119952964
+        },
+        "pose": {
+          "x": 2.9900777772150273,
+          "y": 2.3386138030212744,
+          "theta": 4.637474888004704
+        },
+        "before": {
+          "score": 0.06544848662999056,
+          "coverage": 0.6105032822757112,
+          "inside": 1,
+          "nearFraction": 0.10940919037199125,
+          "rmseM": 1.3791318219140543
+        },
+        "after": {
+          "score": 0.40940098837783995,
+          "coverage": 0.9803063457330415,
+          "inside": 1,
+          "nearFraction": 0.562363238512035,
+          "rmseM": 1.0591778079708598
+        },
+        "tested": 5746,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3365
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 240,
+        "elapsedMs": 223.73580000000038,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.11257631199490697,
+        "alternative": {
+          "x": 2.965077777215028,
+          "y": 2.588613803021275,
+          "theta": 4.137474888004704
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    },
+    {
+      "label": "R3-3",
+      "kind": "real_leave_one_out",
+      "referencePose": {
+        "x": 2.9820777772150278,
+        "y": 2.3296138030212745,
+        "theta": 4.337474888004696
+      },
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.400000000000091
+      },
+      "finalError": {
+        "translationM": 0.01360147050873535,
+        "angleDeg": 0.15000000000009095
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 3.2450777772150277,
+          "y": 2.7006138030212745,
+          "theta": 9.737474888004726
+        },
+        "pose": {
+          "x": 2.9950777772150277,
+          "y": 2.3256138030212745,
+          "theta": 4.487474888004726
+        },
+        "before": {
+          "score": 0.12234830250167371,
+          "coverage": 0.6695842450765864,
+          "inside": 1,
+          "nearFraction": 0.2013129102844639,
+          "rmseM": 1.2853809433637837
+        },
+        "after": {
+          "score": 0.4081556315299657,
+          "coverage": 0.9846827133479212,
+          "inside": 1,
+          "nearFraction": 0.5645514223194749,
+          "rmseM": 1.0565407428927924
+        },
+        "tested": 5782,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3401
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 240,
+        "elapsedMs": 245.1239999999998,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.1075324483865372,
+        "alternative": {
+          "x": 2.945077777215028,
+          "y": 2.5756138030212745,
+          "theta": 4.237474888004726
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    },
+    {
+      "label": "R4-1",
+      "kind": "real_leave_one_out",
+      "referencePose": {
+        "x": 2.7328356377830407,
+        "y": 1.3585822612448972,
+        "theta": 3.6140022517237904
+      },
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "finalError": {
+        "translationM": 0.018384776310850566,
+        "angleDeg": 0.049999999999954525
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 3.2698356377830406,
+          "y": 0.9455822612448972,
+          "theta": 10.914002251723787
+        },
+        "pose": {
+          "x": 2.7198356377830404,
+          "y": 1.345582261244897,
+          "theta": 3.6640022517237867
+        },
+        "before": {
+          "score": 0.09820243617782952,
+          "coverage": 0.631578947368421,
+          "inside": 1,
+          "nearFraction": 0.18201754385964913,
+          "rmseM": 1.1727051279878564
+        },
+        "after": {
+          "score": 0.6272910387825957,
+          "coverage": 0.9122807017543859,
+          "inside": 1,
+          "nearFraction": 0.7543859649122807,
+          "rmseM": 0.7219527885754684
+        },
+        "tested": 5746,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3365
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 456,
+        "sampledPoints": 240,
+        "elapsedMs": 235.07399999999961,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.3046409318081416,
+        "alternative": {
+          "x": 2.4698356377830404,
+          "y": 1.345582261244897,
+          "theta": 4.414002251723787
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    },
+    {
+      "label": "R4-2",
+      "kind": "real_leave_one_out",
+      "referencePose": {
+        "x": 2.7328356377830407,
+        "y": 1.3585822612448972,
+        "theta": 3.6140022517237904
+      },
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "initialError": {
+        "translationM": 0.7284023613360956,
+        "angleDeg": 8.200000000000045
+      },
+      "finalError": {
+        "translationM": 0.012041594578791929,
+        "angleDeg": 0.049999999999954525
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 2.2658356377830406,
+          "y": 1.9175822612448972,
+          "theta": -4.585997748276213
+        },
+        "pose": {
+          "x": 2.7408356377830403,
+          "y": 1.3675822612448971,
+          "theta": 3.6640022517237867
+        },
+        "before": {
+          "score": 0.08006708545874765,
+          "coverage": 0.543859649122807,
+          "inside": 1,
+          "nearFraction": 0.15789473684210525,
+          "rmseM": 0.9510500526984311
+        },
+        "after": {
+          "score": 0.6276856838910406,
+          "coverage": 0.9122807017543859,
+          "inside": 1,
+          "nearFraction": 0.7521929824561403,
+          "rmseM": 0.7340638627879164
+        },
+        "tested": 5602,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3221
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 456,
+        "sampledPoints": 240,
+        "elapsedMs": 205.1257000000005,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.25354361860911023,
+        "alternative": {
+          "x": 2.7408356377830407,
+          "y": 1.1175822612448971,
+          "theta": 3.6640022517237867
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    },
+    {
+      "label": "R4-3",
+      "kind": "real_leave_one_out",
+      "referencePose": {
+        "x": 2.7328356377830407,
+        "y": 1.3585822612448972,
+        "theta": 3.6140022517237904
+      },
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.399999999999977
+      },
+      "finalError": {
+        "translationM": 0.01264911064067353,
+        "angleDeg": 0.10000000000002274
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 2.9958356377830406,
+          "y": 1.7295822612448972,
+          "theta": 9.01400225172381
+        },
+        "pose": {
+          "x": 2.7208356377830407,
+          "y": 1.3545822612448972,
+          "theta": 3.5140022517238094
+        },
+        "before": {
+          "score": 0.13964228749861718,
+          "coverage": 0.5789473684210527,
+          "inside": 1,
+          "nearFraction": 0.25,
+          "rmseM": 1.1044939747074725
+        },
+        "after": {
+          "score": 0.634924237778643,
+          "coverage": 0.9210526315789473,
+          "inside": 1,
+          "nearFraction": 0.7609649122807017,
+          "rmseM": 0.7202654478317997
+        },
+        "tested": 5926,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3545
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 456,
+        "sampledPoints": 240,
+        "elapsedMs": 197.25950000000012,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.2610061982049108,
+        "alternative": {
+          "x": 2.7458356377830406,
+          "y": 1.1045822612448972,
+          "theta": 3.5140022517238094
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    },
+    {
+      "label": "R5-1",
+      "kind": "real_leave_one_out",
+      "referencePose": {
+        "x": 0.041338385695696575,
+        "y": -0.002933562901461178,
+        "theta": 8.024583484785612
+      },
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.300000000000068
+      },
+      "finalError": {
+        "translationM": 0.01697056274847718,
+        "angleDeg": 0.1999999999999318
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 0.5783383856956966,
+          "y": -0.41593356290146116,
+          "theta": 15.324583484785649
+        },
+        "pose": {
+          "x": 0.05333838569569659,
+          "y": 0.009066437098538861,
+          "theta": 7.824583484785649
+        },
+        "before": {
+          "score": 0.11816715962564424,
+          "coverage": 0.6958424507658644,
+          "inside": 1,
+          "nearFraction": 0.2363238512035011,
+          "rmseM": 0.4418708431868151
+        },
+        "after": {
+          "score": 0.7712723400220987,
+          "coverage": 0.9387308533916849,
+          "inside": 1,
+          "nearFraction": 0.912472647702407,
+          "rmseM": 0.06741489880540685
+        },
+        "tested": 6143,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3762
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 240,
+        "elapsedMs": 198.84199999999964,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.23650689714279427,
+        "alternative": {
+          "x": 0.0783383856956966,
+          "y": -0.24093356290146115,
+          "theta": 8.324583484785649
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    },
+    {
+      "label": "R5-2",
+      "kind": "real_leave_one_out",
+      "referencePose": {
+        "x": 0.041338385695696575,
+        "y": -0.002933562901461178,
+        "theta": 8.024583484785612
+      },
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "initialError": {
+        "translationM": 0.7284023613360957,
+        "angleDeg": 8.199999999999932
+      },
+      "finalError": {
+        "translationM": 0.01204159457879231,
+        "angleDeg": 0.1999999999999318
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": -0.42566161430430344,
+          "y": 0.5560664370985389,
+          "theta": -0.17541651521435142
+        },
+        "pose": {
+          "x": 0.049338385695696645,
+          "y": 0.006066437098538782,
+          "theta": 7.824583484785649
+        },
+        "before": {
+          "score": 0.1155755805010417,
+          "coverage": 0.3741794310722101,
+          "inside": 1,
+          "nearFraction": 0.19037199124726478,
+          "rmseM": 0.43020887521779305
+        },
+        "after": {
+          "score": 0.7745066388708588,
+          "coverage": 0.9431072210065645,
+          "inside": 1,
+          "nearFraction": 0.9168490153172867,
+          "rmseM": 0.06845503751300011
+        },
+        "tested": 5461,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3150
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 980
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 240,
+        "elapsedMs": 149.85379999999986,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.2393362475054085,
+        "alternative": {
+          "x": 0.07433838569569665,
+          "y": -0.24393356290146123,
+          "theta": 8.324583484785649
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    },
+    {
+      "label": "R5-3",
+      "kind": "real_leave_one_out",
+      "referencePose": {
+        "x": 0.041338385695696575,
+        "y": -0.002933562901461178,
+        "theta": 8.024583484785612
+      },
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "initialError": {
+        "translationM": 0.4547636748905963,
+        "angleDeg": 5.400000000000091
+      },
+      "finalError": {
+        "translationM": 0.013601470508735466,
+        "angleDeg": 0.15000000000009095
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 0.3043383856956966,
+          "y": 0.3680664370985388,
+          "theta": 13.424583484785671
+        },
+        "pose": {
+          "x": 0.05433838569569659,
+          "y": -0.0069335629014612085,
+          "theta": 8.174583484785671
+        },
+        "before": {
+          "score": 0.14419918567795248,
+          "coverage": 0.6608315098468271,
+          "inside": 1,
+          "nearFraction": 0.27571115973741794,
+          "rmseM": 0.3794043681425126
+        },
+        "after": {
+          "score": 0.7772433501099338,
+          "coverage": 0.949671772428884,
+          "inside": 1,
+          "nearFraction": 0.9212253829321663,
+          "rmseM": 0.07084073785266215
+        },
+        "tested": 6036,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3725
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 980
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 240,
+        "elapsedMs": 169.27260000000024,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3
+        },
+        "alternativeGap": 0.24729874876913494,
+        "alternative": {
+          "x": 0.029338385695696585,
+          "y": 0.24306643709853878,
+          "theta": 7.674583484785671
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      }
+    }
+  ],
+  "caveats": [
+    "Synthetic accuracy is measured in a simulated known scene, not in the physical classroom.",
+    "Real query scan excluded from occupancy map; reference poses and training poses come from TP1 estimation using the complete group. This is not a fully independent ground-truth evaluation.",
+    "Three initial offsets per scan are correlated repeat trials, not independent acquisitions.",
+    "Search is local, not global, and thresholds have no probabilistic calibration."
+  ]
+}

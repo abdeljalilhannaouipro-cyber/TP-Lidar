@@ -1,0 +1,206 @@
+gradient S1-1 20261103 {"error":{"translationM":0.07045936078257678,"angleDeg":0.02654617536427395},"success":true,"ms":29.508499999999998,"stop":"line_search_stalled"}
+gradient S1-2 20261103 {"error":{"translationM":0.30714965195868876,"angleDeg":0.00939626093327206},"success":false,"ms":15.010700000000014,"stop":"line_search_stalled"}
+gradient S1-3 20261103 {"error":{"translationM":0.06987209435069218,"angleDeg":0.032427258602979236},"success":true,"ms":12.872899999999987,"stop":"line_search_stalled"}
+gradient S2-1 20261103 {"error":{"translationM":0.2376910012284064,"angleDeg":0.02062510969324194},"success":false,"ms":11.80970000000002,"stop":"small_update"}
+gradient S2-2 20261103 {"error":{"translationM":0.07104404190647753,"angleDeg":0.0033462806103443654},"success":true,"ms":10.397899999999993,"stop":"line_search_stalled"}
+gradient S2-3 20261103 {"error":{"translationM":0.07084203700315703,"angleDeg":0.005381451203902543},"success":true,"ms":10.11790000000002,"stop":"line_search_stalled"}
+gradient S3-1 20261103 {"error":{"translationM":0.3656009320902172,"angleDeg":0.05359641655661562},"success":false,"ms":9.430000000000007,"stop":"line_search_stalled"}
+gradient S3-2 20261103 {"error":{"translationM":0.07452403355932147,"angleDeg":0.023480719652980042},"success":true,"ms":9.729199999999992,"stop":"line_search_stalled"}
+gradient S3-3 20261103 {"error":{"translationM":0.24214552496013061,"angleDeg":0.08689686774823713},"success":false,"ms":6.726499999999987,"stop":"line_search_stalled"}
+gradient R1-1 20261103 {"error":{"translationM":0.020626354435006836,"angleDeg":0.2922846844153355},"success":true,"ms":29.848700000000008,"stop":"line_search_stalled"}
+gradient R1-2 20261103 {"error":{"translationM":0.017700729882265405,"angleDeg":0.27388191984744026},"success":true,"ms":26.58979999999997,"stop":"line_search_stalled"}
+gradient R1-3 20261103 {"error":{"translationM":0.019738143065559596,"angleDeg":0.280128136383496},"success":true,"ms":21.063600000000008,"stop":"line_search_stalled"}
+gradient R2-1 20261103 {"error":{"translationM":0.012117386371099543,"angleDeg":0.26159646382484425},"success":true,"ms":23.501300000000015,"stop":"line_search_stalled"}
+gradient R2-2 20261103 {"error":{"translationM":0.013886037483901612,"angleDeg":0.25155674939696837},"success":true,"ms":21.458399999999983,"stop":"line_search_stalled"}
+gradient R2-3 20261103 {"error":{"translationM":0.2234767985382111,"angleDeg":0.5431352357685455},"success":false,"ms":24.949799999999982,"stop":"line_search_stalled"}
+gradient R3-1 20261103 {"error":{"translationM":0.010706071396190823,"angleDeg":0.390676368581353},"success":true,"ms":22.571500000000015,"stop":"line_search_stalled"}
+gradient R3-2 20261103 {"error":{"translationM":0.011003490472046207,"angleDeg":0.3910571313301716},"success":true,"ms":20.69010000000003,"stop":"line_search_stalled"}
+gradient R3-3 20261103 {"error":{"translationM":0.01063046935790487,"angleDeg":0.3899101445740598},"success":true,"ms":19.724000000000046,"stop":"line_search_stalled"}
+gradient R4-1 20261103 {"error":{"translationM":0.009003025609768985,"angleDeg":0.10023840927965466},"success":true,"ms":19.495699999999943,"stop":"line_search_stalled"}
+gradient R4-2 20261103 {"error":{"translationM":0.009107186043835386,"angleDeg":0.09910474295793392},"success":true,"ms":22.34559999999999,"stop":"line_search_stalled"}
+gradient R4-3 20261103 {"error":{"translationM":0.009107207905446928,"angleDeg":0.09913311855245865},"success":true,"ms":21.33389999999997,"stop":"line_search_stalled"}
+gradient R5-1 20261103 {"error":{"translationM":0.021060349541245596,"angleDeg":0.10786950385863747},"success":true,"ms":34.92039999999997,"stop":"line_search_stalled"}
+gradient R5-2 20261103 {"error":{"translationM":0.022641889979487777,"angleDeg":0.1436181205210687},"success":true,"ms":22.693100000000072,"stop":"line_search_stalled"}
+gradient R5-3 20261103 {"error":{"translationM":0.2719489212908535,"angleDeg":0.24533035591218777},"success":false,"ms":18.698599999999942,"stop":"line_search_stalled"}
+pyramid S1-1 20261103 {"error":{"translationM":0.08768124086713212,"angleDeg":0.2999999999999545},"success":true,"ms":154.99360000000001,"stop":"pyramid_complete"}
+pyramid S1-2 20261103 {"error":{"translationM":0.08273451516749221,"angleDeg":0.20000000000004547},"success":true,"ms":131.1499,"stop":"pyramid_complete"}
+pyramid S1-3 20261103 {"error":{"translationM":0.059665735560705556,"angleDeg":0.10000000000002274},"success":true,"ms":123.29410000000007,"stop":"pyramid_complete"}
+pyramid S2-1 20261103 {"error":{"translationM":0.08768124086713212,"angleDeg":0.20000000000004547},"success":true,"ms":130.27660000000014,"stop":"pyramid_complete"}
+pyramid S2-2 20261103 {"error":{"translationM":0.08273451516749221,"angleDeg":0.20000000000004547},"success":true,"ms":112.5797,"stop":"pyramid_complete"}
+pyramid S2-3 20261103 {"error":{"translationM":0.07800640999302569,"angleDeg":0.10000000000002274},"success":true,"ms":137.20929999999998,"stop":"pyramid_complete"}
+pyramid S3-1 20261103 {"error":{"translationM":0.07220110802473899,"angleDeg":0.20000000000004547},"success":true,"ms":127.53740000000016,"stop":"pyramid_complete"}
+pyramid S3-2 20261103 {"error":{"translationM":0.08273451516749221,"angleDeg":0.049999999999954525},"success":true,"ms":127.11760000000004,"stop":"pyramid_complete"}
+pyramid S3-3 20261103 {"error":{"translationM":0.07800640999302569,"angleDeg":0.14999999999997726},"success":true,"ms":146.81870000000004,"stop":"pyramid_complete"}
+pyramid R1-1 20261103 {"error":{"translationM":0.0176918060129541,"angleDeg":0.049999999999954525},"success":true,"ms":198.5177000000001,"stop":"pyramid_complete"}
+pyramid R1-2 20261103 {"error":{"translationM":0.012041594578792312,"angleDeg":0.049999999999954525},"success":true,"ms":188.4751000000001,"stop":"pyramid_complete"}
+pyramid R1-3 20261103 {"error":{"translationM":0.013601470508735449,"angleDeg":0.14999999999997726},"success":true,"ms":161.90229999999974,"stop":"pyramid_complete"}
+pyramid R2-1 20261103 {"error":{"translationM":0.01838477631085025,"angleDeg":0.2999999999999545},"success":true,"ms":168.07920000000013,"stop":"pyramid_complete"}
+pyramid R2-2 20261103 {"error":{"translationM":0.017888543819998333,"angleDeg":0.5499999999999545},"success":true,"ms":159.9952000000003,"stop":"pyramid_complete"}
+pyramid R2-3 20261103 {"error":{"translationM":0.012649110640673599,"angleDeg":0.15000000000009095},"success":true,"ms":161.51009999999997,"stop":"pyramid_complete"}
+pyramid R3-1 20261103 {"error":{"translationM":0.016970562748477157,"angleDeg":0.2999999999999545},"success":true,"ms":164.77199999999993,"stop":"pyramid_complete"}
+pyramid R3-2 20261103 {"error":{"translationM":0.012041594578792553,"angleDeg":0.2999999999999545},"success":true,"ms":177.32349999999997,"stop":"pyramid_complete"}
+pyramid R3-3 20261103 {"error":{"translationM":0.01360147050873535,"angleDeg":0.15000000000009095},"success":true,"ms":176.83169999999973,"stop":"pyramid_complete"}
+pyramid R4-1 20261103 {"error":{"translationM":0.01838477631085025,"angleDeg":0.049999999999954525},"success":true,"ms":160.3087999999998,"stop":"pyramid_complete"}
+pyramid R4-2 20261103 {"error":{"translationM":0.012041594578792388,"angleDeg":0.049999999999954525},"success":true,"ms":162.42439999999988,"stop":"pyramid_complete"}
+pyramid R4-3 20261103 {"error":{"translationM":0.012649110640673599,"angleDeg":0.10000000000002274},"success":true,"ms":165.23880000000008,"stop":"pyramid_complete"}
+pyramid R5-1 20261103 {"error":{"translationM":0.01697056274847718,"angleDeg":0.1999999999999318},"success":true,"ms":156.54819999999972,"stop":"pyramid_complete"}
+pyramid R5-2 20261103 {"error":{"translationM":0.012041594578792315,"angleDeg":0.1999999999999318},"success":true,"ms":149.76870000000008,"stop":"pyramid_complete"}
+pyramid R5-3 20261103 {"error":{"translationM":0.013601470508735466,"angleDeg":0.15000000000009095},"success":true,"ms":164.88989999999922,"stop":"pyramid_complete"}
+annealing S1-1 20261103 {"error":{"translationM":0.07159470061317498,"angleDeg":0.0037482236235746313},"success":true,"ms":75.23099999999977,"stop":"annealing_budget_complete"}
+annealing S1-1 20261104 {"error":{"translationM":0.07166404990583738,"angleDeg":0.040600510292051695},"success":true,"ms":60.52009999999973,"stop":"annealing_budget_complete"}
+annealing S1-1 20261105 {"error":{"translationM":0.07182036900311695,"angleDeg":0.04902122637690809},"success":true,"ms":64.77790000000005,"stop":"annealing_budget_complete"}
+annealing S1-2 20261103 {"error":{"translationM":0.07294278631773538,"angleDeg":0.03188167166422318},"success":true,"ms":58.32210000000032,"stop":"annealing_budget_complete"}
+annealing S1-2 20261104 {"error":{"translationM":0.06996328576781914,"angleDeg":0.021318747170425922},"success":true,"ms":64.07229999999981,"stop":"annealing_budget_complete"}
+annealing S1-2 20261105 {"error":{"translationM":0.07110024418809836,"angleDeg":0.018450302036853827},"success":true,"ms":59.47400000000016,"stop":"annealing_budget_complete"}
+annealing S1-3 20261103 {"error":{"translationM":0.06973044699742635,"angleDeg":0.011418148073744305},"success":true,"ms":61.33300000000054,"stop":"annealing_budget_complete"}
+annealing S1-3 20261104 {"error":{"translationM":0.06923180888693309,"angleDeg":0.008432986448951851},"success":true,"ms":64.43069999999989,"stop":"annealing_budget_complete"}
+annealing S1-3 20261105 {"error":{"translationM":0.07193923708426761,"angleDeg":0.029902533622816918},"success":true,"ms":58.57079999999951,"stop":"annealing_budget_complete"}
+annealing S2-1 20261103 {"error":{"translationM":0.07101455896185056,"angleDeg":0.011545926381131721},"success":true,"ms":64.17830000000049,"stop":"annealing_budget_complete"}
+annealing S2-1 20261104 {"error":{"translationM":0.07129388420127374,"angleDeg":0.053239223710079386},"success":true,"ms":64.4980999999998,"stop":"annealing_budget_complete"}
+annealing S2-1 20261105 {"error":{"translationM":0.07154046731561924,"angleDeg":0.00657710609800688},"success":true,"ms":67.79140000000007,"stop":"annealing_budget_complete"}
+annealing S2-2 20261103 {"error":{"translationM":0.06917656247865894,"angleDeg":0.042344468853571016},"success":true,"ms":75.59029999999984,"stop":"annealing_budget_complete"}
+annealing S2-2 20261104 {"error":{"translationM":0.07286866934468077,"angleDeg":0.03000869777599746},"success":true,"ms":67.26730000000043,"stop":"annealing_budget_complete"}
+annealing S2-2 20261105 {"error":{"translationM":0.07203169619579187,"angleDeg":0.017028058820187653},"success":true,"ms":57.322800000000825,"stop":"annealing_budget_complete"}
+annealing S2-3 20261103 {"error":{"translationM":0.07311245416869702,"angleDeg":0.027988224209593682},"success":true,"ms":64.98310000000038,"stop":"annealing_budget_complete"}
+annealing S2-3 20261104 {"error":{"translationM":0.06897755986508065,"angleDeg":0.04864706507737537},"success":true,"ms":69.09289999999964,"stop":"annealing_budget_complete"}
+annealing S2-3 20261105 {"error":{"translationM":0.06971634378558463,"angleDeg":0.03928703201302142},"success":true,"ms":60.38420000000042,"stop":"annealing_budget_complete"}
+annealing S3-1 20261103 {"error":{"translationM":0.07129175780088075,"angleDeg":0.06920708223015026},"success":true,"ms":63.599599999999555,"stop":"annealing_budget_complete"}
+annealing S3-1 20261104 {"error":{"translationM":0.07065908818242364,"angleDeg":0.008091577070217681},"success":true,"ms":59.40399999999954,"stop":"annealing_budget_complete"}
+annealing S3-1 20261105 {"error":{"translationM":0.07281780172980314,"angleDeg":0.006828226354969047},"success":true,"ms":63.00850000000082,"stop":"annealing_budget_complete"}
+annealing S3-2 20261103 {"error":{"translationM":0.07320399458753417,"angleDeg":0.024605504594774175},"success":true,"ms":62.76890000000003,"stop":"annealing_budget_complete"}
+annealing S3-2 20261104 {"error":{"translationM":0.07182451878141899,"angleDeg":0.026947345352709817},"success":true,"ms":58.36630000000059,"stop":"annealing_budget_complete"}
+annealing S3-2 20261105 {"error":{"translationM":0.07114165277007718,"angleDeg":0.01323475580682043},"success":true,"ms":63.97140000000036,"stop":"annealing_budget_complete"}
+annealing S3-3 20261103 {"error":{"translationM":0.07042028854003526,"angleDeg":0.02613287771043815},"success":true,"ms":65.14660000000003,"stop":"annealing_budget_complete"}
+annealing S3-3 20261104 {"error":{"translationM":0.07237018046102825,"angleDeg":0.03787168767053117},"success":true,"ms":61.051000000000386,"stop":"annealing_budget_complete"}
+annealing S3-3 20261105 {"error":{"translationM":0.07262970997214621,"angleDeg":0.0254311695226761},"success":true,"ms":71.76330000000053,"stop":"annealing_budget_complete"}
+annealing R1-1 20261103 {"error":{"translationM":0.02118364085052157,"angleDeg":0.3116524803511993},"success":true,"ms":98.08039999999983,"stop":"annealing_budget_complete"}
+annealing R1-1 20261104 {"error":{"translationM":0.021708381520924473,"angleDeg":0.28739223585421314},"success":true,"ms":88.83829999999944,"stop":"annealing_budget_complete"}
+annealing R1-1 20261105 {"error":{"translationM":0.019826003247126443,"angleDeg":0.2794301077454975},"success":true,"ms":91.53459999999995,"stop":"annealing_budget_complete"}
+annealing R1-2 20261103 {"error":{"translationM":0.02220211146502829,"angleDeg":0.3238397268967219},"success":true,"ms":84.66489999999976,"stop":"annealing_budget_complete"}
+annealing R1-2 20261104 {"error":{"translationM":0.02167078713943373,"angleDeg":0.3287707037574137},"success":true,"ms":87.07719999999972,"stop":"annealing_budget_complete"}
+annealing R1-2 20261105 {"error":{"translationM":0.02314427381951959,"angleDeg":0.29730002907172093},"success":true,"ms":88.5601999999999,"stop":"annealing_budget_complete"}
+annealing R1-3 20261103 {"error":{"translationM":0.020781453619320822,"angleDeg":0.29680534150315907},"success":true,"ms":86.90500000000065,"stop":"annealing_budget_complete"}
+annealing R1-3 20261104 {"error":{"translationM":0.02162902687673161,"angleDeg":0.3340810060299191},"success":true,"ms":85.96209999999974,"stop":"annealing_budget_complete"}
+annealing R1-3 20261105 {"error":{"translationM":0.02208957974152119,"angleDeg":0.3092713929809179},"success":true,"ms":107.08269999999993,"stop":"annealing_budget_complete"}
+annealing R2-1 20261103 {"error":{"translationM":0.011118571981869208,"angleDeg":0.26656512652834863},"success":true,"ms":93.41469999999936,"stop":"annealing_budget_complete"}
+annealing R2-1 20261104 {"error":{"translationM":0.00992241953243328,"angleDeg":0.23174356251502104},"success":true,"ms":90.69369999999981,"stop":"annealing_budget_complete"}
+annealing R2-1 20261105 {"error":{"translationM":0.010236269601259963,"angleDeg":0.26127202015254625},"success":true,"ms":88.79320000000007,"stop":"annealing_budget_complete"}
+annealing R2-2 20261103 {"error":{"translationM":0.013549509151738928,"angleDeg":0.2316693218014052},"success":true,"ms":82.52300000000014,"stop":"annealing_budget_complete"}
+annealing R2-2 20261104 {"error":{"translationM":0.009486960325766975,"angleDeg":0.24649460757927955},"success":true,"ms":85.52630000000045,"stop":"annealing_budget_complete"}
+annealing R2-2 20261105 {"error":{"translationM":0.01393624624918711,"angleDeg":0.2797673566094545},"success":true,"ms":87.7464,"stop":"annealing_budget_complete"}
+annealing R2-3 20261103 {"error":{"translationM":0.014536358869374877,"angleDeg":0.2307587365080508},"success":true,"ms":86.38370000000032,"stop":"annealing_budget_complete"}
+annealing R2-3 20261104 {"error":{"translationM":0.009284002738965048,"angleDeg":0.26161910956284373},"success":true,"ms":84.4429999999993,"stop":"annealing_budget_complete"}
+annealing R2-3 20261105 {"error":{"translationM":0.01173715118263341,"angleDeg":0.2318742087136343},"success":true,"ms":83.07839999999942,"stop":"annealing_budget_complete"}
+annealing R3-1 20261103 {"error":{"translationM":0.013174301123795494,"angleDeg":0.37984857056358123},"success":true,"ms":82.52579999999944,"stop":"annealing_budget_complete"}
+annealing R3-1 20261104 {"error":{"translationM":0.007998865066790685,"angleDeg":0.40806095166021805},"success":true,"ms":86.27790000000005,"stop":"annealing_budget_complete"}
+annealing R3-1 20261105 {"error":{"translationM":0.008985175534145797,"angleDeg":0.38470552716717066},"success":true,"ms":89.09609999999975,"stop":"annealing_budget_complete"}
+annealing R3-2 20261103 {"error":{"translationM":0.012080964368952852,"angleDeg":0.35765058704214425},"success":true,"ms":88.5576000000001,"stop":"annealing_budget_complete"}
+annealing R3-2 20261104 {"error":{"translationM":0.012914294246741053,"angleDeg":0.3948215277578129},"success":true,"ms":89.96020000000044,"stop":"annealing_budget_complete"}
+annealing R3-2 20261105 {"error":{"translationM":0.012424813600667136,"angleDeg":0.3973852214426188},"success":true,"ms":106.98479999999927,"stop":"annealing_budget_complete"}
+annealing R3-3 20261103 {"error":{"translationM":0.01145779651607392,"angleDeg":0.37918721330947847},"success":true,"ms":121.6281999999992,"stop":"annealing_budget_complete"}
+annealing R3-3 20261104 {"error":{"translationM":0.011287273336266888,"angleDeg":0.38077384950588566},"success":true,"ms":107.52219999999943,"stop":"annealing_budget_complete"}
+annealing R3-3 20261105 {"error":{"translationM":0.010060087089136091,"angleDeg":0.4031238170423421},"success":true,"ms":86.73229999999967,"stop":"annealing_budget_complete"}
+annealing R4-1 20261103 {"error":{"translationM":0.009505001488618839,"angleDeg":0.04894305761445139},"success":true,"ms":87.91130000000157,"stop":"annealing_budget_complete"}
+annealing R4-1 20261104 {"error":{"translationM":0.007201007470508485,"angleDeg":0.10293314264845321},"success":true,"ms":86.86909999999989,"stop":"annealing_budget_complete"}
+annealing R4-1 20261105 {"error":{"translationM":0.01163783013171905,"angleDeg":0.09519853919994148},"success":true,"ms":86.9955000000009,"stop":"annealing_budget_complete"}
+annealing R4-2 20261103 {"error":{"translationM":0.011031205690406045,"angleDeg":0.08930476133241427},"success":true,"ms":86.10299999999916,"stop":"annealing_budget_complete"}
+annealing R4-2 20261104 {"error":{"translationM":0.009892258512931091,"angleDeg":0.10551286988709307},"success":true,"ms":83.85649999999987,"stop":"annealing_budget_complete"}
+annealing R4-2 20261105 {"error":{"translationM":0.01026836424934585,"angleDeg":0.11504296681346204},"success":true,"ms":87.34410000000025,"stop":"annealing_budget_complete"}
+annealing R4-3 20261103 {"error":{"translationM":0.010106282568047914,"angleDeg":0.11086171124634348},"success":true,"ms":90.3687000000009,"stop":"annealing_budget_complete"}
+annealing R4-3 20261104 {"error":{"translationM":0.008423959988580787,"angleDeg":0.0875649271280281},"success":true,"ms":85.69290000000001,"stop":"annealing_budget_complete"}
+annealing R4-3 20261105 {"error":{"translationM":0.007586614550064546,"angleDeg":0.1284559493467441},"success":true,"ms":86.89930000000095,"stop":"annealing_budget_complete"}
+annealing R5-1 20261103 {"error":{"translationM":0.02490038453122203,"angleDeg":0.10394126718051666},"success":true,"ms":118.24069999999847,"stop":"annealing_budget_complete"}
+annealing R5-1 20261104 {"error":{"translationM":0.02025049676824869,"angleDeg":0.12390022754652819},"success":true,"ms":96.74589999999989,"stop":"annealing_budget_complete"}
+annealing R5-1 20261105 {"error":{"translationM":0.02298835180027601,"angleDeg":0.12008315115906498},"success":true,"ms":91.90890000000036,"stop":"annealing_budget_complete"}
+annealing R5-2 20261103 {"error":{"translationM":0.02172487022042294,"angleDeg":0.10973573667365599},"success":true,"ms":89.23309999999947,"stop":"annealing_budget_complete"}
+annealing R5-2 20261104 {"error":{"translationM":0.022227437094293815,"angleDeg":0.11295090334590441},"success":true,"ms":92.80500000000029,"stop":"annealing_budget_complete"}
+annealing R5-2 20261105 {"error":{"translationM":0.021612084523155908,"angleDeg":0.09710505050531992},"success":true,"ms":99.22200000000157,"stop":"annealing_budget_complete"}
+annealing R5-3 20261103 {"error":{"translationM":0.02434283714662458,"angleDeg":0.12726024819198756},"success":true,"ms":97.56680000000051,"stop":"annealing_budget_complete"}
+annealing R5-3 20261104 {"error":{"translationM":0.019555753165309758,"angleDeg":0.11055344617079754},"success":true,"ms":93.66409999999996,"stop":"annealing_budget_complete"}
+annealing R5-3 20261105 {"error":{"translationM":0.019283085771491782,"angleDeg":0.09615620591330298},"success":true,"ms":84.79149999999936,"stop":"annealing_budget_complete"}
+{
+  "gradient": {
+    "synthetic": {
+      "cases": 9,
+      "success": 5,
+      "meanInitialTranslationM": 0.6202052217835037,
+      "meanFinalTranslationM": 0.16770318642662974,
+      "meanFinalAngleDeg": 0.029077393373982987,
+      "meanElapsedMs": 12.844811111111113,
+      "meanEvaluations": 143.33333333333334,
+      "meanCoverage": 0.929320987654321,
+      "meanScore": 0.8094118842739146,
+      "maxFinalTranslationM": 0.3656009320902172,
+      "maxFinalAngleDeg": 0.08689686774823713
+    },
+    "real": {
+      "cases": 15,
+      "success": 13,
+      "meanInitialTranslationM": 0.6202052217835038,
+      "meanFinalTranslationM": 0.04551693742485495,
+      "meanFinalAngleDeg": 0.2579680723469437,
+      "meanElapsedMs": 23.32563333333333,
+      "meanEvaluations": 240.8,
+      "meanCoverage": 0.9213395907712388,
+      "meanScore": 0.5986501361944043,
+      "maxFinalTranslationM": 0.2719489212908535,
+      "maxFinalAngleDeg": 0.5431352357685455
+    }
+  },
+  "pyramid": {
+    "synthetic": {
+      "cases": 9,
+      "success": 9,
+      "meanInitialTranslationM": 0.6202052217835037,
+      "meanFinalTranslationM": 0.07904952120091518,
+      "meanFinalAngleDeg": 0.1666666666666793,
+      "meanElapsedMs": 132.3307666666667,
+      "meanEvaluations": 4643,
+      "meanCoverage": 1,
+      "meanScore": 0.9414335198173607,
+      "maxFinalTranslationM": 0.08768124086713212,
+      "maxFinalAngleDeg": 0.2999999999999545
+    },
+    "real": {
+      "cases": 15,
+      "success": 15,
+      "meanInitialTranslationM": 0.6202052217835038,
+      "meanFinalTranslationM": 0.014704002604955356,
+      "meanFinalAngleDeg": 0.18333333333331817,
+      "meanElapsedMs": 167.77237333333326,
+      "meanEvaluations": 4481.133333333333,
+      "meanCoverage": 0.9445289006615735,
+      "meanScore": 0.6290391051265399,
+      "maxFinalTranslationM": 0.01838477631085025,
+      "maxFinalAngleDeg": 0.5499999999999545
+    }
+  },
+  "annealing": {
+    "synthetic": {
+      "cases": 27,
+      "success": 27,
+      "meanInitialTranslationM": 0.6202052217835038,
+      "meanFinalTranslationM": 0.07133622658914793,
+      "meanFinalAngleDeg": 0.027029273280066737,
+      "meanElapsedMs": 63.959996296296424,
+      "meanEvaluations": 3105.814814814815,
+      "meanCoverage": 1,
+      "meanScore": 0.9862889660025589,
+      "maxFinalTranslationM": 0.07320399458753417,
+      "maxFinalAngleDeg": 0.06920708223015026
+    },
+    "real": {
+      "cases": 45,
+      "success": 45,
+      "meanInitialTranslationM": 0.6202052217835038,
+      "meanFinalTranslationM": 0.015132536543715434,
+      "meanFinalAngleDeg": 0.23069707781236906,
+      "meanElapsedMs": 91.2624733333333,
+      "meanEvaluations": 3127.6444444444446,
+      "meanCoverage": 0.9455554915735732,
+      "meanScore": 0.6291528781363874,
+      "maxFinalTranslationM": 0.02490038453122203,
+      "maxFinalAngleDeg": 0.40806095166021805
+    }
+  }
+}

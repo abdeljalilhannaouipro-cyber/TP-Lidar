@@ -3,6 +3,17 @@
 **Rapport de synthèse du TP 1 :** [version PDF illustrée](rapport/rapport_TP1.pdf)
 et [source Markdown](rapport/rapport_TP1.md).
 
+**TP 2, étape 1 :** [localisation sur une grid map](localisation/grid/README.md),
+intégrée au même outil. Recherche corrélative locale à trois niveaux, exemple
+sur grille de quatre scans et scan test exclu, évaluation synthétique et réelle
+avec distinction entre pose connue et pseudo-référence estimée.
+La [recherche exhaustive](localisation/grid/BRUTE_FORCE.md) est aussi disponible :
+toutes les poses du domaine discret, tous les points acceptés, avec une évaluation
+sur les mêmes 24 essais et une comparaison à la méthode à trois niveaux.
+Les [méthodes gradient, multi-résolution par pyramide et recuit simulé](localisation/grid/OPTIMISATIONS.md)
+complètent la localisation sur grille. Les échecs du gradient sont conservés
+dans les bilans ; le recuit est évalué avec trois graines reproductibles.
+
 Le projet réunit les cinq étapes du TP : acquisitions réelles, affichage des scans
 avec poses indépendantes, grille d'occupation, manipulation de segments et carte
 vectorielle. Le **recalcul complet utilise 17 scans contrôlés** : les six captures

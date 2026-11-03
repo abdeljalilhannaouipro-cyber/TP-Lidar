@@ -1,0 +1,2398 @@
+{
+  "format": "tp2-grid-exhaustive-evaluation-v1",
+  "created": "2026-11-03T15:40:32.368Z",
+  "environment": {
+    "node": "v24.22.1",
+    "cpu": "Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz"
+  },
+  "method": "Full enumeration: all accepted points, window ±1 m / ±15 deg, steps 0.1 m / 1 deg, sigma 0.1 m",
+  "successCriterion": "translation <= 0.20 m and angle <= 2 deg relative to indicated reference",
+  "syntheticSummary": {
+    "cases": 9,
+    "success": 9,
+    "meanInitialTranslationM": 0.6202052217835037,
+    "meanFinalTranslationM": 0.0856879304412282,
+    "meanFinalAngleDeg": 0.36666666666667425,
+    "meanElapsedMs": 241.61387777777776,
+    "meanBaselineTimeMs": 125.20385555555555,
+    "meanCoverage": 0.9962962962962963,
+    "meanScore": 0.8799973062234719,
+    "maxFinalTranslationM": 0.09492101980067437,
+    "posesPerTrial": 13671
+  },
+  "realSummary": {
+    "cases": 15,
+    "success": 15,
+    "meanInitialTranslationM": 0.6202052217835038,
+    "meanFinalTranslationM": 0.04926539341385382,
+    "meanFinalAngleDeg": 0.42000000000001214,
+    "meanElapsedMs": 344.33274000000006,
+    "meanBaselineTimeMs": 142.90842666666688,
+    "meanCoverage": 0.9087607329775936,
+    "meanScore": 0.5739119950361684,
+    "maxFinalTranslationM": 0.06935416353759884,
+    "posesPerTrial": 13671
+  },
+  "synthetic": [
+    {
+      "label": "S1-1",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": 1.8,
+        "y": -1.5,
+        "theta": 22
+      },
+      "initialError": {
+        "translationM": 0.6774496291238191,
+        "angleDeg": 7.2999999999999545
+      },
+      "finalError": {
+        "translationM": 0.09454099639838795,
+        "angleDeg": 0.2999999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": 2.337,
+          "y": -1.913,
+          "theta": 29.299999999999955
+        },
+        "pose": {
+          "x": 1.8370000000000002,
+          "y": -1.413,
+          "theta": 22.299999999999955
+        },
+        "before": {
+          "score": 0.013338565252793326,
+          "coverage": 0.37222222222222223,
+          "inside": 0.9888888888888889,
+          "nearFraction": 0.022222222222222223,
+          "rmseM": 0.5412562862481407
+        },
+        "after": {
+          "score": 0.8304471968355309,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0.0052704628454833145
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 360,
+        "elapsedMs": 249.70520000000005,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.28177747413860244,
+        "alternative": {
+          "x": 1.8370000000000002,
+          "y": -1.413,
+          "theta": 18.299999999999955
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 169.0914,
+        "baselineTested": 5772,
+        "baselineError": {
+          "translationM": 0.08768124086713197,
+          "angleDeg": 0.2999999999999545
+        },
+        "baselineScore": 0.925956875686955
+      }
+    },
+    {
+      "label": "S1-2",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": 1.8,
+        "y": -1.5,
+        "theta": 22
+      },
+      "initialError": {
+        "translationM": 0.7284023613360957,
+        "angleDeg": 8.200000000000045
+      },
+      "finalError": {
+        "translationM": 0.06760177512462238,
+        "angleDeg": 0.20000000000004547
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": 1.333,
+          "y": -0.941,
+          "theta": 13.799999999999955
+        },
+        "pose": {
+          "x": 1.833,
+          "y": -1.4409999999999998,
+          "theta": 21.799999999999955
+        },
+        "before": {
+          "score": 0.0313183127757129,
+          "coverage": 0.6416666666666667,
+          "inside": 0.9944444444444445,
+          "nearFraction": 0.06388888888888888,
+          "rmseM": 0.5433980285272094
+        },
+        "after": {
+          "score": 0.9220537944931496,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 360,
+        "elapsedMs": 250.55319999999995,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.35125185977501416,
+        "alternative": {
+          "x": 1.533,
+          "y": -1.4409999999999998,
+          "theta": 21.799999999999955
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 135.9122000000001,
+        "baselineTested": 5794,
+        "baselineError": {
+          "translationM": 0.08273451516749206,
+          "angleDeg": 0.049999999999954525
+        },
+        "baselineScore": 0.9443353697363169
+      }
+    },
+    {
+      "label": "S1-3",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": 1.8,
+        "y": -1.5,
+        "theta": 22
+      },
+      "initialError": {
+        "translationM": 0.4547636748905964,
+        "angleDeg": 5.399999999999977
+      },
+      "finalError": {
+        "translationM": 0.09492101980067437,
+        "angleDeg": 0.39999999999997726
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": 2.063,
+          "y": -1.129,
+          "theta": 27.399999999999977
+        },
+        "pose": {
+          "x": 1.8630000000000002,
+          "y": -1.429,
+          "theta": 22.399999999999977
+        },
+        "before": {
+          "score": 0.14998628051447302,
+          "coverage": 0.5472222222222223,
+          "inside": 1,
+          "nearFraction": 0.3138888888888889,
+          "rmseM": 0.2537035378247858
+        },
+        "after": {
+          "score": 0.8957388049296636,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 360,
+        "elapsedMs": 228.93319999999994,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.34515969459965035,
+        "alternative": {
+          "x": 1.7630000000000001,
+          "y": -1.429,
+          "theta": 18.399999999999977
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 119.47889999999995,
+        "baselineTested": 5602,
+        "baselineError": {
+          "translationM": 0.05966573556070538,
+          "angleDeg": 0.10000000000002274
+        },
+        "baselineScore": 0.9547500457386464
+      }
+    },
+    {
+      "label": "S2-1",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": 1.5,
+        "theta": -35
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "finalError": {
+        "translationM": 0.09454099639838788,
+        "angleDeg": 0.2999999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": -1.463,
+          "y": 1.087,
+          "theta": -27.700000000000045
+        },
+        "pose": {
+          "x": -1.963,
+          "y": 1.587,
+          "theta": -34.700000000000045
+        },
+        "before": {
+          "score": 0.032163559420841085,
+          "coverage": 0.5972222222222222,
+          "inside": 1,
+          "nearFraction": 0.08611111111111111,
+          "rmseM": 0.4942459816341862
+        },
+        "after": {
+          "score": 0.8159947520651926,
+          "coverage": 0.9833333333333333,
+          "inside": 1,
+          "nearFraction": 0.9833333333333333,
+          "rmseM": 0
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 360,
+        "elapsedMs": 247.60889999999995,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.2931082330771836,
+        "alternative": {
+          "x": -1.963,
+          "y": 1.287,
+          "theta": -34.700000000000045
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 119.75479999999993,
+        "baselineTested": 5882,
+        "baselineError": {
+          "translationM": 0.08768124086713182,
+          "angleDeg": 0.20000000000004547
+        },
+        "baselineScore": 0.9261131006221686
+      }
+    },
+    {
+      "label": "S2-2",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": 1.5,
+        "theta": -35
+      },
+      "initialError": {
+        "translationM": 0.7284023613360958,
+        "angleDeg": 8.200000000000045
+      },
+      "finalError": {
+        "translationM": 0.06760177512462238,
+        "angleDeg": 0.20000000000004547
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": -2.467,
+          "y": 2.059,
+          "theta": -43.19999999999999
+        },
+        "pose": {
+          "x": -1.967,
+          "y": 1.5590000000000002,
+          "theta": -35.19999999999999
+        },
+        "before": {
+          "score": 0.01545300614227118,
+          "coverage": 0.39166666666666666,
+          "inside": 0.9888888888888889,
+          "nearFraction": 0.041666666666666664,
+          "rmseM": 0.5566715248335852
+        },
+        "after": {
+          "score": 0.8969212740335952,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 360,
+        "elapsedMs": 213.79410000000007,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.4107673713319594,
+        "alternative": {
+          "x": -1.967,
+          "y": 1.2590000000000001,
+          "theta": -35.19999999999999
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 106.2473,
+        "baselineTested": 6006,
+        "baselineError": {
+          "translationM": 0.08273451516749221,
+          "angleDeg": 0.20000000000004547
+        },
+        "baselineScore": 0.9475229408824916
+      }
+    },
+    {
+      "label": "S2-3",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": 1.5,
+        "theta": -35
+      },
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.399999999999977
+      },
+      "finalError": {
+        "translationM": 0.0949210198006742,
+        "angleDeg": 0.6000000000000227
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": -1.737,
+          "y": 1.871,
+          "theta": -29.600000000000023
+        },
+        "pose": {
+          "x": -1.937,
+          "y": 1.571,
+          "theta": -35.60000000000002
+        },
+        "before": {
+          "score": 0.09694487405917535,
+          "coverage": 0.5611111111111111,
+          "inside": 1,
+          "nearFraction": 0.2361111111111111,
+          "rmseM": 0.3245058848302166
+        },
+        "after": {
+          "score": 0.8822319985260489,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 360,
+        "elapsedMs": 232.19309999999996,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.3571524075644428,
+        "alternative": {
+          "x": -1.937,
+          "y": 1.471,
+          "theta": -31.600000000000023
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 110.39779999999996,
+        "baselineTested": 6186,
+        "baselineError": {
+          "translationM": 0.07800640999302569,
+          "angleDeg": 0.10000000000002274
+        },
+        "baselineScore": 0.9426643332624112
+      }
+    },
+    {
+      "label": "S3-1",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": -2,
+        "theta": 110
+      },
+      "initialError": {
+        "translationM": 0.6774496291238189,
+        "angleDeg": 7.2999999999999545
+      },
+      "finalError": {
+        "translationM": 0.09454099639838807,
+        "angleDeg": 0.7000000000000455
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": -1.463,
+          "y": -2.413,
+          "theta": 117.29999999999995
+        },
+        "pose": {
+          "x": -1.963,
+          "y": -1.9129999999999998,
+          "theta": 109.29999999999995
+        },
+        "before": {
+          "score": 0.0705746905868334,
+          "coverage": 0.42777777777777776,
+          "inside": 1,
+          "nearFraction": 0.15,
+          "rmseM": 0.3345364457502123
+        },
+        "after": {
+          "score": 0.8512259920798908,
+          "coverage": 0.9833333333333333,
+          "inside": 1,
+          "nearFraction": 0.9833333333333333,
+          "rmseM": 0.023167286846702717
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 360,
+        "elapsedMs": 213.00340000000006,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.29007509189491143,
+        "alternative": {
+          "x": -1.863,
+          "y": -1.9129999999999998,
+          "theta": 113.29999999999995
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 109.0685999999996,
+        "baselineTested": 6142,
+        "baselineError": {
+          "translationM": 0.08768124086713212,
+          "angleDeg": 0.5499999999999545
+        },
+        "baselineScore": 0.9098473112110353
+      }
+    },
+    {
+      "label": "S3-2",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": -2,
+        "theta": 110
+      },
+      "initialError": {
+        "translationM": 0.7284023613360958,
+        "angleDeg": 8.200000000000045
+      },
+      "finalError": {
+        "translationM": 0.06760177512462238,
+        "angleDeg": 0.20000000000004547
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": -2.467,
+          "y": -1.4409999999999998,
+          "theta": 101.79999999999995
+        },
+        "pose": {
+          "x": -1.967,
+          "y": -1.9409999999999998,
+          "theta": 109.79999999999995
+        },
+        "before": {
+          "score": 0.06340199573541366,
+          "coverage": 0.5638888888888889,
+          "inside": 1,
+          "nearFraction": 0.125,
+          "rmseM": 0.4055334876325235
+        },
+        "after": {
+          "score": 0.9322448590816769,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 360,
+        "elapsedMs": 285.6902,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.363741104860815,
+        "alternative": {
+          "x": -1.667,
+          "y": -1.9409999999999998,
+          "theta": 109.79999999999995
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 113.16580000000022,
+        "baselineTested": 5920,
+        "baselineError": {
+          "translationM": 0.08273451516749221,
+          "angleDeg": 0.049999999999954525
+        },
+        "baselineScore": 0.9517169236033088
+      }
+    },
+    {
+      "label": "S3-3",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": -2,
+        "theta": 110
+      },
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.399999999999977
+      },
+      "finalError": {
+        "translationM": 0.0949210198006742,
+        "angleDeg": 0.39999999999997726
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": -1.737,
+          "y": -1.629,
+          "theta": 115.39999999999998
+        },
+        "pose": {
+          "x": -1.937,
+          "y": -1.929,
+          "theta": 110.39999999999998
+        },
+        "before": {
+          "score": 0.12763334434019644,
+          "coverage": 0.6722222222222223,
+          "inside": 1,
+          "nearFraction": 0.3,
+          "rmseM": 0.3123491459818443
+        },
+        "after": {
+          "score": 0.8931170839664995,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0.010540925690966629
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 360,
+        "elapsedMs": 253.04359999999997,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.3371296231317956,
+        "alternative": {
+          "x": -2.037,
+          "y": -1.929,
+          "theta": 106.39999999999998
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 143.7179000000001,
+        "baselineTested": 6106,
+        "baselineError": {
+          "translationM": 0.07800640999302555,
+          "angleDeg": 0.14999999999997726
+        },
+        "baselineScore": 0.9559418468457144
+      }
+    }
+  ],
+  "real": [
+    {
+      "label": "R1-1",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "finalError": {
+        "translationM": 0.03921734310225517,
+        "angleDeg": 0.2999999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": 0.537,
+          "y": -0.413,
+          "theta": 7.2999999999999545
+        },
+        "pose": {
+          "x": 0.03700000000000003,
+          "y": -0.012999999999999956,
+          "theta": 0.2999999999999545
+        },
+        "before": {
+          "score": 0.1372399792925085,
+          "coverage": 0.7155361050328227,
+          "inside": 1,
+          "nearFraction": 0.24070021881838075,
+          "rmseM": 0.4608877767273224
+        },
+        "after": {
+          "score": 0.7502658292938462,
+          "coverage": 0.9080962800875274,
+          "inside": 1,
+          "nearFraction": 0.9059080962800875,
+          "rmseM": 0.05279121378542672
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 336.0229999999997,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.2257817263780768,
+        "alternative": {
+          "x": 0.03700000000000003,
+          "y": -0.413,
+          "theta": 0.2999999999999545
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 191.2150999999999,
+        "baselineTested": 6278,
+        "baselineError": {
+          "translationM": 0.0176918060129541,
+          "angleDeg": 0.049999999999954525
+        },
+        "baselineScore": 0.7833312778126326
+      }
+    },
+    {
+      "label": "R1-2",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "initialError": {
+        "translationM": 0.7284023613360957,
+        "angleDeg": 8.200000000000045
+      },
+      "finalError": {
+        "translationM": 0.052630789467763076,
+        "angleDeg": 0.7999999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": -0.467,
+          "y": 0.559,
+          "theta": -8.200000000000045
+        },
+        "pose": {
+          "x": 0.032999999999999974,
+          "y": -0.041000000000000036,
+          "theta": 0.7999999999999545
+        },
+        "before": {
+          "score": 0.09403137396484697,
+          "coverage": 0.3676148796498906,
+          "inside": 1,
+          "nearFraction": 0.17943107221006566,
+          "rmseM": 0.42947367469466546
+        },
+        "after": {
+          "score": 0.7364579880024352,
+          "coverage": 0.8862144420131292,
+          "inside": 1,
+          "nearFraction": 0.8840262582056893,
+          "rmseM": 0.05525627361961448
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 270.97620000000006,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.20703151412400422,
+        "alternative": {
+          "x": 0.032999999999999974,
+          "y": -0.44099999999999995,
+          "theta": -0.20000000000004547
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 147.51370000000043,
+        "baselineTested": 5819,
+        "baselineError": {
+          "translationM": 0.012041594578792307,
+          "angleDeg": 0.049999999999954525
+        },
+        "baselineScore": 0.7875672533209643
+      }
+    },
+    {
+      "label": "R1-3",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "initialError": {
+        "translationM": 0.4547636748905963,
+        "angleDeg": 5.399999999999977
+      },
+      "finalError": {
+        "translationM": 0.06935416353759881,
+        "angleDeg": 0.39999999999997726
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": 0.263,
+          "y": 0.371,
+          "theta": 5.399999999999977
+        },
+        "pose": {
+          "x": 0.063,
+          "y": -0.029000000000000026,
+          "theta": 0.39999999999997726
+        },
+        "before": {
+          "score": 0.11011686437899577,
+          "coverage": 0.6695842450765864,
+          "inside": 1,
+          "nearFraction": 0.22975929978118162,
+          "rmseM": 0.39971011443567667
+        },
+        "after": {
+          "score": 0.680266841160828,
+          "coverage": 0.8687089715536105,
+          "inside": 1,
+          "nearFraction": 0.8665207877461707,
+          "rmseM": 0.06361424600197982
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 301.5024000000003,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.17449226099841153,
+        "alternative": {
+          "x": 0.063,
+          "y": -0.629,
+          "theta": 0.39999999999997726
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 141.35900000000038,
+        "baselineTested": 6134,
+        "baselineError": {
+          "translationM": 0.013601470508735449,
+          "angleDeg": 0.14999999999997726
+        },
+        "baselineScore": 0.7911190268560743
+      }
+    },
+    {
+      "label": "R2-1",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 3.2162682227295947,
+        "y": 1.3246240083357195,
+        "theta": -92.1245634897957
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "finalError": {
+        "translationM": 0.03921734310225512,
+        "angleDeg": 0.2999999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": 3.7532682227295946,
+          "y": 0.9116240083357194,
+          "theta": -84.82456348979571
+        },
+        "pose": {
+          "x": 3.2532682227295946,
+          "y": 1.3116240083357193,
+          "theta": -91.82456348979571
+        },
+        "before": {
+          "score": 0.0794383294590357,
+          "coverage": 0.7789934354485777,
+          "inside": 1,
+          "nearFraction": 0.1422319474835886,
+          "rmseM": 1.3081132868723397
+        },
+        "after": {
+          "score": 0.5124869160849261,
+          "coverage": 0.9474835886214442,
+          "inside": 1,
+          "nearFraction": 0.6542669584245077,
+          "rmseM": 1.2849992075341028
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 348.8811000000005,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.20562664745194875,
+        "alternative": {
+          "x": 3.2532682227295946,
+          "y": 1.0116240083357195,
+          "theta": -91.82456348979571
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 149.98509999999987,
+        "baselineTested": 5826,
+        "baselineError": {
+          "translationM": 0.018384776310850566,
+          "angleDeg": 0.2999999999999545
+        },
+        "baselineScore": 0.5438804696371135
+      }
+    },
+    {
+      "label": "R2-2",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 3.2162682227295947,
+        "y": 1.3246240083357195,
+        "theta": -92.1245634897957
+      },
+      "initialError": {
+        "translationM": 0.7284023613360956,
+        "angleDeg": 8.200000000000045
+      },
+      "finalError": {
+        "translationM": 0.05263078946776313,
+        "angleDeg": 0.7999999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": 2.7492682227295946,
+          "y": 1.8836240083357194,
+          "theta": -100.32456348979571
+        },
+        "pose": {
+          "x": 3.2492682227295946,
+          "y": 1.2836240083357193,
+          "theta": -91.32456348979571
+        },
+        "before": {
+          "score": 0.08429912233771532,
+          "coverage": 0.5426695842450766,
+          "inside": 1,
+          "nearFraction": 0.1422319474835886,
+          "rmseM": 1.9391103936393088
+        },
+        "after": {
+          "score": 0.4980957045692875,
+          "coverage": 0.9343544857768052,
+          "inside": 1,
+          "nearFraction": 0.6433260393873085,
+          "rmseM": 1.2950687530985214
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 330.04039999999986,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.19286054234485572,
+        "alternative": {
+          "x": 3.2492682227295946,
+          "y": 0.9836240083357194,
+          "theta": -91.32456348979571
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 147.02409999999963,
+        "baselineTested": 5962,
+        "baselineError": {
+          "translationM": 0.017888543819998333,
+          "angleDeg": 0.5499999999999545
+        },
+        "baselineScore": 0.545102801519157
+      }
+    },
+    {
+      "label": "R2-3",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 3.2162682227295947,
+        "y": 1.3246240083357195,
+        "theta": -92.1245634897957
+      },
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.400000000000091
+      },
+      "finalError": {
+        "translationM": 0.047010637094173004,
+        "angleDeg": 0.40000000000009095
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": 3.4792682227295946,
+          "y": 1.6956240083357195,
+          "theta": -86.72456348979568
+        },
+        "pose": {
+          "x": 3.1792682227295943,
+          "y": 1.2956240083357193,
+          "theta": -91.72456348979568
+        },
+        "before": {
+          "score": 0.11436054239799778,
+          "coverage": 0.7264770240700219,
+          "inside": 1,
+          "nearFraction": 0.20350109409190373,
+          "rmseM": 1.4108095289795186
+        },
+        "after": {
+          "score": 0.502356279441043,
+          "coverage": 0.9168490153172867,
+          "inside": 1,
+          "nearFraction": 0.6301969365426696,
+          "rmseM": 1.324995312912112
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 327.7372999999998,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.17719243209676233,
+        "alternative": {
+          "x": 3.1792682227295943,
+          "y": 1.5956240083357194,
+          "theta": -91.72456348979568
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 139.9903000000004,
+        "baselineTested": 5992,
+        "baselineError": {
+          "translationM": 0.012649110640673599,
+          "angleDeg": 0.15000000000009095
+        },
+        "baselineScore": 0.545966601706912
+      }
+    },
+    {
+      "label": "R3-1",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.9820777772150278,
+        "y": 2.3296138030212745,
+        "theta": 4.337474888004696
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "finalError": {
+        "translationM": 0.039217343102255046,
+        "angleDeg": 0.2999999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": 3.5190777772150277,
+          "y": 1.9166138030212745,
+          "theta": 11.637474888004704
+        },
+        "pose": {
+          "x": 3.0190777772150277,
+          "y": 2.3166138030212746,
+          "theta": 4.637474888004704
+        },
+        "before": {
+          "score": 0.06536655901367358,
+          "coverage": 0.7177242888402626,
+          "inside": 1,
+          "nearFraction": 0.1137855579868709,
+          "rmseM": 1.288022938027088
+        },
+        "after": {
+          "score": 0.3939691834281215,
+          "coverage": 0.9781181619256017,
+          "inside": 1,
+          "nearFraction": 0.5492341356673961,
+          "rmseM": 1.0596367882285411
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 349.7439999999997,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.12067121422011873,
+        "alternative": {
+          "x": 2.9190777772150276,
+          "y": 2.6166138030212744,
+          "theta": 4.637474888004704
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 133.10940000000028,
+        "baselineTested": 5602,
+        "baselineError": {
+          "translationM": 0.01697056274847684,
+          "angleDeg": 0.2999999999999545
+        },
+        "baselineScore": 0.40813923668226926
+      }
+    },
+    {
+      "label": "R3-2",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.9820777772150278,
+        "y": 2.3296138030212745,
+        "theta": 4.337474888004696
+      },
+      "initialError": {
+        "translationM": 0.7284023613360958,
+        "angleDeg": 8.200000000000045
+      },
+      "finalError": {
+        "translationM": 0.052630789467762965,
+        "angleDeg": 0.20000000000004547
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": 2.5150777772150277,
+          "y": 2.8886138030212747,
+          "theta": -3.8625251119952964
+        },
+        "pose": {
+          "x": 3.0150777772150277,
+          "y": 2.2886138030212746,
+          "theta": 4.137474888004704
+        },
+        "before": {
+          "score": 0.06544848662999056,
+          "coverage": 0.6105032822757112,
+          "inside": 1,
+          "nearFraction": 0.10940919037199125,
+          "rmseM": 1.3791318219140543
+        },
+        "after": {
+          "score": 0.3796274058204558,
+          "coverage": 0.962800875273523,
+          "inside": 1,
+          "nearFraction": 0.5164113785557987,
+          "rmseM": 1.0690148667935928
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 331.9939000000004,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.09900223872363662,
+        "alternative": {
+          "x": 2.9150777772150276,
+          "y": 2.588613803021275,
+          "theta": 4.137474888004704
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 134.66330000000016,
+        "baselineTested": 5746,
+        "baselineError": {
+          "translationM": 0.012041594578791929,
+          "angleDeg": 0.2999999999999545
+        },
+        "baselineScore": 0.40940098837783995
+      }
+    },
+    {
+      "label": "R3-3",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.9820777772150278,
+        "y": 2.3296138030212745,
+        "theta": 4.337474888004696
+      },
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.400000000000091
+      },
+      "finalError": {
+        "translationM": 0.04701063709417252,
+        "angleDeg": 0.40000000000009095
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": 3.2450777772150277,
+          "y": 2.7006138030212745,
+          "theta": 9.737474888004726
+        },
+        "pose": {
+          "x": 2.945077777215028,
+          "y": 2.3006138030212746,
+          "theta": 4.737474888004726
+        },
+        "before": {
+          "score": 0.12234830250167371,
+          "coverage": 0.6695842450765864,
+          "inside": 1,
+          "nearFraction": 0.2013129102844639,
+          "rmseM": 1.2853809433637837
+        },
+        "after": {
+          "score": 0.3900638094810917,
+          "coverage": 0.975929978118162,
+          "inside": 1,
+          "nearFraction": 0.5470459518599562,
+          "rmseM": 1.0663228504080087
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 344.6161000000002,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.10507255547834898,
+        "alternative": {
+          "x": 2.945077777215028,
+          "y": 2.6006138030212744,
+          "theta": 4.737474888004726
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 139.52509999999984,
+        "baselineTested": 5782,
+        "baselineError": {
+          "translationM": 0.01360147050873535,
+          "angleDeg": 0.15000000000009095
+        },
+        "baselineScore": 0.4081556315299657
+      }
+    },
+    {
+      "label": "R4-1",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.7328356377830407,
+        "y": 1.3585822612448972,
+        "theta": 3.6140022517237904
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "finalError": {
+        "translationM": 0.03921734310225512,
+        "angleDeg": 0.2999999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": 3.2698356377830406,
+          "y": 0.9455822612448972,
+          "theta": 10.914002251723787
+        },
+        "pose": {
+          "x": 2.7698356377830406,
+          "y": 1.345582261244897,
+          "theta": 3.9140022517237867
+        },
+        "before": {
+          "score": 0.09820243617782952,
+          "coverage": 0.631578947368421,
+          "inside": 1,
+          "nearFraction": 0.18201754385964913,
+          "rmseM": 1.1727051279878564
+        },
+        "after": {
+          "score": 0.556196590841672,
+          "coverage": 0.8530701754385965,
+          "inside": 1,
+          "nearFraction": 0.6973684210526315,
+          "rmseM": 0.7638902938874361
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 456,
+        "sampledPoints": 456,
+        "elapsedMs": 621.2594000000008,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.22819731734397752,
+        "alternative": {
+          "x": 2.6698356377830406,
+          "y": 1.2455822612448972,
+          "theta": -0.08599774827621331
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 134.6127000000006,
+        "baselineTested": 5746,
+        "baselineError": {
+          "translationM": 0.018384776310850566,
+          "angleDeg": 0.049999999999954525
+        },
+        "baselineScore": 0.6272910387825957
+      }
+    },
+    {
+      "label": "R4-2",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.7328356377830407,
+        "y": 1.3585822612448972,
+        "theta": 3.6140022517237904
+      },
+      "initialError": {
+        "translationM": 0.7284023613360956,
+        "angleDeg": 8.200000000000045
+      },
+      "finalError": {
+        "translationM": 0.05263078946776313,
+        "angleDeg": 0.20000000000004547
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": 2.2658356377830406,
+          "y": 1.9175822612448972,
+          "theta": -4.585997748276213
+        },
+        "pose": {
+          "x": 2.7658356377830406,
+          "y": 1.317582261244897,
+          "theta": 3.4140022517237867
+        },
+        "before": {
+          "score": 0.08006708545874765,
+          "coverage": 0.543859649122807,
+          "inside": 1,
+          "nearFraction": 0.15789473684210525,
+          "rmseM": 0.9510500526984311
+        },
+        "after": {
+          "score": 0.5361809257801594,
+          "coverage": 0.8421052631578947,
+          "inside": 1,
+          "nearFraction": 0.6842105263157895,
+          "rmseM": 0.7664375171509475
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 456,
+        "sampledPoints": 456,
+        "elapsedMs": 339.1905999999999,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.20480525317974407,
+        "alternative": {
+          "x": 2.7658356377830406,
+          "y": 1.0175822612448973,
+          "theta": 3.4140022517237867
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 125.34380000000056,
+        "baselineTested": 5602,
+        "baselineError": {
+          "translationM": 0.012041594578791929,
+          "angleDeg": 0.049999999999954525
+        },
+        "baselineScore": 0.6276856838910406
+      }
+    },
+    {
+      "label": "R4-3",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.7328356377830407,
+        "y": 1.3585822612448972,
+        "theta": 3.6140022517237904
+      },
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.399999999999977
+      },
+      "finalError": {
+        "translationM": 0.047010637094173004,
+        "angleDeg": 0.39999999999997726
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": 2.9958356377830406,
+          "y": 1.7295822612448972,
+          "theta": 9.01400225172381
+        },
+        "pose": {
+          "x": 2.6958356377830404,
+          "y": 1.329582261244897,
+          "theta": 4.014002251723809
+        },
+        "before": {
+          "score": 0.13964228749861718,
+          "coverage": 0.5789473684210527,
+          "inside": 1,
+          "nearFraction": 0.25,
+          "rmseM": 1.1044939747074725
+        },
+        "after": {
+          "score": 0.5590214126587129,
+          "coverage": 0.8596491228070176,
+          "inside": 1,
+          "nearFraction": 0.7039473684210527,
+          "rmseM": 0.7397878510501266
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 456,
+        "sampledPoints": 456,
+        "elapsedMs": 315.8636000000006,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.23170304051105894,
+        "alternative": {
+          "x": 2.6958356377830404,
+          "y": 1.6295822612448971,
+          "theta": 3.0140022517238094
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 138.14730000000054,
+        "baselineTested": 5926,
+        "baselineError": {
+          "translationM": 0.01264911064067353,
+          "angleDeg": 0.10000000000002274
+        },
+        "baselineScore": 0.634924237778643
+      }
+    },
+    {
+      "label": "R5-1",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0.041338385695696575,
+        "y": -0.002933562901461178,
+        "theta": 8.024583484785612
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.300000000000068
+      },
+      "finalError": {
+        "translationM": 0.03921734310225519,
+        "angleDeg": 0.3000000000000682
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": 0.5783383856956966,
+          "y": -0.41593356290146116,
+          "theta": 15.324583484785649
+        },
+        "pose": {
+          "x": 0.07833838569569662,
+          "y": -0.01593356290146114,
+          "theta": 8.324583484785649
+        },
+        "before": {
+          "score": 0.11816715962564424,
+          "coverage": 0.6958424507658644,
+          "inside": 1,
+          "nearFraction": 0.2363238512035011,
+          "rmseM": 0.4418708431868151
+        },
+        "after": {
+          "score": 0.7406017659402049,
+          "coverage": 0.9212253829321663,
+          "inside": 1,
+          "nearFraction": 0.8905908096280087,
+          "rmseM": 0.07627633486599047
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 342.5555999999997,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.22695643600457927,
+        "alternative": {
+          "x": 0.07833838569569662,
+          "y": -0.31593356290146113,
+          "theta": 8.324583484785649
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 148.70740000000114,
+        "baselineTested": 6143,
+        "baselineError": {
+          "translationM": 0.01697056274847718,
+          "angleDeg": 0.1999999999999318
+        },
+        "baselineScore": 0.7712723400220987
+      }
+    },
+    {
+      "label": "R5-2",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0.041338385695696575,
+        "y": -0.002933562901461178,
+        "theta": 8.024583484785612
+      },
+      "initialError": {
+        "translationM": 0.7284023613360957,
+        "angleDeg": 8.199999999999932
+      },
+      "finalError": {
+        "translationM": 0.052630789467763096,
+        "angleDeg": 0.8000000000000682
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": -0.42566161430430344,
+          "y": 0.5560664370985389,
+          "theta": -0.17541651521435142
+        },
+        "pose": {
+          "x": 0.07433838569569656,
+          "y": -0.04393356290146122,
+          "theta": 8.824583484785649
+        },
+        "before": {
+          "score": 0.1155755805010417,
+          "coverage": 0.3741794310722101,
+          "inside": 1,
+          "nearFraction": 0.19037199124726478,
+          "rmseM": 0.43020887521779305
+        },
+        "after": {
+          "score": 0.6979196380317331,
+          "coverage": 0.8796498905908097,
+          "inside": 1,
+          "nearFraction": 0.849015317286652,
+          "rmseM": 0.0793494553311667
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 293.40849999999955,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.18782166848098047,
+        "alternative": {
+          "x": 0.07433838569569656,
+          "y": -0.34393356290146115,
+          "theta": 7.824583484785649
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 139.23029999999926,
+        "baselineTested": 5461,
+        "baselineError": {
+          "translationM": 0.01204159457879231,
+          "angleDeg": 0.1999999999999318
+        },
+        "baselineScore": 0.7745066388708588
+      }
+    },
+    {
+      "label": "R5-3",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0.041338385695696575,
+        "y": -0.002933562901461178,
+        "theta": 8.024583484785612
+      },
+      "initialError": {
+        "translationM": 0.4547636748905963,
+        "angleDeg": 5.400000000000091
+      },
+      "finalError": {
+        "translationM": 0.06935416353759884,
+        "angleDeg": 0.40000000000009095
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "exhaustive-correlative-chamfer",
+        "complete": true,
+        "initial": {
+          "x": 0.3043383856956966,
+          "y": 0.3680664370985388,
+          "theta": 13.424583484785671
+        },
+        "pose": {
+          "x": 0.10433838569569659,
+          "y": -0.03193356290146121,
+          "theta": 8.424583484785671
+        },
+        "before": {
+          "score": 0.14419918567795248,
+          "coverage": 0.6608315098468271,
+          "inside": 1,
+          "nearFraction": 0.27571115973741794,
+          "rmseM": 0.3794043681425126
+        },
+        "after": {
+          "score": 0.6751696350080089,
+          "coverage": 0.8971553610503282,
+          "inside": 1,
+          "nearFraction": 0.8643326039387309,
+          "rmseM": 0.08763592441913265
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "sigmaM": 0.1,
+            "candidates": 13671
+          }
+        ],
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 311.1990000000005,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "sigma": 0.1
+        },
+        "alternativeGap": 0.18949156658519573,
+        "alternative": {
+          "x": 0.10433838569569659,
+          "y": -0.43193356290146123,
+          "theta": 8.424583484785671
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Maximum du score sur le domaine discret déclaré, pas une garantie sur la pose continue, hors fenêtre ou sur la précision physique."
+      },
+      "comparison": {
+        "baselineMethod": "coarse-to-fine-correlative-chamfer",
+        "baselineTimeMs": 133.19980000000032,
+        "baselineTested": 6036,
+        "baselineError": {
+          "translationM": 0.013601470508735466,
+          "angleDeg": 0.15000000000009095
+        },
+        "baselineScore": 0.7772433501099338
+      }
+    }
+  ],
+  "caveats": [
+    "Synthetic accuracy is measured in a simulated known scene, not in the physical classroom.",
+    "Real query scan excluded from occupancy map; reference poses and training poses come from TP1 estimation using the complete group. This is not a fully independent ground-truth evaluation.",
+    "Three initial offsets per scan are correlated repeat trials, not independent acquisitions.",
+    "Search is local, not global, and thresholds have no probabilistic calibration."
+  ]
+}

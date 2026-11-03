@@ -1,0 +1,5823 @@
+{
+  "format": "tp2-grid-optimisation-evaluation-v1",
+  "method": "gradient",
+  "created": "2026-11-03T15:52:47.354Z",
+  "environment": {
+    "node": "v24.22.1",
+    "cpu": "Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz"
+  },
+  "successCriterion": "translation <= 0.20 m and angle <= 2 deg relative to indicated reference",
+  "seeds": [
+    20261103
+  ],
+  "syntheticSummary": {
+    "cases": 9,
+    "success": 5,
+    "meanInitialTranslationM": 0.6202052217835037,
+    "meanFinalTranslationM": 0.16770318642662974,
+    "meanFinalAngleDeg": 0.029077393373982987,
+    "meanElapsedMs": 12.844811111111113,
+    "meanEvaluations": 143.33333333333334,
+    "meanCoverage": 0.929320987654321,
+    "meanScore": 0.8094118842739146,
+    "maxFinalTranslationM": 0.3656009320902172,
+    "maxFinalAngleDeg": 0.08689686774823713
+  },
+  "realSummary": {
+    "cases": 15,
+    "success": 13,
+    "meanInitialTranslationM": 0.6202052217835038,
+    "meanFinalTranslationM": 0.04551693742485495,
+    "meanFinalAngleDeg": 0.2579680723469437,
+    "meanElapsedMs": 23.32563333333333,
+    "meanEvaluations": 240.8,
+    "meanCoverage": 0.9213395907712388,
+    "meanScore": 0.5986501361944043,
+    "maxFinalTranslationM": 0.2719489212908535,
+    "maxFinalAngleDeg": 0.5431352357685455
+  },
+  "synthetic": [
+    {
+      "label": "S1-1",
+      "seed": 20261103,
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": 1.8,
+        "y": -1.5,
+        "theta": 22
+      },
+      "initialError": {
+        "translationM": 0.6774496291238191,
+        "angleDeg": 7.2999999999999545
+      },
+      "finalError": {
+        "translationM": 0.07045936078257678,
+        "angleDeg": 0.02654617536427395
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": 1.8482880370259809,
+          "y": -1.4486893090860509,
+          "theta": 21.973453824635726
+        },
+        "tested": 116,
+        "iterations": 12,
+        "stopReason": "line_search_stalled",
+        "objective": 0.009637449445573053,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.7375991950077339,
+            "pose": {
+              "x": 2.337,
+              "y": -1.913,
+              "theta": 29.299999999999955
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.6620980880824939,
+            "pose": {
+              "x": 2.2591385677337055,
+              "y": -1.7138797036184106,
+              "theta": 25.588057544662206
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.5517225532293463,
+            "pose": {
+              "x": 2.0993372887242088,
+              "y": -1.5336092207142862,
+              "theta": 23.6735500822399
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.45883644012290087,
+            "pose": {
+              "x": 2.081050484284228,
+              "y": -1.2913476068191014,
+              "theta": 25.362294759808265
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.4106251530865977,
+            "pose": {
+              "x": 1.9552918479440802,
+              "y": -1.497719628573901,
+              "theta": 23.528974398327705
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.3035722449447563,
+            "pose": {
+              "x": 1.8484366756501567,
+              "y": -1.2751822731224562,
+              "theta": 24.660148063688098
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.29234968354708174,
+            "pose": {
+              "x": 1.9260068487203312,
+              "y": -1.4503895550644383,
+              "theta": 20.05992878158804
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.11217841981382953,
+            "pose": {
+              "x": 1.8295912631083817,
+              "y": -1.4170081729714998,
+              "theta": 22.128679005577396
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.10670139273032636,
+            "pose": {
+              "x": 1.8644513892511883,
+              "y": -1.4688765979701248,
+              "theta": 22.15244283108791
+            }
+          },
+          {
+            "iteration": 9,
+            "energy": 0.02220568432950325,
+            "pose": {
+              "x": 1.8481073387833251,
+              "y": -1.4425609616832333,
+              "theta": 22.034596536947674
+            }
+          },
+          {
+            "iteration": 10,
+            "energy": 0.009741309383556288,
+            "pose": {
+              "x": 1.8483820924792225,
+              "y": -1.4502999267245027,
+              "theta": 22.004989434952904
+            }
+          },
+          {
+            "iteration": 11,
+            "energy": 0.009637449445573053,
+            "pose": {
+              "x": 1.8482880370259809,
+              "y": -1.4486893090860509,
+              "theta": 21.973453824635726
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": 2.337,
+          "y": -1.913,
+          "theta": 29.299999999999955
+        },
+        "before": {
+          "score": 0.013338565252793326,
+          "coverage": 0.37222222222222223,
+          "inside": 0.9888888888888889,
+          "nearFraction": 0.022222222222222223,
+          "rmseM": 0.5412562862481407
+        },
+        "after": {
+          "score": 0.9859271031224275,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0
+        },
+        "acceptedPoints": 360,
+        "sampledPoints": 360,
+        "elapsedMs": 29.508499999999998,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    },
+    {
+      "label": "S1-2",
+      "seed": 20261103,
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": 1.8,
+        "y": -1.5,
+        "theta": 22
+      },
+      "initialError": {
+        "translationM": 0.7284023613360957,
+        "angleDeg": 8.200000000000045
+      },
+      "finalError": {
+        "translationM": 0.30714965195868876,
+        "angleDeg": 0.00939626093327206
+      },
+      "success": false,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": 1.4973161063864513,
+          "y": -1.4478140895903353,
+          "theta": 21.990603739066728
+        },
+        "tested": 151,
+        "iterations": 14,
+        "stopReason": "line_search_stalled",
+        "objective": 0.1940626567039287,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.5497921645717706,
+            "pose": {
+              "x": 1.333,
+              "y": -0.941,
+              "theta": 13.799999999999955
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.45372035263797633,
+            "pose": {
+              "x": 1.3894168068118287,
+              "y": -1.1661183910843236,
+              "theta": 16.462690577938815
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.3713733853867558,
+            "pose": {
+              "x": 1.4490897785924997,
+              "y": -1.4083523058040326,
+              "theta": 15.9991016853578
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.3521299267184634,
+            "pose": {
+              "x": 1.4695154484285182,
+              "y": -1.3536315507707601,
+              "theta": 19.165105822187343
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.3239843154635782,
+            "pose": {
+              "x": 1.472590099662327,
+              "y": -1.4130573620897422,
+              "theta": 18.617511717829302
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.3193233362390646,
+            "pose": {
+              "x": 1.4812805374175235,
+              "y": -1.3899134499619819,
+              "theta": 20.261981845801074
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.30754697508822537,
+            "pose": {
+              "x": 1.4849376955434737,
+              "y": -1.449942276196201,
+              "theta": 19.774617991260243
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.26732717837292225,
+            "pose": {
+              "x": 1.4899595118435218,
+              "y": -1.4182360358319261,
+              "theta": 21.310889141579082
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.22072762266642354,
+            "pose": {
+              "x": 1.491524839661337,
+              "y": -1.4491032027195159,
+              "theta": 21.44319853621971
+            }
+          },
+          {
+            "iteration": 9,
+            "energy": 0.21276585020976171,
+            "pose": {
+              "x": 1.4942159611037178,
+              "y": -1.4432597036305195,
+              "theta": 22.319268562535513
+            }
+          },
+          {
+            "iteration": 10,
+            "energy": 0.19967009941087357,
+            "pose": {
+              "x": 1.4955015299401686,
+              "y": -1.4462248663300916,
+              "theta": 21.88132510577384
+            }
+          },
+          {
+            "iteration": 11,
+            "energy": 0.1967848240932653,
+            "pose": {
+              "x": 1.4965540742829206,
+              "y": -1.4507422177252134,
+              "theta": 22.061421798174933
+            }
+          },
+          {
+            "iteration": 12,
+            "energy": 0.19407930287425634,
+            "pose": {
+              "x": 1.4969484687690875,
+              "y": -1.4479882554058263,
+              "theta": 21.982867353756433
+            }
+          },
+          {
+            "iteration": 13,
+            "energy": 0.1940626567039287,
+            "pose": {
+              "x": 1.4973161063864513,
+              "y": -1.4478140895903353,
+              "theta": 21.990603739066728
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": 1.333,
+          "y": -0.941,
+          "theta": 13.799999999999955
+        },
+        "before": {
+          "score": 0.0313183127757129,
+          "coverage": 0.6416666666666667,
+          "inside": 0.9944444444444445,
+          "nearFraction": 0.06388888888888888,
+          "rmseM": 0.5433980285272094
+        },
+        "after": {
+          "score": 0.5953583856418927,
+          "coverage": 0.8388888888888889,
+          "inside": 1,
+          "nearFraction": 0.625,
+          "rmseM": 0.1918884922583665
+        },
+        "acceptedPoints": 360,
+        "sampledPoints": 360,
+        "elapsedMs": 15.010700000000014,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    },
+    {
+      "label": "S1-3",
+      "seed": 20261103,
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": 1.8,
+        "y": -1.5,
+        "theta": 22
+      },
+      "initialError": {
+        "translationM": 0.4547636748905964,
+        "angleDeg": 5.399999999999977
+      },
+      "finalError": {
+        "translationM": 0.06987209435069218,
+        "angleDeg": 0.032427258602979236
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": 1.8478812741316162,
+          "y": -1.4491129372385765,
+          "theta": 21.96757274139702
+        },
+        "tested": 170,
+        "iterations": 15,
+        "stopReason": "line_search_stalled",
+        "objective": 0.009760353154238666,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.4823539292295173,
+            "pose": {
+              "x": 2.063,
+              "y": -1.129,
+              "theta": 27.399999999999977
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.4443055314933355,
+            "pose": {
+              "x": 1.8915177714608007,
+              "y": -1.233541611619921,
+              "theta": 31.665063415398095
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.3621791476385963,
+            "pose": {
+              "x": 1.8807751884410036,
+              "y": -1.132916393449959,
+              "theta": 25.116080477150945
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.3466189307483889,
+            "pose": {
+              "x": 1.8034684322693557,
+              "y": -1.1686804883768394,
+              "theta": 22.49521423219676
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.3015733386987771,
+            "pose": {
+              "x": 1.8645970332701833,
+              "y": -1.1763698942987246,
+              "theta": 22.194183416770784
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.29766064221116695,
+            "pose": {
+              "x": 1.8339584294498332,
+              "y": -1.1791988425882352,
+              "theta": 22.350663602038594
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.27788485831801946,
+            "pose": {
+              "x": 1.84926730892639,
+              "y": -1.1812062074910294,
+              "theta": 22.28197243584441
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.27508160621701977,
+            "pose": {
+              "x": 1.8505105153535555,
+              "y": -1.185698924654893,
+              "theta": 21.85473398277236
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.27276315349281377,
+            "pose": {
+              "x": 1.8477336843445853,
+              "y": -1.1865773592413462,
+              "theta": 21.929308524400767
+            }
+          },
+          {
+            "iteration": 9,
+            "energy": 0.27259434511156166,
+            "pose": {
+              "x": 1.847215421510082,
+              "y": -1.1896105263439491,
+              "theta": 21.998242812494254
+            }
+          },
+          {
+            "iteration": 10,
+            "energy": 0.2712183310359399,
+            "pose": {
+              "x": 1.849225271502528,
+              "y": -1.1924984132041507,
+              "theta": 21.949630782855024
+            }
+          },
+          {
+            "iteration": 11,
+            "energy": 0.2711686607892906,
+            "pose": {
+              "x": 1.8478592331011066,
+              "y": -1.193451171359177,
+              "theta": 21.978858486130775
+            }
+          },
+          {
+            "iteration": 12,
+            "energy": 0.022512241515185046,
+            "pose": {
+              "x": 1.8460990875105592,
+              "y": -1.4434422205871216,
+              "theta": 21.945239074787764
+            }
+          },
+          {
+            "iteration": 13,
+            "energy": 0.010515068578547069,
+            "pose": {
+              "x": 1.847776798039126,
+              "y": -1.450921766256564,
+              "theta": 21.988466454718946
+            }
+          },
+          {
+            "iteration": 14,
+            "energy": 0.009760353154238666,
+            "pose": {
+              "x": 1.8478812741316162,
+              "y": -1.4491129372385765,
+              "theta": 21.96757274139702
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": 2.063,
+          "y": -1.129,
+          "theta": 27.399999999999977
+        },
+        "before": {
+          "score": 0.14998628051447302,
+          "coverage": 0.5472222222222223,
+          "inside": 1,
+          "nearFraction": 0.3138888888888889,
+          "rmseM": 0.2537035378247858
+        },
+        "after": {
+          "score": 0.9858151076532069,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0
+        },
+        "acceptedPoints": 360,
+        "sampledPoints": 360,
+        "elapsedMs": 12.872899999999987,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    },
+    {
+      "label": "S2-1",
+      "seed": 20261103,
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": 1.5,
+        "theta": -35
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "finalError": {
+        "translationM": 0.2376910012284064,
+        "angleDeg": 0.02062510969324194
+      },
+      "success": false,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": -1.9485307526730717,
+          "y": 1.2679484353757515,
+          "theta": -34.97937489030676
+        },
+        "tested": 140,
+        "iterations": 13,
+        "stopReason": "small_update",
+        "objective": 0.2155668382378182,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.5475935906115433,
+            "pose": {
+              "x": -1.463,
+              "y": 1.087,
+              "theta": -27.700000000000045
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.466518937683489,
+            "pose": {
+              "x": -1.6822448173300213,
+              "y": 1.1533902449218845,
+              "theta": -30.568231165124587
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.40924894132100603,
+            "pose": {
+              "x": -1.9211334165666365,
+              "y": 1.209218571301776,
+              "theta": -29.189724260670232
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.3862010528966017,
+            "pose": {
+              "x": -1.8283704392009659,
+              "y": 1.2286427072448773,
+              "theta": -31.524612158706873
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.3673651652337177,
+            "pose": {
+              "x": -1.8885936346573735,
+              "y": 1.2362014396064491,
+              "theta": -31.097496914719727
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.34900351075452213,
+            "pose": {
+              "x": -1.8799515401018874,
+              "y": 1.2454460295019845,
+              "theta": -32.850902646674626
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.3357673476643178,
+            "pose": {
+              "x": -1.9414408343933505,
+              "y": 1.2509246637685698,
+              "theta": -32.57123518246078
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.29150600295251705,
+            "pose": {
+              "x": -1.9175321821125426,
+              "y": 1.259682710964464,
+              "theta": -36.07714152319977
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.23976017065088742,
+            "pose": {
+              "x": -1.9597946691560917,
+              "y": 1.2654519568557812,
+              "theta": -34.76844772445344
+            }
+          },
+          {
+            "iteration": 9,
+            "energy": 0.22549966699417245,
+            "pose": {
+              "x": -1.9442472401028814,
+              "y": 1.2664598861468284,
+              "theta": -34.80237042341139
+            }
+          },
+          {
+            "iteration": 10,
+            "energy": 0.21641686911701147,
+            "pose": {
+              "x": -1.9502751078884213,
+              "y": 1.2673929111613313,
+              "theta": -34.94221623660292
+            }
+          },
+          {
+            "iteration": 11,
+            "energy": 0.215580207899883,
+            "pose": {
+              "x": -1.9487273417483961,
+              "y": 1.2677954535202847,
+              "theta": -34.974336090272914
+            }
+          },
+          {
+            "iteration": 12,
+            "energy": 0.2155668811664788,
+            "pose": {
+              "x": -1.948568567881913,
+              "y": 1.2679137719548528,
+              "theta": -34.97842745147784
+            }
+          },
+          {
+            "iteration": 13,
+            "energy": 0.2155668382378182,
+            "pose": {
+              "x": -1.9485307526730717,
+              "y": 1.2679484353757515,
+              "theta": -34.97937489030676
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": -1.463,
+          "y": 1.087,
+          "theta": -27.700000000000045
+        },
+        "before": {
+          "score": 0.032163559420841085,
+          "coverage": 0.5972222222222222,
+          "inside": 1,
+          "nearFraction": 0.08611111111111111,
+          "rmseM": 0.4942459816341862
+        },
+        "after": {
+          "score": 0.5562901520239821,
+          "coverage": 0.8083333333333333,
+          "inside": 1,
+          "nearFraction": 0.5722222222222222,
+          "rmseM": 0.16392941877625958
+        },
+        "acceptedPoints": 360,
+        "sampledPoints": 360,
+        "elapsedMs": 11.80970000000002,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    },
+    {
+      "label": "S2-2",
+      "seed": 20261103,
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": 1.5,
+        "theta": -35
+      },
+      "initialError": {
+        "translationM": 0.7284023613360958,
+        "angleDeg": 8.200000000000045
+      },
+      "finalError": {
+        "translationM": 0.07104404190647753,
+        "angleDeg": 0.0033462806103443654
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": -1.948104295705604,
+          "y": 1.5485189835651774,
+          "theta": -35.003346280610344
+        },
+        "tested": 165,
+        "iterations": 16,
+        "stopReason": "line_search_stalled",
+        "objective": 0.009463129474411185,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.7293733946063117,
+            "pose": {
+              "x": -2.467,
+              "y": 2.059,
+              "theta": -43.19999999999999
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.6337012415420481,
+            "pose": {
+              "x": -2.2584777416680235,
+              "y": 1.9257232244246791,
+              "theta": -42.18480962026945
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.5389650139405004,
+            "pose": {
+              "x": -2.1102618949412344,
+              "y": 1.7856049688504056,
+              "theta": -46.326281697317995
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.4549816985798897,
+            "pose": {
+              "x": -1.9237355909573355,
+              "y": 1.6641521789112639,
+              "theta": -43.06530639456133
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.36237493428772105,
+            "pose": {
+              "x": -1.8469784382867633,
+              "y": 1.6264015749624512,
+              "theta": -36.33559870208569
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.31172862754698016,
+            "pose": {
+              "x": -1.8992454472103313,
+              "y": 1.5343088519150763,
+              "theta": -38.238493702348364
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.29053000938217394,
+            "pose": {
+              "x": -1.8833752212883321,
+              "y": 1.5352839195364347,
+              "theta": -31.091021163855373
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.22461157259594072,
+            "pose": {
+              "x": -1.8947590282226079,
+              "y": 1.496687764820781,
+              "theta": -34.48138070179601
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.19580025605895732,
+            "pose": {
+              "x": -1.9903130653649785,
+              "y": 1.5763972111990596,
+              "theta": -34.14141081689968
+            }
+          },
+          {
+            "iteration": 9,
+            "energy": 0.06252094862283913,
+            "pose": {
+              "x": -1.9415293822825075,
+              "y": 1.538129125465898,
+              "theta": -34.36690425014751
+            }
+          },
+          {
+            "iteration": 10,
+            "energy": 0.033251728505831774,
+            "pose": {
+              "x": -1.949983492512369,
+              "y": 1.5432726967149928,
+              "theta": -35.21607824803772
+            }
+          },
+          {
+            "iteration": 11,
+            "energy": 0.0216983031946784,
+            "pose": {
+              "x": -1.9456518562467164,
+              "y": 1.5494993410588052,
+              "theta": -34.82473669416595
+            }
+          },
+          {
+            "iteration": 12,
+            "energy": 0.010299511505239955,
+            "pose": {
+              "x": -1.9484809537954018,
+              "y": 1.5477949479947604,
+              "theta": -35.02756376900459
+            }
+          },
+          {
+            "iteration": 13,
+            "energy": 0.010042786381286875,
+            "pose": {
+              "x": -1.9480253710556885,
+              "y": 1.5483246968203785,
+              "theta": -34.97531369489627
+            }
+          },
+          {
+            "iteration": 14,
+            "energy": 0.009949397941493398,
+            "pose": {
+              "x": -1.9482752526531824,
+              "y": 1.5484189088278213,
+              "theta": -35.03074111013848
+            }
+          },
+          {
+            "iteration": 15,
+            "energy": 0.009463129474411185,
+            "pose": {
+              "x": -1.948104295705604,
+              "y": 1.5485189835651774,
+              "theta": -35.003346280610344
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": -2.467,
+          "y": 2.059,
+          "theta": -43.19999999999999
+        },
+        "before": {
+          "score": 0.01545300614227118,
+          "coverage": 0.39166666666666666,
+          "inside": 0.9888888888888889,
+          "nearFraction": 0.041666666666666664,
+          "rmseM": 0.5566715248335852
+        },
+        "after": {
+          "score": 0.9864354503716292,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0
+        },
+        "acceptedPoints": 360,
+        "sampledPoints": 360,
+        "elapsedMs": 10.397899999999993,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    },
+    {
+      "label": "S2-3",
+      "seed": 20261103,
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": 1.5,
+        "theta": -35
+      },
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.399999999999977
+      },
+      "finalError": {
+        "translationM": 0.07084203700315703,
+        "angleDeg": 0.005381451203902543
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": -1.9481424492945512,
+          "y": 1.548263740443406,
+          "theta": -34.994618548796154
+        },
+        "tested": 132,
+        "iterations": 12,
+        "stopReason": "line_search_stalled",
+        "objective": 0.009615659506884115,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.5003926380680016,
+            "pose": {
+              "x": -1.737,
+              "y": 1.871,
+              "theta": -29.600000000000023
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.47352693888254216,
+            "pose": {
+              "x": -1.961911726571875,
+              "y": 1.8000510848946494,
+              "theta": -27.22361192335427
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.3878401156792312,
+            "pose": {
+              "x": -1.794185628314876,
+              "y": 1.6151431310201518,
+              "theta": -27.604752214163568
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.2734644914622811,
+            "pose": {
+              "x": -1.8755866611070178,
+              "y": 1.4602126296565139,
+              "theta": -32.71905543168174
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.24810272373793982,
+            "pose": {
+              "x": -1.913149508776672,
+              "y": 1.5041878707783196,
+              "theta": -32.04023907859681
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.20672325640348937,
+            "pose": {
+              "x": -1.9062527493046084,
+              "y": 1.496703587748911,
+              "theta": -35.609336192971
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.067186405877844,
+            "pose": {
+              "x": -1.9534463044714891,
+              "y": 1.5372029165481085,
+              "theta": -35.43083726887335
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.0382924520746467,
+            "pose": {
+              "x": -1.9405718944883819,
+              "y": 1.5513684281643056,
+              "theta": -34.72319939579518
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.015101876304368942,
+            "pose": {
+              "x": -1.9497923478177843,
+              "y": 1.5455624397364862,
+              "theta": -35.04402297262038
+            }
+          },
+          {
+            "iteration": 9,
+            "energy": 0.011037605408017754,
+            "pose": {
+              "x": -1.9483233943612344,
+              "y": 1.5474282121657892,
+              "theta": -34.95516897568859
+            }
+          },
+          {
+            "iteration": 10,
+            "energy": 0.009624735279624203,
+            "pose": {
+              "x": -1.9482590404045943,
+              "y": 1.5481149804742285,
+              "theta": -35.00751632267128
+            }
+          },
+          {
+            "iteration": 11,
+            "energy": 0.009615659506884115,
+            "pose": {
+              "x": -1.9481424492945512,
+              "y": 1.548263740443406,
+              "theta": -34.994618548796154
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": -1.737,
+          "y": 1.871,
+          "theta": -29.600000000000023
+        },
+        "before": {
+          "score": 0.09694487405917535,
+          "coverage": 0.5611111111111111,
+          "inside": 1,
+          "nearFraction": 0.2361111111111111,
+          "rmseM": 0.3245058848302166
+        },
+        "after": {
+          "score": 0.9861240826591738,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0
+        },
+        "acceptedPoints": 360,
+        "sampledPoints": 360,
+        "elapsedMs": 10.11790000000002,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    },
+    {
+      "label": "S3-1",
+      "seed": 20261103,
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": -2,
+        "theta": 110
+      },
+      "initialError": {
+        "translationM": 0.6774496291238189,
+        "angleDeg": 7.2999999999999545
+      },
+      "finalError": {
+        "translationM": 0.3656009320902172,
+        "angleDeg": 0.05359641655661562
+      },
+      "success": false,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": -1.6384640501251861,
+          "y": -1.9456327442907804,
+          "theta": 109.94640358344338
+        },
+        "tested": 126,
+        "iterations": 13,
+        "stopReason": "line_search_stalled",
+        "objective": 0.1755373965211474,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.6209281449909372,
+            "pose": {
+              "x": -1.463,
+              "y": -2.413,
+              "theta": 117.29999999999995
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.548572395745895,
+            "pose": {
+              "x": -1.4479107522708325,
+              "y": -2.173060212429093,
+              "theta": 115.33574621654066
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.4460600771915444,
+            "pose": {
+              "x": -1.494294563253952,
+              "y": -1.947755224504627,
+              "theta": 118.1406371675771
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.37096384333202304,
+            "pose": {
+              "x": -1.487233650691912,
+              "y": -1.7325062759479561,
+              "theta": 114.50359223914973
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.34888985091316727,
+            "pose": {
+              "x": -1.5280989067523298,
+              "y": -1.8400457627695164,
+              "theta": 115.90420442200752
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.3274554339934388,
+            "pose": {
+              "x": -1.5241000240761038,
+              "y": -1.8285368528028545,
+              "theta": 114.1480621584576
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.3215400963572505,
+            "pose": {
+              "x": -1.5342208971275113,
+              "y": -1.856775217156944,
+              "theta": 114.39899740791179
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.2781593642017897,
+            "pose": {
+              "x": -1.599581888499433,
+              "y": -1.9098998115862513,
+              "theta": 107.65573699888967
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.27616130006852896,
+            "pose": {
+              "x": -1.6281114442658686,
+              "y": -1.899566974791592,
+              "theta": 111.12961665063835
+            }
+          },
+          {
+            "iteration": 9,
+            "energy": 0.21681704479645345,
+            "pose": {
+              "x": -1.6335584623724775,
+              "y": -1.9602043613384543,
+              "theta": 110.72479110514098
+            }
+          },
+          {
+            "iteration": 10,
+            "energy": 0.2020125016196029,
+            "pose": {
+              "x": -1.6359270451031676,
+              "y": -1.9336149987970717,
+              "theta": 110.25935491787413
+            }
+          },
+          {
+            "iteration": 11,
+            "energy": 0.17734871503091312,
+            "pose": {
+              "x": -1.637335672325524,
+              "y": -1.9486983695992797,
+              "theta": 110.1497104964792
+            }
+          },
+          {
+            "iteration": 12,
+            "energy": 0.1755373965211474,
+            "pose": {
+              "x": -1.6384640501251861,
+              "y": -1.9456327442907804,
+              "theta": 109.94640358344338
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": -1.463,
+          "y": -2.413,
+          "theta": 117.29999999999995
+        },
+        "before": {
+          "score": 0.0705746905868334,
+          "coverage": 0.42777777777777776,
+          "inside": 1,
+          "nearFraction": 0.15,
+          "rmseM": 0.3345364457502123
+        },
+        "after": {
+          "score": 0.5767681758867557,
+          "coverage": 0.8583333333333333,
+          "inside": 1,
+          "nearFraction": 0.6027777777777777,
+          "rmseM": 0.16595317178704558
+        },
+        "acceptedPoints": 360,
+        "sampledPoints": 360,
+        "elapsedMs": 9.430000000000007,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    },
+    {
+      "label": "S3-2",
+      "seed": 20261103,
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": -2,
+        "theta": 110
+      },
+      "initialError": {
+        "translationM": 0.7284023613360958,
+        "angleDeg": 8.200000000000045
+      },
+      "finalError": {
+        "translationM": 0.07452403355932147,
+        "angleDeg": 0.023480719652980042
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": -1.9474061611291833,
+          "y": -1.9472011393041342,
+          "theta": 109.97651928034702
+        },
+        "tested": 203,
+        "iterations": 21,
+        "stopReason": "line_search_stalled",
+        "objective": 0.009258508414883309,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.5286568586318348,
+            "pose": {
+              "x": -2.467,
+              "y": -1.4409999999999998,
+              "theta": 101.79999999999995
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.4076487134800319,
+            "pose": {
+              "x": -2.29012492083128,
+              "y": -1.589234749837724,
+              "theta": 99.0459757824658
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.3873426795171119,
+            "pose": {
+              "x": -2.257480198766433,
+              "y": -1.7053648406770505,
+              "theta": 98.10751178672604
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.3641076220182824,
+            "pose": {
+              "x": -2.235670427812033,
+              "y": -1.7027338994398993,
+              "theta": 101.63276377759587
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.3533447968508235,
+            "pose": {
+              "x": -2.1941458314729516,
+              "y": -1.7426975051923042,
+              "theta": 100.93994187424937
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.3421404794660387,
+            "pose": {
+              "x": -2.1792230727395245,
+              "y": -1.7446885925639035,
+              "theta": 102.67771371494314
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.33186899460776853,
+            "pose": {
+              "x": -2.1339443902174313,
+              "y": -1.7869116895062984,
+              "theta": 102.43244194351485
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.3210383568177981,
+            "pose": {
+              "x": -2.1259090296373215,
+              "y": -1.7793467497677464,
+              "theta": 104.1948005770289
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.3209939008297117,
+            "pose": {
+              "x": -2.0339735124376697,
+              "y": -1.8607854408680842,
+              "theta": 103.52871387167306
+            }
+          },
+          {
+            "iteration": 9,
+            "energy": 0.3204548931556769,
+            "pose": {
+              "x": -1.9979371258103367,
+              "y": -1.7645510963816078,
+              "theta": 110.05768860787452
+            }
+          },
+          {
+            "iteration": 10,
+            "energy": 0.31045009954556174,
+            "pose": {
+              "x": -1.8910345095987902,
+              "y": -1.7693667471909225,
+              "theta": 108.20692846663792
+            }
+          },
+          {
+            "iteration": 11,
+            "energy": 0.29822451683642376,
+            "pose": {
+              "x": -2.0103415291778344,
+              "y": -1.7909088551094157,
+              "theta": 109.07905448844167
+            }
+          },
+          {
+            "iteration": 12,
+            "energy": 0.297034186613378,
+            "pose": {
+              "x": -1.89556555582112,
+              "y": -1.7971018352472743,
+              "theta": 107.67176850994929
+            }
+          },
+          {
+            "iteration": 13,
+            "energy": 0.20038574589732375,
+            "pose": {
+              "x": -1.9860259216335092,
+              "y": -1.8810572063658182,
+              "theta": 107.10354436705848
+            }
+          },
+          {
+            "iteration": 14,
+            "energy": 0.1426743198071856,
+            "pose": {
+              "x": -1.9545563561009516,
+              "y": -1.900304256636076,
+              "theta": 110.52504490741046
+            }
+          },
+          {
+            "iteration": 15,
+            "energy": 0.09441507729030078,
+            "pose": {
+              "x": -1.9177204538613601,
+              "y": -1.9303871719356147,
+              "theta": 109.36334400764713
+            }
+          },
+          {
+            "iteration": 16,
+            "energy": 0.08773290705775737,
+            "pose": {
+              "x": -1.9609581377798917,
+              "y": -1.9519425800033718,
+              "theta": 110.4992308757171
+            }
+          },
+          {
+            "iteration": 17,
+            "energy": 0.025458227915366807,
+            "pose": {
+              "x": -1.9415008513953511,
+              "y": -1.9451935757156544,
+              "theta": 109.82589731552093
+            }
+          },
+          {
+            "iteration": 18,
+            "energy": 0.01506211572692123,
+            "pose": {
+              "x": -1.9465004177274245,
+              "y": -1.9443183838113376,
+              "theta": 109.9960415002704
+            }
+          },
+          {
+            "iteration": 19,
+            "energy": 0.009372085893180991,
+            "pose": {
+              "x": -1.9473068146604988,
+              "y": -1.9478865408929087,
+              "theta": 109.95679527050379
+            }
+          },
+          {
+            "iteration": 20,
+            "energy": 0.009258508414883309,
+            "pose": {
+              "x": -1.9474061611291833,
+              "y": -1.9472011393041342,
+              "theta": 109.97651928034702
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": -2.467,
+          "y": -1.4409999999999998,
+          "theta": 101.79999999999995
+        },
+        "before": {
+          "score": 0.06340199573541366,
+          "coverage": 0.5638888888888889,
+          "inside": 1,
+          "nearFraction": 0.125,
+          "rmseM": 0.4055334876325235
+        },
+        "after": {
+          "score": 0.9837203606927127,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0
+        },
+        "acceptedPoints": 360,
+        "sampledPoints": 360,
+        "elapsedMs": 9.729199999999992,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    },
+    {
+      "label": "S3-3",
+      "seed": 20261103,
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": -2,
+        "theta": 110
+      },
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.399999999999977
+      },
+      "finalError": {
+        "translationM": 0.24214552496013061,
+        "angleDeg": 0.08689686774823713
+      },
+      "success": false,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": -1.763879482957663,
+          "y": -1.9463198668977373,
+          "theta": 109.91310313225176
+        },
+        "tested": 87,
+        "iterations": 8,
+        "stopReason": "line_search_stalled",
+        "objective": 0.15864088343885657,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.3921638305413951,
+            "pose": {
+              "x": -1.737,
+              "y": -1.629,
+              "theta": 115.39999999999998
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.3351250229228909,
+            "pose": {
+              "x": -1.9369036637855286,
+              "y": -1.7791268944112724,
+              "theta": 115.38098031347101
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.27260078742514227,
+            "pose": {
+              "x": -1.7602463307569687,
+              "y": -1.9206769967753605,
+              "theta": 112.34163561967421
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.2230209715300967,
+            "pose": {
+              "x": -1.759720567790081,
+              "y": -1.9506680217578327,
+              "theta": 108.86528035953302
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.18704775521014705,
+            "pose": {
+              "x": -1.7612507615141846,
+              "y": -1.927948312245416,
+              "theta": 109.47839593901631
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.17421967168079683,
+            "pose": {
+              "x": -1.7625183283918613,
+              "y": -1.943318082213613,
+              "theta": 109.5503247964516
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.17231825130389866,
+            "pose": {
+              "x": -1.7635365017301567,
+              "y": -1.9388540407564339,
+              "theta": 109.97829807700327
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.15864088343885657,
+            "pose": {
+              "x": -1.763879482957663,
+              "y": -1.9463198668977373,
+              "theta": 109.91310313225176
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": -1.737,
+          "y": -1.629,
+          "theta": 115.39999999999998
+        },
+        "before": {
+          "score": 0.12763334434019644,
+          "coverage": 0.6722222222222223,
+          "inside": 1,
+          "nearFraction": 0.3,
+          "rmseM": 0.3123491459818443
+        },
+        "after": {
+          "score": 0.6282681404134506,
+          "coverage": 0.8583333333333333,
+          "inside": 1,
+          "nearFraction": 0.8583333333333333,
+          "rmseM": 0.11176721235407613
+        },
+        "acceptedPoints": 360,
+        "sampledPoints": 360,
+        "elapsedMs": 6.726499999999987,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    }
+  ],
+  "real": [
+    {
+      "label": "R1-1",
+      "seed": 20261103,
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "finalError": {
+        "translationM": 0.020626354435006836,
+        "angleDeg": 0.2922846844153355
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": 0.02021563104809243,
+          "y": -0.004095700014152326,
+          "theta": 0.2922846844153355
+        },
+        "tested": 534,
+        "iterations": 45,
+        "stopReason": "line_search_stalled",
+        "objective": 0.12389924029381025,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.43861987500482547,
+            "pose": {
+              "x": 0.537,
+              "y": -0.413,
+              "theta": 7.2999999999999545
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.376140881113594,
+            "pose": {
+              "x": 0.32817332531854315,
+              "y": -0.44737276115109115,
+              "theta": 3.487576844269711
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.34680232560707774,
+            "pose": {
+              "x": 0.27952654169421626,
+              "y": -0.42966621408511774,
+              "theta": 6.74701794791099
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.2928252079790961,
+            "pose": {
+              "x": 0.09468962393480784,
+              "y": -0.42648159627915116,
+              "theta": 1.925554097410668
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.2851960144404243,
+            "pose": {
+              "x": 0.09548687633237285,
+              "y": -0.4201771305432785,
+              "theta": 1.0490126523336585
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.28102288664360586,
+            "pose": {
+              "x": 0.08169842462146659,
+              "y": -0.41748485663373913,
+              "theta": 1.2449334017981073
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.26803436932957864,
+            "pose": {
+              "x": 0.056575062838763956,
+              "y": -0.39645914952837313,
+              "theta": -0.2798735962315959
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.26397737281177514,
+            "pose": {
+              "x": 0.04587030949491361,
+              "y": -0.3952830435821769,
+              "theta": 0.044449941390666936
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.2625651583888885,
+            "pose": {
+              "x": 0.044797109758116516,
+              "y": -0.3929757760798576,
+              "theta": -0.1671567906803375
+            }
+          },
+          {
+            "iteration": 9,
+            "energy": 0.26224129670782387,
+            "pose": {
+              "x": 0.04420154644122937,
+              "y": -0.3904786633776476,
+              "theta": -0.08281066215135979
+            }
+          },
+          {
+            "iteration": 10,
+            "energy": 0.26203838089655285,
+            "pose": {
+              "x": 0.04451078798532965,
+              "y": -0.38810337482406454,
+              "theta": -0.17120768474273973
+            }
+          },
+          {
+            "iteration": 11,
+            "energy": 0.2620187393218894,
+            "pose": {
+              "x": 0.04272046657795192,
+              "y": -0.3823864678703934,
+              "theta": -0.02754807087046629
+            }
+          },
+          {
+            "iteration": 12,
+            "energy": 0.26146277231747717,
+            "pose": {
+              "x": 0.04458553605209298,
+              "y": -0.37875810175972163,
+              "theta": -0.21842049533825048
+            }
+          },
+          {
+            "iteration": 13,
+            "energy": 0.26139814442546,
+            "pose": {
+              "x": 0.04217172328691121,
+              "y": -0.3760545991728046,
+              "theta": -0.02014949147178413
+            }
+          },
+          {
+            "iteration": 14,
+            "energy": 0.2609701143731066,
+            "pose": {
+              "x": 0.044590887257704825,
+              "y": -0.37203381484390613,
+              "theta": -0.19909241913717324
+            }
+          },
+          {
+            "iteration": 15,
+            "energy": 0.2608946539346602,
+            "pose": {
+              "x": 0.04100793716541179,
+              "y": -0.3697448350186142,
+              "theta": -0.011326980744001958
+            }
+          },
+          {
+            "iteration": 16,
+            "energy": 0.26062999980102075,
+            "pose": {
+              "x": 0.045045408613824,
+              "y": -0.3655627749377284,
+              "theta": -0.16085786252256185
+            }
+          },
+          {
+            "iteration": 17,
+            "energy": 0.2600500728036445,
+            "pose": {
+              "x": 0.03883400486970806,
+              "y": -0.3619702891361676,
+              "theta": -0.07233789715746752
+            }
+          },
+          {
+            "iteration": 18,
+            "energy": 0.2599226167675001,
+            "pose": {
+              "x": 0.045253798248901855,
+              "y": -0.3577031068968865,
+              "theta": -0.10871693808360305
+            }
+          },
+          {
+            "iteration": 19,
+            "energy": 0.25928605305715924,
+            "pose": {
+              "x": 0.03857561490485689,
+              "y": -0.3540479599636716,
+              "theta": -0.058465204630692824
+            }
+          },
+          {
+            "iteration": 20,
+            "energy": 0.2590153228776567,
+            "pose": {
+              "x": 0.04406914061795192,
+              "y": -0.34935562989902386,
+              "theta": -0.14363365145356966
+            }
+          },
+          {
+            "iteration": 21,
+            "energy": 0.25827109460039765,
+            "pose": {
+              "x": 0.03877265426265902,
+              "y": -0.3455906310865047,
+              "theta": -0.019395668893025686
+            }
+          },
+          {
+            "iteration": 22,
+            "energy": 0.257930856640078,
+            "pose": {
+              "x": 0.04064288965787549,
+              "y": -0.34431379605363355,
+              "theta": -0.11057835548410822
+            }
+          },
+          {
+            "iteration": 23,
+            "energy": 0.23623279736064853,
+            "pose": {
+              "x": 0.06271435200870379,
+              "y": -0.09548830830158284,
+              "theta": 0.17407154418026494
+            }
+          },
+          {
+            "iteration": 24,
+            "energy": 0.176060758507175,
+            "pose": {
+              "x": 0.030017709133225545,
+              "y": -0.06997459945470585,
+              "theta": 1.5135649560124875
+            }
+          },
+          {
+            "iteration": 25,
+            "energy": 0.1551654308798338,
+            "pose": {
+              "x": 0.04047880589039965,
+              "y": -0.06869594463295875,
+              "theta": 0.6707651718484158
+            }
+          },
+          {
+            "iteration": 26,
+            "energy": 0.14837347210645196,
+            "pose": {
+              "x": 0.03463648821567489,
+              "y": -0.0582692913259098,
+              "theta": 0.9590899935330981
+            }
+          },
+          {
+            "iteration": 27,
+            "energy": 0.14321044265810337,
+            "pose": {
+              "x": 0.03335695317193843,
+              "y": -0.05345601974511893,
+              "theta": 0.5348150056740906
+            }
+          },
+          {
+            "iteration": 28,
+            "energy": 0.14042771490396913,
+            "pose": {
+              "x": 0.029177213115574197,
+              "y": -0.043140253584332766,
+              "theta": 0.8489706522183269
+            }
+          },
+          {
+            "iteration": 29,
+            "energy": 0.1369423785407433,
+            "pose": {
+              "x": 0.029678960286599665,
+              "y": -0.04172009581649383,
+              "theta": 0.40343192631712554
+            }
+          },
+          {
+            "iteration": 30,
+            "energy": 0.13435354130394933,
+            "pose": {
+              "x": 0.02512925690728729,
+              "y": -0.03235187844254361,
+              "theta": 0.7371242965939473
+            }
+          },
+          {
+            "iteration": 31,
+            "energy": 0.13362308210947468,
+            "pose": {
+              "x": 0.027204922758139016,
+              "y": -0.032098439547971425,
+              "theta": 0.2935276528534132
+            }
+          },
+          {
+            "iteration": 32,
+            "energy": 0.1311765793410996,
+            "pose": {
+              "x": 0.022324132455438628,
+              "y": -0.024181978983545793,
+              "theta": 0.6532248835441123
+            }
+          },
+          {
+            "iteration": 33,
+            "energy": 0.12725269376109244,
+            "pose": {
+              "x": 0.024051630003445568,
+              "y": -0.024359885165144146,
+              "theta": 0.43501283751265873
+            }
+          },
+          {
+            "iteration": 34,
+            "energy": 0.12605366241356328,
+            "pose": {
+              "x": 0.023708505384344103,
+              "y": -0.01699757848811545,
+              "theta": 0.5092427325407698
+            }
+          },
+          {
+            "iteration": 35,
+            "energy": 0.1253943318651082,
+            "pose": {
+              "x": 0.024216511936242524,
+              "y": -0.0168024236915979,
+              "theta": 0.39842821785305205
+            }
+          },
+          {
+            "iteration": 36,
+            "energy": 0.12497887763017215,
+            "pose": {
+              "x": 0.022949777614795774,
+              "y": -0.01328845828239894,
+              "theta": 0.4311698899820158
+            }
+          },
+          {
+            "iteration": 37,
+            "energy": 0.1247780057768895,
+            "pose": {
+              "x": 0.023264697174069204,
+              "y": -0.012218968320967472,
+              "theta": 0.32391880980890164
+            }
+          },
+          {
+            "iteration": 38,
+            "energy": 0.12477448897602401,
+            "pose": {
+              "x": 0.02186032815823369,
+              "y": -0.009927760561133536,
+              "theta": 0.40513395402945207
+            }
+          },
+          {
+            "iteration": 39,
+            "energy": 0.12451574243089468,
+            "pose": {
+              "x": 0.022474392485987926,
+              "y": -0.00955039290394949,
+              "theta": 0.29514953131172206
+            }
+          },
+          {
+            "iteration": 40,
+            "energy": 0.12418008058569367,
+            "pose": {
+              "x": 0.021812505547655126,
+              "y": -0.008501434376377626,
+              "theta": 0.33837167792773926
+            }
+          },
+          {
+            "iteration": 41,
+            "energy": 0.1239634775311047,
+            "pose": {
+              "x": 0.020305751700253505,
+              "y": -0.00495171836611169,
+              "theta": 0.32052705129842707
+            }
+          },
+          {
+            "iteration": 42,
+            "energy": 0.12391894829372777,
+            "pose": {
+              "x": 0.020532540093069374,
+              "y": -0.005000474672678223,
+              "theta": 0.2933513277971542
+            }
+          },
+          {
+            "iteration": 43,
+            "energy": 0.12390012201841341,
+            "pose": {
+              "x": 0.020198139402028303,
+              "y": -0.004086734650197654,
+              "theta": 0.29573611028649793
+            }
+          },
+          {
+            "iteration": 44,
+            "energy": 0.12389924029381025,
+            "pose": {
+              "x": 0.02021563104809243,
+              "y": -0.004095700014152326,
+              "theta": 0.2922846844153355
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": 0.537,
+          "y": -0.413,
+          "theta": 7.2999999999999545
+        },
+        "before": {
+          "score": 0.1372399792925085,
+          "coverage": 0.7155361050328227,
+          "inside": 1,
+          "nearFraction": 0.24070021881838075,
+          "rmseM": 0.4608877767273224
+        },
+        "after": {
+          "score": 0.7805043903993846,
+          "coverage": 0.9168490153172867,
+          "inside": 1,
+          "nearFraction": 0.9168490153172867,
+          "rmseM": 0.04342167188852589
+        },
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 29.848700000000008,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    },
+    {
+      "label": "R1-2",
+      "seed": 20261103,
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "initialError": {
+        "translationM": 0.7284023613360957,
+        "angleDeg": 8.200000000000045
+      },
+      "finalError": {
+        "translationM": 0.017700729882265405,
+        "angleDeg": 0.27388191984744026
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": 0.017609768150253335,
+          "y": -0.001792178579061443,
+          "theta": 0.27388191984744026
+        },
+        "tested": 215,
+        "iterations": 21,
+        "stopReason": "line_search_stalled",
+        "objective": 0.12417602335159887,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.7096105149783322,
+            "pose": {
+              "x": -0.467,
+              "y": 0.559,
+              "theta": -8.200000000000045
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.6623891766903921,
+            "pose": {
+              "x": -0.2735010938763611,
+              "y": 0.4138984896070754,
+              "theta": -10.01269508527048
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.5969445601113732,
+            "pose": {
+              "x": -0.1597770610874678,
+              "y": 0.44069950403215197,
+              "theta": -3.6810221210637337
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.4387493982656214,
+            "pose": {
+              "x": 0.05466251308715592,
+              "y": 0.4111691833495545,
+              "theta": -7.264142452430519
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.40195073611431775,
+            "pose": {
+              "x": 0.2082958620208754,
+              "y": 0.38419439243666526,
+              "theta": -1.6672249170834448
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.3436860431015806,
+            "pose": {
+              "x": 0.10217454393940234,
+              "y": 0.3687401199758988,
+              "theta": -3.507042115823424
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.31825021151142807,
+            "pose": {
+              "x": 0.07534845664116258,
+              "y": 0.23691305229375986,
+              "theta": 2.529577782478782
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.27456085235777183,
+            "pose": {
+              "x": 0.027389144053627634,
+              "y": 0.19178217550535237,
+              "theta": -0.5141318618194646
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.24959618948291784,
+            "pose": {
+              "x": 0.008431377670288509,
+              "y": 0.18192655013088788,
+              "theta": 0.13916078834063228
+            }
+          },
+          {
+            "iteration": 9,
+            "energy": 0.24815042481019858,
+            "pose": {
+              "x": 0.006102582543672352,
+              "y": 0.1714195447414727,
+              "theta": 0.4636797741582086
+            }
+          },
+          {
+            "iteration": 10,
+            "energy": 0.2465613190860029,
+            "pose": {
+              "x": 0.013619103367222052,
+              "y": 0.16726538005028013,
+              "theta": 0.08973377035965768
+            }
+          },
+          {
+            "iteration": 11,
+            "energy": 0.24418814849986248,
+            "pose": {
+              "x": 0.004663058974086864,
+              "y": 0.1574668711450335,
+              "theta": 0.3258297830209358
+            }
+          },
+          {
+            "iteration": 12,
+            "energy": 0.22967831291043447,
+            "pose": {
+              "x": 0.040492468316829455,
+              "y": 0.12968115970441596,
+              "theta": -0.9065149512161952
+            }
+          },
+          {
+            "iteration": 13,
+            "energy": 0.22724442622019442,
+            "pose": {
+              "x": 0.00909328392501918,
+              "y": 0.07904584772991824,
+              "theta": -1.4473506923720834
+            }
+          },
+          {
+            "iteration": 14,
+            "energy": 0.18769257462864994,
+            "pose": {
+              "x": 0.01801208041627217,
+              "y": 0.07286652868775617,
+              "theta": 0.3159545191590496
+            }
+          },
+          {
+            "iteration": 15,
+            "energy": 0.1471622201697148,
+            "pose": {
+              "x": 0.01697693031794134,
+              "y": 0.053749868914755305,
+              "theta": -0.3916218455051421
+            }
+          },
+          {
+            "iteration": 16,
+            "energy": 0.13937015474278763,
+            "pose": {
+              "x": 0.011611390058665405,
+              "y": -0.008356324664676174,
+              "theta": -0.26260548700258823
+            }
+          },
+          {
+            "iteration": 17,
+            "energy": 0.13749876927401594,
+            "pose": {
+              "x": 0.01435390328427294,
+              "y": 0.0015256273154288236,
+              "theta": 0.5830597156486874
+            }
+          },
+          {
+            "iteration": 18,
+            "energy": 0.12471529345130686,
+            "pose": {
+              "x": 0.018710010876420657,
+              "y": -0.0027053211042292746,
+              "theta": 0.17062558019642893
+            }
+          },
+          {
+            "iteration": 19,
+            "energy": 0.12417628911275032,
+            "pose": {
+              "x": 0.017591754394074677,
+              "y": -0.0017843837439739385,
+              "theta": 0.2745513663617203
+            }
+          },
+          {
+            "iteration": 20,
+            "energy": 0.12417602335159887,
+            "pose": {
+              "x": 0.017609768150253335,
+              "y": -0.001792178579061443,
+              "theta": 0.27388191984744026
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": -0.467,
+          "y": 0.559,
+          "theta": -8.200000000000045
+        },
+        "before": {
+          "score": 0.09403137396484697,
+          "coverage": 0.3676148796498906,
+          "inside": 1,
+          "nearFraction": 0.17943107221006566,
+          "rmseM": 0.42947367469466546
+        },
+        "after": {
+          "score": 0.7824614124681394,
+          "coverage": 0.9168490153172867,
+          "inside": 1,
+          "nearFraction": 0.9168490153172867,
+          "rmseM": 0.04286850698677153
+        },
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 26.58979999999997,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    },
+    {
+      "label": "R1-3",
+      "seed": 20261103,
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "initialError": {
+        "translationM": 0.4547636748905963,
+        "angleDeg": 5.399999999999977
+      },
+      "finalError": {
+        "translationM": 0.019738143065559596,
+        "angleDeg": 0.280128136383496
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": 0.019442594882383313,
+          "y": -0.0034029099188812584,
+          "theta": 0.280128136383496
+        },
+        "tested": 133,
+        "iterations": 12,
+        "stopReason": "line_search_stalled",
+        "objective": 0.12392438721358472,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.43696259963725215,
+            "pose": {
+              "x": 0.263,
+              "y": 0.371,
+              "theta": 5.399999999999977
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.3790889437724001,
+            "pose": {
+              "x": 0.126193984411074,
+              "y": 0.2881963864700584,
+              "theta": -0.10514323678580695
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.3283090787043488,
+            "pose": {
+              "x": 0.01975415796459068,
+              "y": 0.26512348474734926,
+              "theta": -1.8625469894950584
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.30316182860358576,
+            "pose": {
+              "x": 0.1637870642738522,
+              "y": 0.07126437134734687,
+              "theta": -3.713202009666361
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.26724649047029175,
+            "pose": {
+              "x": 0.07974567531737745,
+              "y": 0.027299370501804365,
+              "theta": 2.9133294519427864
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.18538405302688024,
+            "pose": {
+              "x": 0.057669731192717816,
+              "y": -0.01278786579508373,
+              "theta": -0.41903295504471316
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.16874610348816516,
+            "pose": {
+              "x": 0.02324378298693297,
+              "y": 0.00664735751895551,
+              "theta": 0.9677664374544293
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.127870082888403,
+            "pose": {
+              "x": 0.027542592525176074,
+              "y": -0.002998882135996306,
+              "theta": 0.1251907495782234
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.12420833882497091,
+            "pose": {
+              "x": 0.022456836248483603,
+              "y": -0.001698262605371481,
+              "theta": 0.2909494998609716
+            }
+          },
+          {
+            "iteration": 9,
+            "energy": 0.12399820011079886,
+            "pose": {
+              "x": 0.02097108680588447,
+              "y": -0.0027636792374264862,
+              "theta": 0.271264975085046
+            }
+          },
+          {
+            "iteration": 10,
+            "energy": 0.12393306420518094,
+            "pose": {
+              "x": 0.019251916897164045,
+              "y": -0.0033095770561093474,
+              "theta": 0.2927250491095492
+            }
+          },
+          {
+            "iteration": 11,
+            "energy": 0.12392438721358472,
+            "pose": {
+              "x": 0.019442594882383313,
+              "y": -0.0034029099188812584,
+              "theta": 0.280128136383496
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": 0.263,
+          "y": 0.371,
+          "theta": 5.399999999999977
+        },
+        "before": {
+          "score": 0.11011686437899577,
+          "coverage": 0.6695842450765864,
+          "inside": 1,
+          "nearFraction": 0.22975929978118162,
+          "rmseM": 0.39971011443567667
+        },
+        "after": {
+          "score": 0.7823216863177495,
+          "coverage": 0.9190371991247265,
+          "inside": 1,
+          "nearFraction": 0.9190371991247265,
+          "rmseM": 0.04253849867350279
+        },
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 21.063600000000008,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    },
+    {
+      "label": "R2-1",
+      "seed": 20261103,
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 3.2162682227295947,
+        "y": 1.3246240083357195,
+        "theta": -92.1245634897957
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "finalError": {
+        "translationM": 0.012117386371099543,
+        "angleDeg": 0.26159646382484425
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": 3.223000635763391,
+          "y": 1.3145490062409864,
+          "theta": -91.86296702597087
+        },
+        "tested": 301,
+        "iterations": 27,
+        "stopReason": "line_search_stalled",
+        "objective": 0.32310497975478514,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.6453800776722838,
+            "pose": {
+              "x": 3.7532682227295946,
+              "y": 0.9116240083357194,
+              "theta": -84.82456348979571
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.5926135508822883,
+            "pose": {
+              "x": 3.5705268457641317,
+              "y": 1.07452560673133,
+              "theta": -83.37263304578056
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.5450768439058812,
+            "pose": {
+              "x": 3.512116368237193,
+              "y": 1.0470988502693659,
+              "theta": -90.29191327568145
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.4117522587196818,
+            "pose": {
+              "x": 3.2731462611141513,
+              "y": 1.1161004062556414,
+              "theta": -91.01215174768964
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.39464350845075113,
+            "pose": {
+              "x": 3.227633354862318,
+              "y": 1.1246416892263256,
+              "theta": -92.21463710063466
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.38417988644111684,
+            "pose": {
+              "x": 3.233312432291965,
+              "y": 1.1295153161734532,
+              "theta": -91.34543994752829
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.381694903781629,
+            "pose": {
+              "x": 3.2351263233071483,
+              "y": 1.1335280191058192,
+              "theta": -91.77491819526307
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.38095832635326693,
+            "pose": {
+              "x": 3.233037784604358,
+              "y": 1.1366026732878824,
+              "theta": -91.57805973543918
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.37998139190131797,
+            "pose": {
+              "x": 3.231733023481826,
+              "y": 1.141635698637771,
+              "theta": -91.74510766738354
+            }
+          },
+          {
+            "iteration": 9,
+            "energy": 0.3796961753896936,
+            "pose": {
+              "x": 3.2310639211369847,
+              "y": 1.1464304634973281,
+              "theta": -91.56944753409192
+            }
+          },
+          {
+            "iteration": 10,
+            "energy": 0.37856718157768804,
+            "pose": {
+              "x": 3.2306547656906344,
+              "y": 1.151045946524472,
+              "theta": -91.74964495705416
+            }
+          },
+          {
+            "iteration": 11,
+            "energy": 0.3776694947734732,
+            "pose": {
+              "x": 3.2290897700821466,
+              "y": 1.1736463177226686,
+              "theta": -91.13299188629748
+            }
+          },
+          {
+            "iteration": 12,
+            "energy": 0.3767559581155354,
+            "pose": {
+              "x": 3.2328088637243297,
+              "y": 1.183090499250816,
+              "theta": -91.97969977647517
+            }
+          },
+          {
+            "iteration": 13,
+            "energy": 0.3716004715014812,
+            "pose": {
+              "x": 3.224792046759105,
+              "y": 1.1936668361209115,
+              "theta": -91.16919520839991
+            }
+          },
+          {
+            "iteration": 14,
+            "energy": 0.365224065132319,
+            "pose": {
+              "x": 3.2270616024277405,
+              "y": 1.1975797778809576,
+              "theta": -91.59764988019992
+            }
+          },
+          {
+            "iteration": 15,
+            "energy": 0.36271485802497316,
+            "pose": {
+              "x": 3.2225116203190307,
+              "y": 1.2237962952717387,
+              "theta": -91.12817889607243
+            }
+          },
+          {
+            "iteration": 16,
+            "energy": 0.3566841415577297,
+            "pose": {
+              "x": 3.225065329598589,
+              "y": 1.2355261800889366,
+              "theta": -91.95473424898137
+            }
+          },
+          {
+            "iteration": 17,
+            "energy": 0.35005345068061655,
+            "pose": {
+              "x": 3.2232618065790963,
+              "y": 1.2507426906198895,
+              "theta": -91.17449719736828
+            }
+          },
+          {
+            "iteration": 18,
+            "energy": 0.34660538359916704,
+            "pose": {
+              "x": 3.223843857315653,
+              "y": 1.260587714466217,
+              "theta": -92.02399249913174
+            }
+          },
+          {
+            "iteration": 19,
+            "energy": 0.33633430604706227,
+            "pose": {
+              "x": 3.222997917477465,
+              "y": 1.2797107665946545,
+              "theta": -91.31635148605625
+            }
+          },
+          {
+            "iteration": 20,
+            "energy": 0.32972953369878266,
+            "pose": {
+              "x": 3.2225961481850565,
+              "y": 1.2833133751201846,
+              "theta": -91.75176210830784
+            }
+          },
+          {
+            "iteration": 21,
+            "energy": 0.3284314283315761,
+            "pose": {
+              "x": 3.220754077804203,
+              "y": 1.3129687906877185,
+              "theta": -91.47441620121657
+            }
+          },
+          {
+            "iteration": 22,
+            "energy": 0.3233848977246286,
+            "pose": {
+              "x": 3.2210618393767785,
+              "y": 1.3111970280393415,
+              "theta": -91.9190650114254
+            }
+          },
+          {
+            "iteration": 23,
+            "energy": 0.32327619622534653,
+            "pose": {
+              "x": 3.2230503348200616,
+              "y": 1.312908079547413,
+              "theta": -91.83614939846086
+            }
+          },
+          {
+            "iteration": 24,
+            "energy": 0.3232188343327799,
+            "pose": {
+              "x": 3.22289165175958,
+              "y": 1.3130872589158422,
+              "theta": -91.89168059466539
+            }
+          },
+          {
+            "iteration": 25,
+            "energy": 0.3231174903288498,
+            "pose": {
+              "x": 3.223023144295676,
+              "y": 1.3145887742363067,
+              "theta": -91.85609651674275
+            }
+          },
+          {
+            "iteration": 26,
+            "energy": 0.32310497975478514,
+            "pose": {
+              "x": 3.223000635763391,
+              "y": 1.3145490062409864,
+              "theta": -91.86296702597087
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": 3.7532682227295946,
+          "y": 0.9116240083357194,
+          "theta": -84.82456348979571
+        },
+        "before": {
+          "score": 0.0794383294590357,
+          "coverage": 0.7789934354485777,
+          "inside": 1,
+          "nearFraction": 0.1422319474835886,
+          "rmseM": 1.3081132868723397
+        },
+        "after": {
+          "score": 0.5461265947485139,
+          "coverage": 0.9540481400437637,
+          "inside": 1,
+          "nearFraction": 0.6652078774617067,
+          "rmseM": 1.2925029507976071
+        },
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 23.501300000000015,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    },
+    {
+      "label": "R2-2",
+      "seed": 20261103,
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 3.2162682227295947,
+        "y": 1.3246240083357195,
+        "theta": -92.1245634897957
+      },
+      "initialError": {
+        "translationM": 0.7284023613360956,
+        "angleDeg": 8.200000000000045
+      },
+      "finalError": {
+        "translationM": 0.013886037483901612,
+        "angleDeg": 0.25155674939696837
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": 3.22293823323153,
+          "y": 1.3124448048761992,
+          "theta": -91.87300674039875
+        },
+        "tested": 150,
+        "iterations": 15,
+        "stopReason": "line_search_stalled",
+        "objective": 0.3231702407313198,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.7836183928738,
+            "pose": {
+              "x": 2.7492682227295946,
+              "y": 1.8836240083357194,
+              "theta": -100.32456348979571
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.767314005197974,
+            "pose": {
+              "x": 2.7355955672463974,
+              "y": 1.726575326978393,
+              "theta": -94.76593007402289
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.6792989238653023,
+            "pose": {
+              "x": 2.8786957426771322,
+              "y": 1.659300595574329,
+              "theta": -89.21855264932697
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.6286222446072038,
+            "pose": {
+              "x": 2.9739249472646807,
+              "y": 1.5654112154189321,
+              "theta": -85.32456348979571
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.5821779283336636,
+            "pose": {
+              "x": 3.083430900634123,
+              "y": 1.3644991808571179,
+              "theta": -85.32456348979571
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.5455505129415397,
+            "pose": {
+              "x": 3.0354628319682333,
+              "y": 1.2461240434608325,
+              "theta": -91.48128701838573
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.5411574709483001,
+            "pose": {
+              "x": 3.080359440037851,
+              "y": 1.289442294800308,
+              "theta": -88.37820032543743
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.39011886334873846,
+            "pose": {
+              "x": 3.2603989396639683,
+              "y": 1.1649676908216273,
+              "theta": -91.83877191441536
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.3749576751623022,
+            "pose": {
+              "x": 3.233275915950253,
+              "y": 1.1687890048801055,
+              "theta": -91.40781238259342
+            }
+          },
+          {
+            "iteration": 9,
+            "energy": 0.33027939841148585,
+            "pose": {
+              "x": 3.217774882418534,
+              "y": 1.291074779778004,
+              "theta": -92.00249400927703
+            }
+          },
+          {
+            "iteration": 10,
+            "energy": 0.3262433617960472,
+            "pose": {
+              "x": 3.221431013068921,
+              "y": 1.2996396714610978,
+              "theta": -91.64306177414085
+            }
+          },
+          {
+            "iteration": 11,
+            "energy": 0.3254882241057792,
+            "pose": {
+              "x": 3.22109417880767,
+              "y": 1.306093458915974,
+              "theta": -92.05060335038343
+            }
+          },
+          {
+            "iteration": 12,
+            "energy": 0.3235724785310337,
+            "pose": {
+              "x": 3.2222410978614078,
+              "y": 1.3087809906587884,
+              "theta": -91.84303578512583
+            }
+          },
+          {
+            "iteration": 13,
+            "energy": 0.32332536509149873,
+            "pose": {
+              "x": 3.222787153042881,
+              "y": 1.311501318796739,
+              "theta": -91.92180668681249
+            }
+          },
+          {
+            "iteration": 14,
+            "energy": 0.3231702407313198,
+            "pose": {
+              "x": 3.22293823323153,
+              "y": 1.3124448048761992,
+              "theta": -91.87300674039875
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": 2.7492682227295946,
+          "y": 1.8836240083357194,
+          "theta": -100.32456348979571
+        },
+        "before": {
+          "score": 0.08429912233771532,
+          "coverage": 0.5426695842450766,
+          "inside": 1,
+          "nearFraction": 0.1422319474835886,
+          "rmseM": 1.9391103936393088
+        },
+        "after": {
+          "score": 0.5456793954308792,
+          "coverage": 0.9540481400437637,
+          "inside": 1,
+          "nearFraction": 0.6673960612691466,
+          "rmseM": 1.2918806739776747
+        },
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 21.458399999999983,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    },
+    {
+      "label": "R2-3",
+      "seed": 20261103,
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 3.2162682227295947,
+        "y": 1.3246240083357195,
+        "theta": -92.1245634897957
+      },
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.400000000000091
+      },
+      "finalError": {
+        "translationM": 0.2234767985382111,
+        "angleDeg": 0.5431352357685455
+      },
+      "success": false,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": 3.210880015272232,
+          "y": 1.5480358403976866,
+          "theta": -91.58142825402717
+        },
+        "tested": 184,
+        "iterations": 15,
+        "stopReason": "line_search_stalled",
+        "objective": 0.4794943542553208,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.6171132732153216,
+            "pose": {
+              "x": 3.4792682227295946,
+              "y": 1.6956240083357195,
+              "theta": -86.72456348979568
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.5696226835742776,
+            "pose": {
+              "x": 3.2623287830466183,
+              "y": 1.5898797199043004,
+              "theta": -88.59336899915195
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.5595666533620562,
+            "pose": {
+              "x": 3.3032931319703103,
+              "y": 1.5644016552836482,
+              "theta": -91.89693035663925
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.5531420400394903,
+            "pose": {
+              "x": 3.1822230507100437,
+              "y": 1.5548976617640875,
+              "theta": -92.74517377908165
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.4970246298145518,
+            "pose": {
+              "x": 3.1995354527012303,
+              "y": 1.5534022599616253,
+              "theta": -91.02527546034406
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.4865264584952341,
+            "pose": {
+              "x": 3.206371487649087,
+              "y": 1.5507005296734366,
+              "theta": -91.8954037819575
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.48072795660955886,
+            "pose": {
+              "x": 3.2079388746221507,
+              "y": 1.5505334635082382,
+              "theta": -91.45006405471997
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.4800900416821952,
+            "pose": {
+              "x": 3.208963061937714,
+              "y": 1.5502809081180913,
+              "theta": -91.67182613208456
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.4796178813861883,
+            "pose": {
+              "x": 3.2095679112615327,
+              "y": 1.5501569756299718,
+              "theta": -91.56132699476575
+            }
+          },
+          {
+            "iteration": 9,
+            "energy": 0.47957619452196587,
+            "pose": {
+              "x": 3.2105391519215187,
+              "y": 1.549680556671733,
+              "theta": -91.60791320111412
+            }
+          },
+          {
+            "iteration": 10,
+            "energy": 0.47957443053437876,
+            "pose": {
+              "x": 3.2108463142900265,
+              "y": 1.5492659509979103,
+              "theta": -91.55394822074311
+            }
+          },
+          {
+            "iteration": 11,
+            "energy": 0.4795533517759331,
+            "pose": {
+              "x": 3.210819662766347,
+              "y": 1.548903466965197,
+              "theta": -91.60892375472724
+            }
+          },
+          {
+            "iteration": 12,
+            "energy": 0.47955103161869844,
+            "pose": {
+              "x": 3.2108898493954983,
+              "y": 1.5485404590512304,
+              "theta": -91.55398253660172
+            }
+          },
+          {
+            "iteration": 13,
+            "energy": 0.4795371732778237,
+            "pose": {
+              "x": 3.210850340328008,
+              "y": 1.548192560384206,
+              "theta": -91.60902901371776
+            }
+          },
+          {
+            "iteration": 14,
+            "energy": 0.4794943542553208,
+            "pose": {
+              "x": 3.210880015272232,
+              "y": 1.5480358403976866,
+              "theta": -91.58142825402717
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": 3.4792682227295946,
+          "y": 1.6956240083357195,
+          "theta": -86.72456348979568
+        },
+        "before": {
+          "score": 0.11436054239799778,
+          "coverage": 0.7264770240700219,
+          "inside": 1,
+          "nearFraction": 0.20350109409190373,
+          "rmseM": 1.4108095289795186
+        },
+        "after": {
+          "score": 0.34310794504016034,
+          "coverage": 0.7811816192560175,
+          "inside": 1,
+          "nearFraction": 0.47045951859956237,
+          "rmseM": 1.4447386996605516
+        },
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 24.949799999999982,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    },
+    {
+      "label": "R3-1",
+      "seed": 20261103,
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.9820777772150278,
+        "y": 2.3296138030212745,
+        "theta": 4.337474888004696
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "finalError": {
+        "translationM": 0.010706071396190823,
+        "angleDeg": 0.390676368581353
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": 2.9747280780153402,
+          "y": 2.321829081676586,
+          "theta": 4.7281512565859884
+        },
+        "tested": 181,
+        "iterations": 16,
+        "stopReason": "line_search_stalled",
+        "objective": 0.2396319877709606,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.6996864837308948,
+            "pose": {
+              "x": 3.5190777772150277,
+              "y": 1.9166138030212745,
+              "theta": 11.637474888004704
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.6246167600565866,
+            "pose": {
+              "x": 3.3333651974465273,
+              "y": 2.0222099074595508,
+              "theta": 15.357323720887734
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.5098744627944799,
+            "pose": {
+              "x": 3.239851398664017,
+              "y": 2.0893872986450424,
+              "theta": 9.000178982774287
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.4191858144705224,
+            "pose": {
+              "x": 3.010834311173466,
+              "y": 2.1891286967005246,
+              "theta": 9.290679251786969
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.3304180369969767,
+            "pose": {
+              "x": 2.944166660896811,
+              "y": 2.2274746458645467,
+              "theta": 2.476032550679747
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.2854749748634266,
+            "pose": {
+              "x": 2.973737899321182,
+              "y": 2.253937637140354,
+              "theta": 5.8717746022533674
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.2504040012087785,
+            "pose": {
+              "x": 2.9660919561598877,
+              "y": 2.277838658540354,
+              "theta": 4.231941082969911
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.24362650111838507,
+            "pose": {
+              "x": 2.9660599470383295,
+              "y": 2.296348695628792,
+              "theta": 4.953242383642532
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.2412162783526365,
+            "pose": {
+              "x": 2.965982469366818,
+              "y": 2.305182394870181,
+              "theta": 4.584028562818048
+            }
+          },
+          {
+            "iteration": 9,
+            "energy": 0.24069489568135227,
+            "pose": {
+              "x": 2.9781165283212765,
+              "y": 2.333958454420679,
+              "theta": 4.551801150643314
+            }
+          },
+          {
+            "iteration": 10,
+            "energy": 0.24026466680131472,
+            "pose": {
+              "x": 2.974407072930713,
+              "y": 2.330951885997753,
+              "theta": 4.728945309829896
+            }
+          },
+          {
+            "iteration": 11,
+            "energy": 0.24008417390222836,
+            "pose": {
+              "x": 2.974903265673316,
+              "y": 2.3243498922053867,
+              "theta": 4.610125179928218
+            }
+          },
+          {
+            "iteration": 12,
+            "energy": 0.23966541428399998,
+            "pose": {
+              "x": 2.9740622719751935,
+              "y": 2.3241812773305908,
+              "theta": 4.719299907404434
+            }
+          },
+          {
+            "iteration": 13,
+            "energy": 0.2396532341756959,
+            "pose": {
+              "x": 2.9745694260150666,
+              "y": 2.322349428935753,
+              "theta": 4.706429908571522
+            }
+          },
+          {
+            "iteration": 14,
+            "energy": 0.2396346968288769,
+            "pose": {
+              "x": 2.974745024095142,
+              "y": 2.3219054771905685,
+              "theta": 4.730835262228766
+            }
+          },
+          {
+            "iteration": 15,
+            "energy": 0.2396319877709606,
+            "pose": {
+              "x": 2.9747280780153402,
+              "y": 2.321829081676586,
+              "theta": 4.7281512565859884
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": 3.5190777772150277,
+          "y": 1.9166138030212745,
+          "theta": 11.637474888004704
+        },
+        "before": {
+          "score": 0.06536655901367358,
+          "coverage": 0.7177242888402626,
+          "inside": 1,
+          "nearFraction": 0.1137855579868709,
+          "rmseM": 1.288022938027088
+        },
+        "after": {
+          "score": 0.4061876981517999,
+          "coverage": 0.9803063457330415,
+          "inside": 1,
+          "nearFraction": 0.5667396061269147,
+          "rmseM": 1.0584616054294191
+        },
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 22.571500000000015,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    },
+    {
+      "label": "R3-2",
+      "seed": 20261103,
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.9820777772150278,
+        "y": 2.3296138030212745,
+        "theta": 4.337474888004696
+      },
+      "initialError": {
+        "translationM": 0.7284023613360958,
+        "angleDeg": 8.200000000000045
+      },
+      "finalError": {
+        "translationM": 0.011003490472046207,
+        "angleDeg": 0.3910571313301716
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": 2.9746887448985393,
+          "y": 2.3214603372554605,
+          "theta": 4.728532019334921
+        },
+        "tested": 167,
+        "iterations": 15,
+        "stopReason": "line_search_stalled",
+        "objective": 0.2396446555138032,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.6918232758723819,
+            "pose": {
+              "x": 2.5150777772150277,
+              "y": 2.8886138030212747,
+              "theta": -3.8625251119952964
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.5868885206529936,
+            "pose": {
+              "x": 2.570392862326034,
+              "y": 2.6889569486019242,
+              "theta": -7.8709148581798445
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.5563908492280998,
+            "pose": {
+              "x": 2.7810050920568363,
+              "y": 2.555773782839365,
+              "theta": -8.447252478658015
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.4951554358095305,
+            "pose": {
+              "x": 2.734960255810886,
+              "y": 2.5624224399511997,
+              "theta": -1.4103796753333881
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.36154483057261017,
+            "pose": {
+              "x": 2.8457400951546066,
+              "y": 2.395738403870477,
+              "theta": 2.881477643673975
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.30472342943662845,
+            "pose": {
+              "x": 3.002570795167786,
+              "y": 2.2308963130867268,
+              "theta": 5.849157972113744
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.28511696066225645,
+            "pose": {
+              "x": 2.9551412212966155,
+              "y": 2.2971084925096807,
+              "theta": 3.132681917929176
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.2424423123334186,
+            "pose": {
+              "x": 2.964376180132545,
+              "y": 2.3028189490282065,
+              "theta": 4.895948762491685
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.2406379042827611,
+            "pose": {
+              "x": 2.9670237061135465,
+              "y": 2.313156097023349,
+              "theta": 4.56896776443773
+            }
+          },
+          {
+            "iteration": 9,
+            "energy": 0.2399338246133066,
+            "pose": {
+              "x": 2.9696766072192387,
+              "y": 2.316897165361685,
+              "theta": 4.75015673209532
+            }
+          },
+          {
+            "iteration": 10,
+            "energy": 0.2399151563569034,
+            "pose": {
+              "x": 2.974245162896191,
+              "y": 2.3223316354874113,
+              "theta": 4.656754111972191
+            }
+          },
+          {
+            "iteration": 11,
+            "energy": 0.23975340826703417,
+            "pose": {
+              "x": 2.9743414102548824,
+              "y": 2.3222910802675467,
+              "theta": 4.7686199242846214
+            }
+          },
+          {
+            "iteration": 12,
+            "energy": 0.23965726720126546,
+            "pose": {
+              "x": 2.974227451853461,
+              "y": 2.3218969143634984,
+              "theta": 4.713915625551294
+            }
+          },
+          {
+            "iteration": 13,
+            "energy": 0.239650358015617,
+            "pose": {
+              "x": 2.9747302928090775,
+              "y": 2.32151437528072,
+              "theta": 4.735247998072282
+            }
+          },
+          {
+            "iteration": 14,
+            "energy": 0.2396446555138032,
+            "pose": {
+              "x": 2.9746887448985393,
+              "y": 2.3214603372554605,
+              "theta": 4.728532019334921
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": 2.5150777772150277,
+          "y": 2.8886138030212747,
+          "theta": -3.8625251119952964
+        },
+        "before": {
+          "score": 0.06544848662999056,
+          "coverage": 0.6105032822757112,
+          "inside": 1,
+          "nearFraction": 0.10940919037199125,
+          "rmseM": 1.3791318219140543
+        },
+        "after": {
+          "score": 0.4072487831384471,
+          "coverage": 0.9824945295404814,
+          "inside": 1,
+          "nearFraction": 0.5689277899343544,
+          "rmseM": 1.057292793134192
+        },
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 20.69010000000003,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    },
+    {
+      "label": "R3-3",
+      "seed": 20261103,
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.9820777772150278,
+        "y": 2.3296138030212745,
+        "theta": 4.337474888004696
+      },
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.400000000000091
+      },
+      "finalError": {
+        "translationM": 0.01063046935790487,
+        "angleDeg": 0.3899101445740598
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": 2.9748097892938477,
+          "y": 2.3218560178768577,
+          "theta": 4.727385032578695
+        },
+        "tested": 159,
+        "iterations": 12,
+        "stopReason": "line_search_stalled",
+        "objective": 0.23963010018003061,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.6293507356366798,
+            "pose": {
+              "x": 3.2450777772150277,
+              "y": 2.7006138030212745,
+              "theta": 9.737474888004726
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.475782110893319,
+            "pose": {
+              "x": 3.043578014361387,
+              "y": 2.5558682861465036,
+              "theta": 8.856078008445138
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.2683936549822232,
+            "pose": {
+              "x": 3.0162083256418377,
+              "y": 2.3409037295610235,
+              "theta": 5.284714417120199
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.25722916318769645,
+            "pose": {
+              "x": 2.9850750726372626,
+              "y": 2.332326134130912,
+              "theta": 3.7517456757850596
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.2407462990107263,
+            "pose": {
+              "x": 2.985040260241855,
+              "y": 2.3286032188959633,
+              "theta": 4.640615967295389
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.24002471975689194,
+            "pose": {
+              "x": 2.9790571467493505,
+              "y": 2.3269499205308724,
+              "theta": 4.7765172617719145
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.2397580777424257,
+            "pose": {
+              "x": 2.977676592862114,
+              "y": 2.3251354989227973,
+              "theta": 4.68564999277703
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.23974318965857963,
+            "pose": {
+              "x": 2.97527065146358,
+              "y": 2.323413277408366,
+              "theta": 4.758711593518001
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.2396366177879986,
+            "pose": {
+              "x": 2.974878751065394,
+              "y": 2.3225932038106376,
+              "theta": 4.709186437477115
+            }
+          },
+          {
+            "iteration": 9,
+            "energy": 0.2396323716211077,
+            "pose": {
+              "x": 2.9748432463423944,
+              "y": 2.3219593481098646,
+              "theta": 4.730444651926518
+            }
+          },
+          {
+            "iteration": 10,
+            "energy": 0.23963041635614157,
+            "pose": {
+              "x": 2.9748166835239136,
+              "y": 2.32187910455963,
+              "theta": 4.7279215955813925
+            }
+          },
+          {
+            "iteration": 11,
+            "energy": 0.23963010018003061,
+            "pose": {
+              "x": 2.9748097892938477,
+              "y": 2.3218560178768577,
+              "theta": 4.727385032578695
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": 3.2450777772150277,
+          "y": 2.7006138030212745,
+          "theta": 9.737474888004726
+        },
+        "before": {
+          "score": 0.12234830250167371,
+          "coverage": 0.6695842450765864,
+          "inside": 1,
+          "nearFraction": 0.2013129102844639,
+          "rmseM": 1.2853809433637837
+        },
+        "after": {
+          "score": 0.40621642773571937,
+          "coverage": 0.9803063457330415,
+          "inside": 1,
+          "nearFraction": 0.5667396061269147,
+          "rmseM": 1.0584616054294191
+        },
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 19.724000000000046,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    },
+    {
+      "label": "R4-1",
+      "seed": 20261103,
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.7328356377830407,
+        "y": 1.3585822612448972,
+        "theta": 3.6140022517237904
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "finalError": {
+        "translationM": 0.009003025609768985,
+        "angleDeg": 0.10023840927965466
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": 2.724342540085933,
+          "y": 1.355595329434906,
+          "theta": 3.5137638424441775
+        },
+        "tested": 184,
+        "iterations": 15,
+        "stopReason": "line_search_stalled",
+        "objective": 0.2331213390648887,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.6028842650060631,
+            "pose": {
+              "x": 3.2698356377830406,
+              "y": 0.9455822612448972,
+              "theta": 10.914002251723787
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.5733742695404385,
+            "pose": {
+              "x": 3.09460033004324,
+              "y": 1.1006738568884409,
+              "theta": 13.43423249874445
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.46838813786860933,
+            "pose": {
+              "x": 2.940977392043604,
+              "y": 1.088308806831114,
+              "theta": 7.795100897588668
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.419134359139782,
+            "pose": {
+              "x": 2.8507702050735397,
+              "y": 1.2908644246581615,
+              "theta": 4.4870590789610105
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.4043160741388514,
+            "pose": {
+              "x": 2.7641114560962237,
+              "y": 1.3478078252435735,
+              "theta": 6.486819345634103
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.3471112178960567,
+            "pose": {
+              "x": 2.789853719056908,
+              "y": 1.299445032705898,
+              "theta": 3.2681200923032065
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.27604655418768975,
+            "pose": {
+              "x": 2.678072032807733,
+              "y": 1.3537783315857836,
+              "theta": 3.6500591607280057
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.24478290682056392,
+            "pose": {
+              "x": 2.7383820317404455,
+              "y": 1.3571423916785186,
+              "theta": 3.1902296267688826
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.24388388540187403,
+            "pose": {
+              "x": 2.7215899460942232,
+              "y": 1.3537964898671815,
+              "theta": 3.939136808460148
+            }
+          },
+          {
+            "iteration": 9,
+            "energy": 0.23314567226159086,
+            "pose": {
+              "x": 2.7241836024033206,
+              "y": 1.355052218755868,
+              "theta": 3.499191848313785
+            }
+          },
+          {
+            "iteration": 10,
+            "energy": 0.23312355323509779,
+            "pose": {
+              "x": 2.724223323138609,
+              "y": 1.3552030836816518,
+              "theta": 3.5124468964759217
+            }
+          },
+          {
+            "iteration": 11,
+            "energy": 0.2331232796831112,
+            "pose": {
+              "x": 2.724280243434671,
+              "y": 1.3553090500273726,
+              "theta": 3.5118512031205
+            }
+          },
+          {
+            "iteration": 12,
+            "energy": 0.23312260782085995,
+            "pose": {
+              "x": 2.7243254068617113,
+              "y": 1.355422358879252,
+              "theta": 3.5119871829706426
+            }
+          },
+          {
+            "iteration": 13,
+            "energy": 0.2331219280044622,
+            "pose": {
+              "x": 2.7243423059056076,
+              "y": 1.35564650278367,
+              "theta": 3.514716798826953
+            }
+          },
+          {
+            "iteration": 14,
+            "energy": 0.2331213390648887,
+            "pose": {
+              "x": 2.724342540085933,
+              "y": 1.355595329434906,
+              "theta": 3.5137638424441775
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": 3.2698356377830406,
+          "y": 0.9455822612448972,
+          "theta": 10.914002251723787
+        },
+        "before": {
+          "score": 0.09820243617782952,
+          "coverage": 0.631578947368421,
+          "inside": 1,
+          "nearFraction": 0.18201754385964913,
+          "rmseM": 1.1727051279878564
+        },
+        "after": {
+          "score": 0.6386104163800577,
+          "coverage": 0.9276315789473685,
+          "inside": 1,
+          "nearFraction": 0.7675438596491229,
+          "rmseM": 0.7188243751435758
+        },
+        "acceptedPoints": 456,
+        "sampledPoints": 456,
+        "elapsedMs": 19.495699999999943,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    },
+    {
+      "label": "R4-2",
+      "seed": 20261103,
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.7328356377830407,
+        "y": 1.3585822612448972,
+        "theta": 3.6140022517237904
+      },
+      "initialError": {
+        "translationM": 0.7284023613360956,
+        "angleDeg": 8.200000000000045
+      },
+      "finalError": {
+        "translationM": 0.009107186043835386,
+        "angleDeg": 0.09910474295793392
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": 2.724289770519331,
+          "y": 1.3554344063644925,
+          "theta": 3.5148975087658982
+        },
+        "tested": 194,
+        "iterations": 17,
+        "stopReason": "line_search_stalled",
+        "objective": 0.23311796073694915,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.6776725063216328,
+            "pose": {
+              "x": 2.2658356377830406,
+              "y": 1.9175822612448972,
+              "theta": -4.585997748276213
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.6192623041771562,
+            "pose": {
+              "x": 2.3423203858978243,
+              "y": 1.715858994176221,
+              "theta": -8.204919880291527
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.5603515675485781,
+            "pose": {
+              "x": 2.456107400051485,
+              "y": 1.5789752942742412,
+              "theta": -3.175981470617103
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.5526887674842871,
+            "pose": {
+              "x": 2.4776521211259115,
+              "y": 1.5650494247330138,
+              "theta": -3.687214000892709
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.5206555069569837,
+            "pose": {
+              "x": 2.50066011225906,
+              "y": 1.5371079092287965,
+              "theta": -0.2596398611879067
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.3720860644156641,
+            "pose": {
+              "x": 2.6045860601695123,
+              "y": 1.3685038460844194,
+              "theta": 4.110648748284461
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.32165818843198896,
+            "pose": {
+              "x": 2.681431297700653,
+              "y": 1.2812955651002698,
+              "theta": 2.793305138727078
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.30690613507069675,
+            "pose": {
+              "x": 2.725495100482472,
+              "y": 1.3201329891778462,
+              "theta": 2.1813619548896668
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.26419603025448635,
+            "pose": {
+              "x": 2.7128482614064047,
+              "y": 1.322696475884108,
+              "theta": 3.933277269572045
+            }
+          },
+          {
+            "iteration": 9,
+            "energy": 0.24038630775537087,
+            "pose": {
+              "x": 2.724285157653582,
+              "y": 1.3386526781300283,
+              "theta": 3.2367390066569897
+            }
+          },
+          {
+            "iteration": 10,
+            "energy": 0.23526722645811135,
+            "pose": {
+              "x": 2.723957154497671,
+              "y": 1.3469693238518183,
+              "theta": 3.6155703243470043
+            }
+          },
+          {
+            "iteration": 11,
+            "energy": 0.2333751996332365,
+            "pose": {
+              "x": 2.72519270729945,
+              "y": 1.3522718276332117,
+              "theta": 3.4550602624516387
+            }
+          },
+          {
+            "iteration": 12,
+            "energy": 0.233221261075995,
+            "pose": {
+              "x": 2.723715905996526,
+              "y": 1.3544626207707366,
+              "theta": 3.5374859338332953
+            }
+          },
+          {
+            "iteration": 13,
+            "energy": 0.2331586775918722,
+            "pose": {
+              "x": 2.7244201605062965,
+              "y": 1.3554054912937314,
+              "theta": 3.4928308843682316
+            }
+          },
+          {
+            "iteration": 14,
+            "energy": 0.23313110514796395,
+            "pose": {
+              "x": 2.724167932700702,
+              "y": 1.3552692676466185,
+              "theta": 3.519574860486955
+            }
+          },
+          {
+            "iteration": 15,
+            "energy": 0.23312961617685798,
+            "pose": {
+              "x": 2.724366042225285,
+              "y": 1.3554882904669099,
+              "theta": 3.508435280431513
+            }
+          },
+          {
+            "iteration": 16,
+            "energy": 0.23311796073694915,
+            "pose": {
+              "x": 2.724289770519331,
+              "y": 1.3554344063644925,
+              "theta": 3.5148975087658982
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": 2.2658356377830406,
+          "y": 1.9175822612448972,
+          "theta": -4.585997748276213
+        },
+        "before": {
+          "score": 0.08006708545874765,
+          "coverage": 0.543859649122807,
+          "inside": 1,
+          "nearFraction": 0.15789473684210525,
+          "rmseM": 0.9510500526984311
+        },
+        "after": {
+          "score": 0.6385962416286249,
+          "coverage": 0.9276315789473685,
+          "inside": 1,
+          "nearFraction": 0.7675438596491229,
+          "rmseM": 0.7188079309787204
+        },
+        "acceptedPoints": 456,
+        "sampledPoints": 456,
+        "elapsedMs": 22.34559999999999,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    },
+    {
+      "label": "R4-3",
+      "seed": 20261103,
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.7328356377830407,
+        "y": 1.3585822612448972,
+        "theta": 3.6140022517237904
+      },
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.399999999999977
+      },
+      "finalError": {
+        "translationM": 0.009107207905446928,
+        "angleDeg": 0.09913311855245865
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": 2.7242940355283873,
+          "y": 1.35542278870089,
+          "theta": 3.5148691331713735
+        },
+        "tested": 147,
+        "iterations": 13,
+        "stopReason": "line_search_stalled",
+        "objective": 0.23311837749091338,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.6066094289629851,
+            "pose": {
+              "x": 2.9958356377830406,
+              "y": 1.7295822612448972,
+              "theta": 9.01400225172381
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.5584604455271424,
+            "pose": {
+              "x": 2.865309707630945,
+              "y": 1.592825900669789,
+              "theta": 13.700422214380296
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.48616468556807485,
+            "pose": {
+              "x": 2.893783419926014,
+              "y": 1.4112998421378506,
+              "theta": 8.843989070743874
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.4365587948040496,
+            "pose": {
+              "x": 2.7942723915673695,
+              "y": 1.4507012285440115,
+              "theta": 2.3715256215215277
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.39189988138310455,
+            "pose": {
+              "x": 2.651996662508738,
+              "y": 1.27375061520413,
+              "theta": 5.368770936787314
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.2758015785975735,
+            "pose": {
+              "x": 2.6929488766025926,
+              "y": 1.3507766626444253,
+              "theta": 2.8040400383561064
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.2643105122405302,
+            "pose": {
+              "x": 2.730208893554553,
+              "y": 1.3447953058440443,
+              "theta": 4.231315888289487
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.2351829526335991,
+            "pose": {
+              "x": 2.729959961083718,
+              "y": 1.3505555687171364,
+              "theta": 3.3514385428898095
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.23363322120916358,
+            "pose": {
+              "x": 2.7258612985585886,
+              "y": 1.352144943650904,
+              "theta": 3.5364560303406734
+            }
+          },
+          {
+            "iteration": 9,
+            "energy": 0.23318054983610742,
+            "pose": {
+              "x": 2.724503734728232,
+              "y": 1.3551918349795244,
+              "theta": 3.4782206923474632
+            }
+          },
+          {
+            "iteration": 10,
+            "energy": 0.2331676261747708,
+            "pose": {
+              "x": 2.723959679297152,
+              "y": 1.3550634728968078,
+              "theta": 3.531833012784773
+            }
+          },
+          {
+            "iteration": 11,
+            "energy": 0.23312821444713952,
+            "pose": {
+              "x": 2.72431130035556,
+              "y": 1.3554264052842073,
+              "theta": 3.507893299023067
+            }
+          },
+          {
+            "iteration": 12,
+            "energy": 0.23311837749091338,
+            "pose": {
+              "x": 2.7242940355283873,
+              "y": 1.35542278870089,
+              "theta": 3.5148691331713735
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": 2.9958356377830406,
+          "y": 1.7295822612448972,
+          "theta": 9.01400225172381
+        },
+        "before": {
+          "score": 0.13964228749861718,
+          "coverage": 0.5789473684210527,
+          "inside": 1,
+          "nearFraction": 0.25,
+          "rmseM": 1.1044939747074725
+        },
+        "after": {
+          "score": 0.6385934181125302,
+          "coverage": 0.9276315789473685,
+          "inside": 1,
+          "nearFraction": 0.7675438596491229,
+          "rmseM": 0.7188079309787204
+        },
+        "acceptedPoints": 456,
+        "sampledPoints": 456,
+        "elapsedMs": 21.33389999999997,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    },
+    {
+      "label": "R5-1",
+      "seed": 20261103,
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0.041338385695696575,
+        "y": -0.002933562901461178,
+        "theta": 8.024583484785612
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.300000000000068
+      },
+      "finalError": {
+        "translationM": 0.021060349541245596,
+        "angleDeg": 0.10786950385863747
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": 0.06232866414156757,
+          "y": -0.004650109890112275,
+          "theta": 8.132452988644218
+        },
+        "tested": 643,
+        "iterations": 54,
+        "stopReason": "line_search_stalled",
+        "objective": 0.09749476767198048,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.43870429466770794,
+            "pose": {
+              "x": 0.5783383856956966,
+              "y": -0.41593356290146116,
+              "theta": 15.324583484785649
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.3709604308545549,
+            "pose": {
+              "x": 0.33901084020906047,
+              "y": -0.3765124600890234,
+              "theta": 17.05968630228108
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.3398995563757952,
+            "pose": {
+              "x": 0.3275789772719193,
+              "y": -0.3761004052302783,
+              "theta": 13.493726750102041
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.3223532704875003,
+            "pose": {
+              "x": 0.29991112079665044,
+              "y": -0.38106560310615173,
+              "theta": 11.894546597516864
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.3176072934280265,
+            "pose": {
+              "x": 0.28147388352936914,
+              "y": -0.368445542025315,
+              "theta": 12.520465188249204
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.31289735618246023,
+            "pose": {
+              "x": 0.26947317416504274,
+              "y": -0.36804090737979994,
+              "theta": 11.693944154042129
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.30413997565735823,
+            "pose": {
+              "x": 0.2226450938299963,
+              "y": -0.33284861070925853,
+              "theta": 12.318233632389138
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.29491455318429266,
+            "pose": {
+              "x": 0.2018720109312831,
+              "y": -0.34227029635957945,
+              "theta": 10.651241293393923
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.2881801900681837,
+            "pose": {
+              "x": 0.165666690676617,
+              "y": -0.3198239743980283,
+              "theta": 11.961420331704858
+            }
+          },
+          {
+            "iteration": 9,
+            "energy": 0.2847692629615236,
+            "pose": {
+              "x": 0.17054218005377247,
+              "y": -0.3208746578151695,
+              "theta": 10.176637103363532
+            }
+          },
+          {
+            "iteration": 10,
+            "energy": 0.2786502931669014,
+            "pose": {
+              "x": 0.12800574152472943,
+              "y": -0.3031036332056526,
+              "theta": 11.385663612110193
+            }
+          },
+          {
+            "iteration": 11,
+            "energy": 0.2691155619636595,
+            "pose": {
+              "x": 0.14409527700899566,
+              "y": -0.2982065099276675,
+              "theta": 10.63112608993822
+            }
+          },
+          {
+            "iteration": 12,
+            "energy": 0.266614640963019,
+            "pose": {
+              "x": 0.14045046149459084,
+              "y": -0.27069859306412675,
+              "theta": 11.042891378599393
+            }
+          },
+          {
+            "iteration": 13,
+            "energy": 0.2602653068343679,
+            "pose": {
+              "x": 0.15074393344372178,
+              "y": -0.2581806411961909,
+              "theta": 10.27744688150051
+            }
+          },
+          {
+            "iteration": 14,
+            "energy": 0.2575630248157768,
+            "pose": {
+              "x": 0.11500788668875972,
+              "y": -0.21107619432805122,
+              "theta": 10.857774254355832
+            }
+          },
+          {
+            "iteration": 15,
+            "energy": 0.25636991454768987,
+            "pose": {
+              "x": 0.14382828866970065,
+              "y": -0.19452906558812383,
+              "theta": 9.341375944517722
+            }
+          },
+          {
+            "iteration": 16,
+            "energy": 0.25045998964004057,
+            "pose": {
+              "x": 0.11376940665946583,
+              "y": -0.17718117629571423,
+              "theta": 10.830450251127559
+            }
+          },
+          {
+            "iteration": 17,
+            "energy": 0.24291408424690808,
+            "pose": {
+              "x": 0.13787994871345483,
+              "y": -0.16705174336012457,
+              "theta": 9.204237364966616
+            }
+          },
+          {
+            "iteration": 18,
+            "energy": 0.2154248645797625,
+            "pose": {
+              "x": 0.12374987728370851,
+              "y": -0.15742905550511554,
+              "theta": 9.953645277005762
+            }
+          },
+          {
+            "iteration": 19,
+            "energy": 0.21008396440678664,
+            "pose": {
+              "x": 0.12348645855921819,
+              "y": -0.15061483708560464,
+              "theta": 9.550902749206784
+            }
+          },
+          {
+            "iteration": 20,
+            "energy": 0.20551780245969362,
+            "pose": {
+              "x": 0.11034854744207379,
+              "y": -0.12605592260011278,
+              "theta": 9.956872267630501
+            }
+          },
+          {
+            "iteration": 21,
+            "energy": 0.19338934843961772,
+            "pose": {
+              "x": 0.1145213917354253,
+              "y": -0.11742197652729508,
+              "theta": 9.104817925941461
+            }
+          },
+          {
+            "iteration": 22,
+            "energy": 0.18395315869203682,
+            "pose": {
+              "x": 0.0956317099186475,
+              "y": -0.09822239288512441,
+              "theta": 9.558792899675154
+            }
+          },
+          {
+            "iteration": 23,
+            "energy": 0.1692548940239729,
+            "pose": {
+              "x": 0.10260831836402656,
+              "y": -0.08757440108302278,
+              "theta": 8.74119311489062
+            }
+          },
+          {
+            "iteration": 24,
+            "energy": 0.15326401766853,
+            "pose": {
+              "x": 0.07940689785287025,
+              "y": -0.06939860712027052,
+              "theta": 9.0387688553825
+            }
+          },
+          {
+            "iteration": 25,
+            "energy": 0.14416280939961346,
+            "pose": {
+              "x": 0.08132460520802709,
+              "y": -0.06034245201835031,
+              "theta": 8.183702071085008
+            }
+          },
+          {
+            "iteration": 26,
+            "energy": 0.13910465144649437,
+            "pose": {
+              "x": 0.06885779307967377,
+              "y": -0.04609222691144743,
+              "theta": 8.895918905426583
+            }
+          },
+          {
+            "iteration": 27,
+            "energy": 0.1321876417742603,
+            "pose": {
+              "x": 0.0740660437432693,
+              "y": -0.04470378281318216,
+              "theta": 8.01409011493729
+            }
+          },
+          {
+            "iteration": 28,
+            "energy": 0.1305328081010526,
+            "pose": {
+              "x": 0.06292249205529654,
+              "y": -0.031158340537621287,
+              "theta": 8.755016015192496
+            }
+          },
+          {
+            "iteration": 29,
+            "energy": 0.12404455063762246,
+            "pose": {
+              "x": 0.06788390348961859,
+              "y": -0.032245677147801854,
+              "theta": 7.871673492151444
+            }
+          },
+          {
+            "iteration": 30,
+            "energy": 0.10286374874010126,
+            "pose": {
+              "x": 0.06306427450092811,
+              "y": -0.02598305315118471,
+              "theta": 8.25782679446479
+            }
+          },
+          {
+            "iteration": 31,
+            "energy": 0.10225737017783958,
+            "pose": {
+              "x": 0.06910571229697826,
+              "y": 0.0046525193963774525,
+              "theta": 8.222446661755498
+            }
+          },
+          {
+            "iteration": 32,
+            "energy": 0.10043884908831824,
+            "pose": {
+              "x": 0.06655787864546259,
+              "y": 0.0015107928140259408,
+              "theta": 8.030969742807542
+            }
+          },
+          {
+            "iteration": 33,
+            "energy": 0.10030493038244187,
+            "pose": {
+              "x": 0.06234285801545536,
+              "y": 0.0013483350641546599,
+              "theta": 8.219355191963245
+            }
+          },
+          {
+            "iteration": 34,
+            "energy": 0.09995646392780677,
+            "pose": {
+              "x": 0.06296307362737918,
+              "y": -0.0011098294856482505,
+              "theta": 8.007655396824475
+            }
+          },
+          {
+            "iteration": 35,
+            "energy": 0.09781885170309439,
+            "pose": {
+              "x": 0.061867789993561684,
+              "y": -0.0006377649716114986,
+              "theta": 8.11421745229893
+            }
+          },
+          {
+            "iteration": 36,
+            "energy": 0.0977095830267049,
+            "pose": {
+              "x": 0.06166147705402536,
+              "y": -0.002511287482442115,
+              "theta": 8.099552484821288
+            }
+          },
+          {
+            "iteration": 37,
+            "energy": 0.09766259310981462,
+            "pose": {
+              "x": 0.061516002098597866,
+              "y": -0.0024714581146318415,
+              "theta": 8.127193244669797
+            }
+          },
+          {
+            "iteration": 38,
+            "energy": 0.0976387784674626,
+            "pose": {
+              "x": 0.061839076452290365,
+              "y": -0.0030900578825951985,
+              "theta": 8.10762374545834
+            }
+          },
+          {
+            "iteration": 39,
+            "energy": 0.09761427049404459,
+            "pose": {
+              "x": 0.06167654119619281,
+              "y": -0.0030009645475955193,
+              "theta": 8.135091664019342
+            }
+          },
+          {
+            "iteration": 40,
+            "energy": 0.09759886563433831,
+            "pose": {
+              "x": 0.06195047768060902,
+              "y": -0.0034795406541047735,
+              "theta": 8.112002139689139
+            }
+          },
+          {
+            "iteration": 41,
+            "energy": 0.09758720652466257,
+            "pose": {
+              "x": 0.06177625300747458,
+              "y": -0.0033447213535316433,
+              "theta": 8.139257469131621
+            }
+          },
+          {
+            "iteration": 42,
+            "energy": 0.09757490519573046,
+            "pose": {
+              "x": 0.06203343552952323,
+              "y": -0.0037609923957973024,
+              "theta": 8.115046190449561
+            }
+          },
+          {
+            "iteration": 43,
+            "energy": 0.09756821559294451,
+            "pose": {
+              "x": 0.06184862807442826,
+              "y": -0.003590356462211064,
+              "theta": 8.14207868743972
+            }
+          },
+          {
+            "iteration": 44,
+            "energy": 0.09755998992894899,
+            "pose": {
+              "x": 0.062094072209841644,
+              "y": -0.003966942355240366,
+              "theta": 8.117242196928487
+            }
+          },
+          {
+            "iteration": 45,
+            "energy": 0.09755464816674671,
+            "pose": {
+              "x": 0.06190103469985697,
+              "y": -0.0037683795167267053,
+              "theta": 8.144070202104217
+            }
+          },
+          {
+            "iteration": 46,
+            "energy": 0.09754909039492418,
+            "pose": {
+              "x": 0.06213863036228262,
+              "y": -0.00411780742206691,
+              "theta": 8.118848297401655
+            }
+          },
+          {
+            "iteration": 47,
+            "energy": 0.09754735296420965,
+            "pose": {
+              "x": 0.06193876480291194,
+              "y": -0.0038980545073958317,
+              "theta": 8.145499100374082
+            }
+          },
+          {
+            "iteration": 48,
+            "energy": 0.09754109498530988,
+            "pose": {
+              "x": 0.062171404399480434,
+              "y": -0.004228372607607833,
+              "theta": 8.120029159336013
+            }
+          },
+          {
+            "iteration": 49,
+            "energy": 0.0975321864933788,
+            "pose": {
+              "x": 0.06206876221572455,
+              "y": -0.004110598620035155,
+              "theta": 8.133282096998755
+            }
+          },
+          {
+            "iteration": 50,
+            "energy": 0.09752522664903102,
+            "pose": {
+              "x": 0.06253104849572633,
+              "y": -0.004821765590760474,
+              "theta": 8.119417961140698
+            }
+          },
+          {
+            "iteration": 51,
+            "energy": 0.09750714207671395,
+            "pose": {
+              "x": 0.062257651169502215,
+              "y": -0.004539670426441433,
+              "theta": 8.145031009659533
+            }
+          },
+          {
+            "iteration": 52,
+            "energy": 0.09749545431714228,
+            "pose": {
+              "x": 0.062337773070840874,
+              "y": -0.004660540650636036,
+              "theta": 8.13167391918887
+            }
+          },
+          {
+            "iteration": 53,
+            "energy": 0.09749476767198048,
+            "pose": {
+              "x": 0.06232866414156757,
+              "y": -0.004650109890112275,
+              "theta": 8.132452988644218
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": 0.5783383856956966,
+          "y": -0.41593356290146116,
+          "theta": 15.324583484785649
+        },
+        "before": {
+          "score": 0.11816715962564424,
+          "coverage": 0.6958424507658644,
+          "inside": 1,
+          "nearFraction": 0.2363238512035011,
+          "rmseM": 0.4418708431868151
+        },
+        "after": {
+          "score": 0.7755361282649339,
+          "coverage": 0.9474835886214442,
+          "inside": 1,
+          "nearFraction": 0.9168490153172867,
+          "rmseM": 0.07368754781742579
+        },
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 34.92039999999997,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    },
+    {
+      "label": "R5-2",
+      "seed": 20261103,
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0.041338385695696575,
+        "y": -0.002933562901461178,
+        "theta": 8.024583484785612
+      },
+      "initialError": {
+        "translationM": 0.7284023613360957,
+        "angleDeg": 8.199999999999932
+      },
+      "finalError": {
+        "translationM": 0.022641889979487777,
+        "angleDeg": 0.1436181205210687
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": 0.06348630609177086,
+          "y": -0.007637263994471399,
+          "theta": 8.168201605306649
+        },
+        "tested": 302,
+        "iterations": 28,
+        "stopReason": "line_search_stalled",
+        "objective": 0.0974597297630033,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.6897906855869103,
+            "pose": {
+              "x": -0.42566161430430344,
+              "y": 0.5560664370985389,
+              "theta": -0.17541651521435142
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.6440392115545507,
+            "pose": {
+              "x": -0.27891417546484143,
+              "y": 0.4352101666841001,
+              "theta": 4.475694428318093
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.6305257645072331,
+            "pose": {
+              "x": -0.14921735685108428,
+              "y": 0.370779766631813,
+              "theta": -1.3622548138718003
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.49239769630404334,
+            "pose": {
+              "x": 0.09757391648832431,
+              "y": 0.37636793276865865,
+              "theta": -2.4947852139590623
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.35403738817503266,
+            "pose": {
+              "x": 0.22575753148084005,
+              "y": 0.38991183832681775,
+              "theta": 3.6418524611013936
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.3092892864276987,
+            "pose": {
+              "x": 0.1026950364046974,
+              "y": 0.2812715886445497,
+              "theta": 9.043550029094263
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.29816011806942166,
+            "pose": {
+              "x": 0.042177159247887674,
+              "y": 0.26641998919336474,
+              "theta": 9.1817342713789
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.28453414971492913,
+            "pose": {
+              "x": 0.07580625046097772,
+              "y": 0.2655790339542816,
+              "theta": 7.672714457464963
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.2624228389979436,
+            "pose": {
+              "x": 0.04808909878585421,
+              "y": 0.2607154820916812,
+              "theta": 8.062017952223982
+            }
+          },
+          {
+            "iteration": 9,
+            "energy": 0.26194667011674166,
+            "pose": {
+              "x": 0.04805061384595233,
+              "y": 0.24904692378201615,
+              "theta": 8.359713351369919
+            }
+          },
+          {
+            "iteration": 10,
+            "energy": 0.2613690788332462,
+            "pose": {
+              "x": 0.05363657920600673,
+              "y": 0.24848675075460464,
+              "theta": 8.204067087306612
+            }
+          },
+          {
+            "iteration": 11,
+            "energy": 0.2612678255429638,
+            "pose": {
+              "x": 0.04710839829411373,
+              "y": 0.2442139060565489,
+              "theta": 8.21555515606724
+            }
+          },
+          {
+            "iteration": 12,
+            "energy": 0.2603635167324438,
+            "pose": {
+              "x": 0.05911307223226714,
+              "y": 0.23944790886353107,
+              "theta": 7.963659392250065
+            }
+          },
+          {
+            "iteration": 13,
+            "energy": 0.25591909058607853,
+            "pose": {
+              "x": 0.04602684612389413,
+              "y": 0.23121209775778612,
+              "theta": 8.028118587218728
+            }
+          },
+          {
+            "iteration": 14,
+            "energy": 0.24892875436276504,
+            "pose": {
+              "x": 0.10449899267845913,
+              "y": 0.1468714249259505,
+              "theta": 5.983723001127146
+            }
+          },
+          {
+            "iteration": 15,
+            "energy": 0.1505256150451818,
+            "pose": {
+              "x": 0.06645965689646488,
+              "y": -0.08070291607020319,
+              "theta": 8.74091358621854
+            }
+          },
+          {
+            "iteration": 16,
+            "energy": 0.14051920638215548,
+            "pose": {
+              "x": 0.07511486458137123,
+              "y": -0.05937218003361655,
+              "theta": 8.135466627831647
+            }
+          },
+          {
+            "iteration": 17,
+            "energy": 0.13807626823525304,
+            "pose": {
+              "x": 0.06552926312924462,
+              "y": -0.04398519658931066,
+              "theta": 8.86467753706711
+            }
+          },
+          {
+            "iteration": 18,
+            "energy": 0.13016314669747847,
+            "pose": {
+              "x": 0.07189028356618665,
+              "y": -0.042823042242286835,
+              "theta": 7.988806400550061
+            }
+          },
+          {
+            "iteration": 19,
+            "energy": 0.12938617025081015,
+            "pose": {
+              "x": 0.06112395227986045,
+              "y": -0.02895906256271963,
+              "theta": 8.729474129188702
+            }
+          },
+          {
+            "iteration": 20,
+            "energy": 0.12296397056729153,
+            "pose": {
+              "x": 0.06661848266078202,
+              "y": -0.030381083657785912,
+              "theta": 7.849116277028429
+            }
+          },
+          {
+            "iteration": 21,
+            "energy": 0.10222905032864614,
+            "pose": {
+              "x": 0.06228217265371394,
+              "y": -0.02428725466062831,
+              "theta": 8.24212762176046
+            }
+          },
+          {
+            "iteration": 22,
+            "energy": 0.09901726503413631,
+            "pose": {
+              "x": 0.06669211804702385,
+              "y": -0.009299691379626274,
+              "theta": 8.249484806240844
+            }
+          },
+          {
+            "iteration": 23,
+            "energy": 0.09814787387842522,
+            "pose": {
+              "x": 0.06566326697024677,
+              "y": -0.009600165406203898,
+              "theta": 8.141874050815773
+            }
+          },
+          {
+            "iteration": 24,
+            "energy": 0.09764335901918843,
+            "pose": {
+              "x": 0.06474842529005492,
+              "y": -0.008776892504099298,
+              "theta": 8.185320572762635
+            }
+          },
+          {
+            "iteration": 25,
+            "energy": 0.09755854960521859,
+            "pose": {
+              "x": 0.0641419235847337,
+              "y": -0.008415835745023359,
+              "theta": 8.165986578798197
+            }
+          },
+          {
+            "iteration": 26,
+            "energy": 0.09746372665080567,
+            "pose": {
+              "x": 0.06353442116576197,
+              "y": -0.007714246616727927,
+              "theta": 8.174694209504423
+            }
+          },
+          {
+            "iteration": 27,
+            "energy": 0.0974597297630033,
+            "pose": {
+              "x": 0.06348630609177086,
+              "y": -0.007637263994471399,
+              "theta": 8.168201605306649
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": -0.42566161430430344,
+          "y": 0.5560664370985389,
+          "theta": -0.17541651521435142
+        },
+        "before": {
+          "score": 0.1155755805010417,
+          "coverage": 0.3741794310722101,
+          "inside": 1,
+          "nearFraction": 0.19037199124726478,
+          "rmseM": 0.43020887521779305
+        },
+        "after": {
+          "score": 0.7737858142379685,
+          "coverage": 0.9452954048140044,
+          "inside": 1,
+          "nearFraction": 0.9146608315098468,
+          "rmseM": 0.07345833862659143
+        },
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 22.693100000000072,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    },
+    {
+      "label": "R5-3",
+      "seed": 20261103,
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0.041338385695696575,
+        "y": -0.002933562901461178,
+        "theta": 8.024583484785612
+      },
+      "initialError": {
+        "translationM": 0.4547636748905963,
+        "angleDeg": 5.400000000000091
+      },
+      "finalError": {
+        "translationM": 0.2719489212908535,
+        "angleDeg": 0.24533035591218777
+      },
+      "success": false,
+      "result": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "pose": {
+          "x": 0.05138025260345064,
+          "y": 0.26882989435551774,
+          "theta": 8.269913840697768
+        },
+        "tested": 118,
+        "iterations": 9,
+        "stopReason": "line_search_stalled",
+        "objective": 0.26132517706562913,
+        "trace": [
+          {
+            "iteration": 0,
+            "energy": 0.4320803557054266,
+            "pose": {
+              "x": 0.3043383856956966,
+              "y": 0.3680664370985388,
+              "theta": 13.424583484785671
+            }
+          },
+          {
+            "iteration": 1,
+            "energy": 0.35917797383123506,
+            "pose": {
+              "x": 0.13489406467134185,
+              "y": 0.30365246719042405,
+              "theta": 8.492529757360899
+            }
+          },
+          {
+            "iteration": 2,
+            "energy": 0.30150689423888155,
+            "pose": {
+              "x": 0.08066026380161478,
+              "y": 0.294196690920821,
+              "theta": 9.340203890837415
+            }
+          },
+          {
+            "iteration": 3,
+            "energy": 0.27003670911589855,
+            "pose": {
+              "x": 0.05557988626514471,
+              "y": 0.28130621044695714,
+              "theta": 7.742314024457187
+            }
+          },
+          {
+            "iteration": 4,
+            "energy": 0.2643136448749991,
+            "pose": {
+              "x": 0.04351745791831435,
+              "y": 0.2763680263038405,
+              "theta": 7.989173049647206
+            }
+          },
+          {
+            "iteration": 5,
+            "energy": 0.26137748683264767,
+            "pose": {
+              "x": 0.051775380017909434,
+              "y": 0.26902930162056354,
+              "theta": 8.305716633683915
+            }
+          },
+          {
+            "iteration": 6,
+            "energy": 0.2613282047792835,
+            "pose": {
+              "x": 0.05157247648707969,
+              "y": 0.26889351904841474,
+              "theta": 8.278628579650558
+            }
+          },
+          {
+            "iteration": 7,
+            "energy": 0.2613265775935696,
+            "pose": {
+              "x": 0.0514532046021961,
+              "y": 0.2688537114466046,
+              "theta": 8.27263341630919
+            }
+          },
+          {
+            "iteration": 8,
+            "energy": 0.26132517706562913,
+            "pose": {
+              "x": 0.05138025260345064,
+              "y": 0.26882989435551774,
+              "theta": 8.269913840697768
+            }
+          }
+        ],
+        "method": "gradient",
+        "initial": {
+          "x": 0.3043383856956966,
+          "y": 0.3680664370985388,
+          "theta": 13.424583484785671
+        },
+        "before": {
+          "score": 0.14419918567795248,
+          "coverage": 0.6608315098468271,
+          "inside": 1,
+          "nearFraction": 0.27571115973741794,
+          "rmseM": 0.3794043681425126
+        },
+        "after": {
+          "score": 0.5147756908611565,
+          "coverage": 0.7592997811816192,
+          "inside": 1,
+          "nearFraction": 0.6323851203501094,
+          "rmseM": 0.1366598103311506
+        },
+        "acceptedPoints": 457,
+        "sampledPoints": 457,
+        "elapsedMs": 18.698599999999942,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "method": "gradient",
+          "seed": 20261103,
+          "maxIterations": 100,
+          "chains": 8,
+          "annealIterations": 400
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Pas de descente accepté : minimum local ou objectif non lisse possible."
+        ],
+        "caveat": "Méthode bornée à la fenêtre initiale. Score non probabiliste ; le recuit est une optimisation stochastique, pas un posterior de pose calibré."
+      }
+    }
+  ],
+  "caveats": [
+    "Synthetic accuracy is measured in a simulated known scene, not in the physical classroom.",
+    "Real query scan excluded from occupancy map; reference poses and training poses come from TP1 estimation using the complete group. This is not a fully independent ground-truth evaluation.",
+    "Three initial offsets per scan are correlated repeat trials, not independent acquisitions.",
+    "Search is local, not global, and thresholds have no probabilistic calibration.",
+    "Annealing seeds and repeated offsets are correlated computational trials, not independent acquisitions."
+  ]
+}

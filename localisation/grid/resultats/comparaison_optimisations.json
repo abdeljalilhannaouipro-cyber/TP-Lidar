@@ -1,0 +1,86 @@
+{
+  "gradient": {
+    "synthetic": {
+      "cases": 9,
+      "success": 5,
+      "meanInitialTranslationM": 0.6202052217835037,
+      "meanFinalTranslationM": 0.16770318642662974,
+      "meanFinalAngleDeg": 0.029077393373982987,
+      "meanElapsedMs": 12.844811111111113,
+      "meanEvaluations": 143.33333333333334,
+      "meanCoverage": 0.929320987654321,
+      "meanScore": 0.8094118842739146,
+      "maxFinalTranslationM": 0.3656009320902172,
+      "maxFinalAngleDeg": 0.08689686774823713
+    },
+    "real": {
+      "cases": 15,
+      "success": 13,
+      "meanInitialTranslationM": 0.6202052217835038,
+      "meanFinalTranslationM": 0.04551693742485495,
+      "meanFinalAngleDeg": 0.2579680723469437,
+      "meanElapsedMs": 23.32563333333333,
+      "meanEvaluations": 240.8,
+      "meanCoverage": 0.9213395907712388,
+      "meanScore": 0.5986501361944043,
+      "maxFinalTranslationM": 0.2719489212908535,
+      "maxFinalAngleDeg": 0.5431352357685455
+    }
+  },
+  "pyramid": {
+    "synthetic": {
+      "cases": 9,
+      "success": 9,
+      "meanInitialTranslationM": 0.6202052217835037,
+      "meanFinalTranslationM": 0.07904952120091518,
+      "meanFinalAngleDeg": 0.1666666666666793,
+      "meanElapsedMs": 132.3307666666667,
+      "meanEvaluations": 4643,
+      "meanCoverage": 1,
+      "meanScore": 0.9414335198173607,
+      "maxFinalTranslationM": 0.08768124086713212,
+      "maxFinalAngleDeg": 0.2999999999999545
+    },
+    "real": {
+      "cases": 15,
+      "success": 15,
+      "meanInitialTranslationM": 0.6202052217835038,
+      "meanFinalTranslationM": 0.014704002604955356,
+      "meanFinalAngleDeg": 0.18333333333331817,
+      "meanElapsedMs": 167.77237333333326,
+      "meanEvaluations": 4481.133333333333,
+      "meanCoverage": 0.9445289006615735,
+      "meanScore": 0.6290391051265399,
+      "maxFinalTranslationM": 0.01838477631085025,
+      "maxFinalAngleDeg": 0.5499999999999545
+    }
+  },
+  "annealing": {
+    "synthetic": {
+      "cases": 27,
+      "success": 27,
+      "meanInitialTranslationM": 0.6202052217835038,
+      "meanFinalTranslationM": 0.07133622658914793,
+      "meanFinalAngleDeg": 0.027029273280066737,
+      "meanElapsedMs": 63.959996296296424,
+      "meanEvaluations": 3105.814814814815,
+      "meanCoverage": 1,
+      "meanScore": 0.9862889660025589,
+      "maxFinalTranslationM": 0.07320399458753417,
+      "maxFinalAngleDeg": 0.06920708223015026
+    },
+    "real": {
+      "cases": 45,
+      "success": 45,
+      "meanInitialTranslationM": 0.6202052217835038,
+      "meanFinalTranslationM": 0.015132536543715434,
+      "meanFinalAngleDeg": 0.23069707781236906,
+      "meanElapsedMs": 91.2624733333333,
+      "meanEvaluations": 3127.6444444444446,
+      "meanCoverage": 0.9455554915735732,
+      "meanScore": 0.6291528781363874,
+      "maxFinalTranslationM": 0.02490038453122203,
+      "maxFinalAngleDeg": 0.40806095166021805
+    }
+  }
+}
