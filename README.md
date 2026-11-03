@@ -26,6 +26,9 @@ avec ses bilans et figures des trois niveaux.
 Le [recuit simulé vectoriel](localisation/vectorielle/PROBABILISTE.md) complète
 les pistes probabilistes, avec trajectoires, graines reproductibles et 72 essais
 calculatoires répartis sur trois graines.
+Un [calcul direct vectoriel](localisation/vectorielle/CALCUL_DIRECT.md) complète
+les approches : association des segments une fois, orientation fermée et
+résolution linéaire de la translation, avec vérification de l'observabilité.
 
 Le projet réunit les cinq étapes du TP : acquisitions réelles, affichage des scans
 avec poses indépendantes, grille d'occupation, manipulation de segments et carte

@@ -1,0 +1,18 @@
+const fs=require('node:fs'),path=require('node:path'),os=require('node:os');
+const D=require('../../visualisation/vector-direct.js'),L=require('../../visualisation/grid-localisation.js'),C=require('../../visualisation/core.js'),{VectorMap}=require('../../visualisation/vector-map.js'),{scene}=require('../grid/scene.cjs');
+const root=path.resolve(__dirname,'../..'),dest=path.join(__dirname,'resultats'),previous=JSON.parse(fs.readFileSync(path.join(dest,'evaluation.json'),'utf8'));
+const alignment=JSON.parse(fs.readFileSync(path.join(root,'traitement_complet/resultats/alignement.json'),'utf8')),group=alignment.components.find(g=>g.scans.length===5),scans=group.scans.map(r=>{const i=alignment.inputs[r.index];return C.parseScan(fs.readFileSync(path.join(root,i.path),'utf8'),i.name);});
+const s=scene(),map=new VectorMap();map.seed(s.walls.map(([a,b])=>({a,b})));const synthetic=[],real=[];
+function run(old,map,scan){
+ let r;try{const result=D.match(map,scan,old.result.initial),ref=old.referencePose,error=p=>({translationM:Math.hypot(p.x-ref.x,p.y-ref.y),angleDeg:Math.abs(L.wrap(p.theta-ref.theta))});r={label:old.label,kind:old.kind,referenceType:old.referenceType,referencePose:ref,initialError:old.initialError,finalError:error(result.pose),success:error(result.pose).translationM<=.2&&error(result.pose).angleDeg<=2,result,status:'solved'};}
+ catch(e){r={label:old.label,kind:old.kind,initialError:old.initialError,referenceType:old.referenceType,referencePose:old.referencePose,success:false,status:'rejected',failure:e.message,result:null,finalError:null};}
+ console.log(r.label,JSON.stringify({status:r.status,error:r.finalError,success:r.success,failure:r.failure}));return r;
+}
+for(const old of previous.synthetic)synthetic.push(run(old,map,s.scan(old.referencePose)));
+for(const old of previous.real){const i=Number(/^R(\d+)-/.exec(old.label)[1])-1;real.push(run(old,VectorMap.load(fs.readFileSync(path.join(dest,`carte_sans_scan_${i+1}.json`),'utf8')),scans[i]));}
+function summary(rows){const solved=rows.filter(r=>r.result),mean=f=>solved.length?solved.reduce((s,r)=>s+f(r),0)/solved.length:null;return{cases:rows.length,solved:solved.length,rejected:rows.length-solved.length,success:rows.filter(r=>r.success).length,meanFinalTranslationM:mean(r=>r.finalError.translationM),meanFinalAngleDeg:mean(r=>r.finalError.angleDeg),meanElapsedMs:mean(r=>r.result.elapsedMs),meanRetainedPairs:mean(r=>r.result.retainedPairs.length),maxFinalTranslationM:solved.length?Math.max(...solved.map(r=>r.finalError.translationM)):null};}
+const report={format:'tp2-vector-direct-evaluation-v1',created:new Date().toISOString(),environment:{node:process.version,cpu:os.cpus()[0].model},successCriterion:previous.successCriterion,syntheticSummary:summary(synthetic),realSummary:summary(real),synthetic,real,caveats:[...previous.caveats,'Means use returned estimates only; rejected estimates are reported separately and count as failures.']};
+fs.writeFileSync(path.join(dest,'evaluation_direct.json'),JSON.stringify(report,null,2));
+const rows=[...synthetic,...real].map(r=>[r.label,r.kind,r.status,r.initialError.translationM,r.finalError?.translationM??'',r.finalError?.angleDeg??'',r.result?.retainedPairs.length??'',r.result?.conditionRatio??'',r.result?.elapsedMs??'',r.success,JSON.stringify(r.failure||'')].join(','));
+fs.writeFileSync(path.join(dest,'evaluation_direct.csv'),['case,type,status,initial_xy_m,final_xy_m,final_angle_deg,pairs,condition_ratio,time_ms,success,failure',...rows].join('\n'));
+console.log(JSON.stringify({synthetic:report.syntheticSummary,real:report.realSummary},null,2));
