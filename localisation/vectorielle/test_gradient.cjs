@@ -1,0 +1,16 @@
+const assert=require('node:assert/strict'),G=require('../../visualisation/vector-gradient.js'),V=require('../../visualisation/vector-localisation.js'),L=require('../../visualisation/grid-localisation.js'),{VectorMap}=require('../../visualisation/vector-map.js'),{scene}=require('../grid/scene.cjs');
+const s=scene(),map=new VectorMap();map.seed(s.walls.map(([a,b])=>({a,b})));const truth={x:1.8,y:-1.5,theta:22},scan=s.scan(truth),initial={x:2.337,y:-1.913,theta:29.3};
+let count=0;function test(name,fn){fn();count++;console.log('OK',name);}
+test('Gradient analytique vérifié par différences finies loin des ruptures',()=>{
+ const geometry=V.geometry({features:[{segment:{a:[-3,0],b:[3,0]}}]}),points=[[.2,.08],[-.3,.12],[.7,.15]],p={x:.1,y:.07,theta:7},e=G.objective(geometry,points,p,2),h=1e-6;
+ for(let i=0;i<3;i++){const a={...p},b={...p},key=['x','y','theta'][i],step=i===2?h/G.LEVER*180/Math.PI:h;a[key]+=step;b[key]-=step;const numeric=(G.objective(geometry,points,a,2).cost-G.objective(geometry,points,b,2).cost)/(2*h);assert(Math.abs(numeric-e.gradient[i])<1e-7);}
+});
+test('Coût identique à celui du moteur exhaustif',()=>{const g=V.geometry(map),a=G.objective(g,scan.points,initial),b=V.evaluate(g,scan.points,initial);assert(Math.abs(a.cost-b.cost)<1e-12);});
+test('Projections aux extrémités et coût saturé sans fausse pente',()=>{const g=V.geometry({features:[{segment:{a:[0,0],b:[1,0]}}]});assert.equal(G.nearest(2,1,g).qx,1);const e=G.objective(g,[[2,1]],{x:0,y:0,theta:0},5);assert.deepEqual(e.gradient,[2,2,1]);const r=G.objective(g,[[10,10]],{x:0,y:0,theta:0});assert.deepEqual(r.gradient,[0,0,0]);assert.equal(r.active,0);});
+let result;
+test('Coût décroissant, données intactes et pose de scan ignorée',()=>{const before=map.save();result=G.match(map,{...scan,pose:{x:999,y:999,theta:999}},initial);assert.equal(map.save(),before);assert(result.after.cost<result.before.cost);assert(result.trace.every((r,i)=>i===0||r.cost<=result.trace[i-1].cost));assert(result.iterations<=100);assert.equal(result.acceptedPoints,scan.points.length);});
+test('Récupération depuis une bonne initialisation',()=>{const r=G.match(map,scan,{x:1.94,y:-1.52,theta:23});assert(Math.hypot(r.pose.x-truth.x,r.pose.y-truth.y)<.05);assert(Math.abs(L.wrap(r.pose.theta-truth.theta))<.5);});
+test('Budget, scan déjà intégré et pose invalide refusés',()=>{assert.throws(()=>G.match(map,scan,initial,{maxIterations:0}));assert.throws(()=>G.match({...map,scans:[{checksum:scan.checksum}]},scan,initial));assert.throws(()=>G.match(map,scan,{x:NaN,y:0,theta:0}));});
+test('Plateau de troncature signalé comme échec local',()=>{const r=G.match(map,{...scan,points:scan.points.map(p=>p.map(x=>x*10))},truth,{maxRange:100});assert.equal(r.stopReason,'flat_truncation');assert.equal(r.quality,'a_verifier');});
+test('Fenêtre et franchissement ±180° respectés',()=>{const p={...truth,theta:179},r=G.match(map,s.scan(p),{...p,theta:-179});assert(Math.abs(L.wrap(r.pose.theta+179))<=15);assert(Math.abs(r.pose.x-p.x)<=1);});
+(async()=>{await assert.rejects(G.matchAsync(map,scan,initial,{},()=>{},()=>true),/annulée/);count++;const r=await G.matchAsync(map,scan,initial);assert.deepEqual(r.pose,result.pose);count++;console.log(`${count} vector gradient checks passed.`);})().catch(e=>{console.error(e);process.exitCode=1;});

@@ -1,5 +1,9 @@
 # TP 2 - Localisation sur carte vectorielle par recherche exhaustive
 
+La [descente de gradient vectorielle](GRADIENT.md) est également disponible dans
+le même panneau. Elle minimise le même coût tronqué avec un gradient analytique,
+une recherche de pas et une évaluation sur les mêmes 24 configurations.
+
 Cette étape estime la pose `(x, y, theta)` d'un scan en le comparant à une
 **carte de segments**, construite sans insérer ce scan. Elle suit les sections
 **5 et 8.1 du document « Scan matching.md »**, Jonathan Quillès, 2026, fourni dans

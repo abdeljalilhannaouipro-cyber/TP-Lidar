@@ -17,6 +17,9 @@ dans les bilans ; le recuit est évalué avec trois graines reproductibles.
 **TP 2, étape 2 :** [localisation sur carte vectorielle par recherche exhaustive](localisation/vectorielle/README.md).
 Distances directes aux segments finis, coût quadratique tronqué, 13 671 poses
 par essai, cartes construites sans le scan test et 24 essais chiffrés avec images.
+Une [descente de gradient sur les segments finis](localisation/vectorielle/GRADIENT.md)
+complète cette étape, avec gradient analytique, trace du coût et comparaison
+à la recherche exhaustive sur les mêmes cartes et scans.
 
 Le projet réunit les cinq étapes du TP : acquisitions réelles, affichage des scans
 avec poses indépendantes, grille d'occupation, manipulation de segments et carte

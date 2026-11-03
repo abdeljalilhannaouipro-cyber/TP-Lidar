@@ -21,10 +21,11 @@
 <main class="layout">
 <aside>
 <details class="grid-panel" open><summary style="font-weight:600;cursor:pointer">TP 2 · Localisation sur carte vectorielle</summary>
-<p class="hint">Recherche exhaustive : comparer tous les points du scan aux segments finis d’une carte fixe, construite sans ce scan.</p>
+<p class="hint">Localiser le scan sur les segments finis d’une carte fixe, construite sans ce scan.</p>
 <button id="vlDemo">Exemple vectoriel : 4 scans + 1 test</button>
 <div class="footnote">Remplace la carte vectorielle courante ; conserve et masque les autres scans chargés.</div>
 <div id="vlTarget" class="grid-state"></div>
+<label for="vlMethod" class="hint">Algorithme vectoriel</label><select id="vlMethod" style="width:100%;padding:8px;margin-top:5px"><option value="exhaustive">Recherche exhaustive (brute force)</option><option value="gradient">Descente de gradient</option></select>
 <div class="grid-fields" style="margin-top:10px">
 <label>X initial (m)<input id="vlX" type="number" value="0" step="0.05"></label>
 <label>Y initial (m)<input id="vlY" type="number" value="0" step="0.05"></label>
@@ -36,6 +37,7 @@
 <label>Troncature des distances (m)<input id="vlCap" type="number" value="0.5" min="0.2" max="5" step="0.1"></label>
 <label>Portée maximum (m)<input id="vlRange" type="number" value="12" min="0.1" step="0.5"></label>
 <label>Intensité minimum<input id="vlIntensity" type="number" value="0" min="0" max="255" step="1"></label>
+<label>Itérations gradient maximum<input id="vlIterations" type="number" value="100" min="1" max="300" step="1"></label>
 </div>
 <div class="grid-actions"><button id="vlUsePose">Copier la pose du scan</button><button id="vlRun" class="primary">Estimer la pose</button><button id="vlCancel">Annuler</button></div>
 <div class="grid-actions"><button id="vlApply">Appliquer la pose proposée</button><button id="vlExport">Exporter le résultat JSON</button></div>
@@ -142,5 +144,5 @@
 <div class="plot"><canvas id="canvas" tabindex="0" aria-label="Nuages de points cartésiens ; X et Y en mètres. Les poses sont réglables dans la liste des scans." role="img"></canvas><div id="empty" class="empty"><div><h2>Un repère, plusieurs scans</h2><p>Chargez vos mesures pour comparer leurs contours.<br>Une couleur par scan, une pose indépendante.</p></div></div></div>
 <div class="status"><span id="metrics">Aucun scan chargé</span><span>Molette : zoom · Flèches : scan sélectionné ±0,10 m · Q / E : ±1°</span></div>
 </section></main>
-<script src="core.js"></script><script src="examples.js"></script><script src="new-examples.js"></script><script src="pose-presets.js"></script><script src="grid.js"></script><script src="segments.js"></script><script src="vector-map.js"></script><script src="grid-localisation.js"></script><script src="grid-brute-force.js"></script><script src="grid-optimisation.js"></script><script src="grid-localisation-example.js"></script><script src="viewer.js"></script><script src="segments-ui.js"></script><script src="vector-ui.js"></script><script src="grid-localisation-ui.js"></script><script src="vector-localisation.js"></script><script src="vector-localisation-example.js"></script><script src="vector-localisation-ui.js"></script>
+<script src="core.js"></script><script src="examples.js"></script><script src="new-examples.js"></script><script src="pose-presets.js"></script><script src="grid.js"></script><script src="segments.js"></script><script src="vector-map.js"></script><script src="grid-localisation.js"></script><script src="grid-brute-force.js"></script><script src="grid-optimisation.js"></script><script src="grid-localisation-example.js"></script><script src="viewer.js"></script><script src="segments-ui.js"></script><script src="vector-ui.js"></script><script src="grid-localisation-ui.js"></script><script src="vector-localisation.js"></script><script src="vector-gradient.js"></script><script src="vector-localisation-example.js"></script><script src="vector-localisation-ui.js"></script>
 </body></html>

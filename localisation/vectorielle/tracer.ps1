@@ -1,8 +1,9 @@
+param([string]$EvaluationFile='evaluation.json',[string]$OutputFile='avant_apres.png')
 $ErrorActionPreference='Stop'
 Add-Type -AssemblyName System.Drawing
 $folder=Join-Path $PSScriptRoot 'resultats'
 $example=Get-Content -LiteralPath (Join-Path $folder 'exemple.json') -Raw | ConvertFrom-Json
-$report=Get-Content -LiteralPath (Join-Path $folder 'evaluation.json') -Raw | ConvertFrom-Json
+$report=Get-Content -LiteralPath (Join-Path $folder $EvaluationFile) -Raw | ConvertFrom-Json
 $trial=$report.real | Where-Object label -eq $example.source | Select-Object -First 1
 $points=[System.Collections.Generic.List[object]]::new()
 foreach($f in $example.map.features){$points.Add($f.segment.a);$points.Add($f.segment.b)}
@@ -17,7 +18,8 @@ $scale=[Math]::Min(650/($xmax-$xmin),625/($ymax-$ymin))
 $bmp=[System.Drawing.Bitmap]::new(1600,1030);$g=[System.Drawing.Graphics]::FromImage($bmp);$g.Clear([System.Drawing.Color]::White);$g.SmoothingMode=[System.Drawing.Drawing2D.SmoothingMode]::AntiAlias
 $title=[System.Drawing.Font]::new('Segoe UI',23,[System.Drawing.FontStyle]::Bold);$font=[System.Drawing.Font]::new('Segoe UI',14);$small=[System.Drawing.Font]::new('Segoe UI',11)
 $ink=[System.Drawing.SolidBrush]::new([System.Drawing.Color]::FromArgb(23,51,77));$wall=[System.Drawing.Pen]::new([System.Drawing.Color]::FromArgb(45,60,75),3);$grid=[System.Drawing.Pen]::new([System.Drawing.Color]::FromArgb(232,237,242),1)
-$g.DrawString('TP 2 - Carte vectorielle : recherche exhaustive',$title,$ink,45,20)
+$headingTitle=if($trial.result.method -eq 'gradient-point-to-finite-segments'){'TP 2 - Carte vectorielle : descente de gradient'}else{'TP 2 - Carte vectorielle : recherche exhaustive'}
+$g.DrawString($headingTitle,$title,$ink,45,20)
 $g.DrawString('Reference : segments de 4 scans ; scan test exclu. Les deux panneaux utilisent le meme repere et la meme echelle.',$font,$ink,45,65)
 foreach($panel in 0,1){
  $left=55+780*$panel;$top=170;$pose=if($panel -eq 0){$trial.result.initial}else{$trial.result.pose}
@@ -36,7 +38,8 @@ foreach($panel in 0,1){
  $g.DrawString(('Cout={0:F4} m2 ; impacts proches des segments={1:F1} %' -f $m.cost,($m.nearFraction*100)),$font,$ink,$left,865)
  $brush.Dispose();$pen.Dispose()
 }
-$g.DrawString('Traits sombres = segments de reference ; points colores = scan test ; X/Y en metres. 13 671 poses testees.',$small,$ink,45,925)
+$details=if($trial.result.complete){$trial.result.tested.ToString()+' poses testees.'}else{$trial.result.iterations.ToString()+' iterations ; '+$trial.result.tested+' evaluations du cout.'}
+$g.DrawString(('Traits sombres = segments ; points colores = scan test ; X/Y en metres. '+$details),$small,$ink,45,925)
 $g.DrawString('Trace calcule, pas une capture du navigateur. Poses TP 1 utilisees comme pseudo-reference, sans precision physique certifiee.',$small,$ink,45,955)
-$bmp.Save((Join-Path $folder 'avant_apres.png'),[System.Drawing.Imaging.ImageFormat]::Png)
+$bmp.Save((Join-Path $folder $OutputFile),[System.Drawing.Imaging.ImageFormat]::Png)
 $g.Dispose();$bmp.Dispose();$title.Dispose();$font.Dispose();$small.Dispose();$ink.Dispose();$wall.Dispose();$grid.Dispose()
