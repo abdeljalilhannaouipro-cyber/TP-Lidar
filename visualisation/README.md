@@ -74,6 +74,16 @@ sont signalées ; les valeurs non finies et les CSV fusionnés sont refusés.
 Un passage angulaire interne par zéro déclenche un avertissement de contrôle,
 sans prétendre prouver à lui seul qu'un scan est invalide.
 
+## Exemple avant/après pour le compte rendu
+
+Le dossier [`exemple_pose`](exemple_pose/README.md) contient deux fichiers de
+poses rechargeables et un export des points : seul S2 passe à `(1.50 m, -0.75 m,
+30°)`, tandis que S1 reste fixe. Les quatre autres scans sont masqués pour rendre
+la comparaison lisible ; leurs poses restent inchangées. Ces valeurs illustrent
+la manipulation indépendante et ne sont pas un recalage de la salle.
+
+![Exemple de modification indépendante de la pose](exemple_pose/avant_apres.png)
+
 ## Vérification
 
 Avec Node.js installé :

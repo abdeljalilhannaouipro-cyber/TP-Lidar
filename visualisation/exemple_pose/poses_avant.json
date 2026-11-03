@@ -1,0 +1,66 @@
+{
+  "format": "tp-lidar-poses-v1",
+  "units": "metres/degrees-counterclockwise",
+  "scans": [
+    {
+      "name": "scan_20261103_112700_205708.csv",
+      "checksum": "bcb87322",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": true
+    },
+    {
+      "name": "scan_20261103_112833_263525.csv",
+      "checksum": "7d5f683c",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": true
+    },
+    {
+      "name": "scan_20261103_113456_758311.csv",
+      "checksum": "7cf785fd",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": false
+    },
+    {
+      "name": "scan_20261103_113714_728775_tour2.csv",
+      "checksum": "13508fb9",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": false
+    },
+    {
+      "name": "scan_20261103_113903_422823.csv",
+      "checksum": "d2bd2d4",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": false
+    },
+    {
+      "name": "scan_20261103_114251_824188_tour2.csv",
+      "checksum": "ce73d242",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "visible": false
+    }
+  ]
+}
