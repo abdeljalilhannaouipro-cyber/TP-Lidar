@@ -1,0 +1,80 @@
+{
+  "reference": "scan_20261103_113714_728775_tour2.csv",
+  "moving": "scan_20261103_113903_422823.csv",
+  "poses": [
+    {
+      "x": 0,
+      "y": 0,
+      "theta": 0
+    },
+    {
+      "x": -0.01958114335985975,
+      "y": 0.05923925441525838,
+      "theta": -0.973384434211539
+    }
+  ],
+  "poseEstimation": {
+    "reference": "scan_20261103_113714_728775_tour2.csv",
+    "moving": "scan_20261103_113903_422823.csv",
+    "pose": {
+      "x": -0.01958114335985975,
+      "y": 0.05923925441525838,
+      "theta": -0.973384434211539
+    },
+    "overlap_moving": 0.9299363057324841,
+    "overlap_reference": 0.9211356466876972,
+    "inlier_rmse_m": 0.05215210093883655,
+    "alternative_score": 0.3773503798031081,
+    "note": "Estimated rigid pose for an incremental-map example, not measured ground truth"
+  },
+  "options": {
+    "gap": 0.3,
+    "residual": 0.05,
+    "minPoints": 5,
+    "minLength": 0.15,
+    "angularDeg": 8,
+    "positionM": 0.12,
+    "maxRange": 12,
+    "minIntensity": 0,
+    "cleanup": true,
+    "clearance": 0.15,
+    "minCrossings": 3,
+    "maxMisses": 3
+  },
+  "first": {
+    "duplicate": false,
+    "step": 1,
+    "accepted": 456,
+    "filtered": 0,
+    "extracted": 27,
+    "added": 23,
+    "merges": 4,
+    "contradicted": 0,
+    "trimmed": 0,
+    "removed": 0,
+    "before": 0,
+    "after": 23
+  },
+  "second": {
+    "duplicate": false,
+    "step": 2,
+    "accepted": 457,
+    "filtered": 0,
+    "extracted": 28,
+    "added": 8,
+    "merges": 21,
+    "contradicted": 0,
+    "trimmed": 0,
+    "removed": 0,
+    "before": 23,
+    "after": 30
+  },
+  "stats": {
+    "features": 30,
+    "scans": 2,
+    "confirmed": 17,
+    "contradicted": 0,
+    "totalLengthM": 23.845077638440802
+  },
+  "note": "Two real scans in a local reference frame; not a complete six-scan room map. Second pose estimated, not measured. No contradiction was detected on this real pair; cleanup demonstrated separately using synthetic rays."
+}

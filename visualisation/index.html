@@ -2,14 +2,14 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TP LD06 · Scans, grille et segments</title>
+<title>TP LD06 · Scans, grille et carte vectorielle</title>
 <style>
 :root{font-family:Inter,Segoe UI,Arial,sans-serif;color:#233447;background:#edf1f5;font-size:14px;--blue:#155fa8;--border:#d9e0e7}*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button{cursor:pointer;border:1px solid var(--border);border-radius:7px;padding:9px 12px;background:#fff;color:#263f58}button:hover{background:#eaf2fa}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #84baf0;outline-offset:2px}button.primary{background:#1769b5;color:#fff;border-color:#1769b5}button.primary:hover{background:#12558f}button[disabled]{opacity:.4;cursor:default}header{background:#112c43;color:#fff;padding:20px 28px;display:flex;justify-content:space-between;gap:20px;align-items:center}header h1{font-size:23px;margin:6px 0;font-weight:600;letter-spacing:-.4px}header p{margin:0;color:#becedc;font-size:13px}.eyebrow{font-size:11px;letter-spacing:2px;color:#8dbada;text-transform:uppercase}.badge{border:1px solid #426078;padding:7px 10px;border-radius:6px;font-size:12px;color:#cfdfec}.toolbar{padding:13px 22px;display:flex;gap:9px;align-items:center;flex-wrap:wrap;background:white;border-bottom:1px solid var(--border)}.toolbar .spacer{flex:1}.toolbar label{font-size:12px;color:#51657b}.toolbar select{padding:8px;border:1px solid var(--border);border-radius:6px;background:#fff;max-width:210px}.layout{display:grid;grid-template-columns:340px minmax(0,1fr);min-height:calc(100vh - 204px)}aside{background:#f8fafc;border-right:1px solid var(--border);padding:20px;max-height:calc(100vh - 193px);overflow:auto}.section-title{display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#5a6f83;margin-bottom:14px}#count{background:#e5edf5;border-radius:5px;padding:3px 7px;letter-spacing:0}.hint{font-size:12px;line-height:1.6;color:#6a7a8b}.card{background:white;border:1px solid var(--border);border-left:4px solid var(--scan-color);border-radius:8px;margin:12px 0;padding:13px;box-shadow:0 2px 3px #19354a05}.card.selected{outline:2px solid #8faac5;outline-offset:1px}.card-top{display:flex;align-items:flex-start;gap:7px}.card-top input{margin-top:4px;accent-color:var(--scan-color)}.name{font-size:12px;font-weight:600;overflow-wrap:anywhere;flex:1;line-height:1.5}.remove{padding:0 4px;border:0;font-size:20px;line-height:22px;color:#7f8d9b}.stats{font-size:11px;color:#708091;margin:7px 0 12px}.fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.fields label{font-size:11px;color:#607489}.fields input{width:100%;border:1px solid #ccd6df;padding:8px 6px;border-radius:5px;margin-top:4px;font-variant-numeric:tabular-nums}.rotation{width:100%;margin:13px 0 6px;accent-color:var(--scan-color)}.card-footer{display:flex;justify-content:space-between;align-items:center;gap:6px}.card-footer button{font-size:11px;padding:5px 8px}.card-footer label{display:flex;align-items:center;gap:5px;font-size:11px;color:#607489}.card-footer input{width:65px}.warning{background:#fff6df;color:#825b0c;padding:8px;border-radius:5px;font-size:11px;line-height:1.5;margin-top:10px}.viewer{min-width:0;padding:20px;display:flex;flex-direction:column;gap:10px}.viewbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.viewbar .mode{margin-left:auto;font-size:12px}.viewbar select{background:white;border:1px solid var(--border);padding:8px;border-radius:6px}.plot{position:relative;flex:1;min-height:480px;background:#fff;border:1px solid var(--border);border-radius:10px;overflow:hidden}canvas{display:block;width:100%;height:100%;position:absolute;inset:0;touch-action:none}.empty{pointer-events:none;position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center}.empty h2{font-size:21px;color:#304d68}.empty p{color:#748596;font-size:14px;line-height:1.8}.status{display:flex;gap:14px;justify-content:space-between;flex-wrap:wrap;font-size:12px;color:#63778b}.exports{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px;border-top:1px solid var(--border);padding-top:15px}.exports button{font-size:12px;flex:1}.footnote{font-size:11px;color:#607489;margin-top:12px;line-height:1.6}#notice{padding:10px 22px;background:#e8f1fa;color:#264e74;font-size:12px;min-height:36px;line-height:1.5}#notice.error{background:#fff0ed;color:#9b3421}input[type=file]{display:none}@media(max-width:850px){header{padding:18px}.badge{display:none}.layout{grid-template-columns:1fr}aside{max-height:none;border-right:0;order:2}.viewer{min-height:550px;order:1;padding:12px}.plot{min-height:440px}.toolbar{padding:10px}.toolbar .spacer{display:none}.layout aside{padding:15px}#scans{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px}.card{margin:0}.section-title{margin-top:5px}}
 </style>
 <style>.grid-panel{padding:14px;border:1px solid #c9d8e5;border-radius:8px;background:#fff;margin:15px 0 20px}.grid-panel h2{font-size:14px;margin:0 0 12px}.grid-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.grid-fields label{font-size:11px;color:#536c81}.grid-fields input{width:100%;padding:7px;border:1px solid #ccd6df;border-radius:5px;margin-top:4px}.grid-actions{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.grid-actions button{font-size:11px;flex:1;padding:8px}.grid-state{font-size:11px;line-height:1.6;color:#52687d;margin-top:10px}.map-legend{display:flex;gap:10px;flex-wrap:wrap;font-size:11px;margin-top:10px}.map-legend i{display:inline-block;width:10px;height:10px;border:1px solid #aab6c2;margin-right:4px}</style>
 </head>
 <body>
-<header><div><div class="eyebrow">TP Robotique · Jour 1 / Étapes 2, 3 et 4</div><h1>Scans, grille &amp; atelier de segments</h1><p>Ajuster les poses, cartographier les observations et manipuler les segments.</p></div><div class="badge">Traitement local dans le navigateur</div></header>
+<header><div><div class="eyebrow">TP Robotique · Jour 1 / Étapes 2 à 5</div><h1>Scans &amp; cartes LD06</h1><p>Nuages de points, grille d’occupation, géométrie et carte vectorielle.</p></div><div class="badge">Traitement local dans le navigateur</div></header>
 <div class="toolbar">
 <button class="primary" id="open">＋ Charger des CSV</button><input id="files" type="file" accept=".csv,text/csv" multiple>
 <button id="examples">Charger mes 6 scans</button><div class="spacer"></div>
@@ -19,7 +19,24 @@
 <div id="notice" role="status" aria-live="polite">Chargez vos CSV ou les six captures réelles. Chaque pose commence à (0, 0, 0°).</div>
 <main class="layout">
 <aside>
-<details class="grid-panel" open><summary style="font-weight:600;cursor:pointer">Atelier de segments · Étape 4</summary>
+<details class="grid-panel" open><summary style="font-weight:600;cursor:pointer">Carte vectorielle · Étape 5</summary>
+<p class="hint">Intégrer les scans positionnés pour enrichir une carte de segments. Les paramètres d’extraction et de proximité sont ceux de l’atelier ci-dessous, figés à la création de la carte.</p>
+<label class="hint"><input id="vecCleanup" type="checkbox" checked> Nettoyer les segments anciens traversés</label>
+<div class="grid-fields" style="margin-top:10px">
+<label>Marge avant impact (m)<input id="vecClearance" type="number" value="0.15" min="0.001" step="0.05"></label>
+<label>Rayons distincts minimum<input id="vecCrossings" type="number" value="3" min="1" step="1"></label>
+<label>Contradictions avant retrait<input id="vecMisses" type="number" value="3" min="1" step="1"></label>
+</div>
+<div class="grid-actions"><button id="vecNew">Créer / vider la carte</button><button id="vecSeed">Créer depuis l’atelier</button></div>
+<div class="grid-actions"><button id="vecSelected" class="primary">Intégrer le scan sélectionné</button><button id="vecVisible">Intégrer les scans visibles</button></div>
+<div class="grid-actions"><button id="vecSave">Sauver JSON</button><button id="vecLoad">Ouvrir une carte</button><button id="vecCSV">Exporter CSV</button><button id="vecToWorkshop">Copier vers l’atelier</button></div>
+<input id="vecFile" type="file" accept=".json,application/json">
+<div id="vecStatus" class="grid-state" role="status">Carte vide. Régler les poses avant d’intégrer les scans.</div>
+<div id="vecReport" class="grid-state" role="status"></div>
+<div class="map-legend"><span style="color:#008468">● Confirmé par plusieurs scans</span><span style="color:#8c3f9b">● Nouveau / initial</span><span style="color:#c26b08">● Traversées contradictoires</span></div>
+<div class="footnote">Les poses et paramètres des observations intégrées sont figés. Après correction, reconstruire la carte. La couleur indique un historique d’observations, pas une probabilité calibrée.</div>
+</details>
+<details class="grid-panel"><summary style="font-weight:600;cursor:pointer">Atelier de segments · Étape 4</summary>
 <p class="hint">Extraction depuis les scans positionnés, puis opérations sur deux segments A et B.</p>
 <div class="grid-fields">
 <label>Écart de rupture (m)<input id="segGap" type="number" value="0.30" min="0.001" step="0.01"></label>
@@ -48,7 +65,7 @@
 <div class="grid-actions"><button id="segSave">Sauver JSON</button><button id="segLoad">Ouvrir des segments</button><button id="segCSV">Exporter CSV</button></div><input id="segFile" type="file" accept=".json,application/json">
 <div id="segStatus" class="grid-state" role="status">Aucun segment. Tolérance linéaire : 10⁻⁹ m.</div>
 </details>
-<section class="grid-panel" aria-label="Construction de la grille d’occupation"><h2>Grille d’occupation · Étape 3</h2>
+<details class="grid-panel" aria-label="Construction de la grille d’occupation"><summary style="font-weight:600;cursor:pointer">Grille d’occupation · Étape 3</summary>
 <div class="grid-fields">
 <label>Résolution (m)<input id="gridResolution" type="number" value="0.1" min="0.02" max="2" step="0.02"></label>
 <label>Largeur (m)<input id="gridWidth" type="number" value="30" min="1" step="1"></label>
@@ -64,7 +81,7 @@
 <div class="map-legend"><span><i style="background:#dce0e5"></i>Inconnu</span><span><i style="background:#fff"></i>Libre</span><span><i style="background:#253747"></i>Occupé</span></div>
 <div id="gridStatus" class="grid-state" role="status">Aucune grille. Régler les poses avant d’intégrer les scans.</div>
 <div class="footnote">Modifier les dimensions demande de recréer la grille. Une pose déjà intégrée reste figée dans la carte ; après correction d’une pose, recréer la grille puis réintégrer les scans.</div>
-</section>
+</details>
 <div class="section-title">Scans &amp; poses <span id="count">0</span></div>
 <div class="hint">Réglez chaque origine en mètres et chaque angle en degrés. Cliquez sur un scan pour le sélectionner.</div>
 <div id="scans"></div>
@@ -72,9 +89,9 @@
 <div class="footnote">Les exports de points et d’image incluent les scans visibles. Les poses sauvegardées incluent tous les scans chargés. Vos CSV sources restent inchangés.</div>
 </aside>
 <section class="viewer" aria-label="Carte des nuages de points">
-<div class="viewbar"><label for="viewMode">Vue</label><select id="viewMode"><option value="points">Points</option><option value="grid">Grille</option><option value="both">Grille + points</option><option value="segments">Segments</option><option value="segmentsPoints">Points + segments</option></select><button id="fit">Cadrer</button><button id="zoomIn" aria-label="Agrandir">＋</button><button id="zoomOut" aria-label="Réduire">−</button><label class="mode" for="dragMode">Glisser pour</label><select id="dragMode"><option value="pan">déplacer la vue</option><option value="scan">déplacer le scan sélectionné</option></select></div>
+<div class="viewbar"><label for="viewMode">Vue</label><select id="viewMode"><option value="points">Points</option><option value="grid">Grille</option><option value="both">Grille + points</option><option value="segments">Segments</option><option value="segmentsPoints">Points + segments</option><option value="vector">Carte vectorielle</option><option value="vectorPoints">Carte vectorielle + points</option></select><button id="fit">Cadrer</button><button id="zoomIn" aria-label="Agrandir">＋</button><button id="zoomOut" aria-label="Réduire">−</button><label class="mode" for="dragMode">Glisser pour</label><select id="dragMode"><option value="pan">déplacer la vue</option><option value="scan">déplacer le scan sélectionné</option></select></div>
 <div class="plot"><canvas id="canvas" tabindex="0" aria-label="Nuages de points cartésiens ; X et Y en mètres. Les poses sont réglables dans la liste des scans." role="img"></canvas><div id="empty" class="empty"><div><h2>Un repère, plusieurs scans</h2><p>Chargez vos mesures pour comparer leurs contours.<br>Une couleur par scan, une pose indépendante.</p></div></div></div>
 <div class="status"><span id="metrics">Aucun scan chargé</span><span>Molette : zoom · Flèches : scan sélectionné ±0,10 m · Q / E : ±1°</span></div>
 </section></main>
-<script src="core.js"></script><script src="examples.js"></script><script src="grid.js"></script><script src="segments.js"></script><script src="viewer.js"></script><script src="segments-ui.js"></script>
+<script src="core.js"></script><script src="examples.js"></script><script src="grid.js"></script><script src="segments.js"></script><script src="vector-map.js"></script><script src="viewer.js"></script><script src="segments-ui.js"></script><script src="vector-ui.js"></script>
 </body></html>

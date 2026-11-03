@@ -22,5 +22,5 @@ des seuils et ne représente pas un décompte d'objets physiques.
 **38 contrôles dédiés aux segments** couvrent les cas limites, en plus des
 27 contrôles précédents. Le raccordement des commandes a été exercé dans un DOM
 minimal ; cela ne constitue pas une vérification visuelle complète du navigateur.
-Cette étape fournit les primitives et les opérations ; la carte vectorielle
-continue du point 5 reste à développer séparément.
+Cette étape fournit les primitives et les opérations ; leur utilisation dans
+la carte vectorielle du point 5 est décrite dans [le module suivant](visualisation/VECTORIELLE.md).

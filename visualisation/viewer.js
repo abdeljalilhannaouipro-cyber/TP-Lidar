@@ -5,15 +5,20 @@ const canvas = $('canvas'), ctx = canvas.getContext('2d');
 const state = { scans: [], selected: null, counter: 0, view: { x: 0, y: 0, scale: 50 }, width: 800, height: 600, drag: null };
 state.grid = null;
 state.segments = [];
+state.vector = null;
 const gridImage = { grid: null, version: -1, canvas: document.createElement('canvas'), counts: null };
 function notice(message, error = false) { $('notice').textContent = message; $('notice').classList.toggle('error', error); }
 function screen(point) { return [state.width / 2 + (point[0] - state.view.x) * state.view.scale, state.height / 2 - (point[1] - state.view.y) * state.view.scale]; }
 function world(x, y) { return [state.view.x + (x - state.width / 2) / state.view.scale, state.view.y - (y - state.height / 2) / state.view.scale]; }
 function fit() {
   const mode=$('viewMode').value;
-  const pts = ['grid','segments'].includes(mode) ? [] : state.scans.filter(s => s.visible).flatMap(s => [[s.pose.x, s.pose.y], ...s.points.map(p => Core.transform(p, s.pose))]);
+  const pts = ['grid','segments','vector'].includes(mode) ? [] : state.scans.filter(s => s.visible).flatMap(s => [[s.pose.x, s.pose.y], ...s.points.map(p => Core.transform(p, s.pose))]);
   if (state.grid && ['grid','both'].includes(mode)) pts.push([state.grid.x,state.grid.y],[state.grid.x+state.grid.width,state.grid.y+state.grid.height]);
   if (['segments','segmentsPoints'].includes(mode)) for(const item of state.segments)pts.push(item.segment.a,item.segment.b);
+  if (state.vector && ['vector','vectorPoints'].includes(mode)){
+    for(const feature of state.vector.features)pts.push(feature.segment.a,feature.segment.b);
+    for(const source of state.vector.scans)pts.push([source.pose.x,source.pose.y]);
+  }
   if (!pts.length) { draw(); return; }
   let xmin = Infinity, xmax = -Infinity, ymin = Infinity, ymax = -Infinity;
   for (const p of pts) { xmin = Math.min(xmin, p[0]); xmax = Math.max(xmax, p[0]); ymin = Math.min(ymin, p[1]); ymax = Math.max(ymax, p[1]); }
@@ -32,10 +37,12 @@ function draw() {
   const visible = state.scans.filter(s => s.visible);
   const showGrid = ['grid','both'].includes($('viewMode').value) && state.grid;
   const showSegments = ['segments','segmentsPoints'].includes($('viewMode').value) && state.segments.length;
+  const showVector = ['vector','vectorPoints'].includes($('viewMode').value) && state.vector;
   if (showGrid) drawGrid();
   updateGridStatus();
   if(typeof updateSegmentsStatus==='function')updateSegmentsStatus();
-  $('empty').style.display = state.scans.length || showGrid || showSegments ? 'none' : 'flex';
+  if(typeof updateVectorStatus==='function')updateVectorStatus();
+  $('empty').style.display = state.scans.length || showGrid || showSegments || showVector ? 'none' : 'flex';
   let step = Math.pow(10, Math.floor(Math.log10(80 / state.view.scale)));
   if (step * state.view.scale < 40) step *= 2;
   if (step * state.view.scale < 40) step *= 2.5;
@@ -53,6 +60,9 @@ function draw() {
   const drawn = $('viewMode').value === 'grid' ? (state.grid?.scans || []).map((record,i) => {
     const loaded=state.scans.find(s=>s.name===record.name&&s.checksum===record.checksum);
     return {name:record.name,pose:record.pose,points:[],color:loaded?.color||Core.color(i),label:loaded?.label||`G${i+1}`,id:loaded?.id,opacity:1};
+  }) : $('viewMode').value==='vector' ? (state.vector?.scans||[]).map((record,i)=>{
+    const loaded=state.scans.find(s=>s.name===record.name&&s.checksum===record.checksum);
+    return{name:record.name,pose:record.pose,points:[],color:loaded?.color||Core.color(i),label:loaded?.label||`V${i+1}`,id:loaded?.id,opacity:1};
   }) : $('viewMode').value==='segments' ? [] : visible;
   for (const scan of drawn) {
     ctx.globalAlpha = scan.opacity; ctx.fillStyle = scan.color;
@@ -71,6 +81,7 @@ function draw() {
     ctx.font = 'bold 12px Segoe UI,Arial'; ctx.fillText(scan.label, x + 9, y + 17);
   }
   if(showSegments && typeof drawSegments==='function')drawSegments();
+  if(showVector && typeof drawVectorMap==='function')drawVectorMap();
   ctx.globalAlpha = 1; ctx.fillStyle = '#344f68'; ctx.font = '12px Segoe UI,Arial';
   ctx.fillText('Y (m)', 10, 24); ctx.fillText('X (m)', Math.max(10, w - 49), h - 31);
   const maxLegend = Math.min(drawn.length, Math.max(0, Math.floor((h - 110) / 20)));
@@ -83,9 +94,9 @@ function draw() {
       ctx.fillText(name.length > 37 ? name.slice(0, 34) + '…' : name, lx + 12, ly + i * 20 + 9);
     });
   }
-  $('metrics').textContent = `${visible.length}/${state.scans.length} scans visibles · ${visible.reduce((n, s) => n + s.points.length, 0).toLocaleString('fr-FR')} points · ${state.segments.length} segments · repère ${label(step)} m`;
+  $('metrics').textContent = `${visible.length}/${state.scans.length} scans visibles · ${visible.reduce((n, s) => n + s.points.length, 0).toLocaleString('fr-FR')} points · ${state.segments.length} segments atelier · ${state.vector?.features.length||0} primitives carte · repère ${label(step)} m`;
   $('count').textContent = String(state.scans.length);
-  ['savePoses', 'exportCSV', 'exportPNG'].forEach(id => $(id).disabled = id === 'savePoses' ? !state.scans.length : id === 'exportPNG' ? !visible.length&&!showGrid&&!showSegments : !visible.length);
+  ['savePoses', 'exportCSV', 'exportPNG'].forEach(id => $(id).disabled = id === 'savePoses' ? !state.scans.length : id === 'exportPNG' ? !visible.length&&!showGrid&&!showSegments&&!showVector : !visible.length);
 }
 function drawGrid() {
   const grid=state.grid;
@@ -192,7 +203,7 @@ $('fit').onclick = fit; $('zoomIn').onclick = () => zoom(1.25); $('zoomOut').onc
 $('savePoses').onclick = () => download('poses_manuelles.json', Core.savePoses(state.scans), 'application/json');
 $('exportCSV').onclick = () => download('points_transformes.csv', Core.exportPoints(state.scans), 'text/csv;charset=utf-8');
 $('exportPNG').onclick = () => {
-  const link = document.createElement('a'); link.href = canvas.toDataURL('image/png'); link.download = $('viewMode').value==='points'?'nuages_de_points.png':['segments','segmentsPoints'].includes($('viewMode').value)?'segments.png':'grille_occupation.png'; link.click();
+  const link = document.createElement('a'); link.href = canvas.toDataURL('image/png'); link.download = $('viewMode').value==='points'?'nuages_de_points.png':['segments','segmentsPoints'].includes($('viewMode').value)?'segments.png':['vector','vectorPoints'].includes($('viewMode').value)?'carte_vectorielle.png':'grille_occupation.png'; link.click();
 };
 $('viewMode').onchange=()=>fit();
 $('gridNew').onclick=()=>{try{state.grid=gridFromFields();$('viewMode').value='grid';fit();notice('Nouvelle grille : toutes les cellules sont inconnues. Intégrer un scan pour commencer.');}catch(error){notice(error.message,true);}};

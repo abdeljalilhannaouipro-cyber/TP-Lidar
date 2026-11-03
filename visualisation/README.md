@@ -1,11 +1,11 @@
-# Étapes 2, 3 et 4 — Visualisation, grille et segments
+# Étapes 2 à 5 — Visualisation, grille, segments et carte vectorielle
 
 ## Ouvrir l'outil
 
 Ouvrir **`index.html` dans Chrome ou Edge** par un double-clic. Aucun serveur,
 compte, accès série, installation Python ou connexion Internet n'est nécessaire.
 Conserver dans le même dossier `index.html`, `core.js`, `viewer.js`, `grid.js`,
-`segments.js`, `segments-ui.js` et `examples.js`.
+`segments.js`, `segments-ui.js`, `vector-map.js`, `vector-ui.js` et `examples.js`.
 Les données restent dans la mémoire du navigateur jusqu'à la fermeture de la page.
 Sauvegarder les poses avant de quitter pour ne pas perdre les réglages.
 
@@ -112,8 +112,8 @@ et **Grille + points** affichent le résultat. La carte est sauvegardable et
 rechargeable en JSON, avec un export CSV et PNG.
 
 La procédure, les choix techniques, les hypothèses et les limites suivant le
-document du cours sont détaillés dans [`GRID.md`](GRID.md). Cette version ne
-construit pas de carte vectorielle.
+document du cours sont détaillés dans [`GRID.md`](GRID.md). Cette version
+est complétée par le module vectoriel de l'étape 5 décrit ci-dessous.
 
 ## Étape 4 — Atelier de segments
 
@@ -128,3 +128,17 @@ Le [guide et compte rendu de l'étape 4](SEGMENTS.md) explique la tolérance de
 Les [exemples](exemple_segments/README.md) incluent les images de calcul et les
 fichiers rechargeables. Les 38 contrôles supplémentaires se lancent avec
 `node visualisation/test_segments.cjs` depuis la racine du dépôt.
+
+## Étape 5 — Carte vectorielle
+
+Le panneau **Carte vectorielle** réutilise l'extraction, la proximité, la fusion,
+l'intersection et le découpage pour intégrer successivement les scans positionnés.
+Les primitives proches sont fusionnées, les nouveaux segments sont ajoutés et
+les anciennes primitives traversées peuvent être réduites ou retirées selon les
+critères configurés. Les compteurs de confirmations et contradictions sont conservés.
+
+La carte se sauvegarde et se recharge en JSON, avec export géométrique CSV et
+image PNG. Le [guide et compte rendu](VECTORIELLE.md) suit la méthode du cours,
+explique les seuils et les limites. L'[exemple sur deux scans réels](exemple_vectorielle/README.md)
+contient les cartes avant/après et les fichiers rechargeables. Les 25 tests de
+carte se lancent avec `node visualisation/test_vector.cjs` ; total : 90 contrôles.

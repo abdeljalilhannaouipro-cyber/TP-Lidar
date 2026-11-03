@@ -1,8 +1,8 @@
 # Étape 4 — Extraction et manipulation de segments
 
 Cette étape ajoute un atelier de géométrie au visualiseur. Elle couvre les six
-fonctions demandées ; la construction continue d'une carte vectorielle reste
-l'étape 5 et n'est pas annoncée comme réalisée ici.
+fonctions demandées. Leur utilisation pour construire une carte vectorielle est
+décrite séparément dans le [guide de l'étape 5](VECTORIELLE.md).
 
 ## Utiliser l'atelier
 

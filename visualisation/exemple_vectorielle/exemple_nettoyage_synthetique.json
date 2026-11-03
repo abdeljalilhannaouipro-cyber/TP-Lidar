@@ -1,0 +1,380 @@
+{
+  "description": "Synthetic old vertical segment crossed by three distinct rays per scan; not real measurements.",
+  "snapshots": [
+    {
+      "step": 0,
+      "map": {
+        "format": "tp-lidar-vector-map-v1",
+        "units": "metres/degrees-counterclockwise",
+        "options": {
+          "gap": 0.3,
+          "residual": 0.05,
+          "minPoints": 5,
+          "minLength": 0.15,
+          "angularDeg": 8,
+          "positionM": 0.12,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "cleanup": true,
+          "clearance": 0.15,
+          "minCrossings": 3,
+          "maxMisses": 3
+        },
+        "nextId": 2,
+        "features": [
+          {
+            "id": 1,
+            "segment": {
+              "a": [
+                2,
+                -2
+              ],
+              "b": [
+                2,
+                2
+              ]
+            },
+            "supportScans": [],
+            "misses": 0,
+            "lastSeen": 0,
+            "lastFree": 0
+          }
+        ],
+        "scans": []
+      }
+    },
+    {
+      "step": 1,
+      "points": [
+        [
+          4,
+          -0.2
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          0.2
+        ]
+      ],
+      "report": {
+        "duplicate": false,
+        "step": 1,
+        "accepted": 3,
+        "filtered": 0,
+        "extracted": 0,
+        "added": 0,
+        "merges": 0,
+        "contradicted": 1,
+        "trimmed": 1,
+        "removed": 0,
+        "before": 1,
+        "after": 1
+      },
+      "map": {
+        "format": "tp-lidar-vector-map-v1",
+        "units": "metres/degrees-counterclockwise",
+        "options": {
+          "gap": 0.3,
+          "residual": 0.05,
+          "minPoints": 5,
+          "minLength": 0.15,
+          "angularDeg": 8,
+          "positionM": 0.12,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "cleanup": true,
+          "clearance": 0.15,
+          "minCrossings": 3,
+          "maxMisses": 3
+        },
+        "nextId": 2,
+        "features": [
+          {
+            "id": 1,
+            "segment": {
+              "a": [
+                2,
+                -2
+              ],
+              "b": [
+                2,
+                0
+              ]
+            },
+            "supportScans": [],
+            "misses": 1,
+            "lastSeen": 0,
+            "lastFree": 1
+          }
+        ],
+        "scans": [
+          {
+            "name": "synthetic_free_1",
+            "checksum": "6be52e3c",
+            "pose": {
+              "x": 0,
+              "y": 0,
+              "theta": 0
+            },
+            "report": {
+              "duplicate": false,
+              "step": 1,
+              "accepted": 3,
+              "filtered": 0,
+              "extracted": 0,
+              "added": 0,
+              "merges": 0,
+              "contradicted": 1,
+              "trimmed": 1,
+              "removed": 0,
+              "before": 1,
+              "after": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "step": 2,
+      "points": [
+        [
+          4,
+          -2.2
+        ],
+        [
+          4,
+          -2
+        ],
+        [
+          4,
+          -1.8
+        ]
+      ],
+      "report": {
+        "duplicate": false,
+        "step": 2,
+        "accepted": 3,
+        "filtered": 0,
+        "extracted": 0,
+        "added": 0,
+        "merges": 0,
+        "contradicted": 1,
+        "trimmed": 1,
+        "removed": 0,
+        "before": 1,
+        "after": 1
+      },
+      "map": {
+        "format": "tp-lidar-vector-map-v1",
+        "units": "metres/degrees-counterclockwise",
+        "options": {
+          "gap": 0.3,
+          "residual": 0.05,
+          "minPoints": 5,
+          "minLength": 0.15,
+          "angularDeg": 8,
+          "positionM": 0.12,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "cleanup": true,
+          "clearance": 0.15,
+          "minCrossings": 3,
+          "maxMisses": 3
+        },
+        "nextId": 2,
+        "features": [
+          {
+            "id": 1,
+            "segment": {
+              "a": [
+                2,
+                -2
+              ],
+              "b": [
+                2,
+                -1
+              ]
+            },
+            "supportScans": [],
+            "misses": 2,
+            "lastSeen": 0,
+            "lastFree": 2
+          }
+        ],
+        "scans": [
+          {
+            "name": "synthetic_free_1",
+            "checksum": "6be52e3c",
+            "pose": {
+              "x": 0,
+              "y": 0,
+              "theta": 0
+            },
+            "report": {
+              "duplicate": false,
+              "step": 1,
+              "accepted": 3,
+              "filtered": 0,
+              "extracted": 0,
+              "added": 0,
+              "merges": 0,
+              "contradicted": 1,
+              "trimmed": 1,
+              "removed": 0,
+              "before": 1,
+              "after": 1
+            }
+          },
+          {
+            "name": "synthetic_free_2",
+            "checksum": "fe030fdb",
+            "pose": {
+              "x": 0,
+              "y": 0,
+              "theta": 0
+            },
+            "report": {
+              "duplicate": false,
+              "step": 2,
+              "accepted": 3,
+              "filtered": 0,
+              "extracted": 0,
+              "added": 0,
+              "merges": 0,
+              "contradicted": 1,
+              "trimmed": 1,
+              "removed": 0,
+              "before": 1,
+              "after": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "step": 3,
+      "points": [
+        [
+          4,
+          -3.2
+        ],
+        [
+          4,
+          -3
+        ],
+        [
+          4,
+          -2.8
+        ]
+      ],
+      "report": {
+        "duplicate": false,
+        "step": 3,
+        "accepted": 3,
+        "filtered": 0,
+        "extracted": 0,
+        "added": 0,
+        "merges": 0,
+        "contradicted": 1,
+        "trimmed": 0,
+        "removed": 1,
+        "before": 1,
+        "after": 0
+      },
+      "map": {
+        "format": "tp-lidar-vector-map-v1",
+        "units": "metres/degrees-counterclockwise",
+        "options": {
+          "gap": 0.3,
+          "residual": 0.05,
+          "minPoints": 5,
+          "minLength": 0.15,
+          "angularDeg": 8,
+          "positionM": 0.12,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "cleanup": true,
+          "clearance": 0.15,
+          "minCrossings": 3,
+          "maxMisses": 3
+        },
+        "nextId": 2,
+        "features": [],
+        "scans": [
+          {
+            "name": "synthetic_free_1",
+            "checksum": "6be52e3c",
+            "pose": {
+              "x": 0,
+              "y": 0,
+              "theta": 0
+            },
+            "report": {
+              "duplicate": false,
+              "step": 1,
+              "accepted": 3,
+              "filtered": 0,
+              "extracted": 0,
+              "added": 0,
+              "merges": 0,
+              "contradicted": 1,
+              "trimmed": 1,
+              "removed": 0,
+              "before": 1,
+              "after": 1
+            }
+          },
+          {
+            "name": "synthetic_free_2",
+            "checksum": "fe030fdb",
+            "pose": {
+              "x": 0,
+              "y": 0,
+              "theta": 0
+            },
+            "report": {
+              "duplicate": false,
+              "step": 2,
+              "accepted": 3,
+              "filtered": 0,
+              "extracted": 0,
+              "added": 0,
+              "merges": 0,
+              "contradicted": 1,
+              "trimmed": 1,
+              "removed": 0,
+              "before": 1,
+              "after": 1
+            }
+          },
+          {
+            "name": "synthetic_free_3",
+            "checksum": "5271bc88",
+            "pose": {
+              "x": 0,
+              "y": 0,
+              "theta": 0
+            },
+            "report": {
+              "duplicate": false,
+              "step": 3,
+              "accepted": 3,
+              "filtered": 0,
+              "extracted": 0,
+              "added": 0,
+              "merges": 0,
+              "contradicted": 1,
+              "trimmed": 0,
+              "removed": 1,
+              "before": 1,
+              "after": 0
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
