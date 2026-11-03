@@ -3,11 +3,14 @@ const Core = window.LidarCore;
 const $ = id => document.getElementById(id);
 const canvas = $('canvas'), ctx = canvas.getContext('2d');
 const state = { scans: [], selected: null, counter: 0, view: { x: 0, y: 0, scale: 50 }, width: 800, height: 600, drag: null };
+state.grid = null;
+const gridImage = { grid: null, version: -1, canvas: document.createElement('canvas'), counts: null };
 function notice(message, error = false) { $('notice').textContent = message; $('notice').classList.toggle('error', error); }
 function screen(point) { return [state.width / 2 + (point[0] - state.view.x) * state.view.scale, state.height / 2 - (point[1] - state.view.y) * state.view.scale]; }
 function world(x, y) { return [state.view.x + (x - state.width / 2) / state.view.scale, state.view.y - (y - state.height / 2) / state.view.scale]; }
 function fit() {
-  const pts = state.scans.filter(s => s.visible).flatMap(s => [[s.pose.x, s.pose.y], ...s.points.map(p => Core.transform(p, s.pose))]);
+  const pts = $('viewMode').value === 'grid' ? [] : state.scans.filter(s => s.visible).flatMap(s => [[s.pose.x, s.pose.y], ...s.points.map(p => Core.transform(p, s.pose))]);
+  if (state.grid && $('viewMode').value !== 'points') pts.push([state.grid.x,state.grid.y],[state.grid.x+state.grid.width,state.grid.y+state.grid.height]);
   if (!pts.length) { draw(); return; }
   let xmin = Infinity, xmax = -Infinity, ymin = Infinity, ymax = -Infinity;
   for (const p of pts) { xmin = Math.min(xmin, p[0]); xmax = Math.max(xmax, p[0]); ymin = Math.min(ymin, p[1]); ymax = Math.max(ymax, p[1]); }
@@ -24,7 +27,10 @@ function draw() {
   const { width: w, height: h } = state;
   ctx.clearRect(0, 0, w, h); ctx.fillStyle = '#ffffff'; ctx.fillRect(0, 0, w, h);
   const visible = state.scans.filter(s => s.visible);
-  $('empty').style.display = state.scans.length ? 'none' : 'flex';
+  const showGrid = $('viewMode').value !== 'points' && state.grid;
+  if (showGrid) drawGrid();
+  updateGridStatus();
+  $('empty').style.display = state.scans.length || showGrid ? 'none' : 'flex';
   let step = Math.pow(10, Math.floor(Math.log10(80 / state.view.scale)));
   if (step * state.view.scale < 40) step *= 2;
   if (step * state.view.scale < 40) step *= 2.5;
@@ -39,7 +45,11 @@ function draw() {
   }
   const origin = screen([0, 0]); ctx.strokeStyle = '#acbac8';
   ctx.beginPath(); ctx.moveTo(origin[0], 0); ctx.lineTo(origin[0], h); ctx.moveTo(0, origin[1]); ctx.lineTo(w, origin[1]); ctx.stroke();
-  for (const scan of visible) {
+  const drawn = $('viewMode').value === 'grid' ? (state.grid?.scans || []).map((record,i) => {
+    const loaded=state.scans.find(s=>s.name===record.name&&s.checksum===record.checksum);
+    return {name:record.name,pose:record.pose,points:[],color:loaded?.color||Core.color(i),label:loaded?.label||`G${i+1}`,id:loaded?.id,opacity:1};
+  }) : visible;
+  for (const scan of drawn) {
     ctx.globalAlpha = scan.opacity; ctx.fillStyle = scan.color;
     for (const point of scan.points) {
       const [x, y] = screen(Core.transform(point, scan.pose));
@@ -57,11 +67,11 @@ function draw() {
   }
   ctx.globalAlpha = 1; ctx.fillStyle = '#344f68'; ctx.font = '12px Segoe UI,Arial';
   ctx.fillText('Y (m)', 10, 24); ctx.fillText('X (m)', Math.max(10, w - 49), h - 31);
-  const maxLegend = Math.min(visible.length, Math.max(0, Math.floor((h - 110) / 20)));
+  const maxLegend = Math.min(drawn.length, Math.max(0, Math.floor((h - 110) / 20)));
   if (maxLegend) {
     const lx = Math.max(65, w - 280), ly = 14;
     ctx.fillStyle = 'rgba(255,255,255,.92)'; ctx.fillRect(lx - 8, ly - 7, 276, maxLegend * 20 + 10);
-    visible.slice(0, maxLegend).forEach((scan, i) => {
+    drawn.slice(0, maxLegend).forEach((scan, i) => {
       ctx.fillStyle = scan.color; ctx.beginPath(); ctx.arc(lx, ly + i * 20 + 5, 3, 0, 2 * Math.PI); ctx.fill();
       ctx.fillStyle = '#42586f'; ctx.font = '11px Segoe UI,Arial'; const name = `${scan.label} · ${scan.name}`;
       ctx.fillText(name.length > 37 ? name.slice(0, 34) + '…' : name, lx + 12, ly + i * 20 + 9);
@@ -69,7 +79,49 @@ function draw() {
   }
   $('metrics').textContent = `${visible.length}/${state.scans.length} scans visibles · ${visible.reduce((n, s) => n + s.points.length, 0).toLocaleString('fr-FR')} points · grille ${label(step)} m`;
   $('count').textContent = String(state.scans.length);
-  ['savePoses', 'exportCSV', 'exportPNG'].forEach(id => $(id).disabled = id === 'savePoses' ? !state.scans.length : !visible.length);
+  ['savePoses', 'exportCSV', 'exportPNG'].forEach(id => $(id).disabled = id === 'savePoses' ? !state.scans.length : id === 'exportPNG' ? !visible.length&&!showGrid : !visible.length);
+}
+function drawGrid() {
+  const grid=state.grid;
+  if(gridImage.grid!==grid||gridImage.version!==grid.version){
+    const buffer=gridImage.canvas;buffer.width=grid.nx;buffer.height=grid.ny;
+    const context=buffer.getContext('2d'),image=context.createImageData(grid.nx,grid.ny);
+    for(let y=0;y<grid.ny;y++)for(let x=0;x<grid.nx;x++){
+      const value=grid.cells[y*grid.nx+x],i=((grid.ny-1-y)*grid.nx+x)*4;
+      const color=value===0?[255,255,255]:value===255?[37,55,71]:[220,224,229];
+      image.data[i]=color[0];image.data[i+1]=color[1];image.data[i+2]=color[2];image.data[i+3]=255;
+    }
+    context.putImageData(image,0,0);gridImage.grid=grid;gridImage.version=grid.version;gridImage.counts=grid.counts();
+  }
+  const [left,top]=screen([grid.x,grid.y+grid.height]);ctx.imageSmoothingEnabled=false;
+  ctx.drawImage(gridImage.canvas,left,top,grid.width*state.view.scale,grid.height*state.view.scale);
+  ctx.strokeStyle='#61788c';ctx.lineWidth=1;ctx.strokeRect(left,top,grid.width*state.view.scale,grid.height*state.view.scale);
+}
+function updateGridStatus(){
+  const grid=state.grid;
+  $('gridSave').disabled=!grid;$('gridCSV').disabled=!grid;
+  const selected=state.scans.find(s=>s.id===state.selected);
+  $('gridSelected').disabled=!selected;$('gridSelected').textContent=selected?`Intégrer ${selected.label}`:'Intégrer le scan sélectionné';$('gridSelected').title=selected?selected.name:'Sélectionner une fiche de scan';
+  $('gridVisible').disabled=!state.scans.some(s=>s.visible);
+  if(!grid){$('gridStatus').textContent='Aucune grille. Régler les poses avant d’intégrer les scans.';return;}
+  if(gridImage.grid!==grid||gridImage.version!==grid.version)gridImage.counts=grid.counts();
+  const c=gridImage.counts;
+  const stale=grid.scans.filter(record=>{const s=state.scans.find(s=>s.name===record.name&&s.checksum===record.checksum);return s&&['x','y','theta'].some(k=>s.pose[k]!==record.pose[k]);}).length;
+  $('gridStatus').textContent=`${grid.nx} × ${grid.ny} cellules · ${grid.resolution} m/cellule · ${grid.scans.length} scan(s) intégré(s). Libres : ${c.free} ; occupées : ${c.occupied} ; inconnues : ${c.unknown}.${stale?' ATTENTION : '+stale+' pose(s) modifiée(s) depuis intégration. Recréer la grille.':''}`;
+}
+function gridFromFields(){
+  const number=id=>{if(!$(id).value.trim())throw new Error('Compléter les paramètres de grille.');return Number($(id).value);};
+  return new LidarGrid.Grid({resolution:number('gridResolution'),width:number('gridWidth'),height:number('gridHeight'),x:number('gridX'),y:number('gridY')});
+}
+function integrateScans(scans){
+  try{
+    if(!scans.length)throw new Error('Charger et sélectionner un scan.');
+    const next=state.grid?LidarGrid.Grid.load(state.grid.save()):gridFromFields();
+    let added=0,duplicates=0,filtered=0,clipped=0;
+    for(const scan of scans){const result=next.integrate(scan,Core.transform,{minIntensity:Number($('gridIntensity').value),maxRange:Number($('gridRange').value)});result.duplicate?duplicates++:added++;filtered+=result.filtered;clipped+=result.clipped;}
+    state.grid=next;$('viewMode').value='both';fit();
+    notice(`${added} scan(s) intégré(s), ${duplicates} déjà présent(s), ${filtered} mesure(s) filtrée(s), ${clipped} rayon(s) limité(s) au bord. Les impacts hors carte ne créent pas d’obstacle au bord.`);
+  }catch(error){notice(error.message,true);}
 }
 function renderCards() {
   $('scans').replaceChildren();
@@ -134,7 +186,20 @@ $('fit').onclick = fit; $('zoomIn').onclick = () => zoom(1.25); $('zoomOut').onc
 $('savePoses').onclick = () => download('poses_manuelles.json', Core.savePoses(state.scans), 'application/json');
 $('exportCSV').onclick = () => download('points_transformes.csv', Core.exportPoints(state.scans), 'text/csv;charset=utf-8');
 $('exportPNG').onclick = () => {
-  const link = document.createElement('a'); link.href = canvas.toDataURL('image/png'); link.download = 'nuages_de_points.png'; link.click();
+  const link = document.createElement('a'); link.href = canvas.toDataURL('image/png'); link.download = $('viewMode').value==='points'?'nuages_de_points.png':'grille_occupation.png'; link.click();
+};
+$('viewMode').onchange=()=>fit();
+$('gridNew').onclick=()=>{try{state.grid=gridFromFields();$('viewMode').value='grid';fit();notice('Nouvelle grille : toutes les cellules sont inconnues. Intégrer un scan pour commencer.');}catch(error){notice(error.message,true);}};
+$('gridSelected').onclick=()=>integrateScans(state.scans.filter(s=>s.id===state.selected));
+$('gridVisible').onclick=()=>integrateScans(state.scans.filter(s=>s.visible));
+$('gridSave').onclick=()=>{if(state.grid)download('grille_occupation.json',state.grid.save(),'application/json');};
+$('gridCSV').onclick=()=>{if(state.grid)download('grille_occupation.csv',state.grid.csv(),'text/csv;charset=utf-8');};
+$('gridLoad').onclick=()=>$('gridFile').click();
+$('gridFile').onchange=async event=>{
+  try{const file=event.target.files[0];if(!file)return;const grid=LidarGrid.Grid.load(await file.text());state.grid=grid;
+    for(const[id,value]of Object.entries({gridResolution:grid.resolution,gridWidth:grid.width,gridHeight:grid.height,gridX:grid.x,gridY:grid.y}))$(id).value=String(value);
+    $('viewMode').value='grid';fit();notice('Grille rechargée. Charger et positionner de nouveaux scans pour la mettre à jour. Les scans déjà intégrés sont mémorisés.');
+  }catch(error){notice(error.message,true);}finally{event.target.value='';}
 };
 $('loadPoses').onclick = () => $('poseFile').click();
 $('poseFile').onchange = async event => {

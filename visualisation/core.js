@@ -42,7 +42,8 @@
     if (ai < 0 || ri < 0) throw new Error('Colonnes angle_deg et dist_mm (ou distance_m/r_m) attendues.');
     const metres = ['distance_m', 'r_m'].includes(headers[ri]);
     const hasXY = xi >= 0 && yi >= 0;
-    const points = []; let invalid = 0, wraps = 0, previous = null;
+    const ii = find(['intensity', 'qualite', 'quality']);
+    const points = [], qualities = []; let invalid = 0, wraps = 0, previous = null;
     for (let n = 0; n < rows.length; n++) {
       const row = rows[n];
       const number = index => {
@@ -64,9 +65,10 @@
         x = r * Math.cos(a); y = (clockwise ? -1 : 1) * r * Math.sin(a);
       }
       points.push([x, y]);
+      qualities.push(ii >= 0 ? number(ii) : null);
     }
     if (!points.length) throw new Error('Aucune distance positive exploitable.');
-    return { name, points, invalid, wraps, basis: hasXY ? 'XY du CSV' : `Polaires, angles ${clockwise ? 'horaires' : 'antihoraires'}`,
+    return { name, points, qualities, invalid, wraps, basis: hasXY ? 'XY du CSV' : `Polaires, angles ${clockwise ? 'horaires' : 'antihoraires'}`,
       checksum: checksum(points), pose: { x: 0, y: 0, theta: 0 }, visible: true, opacity: .85 };
   }
   function transform(point, pose) {

@@ -1,10 +1,10 @@
-# Étape 2 — Visualisation des nuages de points
+# Étapes 2 et 3 — Visualisation et carte d'occupation
 
 ## Ouvrir l'outil
 
 Ouvrir **`index.html` dans Chrome ou Edge** par un double-clic. Aucun serveur,
 compte, accès série, installation Python ou connexion Internet n'est nécessaire.
-Conserver dans le même dossier `index.html`, `core.js`, `viewer.js` et `examples.js`.
+Conserver dans le même dossier `index.html`, `core.js`, `viewer.js`, `grid.js` et `examples.js`.
 Les données restent dans la mémoire du navigateur jusqu'à la fermeture de la page.
 Sauvegarder les poses avant de quitter pour ne pas perdre les réglages.
 
@@ -102,4 +102,14 @@ aperçu servi avec une réponse HTTP 200. La vérification graphique automatisé
 n'a pas pu être menée à terme ici ; les interactions et le rendu restent à
 confirmer dans le navigateur du poste utilisateur.
 
-Cette étape ne construit ni grille d'occupation ni carte vectorielle.
+## Étape 3 — Carte d'occupation
+
+Le panneau **Grille d'occupation** permet de créer une carte inconnue, d'intégrer
+un scan et sa pose, puis d'ajouter les scans suivants à la même carte. Les cellules
+traversées deviennent libres ; les impacts deviennent occupés. Les vues **Grille**
+et **Grille + points** affichent le résultat. La carte est sauvegardable et
+rechargeable en JSON, avec un export CSV et PNG.
+
+La procédure, les choix techniques, les hypothèses et les limites suivant le
+document du cours sont détaillés dans [`GRID.md`](GRID.md). Cette version ne
+construit pas de carte vectorielle.
