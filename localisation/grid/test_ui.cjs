@@ -16,7 +16,7 @@ Object.assign(ids.viewMode,{value:'points'});ids.dragMode.value='pan';ids.angleM
 const sandbox={console,performance,Blob,Uint8Array,Float32Array,Uint8ClampedArray,URLSearchParams,setTimeout,location:{search:''},ResizeObserver:class{observe(){}},URL:{createObjectURL(){return'blob:test';},revokeObjectURL(){}},devicePixelRatio:1,
  document:{getElementById:id=>{assert.ok(ids[id],`Unknown element ${id}`);return ids[id];},createElement:tag=>new Element(tag),querySelectorAll:()=>nodes.filter(n=>n.className==='card'),querySelector:()=>null},addEventListener(){}};
 sandbox.window=sandbox;vm.createContext(sandbox);
-for(const file of ['core.js','examples.js','new-examples.js','pose-presets.js','grid.js','segments.js','vector-map.js','grid-localisation.js','grid-brute-force.js','grid-optimisation.js','grid-localisation-example.js','viewer.js','segments-ui.js','vector-ui.js','grid-localisation-ui.js'])vm.runInContext(fs.readFileSync(path.join(base,file),'utf8'),sandbox,{filename:file});
+for(const file of ['core.js','examples.js','new-examples.js','pose-presets.js','grid.js','segments.js','vector-map.js','grid-localisation.js','grid-brute-force.js','grid-optimisation.js','grid-localisation-example.js','viewer.js','segments-ui.js','vector-ui.js','grid-localisation-ui.js','vector-localisation.js','vector-localisation-example.js','vector-localisation-ui.js'])vm.runInContext(fs.readFileSync(path.join(base,file),'utf8'),sandbox,{filename:file});
 const run=code=>vm.runInContext(code,sandbox);
 async function main(){
  ids.examples.click();assert.equal(run('state.scans.length'),6);
@@ -65,6 +65,13 @@ async function main(){
  await ids.locRun.onclick();run('state.grid.version++');ids.locApply.click();assert.ok(ids.notice.textContent.includes('périmé'));
  ids.locDemo.click();const changed=ids.locRun.onclick();run('state.grid.version++');await changed;assert.equal(run('localisationResult'),null);assert.ok(ids.notice.textContent.includes('modifié'));
  ids.locDemo.click();run('state.grid.scans.push({checksum:state.scans.find(s=>s.id===state.selected).checksum})');await ids.locRun.onclick();assert.ok(ids.notice.textContent.includes('déjà'));
- console.log('UI handler integration passed: TP1 regression, demo, search, explicit apply, grid preservation, cancellation, stale map and duplicate rejection. Visual rendering not tested.');
+ ids.vlDemo.click();assert.equal(run('state.vector.scans.length'),4);assert.equal(ids.viewMode.value,'vectorPoints');
+ const vectorReference=run('state.vector.save()'),vectorInitial=run('JSON.stringify(state.scans.find(s=>s.id===state.selected).pose)');
+ ids.vlXY.value='0.2';ids.vlAngle.value='3';await ids.vlRun.onclick();assert.ok(run('vectorLocResult'),ids.notice.textContent);assert.equal(run('vectorLocResult.result.tested'),175);
+ assert.equal(run('JSON.stringify(state.scans.find(s=>s.id===state.selected).pose)'),vectorInitial);ids.vlApply.click();assert.equal(run('state.vector.save()'),vectorReference);assert.notEqual(run('JSON.stringify(state.scans.find(s=>s.id===state.selected).pose)'),vectorInitial);
+ ids.vlDemo.click();const vectorPending=ids.vlRun.onclick();ids.vlCancel.click();await vectorPending;assert.ok(ids.notice.textContent.includes('annulée'));assert.equal(run('vectorLocResult'),null);
+ await ids.vlRun.onclick();run('state.vector.version++');ids.vlApply.click();assert.ok(ids.notice.textContent.includes('périmé'));
+ ids.vlDemo.click();run('state.vector.scans.push({checksum:state.scans.find(s=>s.id===state.selected).checksum})');await ids.vlRun.onclick();assert.ok(ids.notice.textContent.includes('déjà'));
+ console.log('UI handler integration passed: TP1 regression, grid methods and vector matching; demos, explicit apply, preserved maps, cancellation, stale results and duplicate rejection. Visual rendering not tested.');
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});

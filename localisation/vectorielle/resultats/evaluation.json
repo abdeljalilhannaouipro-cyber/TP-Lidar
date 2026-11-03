@@ -1,0 +1,1911 @@
+{
+  "format": "tp2-vector-localisation-evaluation-v1",
+  "created": "2026-11-03T16:00:29.529Z",
+  "environment": {
+    "node": "v24.22.1",
+    "cpu": "Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz"
+  },
+  "successCriterion": "translation <= 0.20 m and angle <= 2 deg relative to indicated reference",
+  "syntheticSummary": {
+    "cases": 9,
+    "success": 9,
+    "meanInitialTranslationM": 0.6202052217835037,
+    "meanFinalTranslationM": 0.046286256554730204,
+    "meanFinalAngleDeg": 0.41111111111110354,
+    "meanElapsedMs": 478.09134444444436,
+    "meanSupport": 1,
+    "maxFinalTranslationM": 0.052630789467762965
+  },
+  "realSummary": {
+    "cases": 15,
+    "success": 15,
+    "meanInitialTranslationM": 0.6202052217835038,
+    "meanFinalTranslationM": 0.07057698798133392,
+    "meanFinalAngleDeg": 0.39333333333332426,
+    "meanElapsedMs": 1864.3733933333338,
+    "meanSupport": 0.8388927278078492,
+    "maxFinalTranslationM": 0.16238842323269254
+  },
+  "synthetic": [
+    {
+      "label": "S1-1",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": 1.8,
+        "y": -1.5,
+        "theta": 22
+      },
+      "initialError": {
+        "translationM": 0.6774496291238191,
+        "angleDeg": 7.2999999999999545
+      },
+      "referenceSupport": 1,
+      "finalError": {
+        "translationM": 0.03921734310225526,
+        "angleDeg": 0.2999999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": 2.337,
+          "y": -1.913,
+          "theta": 29.299999999999955
+        },
+        "pose": {
+          "x": 1.8370000000000002,
+          "y": -1.513,
+          "theta": 22.299999999999955
+        },
+        "before": {
+          "cost": 0.18242746282065458,
+          "score": 0.27029014871738166,
+          "rmseM": 0.5169909755122565,
+          "nearFraction": 0.027777777777777776
+        },
+        "after": {
+          "cost": 0.0006796849814359942,
+          "score": 0.997281260074256,
+          "rmseM": 0.02607076871586249,
+          "nearFraction": 1
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 360,
+        "segments": 10,
+        "elapsedMs": 442.87030000000004,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": 1.737,
+          "y": -1.513,
+          "theta": 18.299999999999955
+        },
+        "alternativeGap": 0.02966434688030839,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    },
+    {
+      "label": "S1-2",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": 1.8,
+        "y": -1.5,
+        "theta": 22
+      },
+      "initialError": {
+        "translationM": 0.7284023613360957,
+        "angleDeg": 8.200000000000045
+      },
+      "referenceSupport": 1,
+      "finalError": {
+        "translationM": 0.052630789467762965,
+        "angleDeg": 0.20000000000004547
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": 1.333,
+          "y": -0.941,
+          "theta": 13.799999999999955
+        },
+        "pose": {
+          "x": 1.833,
+          "y": -1.541,
+          "theta": 21.799999999999955
+        },
+        "before": {
+          "cost": 0.18299796555194417,
+          "score": 0.2680081377922233,
+          "rmseM": 0.5406666159767679,
+          "nearFraction": 0.06944444444444445
+        },
+        "after": {
+          "cost": 0.001438413797471475,
+          "score": 0.9942463448101141,
+          "rmseM": 0.03792642610992334,
+          "nearFraction": 1
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 360,
+        "segments": 10,
+        "elapsedMs": 447.09929999999997,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": 1.833,
+          "y": -1.4409999999999998,
+          "theta": 25.799999999999955
+        },
+        "alternativeGap": 0.030073449376652794,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    },
+    {
+      "label": "S1-3",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": 1.8,
+        "y": -1.5,
+        "theta": 22
+      },
+      "initialError": {
+        "translationM": 0.4547636748905964,
+        "angleDeg": 5.399999999999977
+      },
+      "referenceSupport": 1,
+      "finalError": {
+        "translationM": 0.04701063709417252,
+        "angleDeg": 0.6000000000000227
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": 2.063,
+          "y": -1.129,
+          "theta": 27.399999999999977
+        },
+        "pose": {
+          "x": 1.7630000000000001,
+          "y": -1.529,
+          "theta": 21.399999999999977
+        },
+        "before": {
+          "cost": 0.09119799615206353,
+          "score": 0.6352080153917459,
+          "rmseM": 0.3036451038378974,
+          "nearFraction": 0.33055555555555555
+        },
+        "after": {
+          "cost": 0.0009777742295317303,
+          "score": 0.996088903081873,
+          "rmseM": 0.03126938166212646,
+          "nearFraction": 1
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 360,
+        "segments": 10,
+        "elapsedMs": 422.6408999999999,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": 1.8630000000000002,
+          "y": -1.429,
+          "theta": 25.399999999999977
+        },
+        "alternativeGap": 0.029437509713539423,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    },
+    {
+      "label": "S2-1",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": 1.5,
+        "theta": -35
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "referenceSupport": 1,
+      "finalError": {
+        "translationM": 0.039217343102255046,
+        "angleDeg": 0.2999999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": -1.463,
+          "y": 1.087,
+          "theta": -27.700000000000045
+        },
+        "pose": {
+          "x": -1.963,
+          "y": 1.487,
+          "theta": -34.700000000000045
+        },
+        "before": {
+          "cost": 0.164844721784423,
+          "score": 0.340621112862308,
+          "rmseM": 0.47723840543457136,
+          "nearFraction": 0.09444444444444444
+        },
+        "after": {
+          "cost": 0.0009288614117178636,
+          "score": 0.9962845543531286,
+          "rmseM": 0.03047722775643913,
+          "nearFraction": 1
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 360,
+        "segments": 10,
+        "elapsedMs": 467.6229999999998,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": -1.963,
+          "y": 1.487,
+          "theta": -38.700000000000045
+        },
+        "alternativeGap": 0.03210818310728136,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    },
+    {
+      "label": "S2-2",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": 1.5,
+        "theta": -35
+      },
+      "initialError": {
+        "translationM": 0.7284023613360958,
+        "angleDeg": 8.200000000000045
+      },
+      "referenceSupport": 1,
+      "finalError": {
+        "translationM": 0.052630789467762965,
+        "angleDeg": 0.20000000000004547
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": -2.467,
+          "y": 2.059,
+          "theta": -43.19999999999999
+        },
+        "pose": {
+          "x": -1.967,
+          "y": 1.459,
+          "theta": -35.19999999999999
+        },
+        "before": {
+          "cost": 0.18745818270520137,
+          "score": 0.2501672691791945,
+          "rmseM": 0.547344180525101,
+          "nearFraction": 0.044444444444444446
+        },
+        "after": {
+          "cost": 0.001362933891583357,
+          "score": 0.9945482644336666,
+          "rmseM": 0.03691793455196752,
+          "nearFraction": 1
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 360,
+        "segments": 10,
+        "elapsedMs": 485.6143000000002,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": -2.067,
+          "y": 1.459,
+          "theta": -31.19999999999999
+        },
+        "alternativeGap": 0.032647924131793515,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    },
+    {
+      "label": "S2-3",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": 1.5,
+        "theta": -35
+      },
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.399999999999977
+      },
+      "referenceSupport": 1,
+      "finalError": {
+        "translationM": 0.04701063709417252,
+        "angleDeg": 0.39999999999997726
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": -1.737,
+          "y": 1.871,
+          "theta": -29.600000000000023
+        },
+        "pose": {
+          "x": -2.037,
+          "y": 1.471,
+          "theta": -34.60000000000002
+        },
+        "before": {
+          "cost": 0.1270699900150197,
+          "score": 0.4917200399399212,
+          "rmseM": 0.3686740845992934,
+          "nearFraction": 0.18888888888888888
+        },
+        "after": {
+          "cost": 0.0010818505734409285,
+          "score": 0.9956725977062363,
+          "rmseM": 0.032891496977804593,
+          "nearFraction": 1
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 360,
+        "segments": 10,
+        "elapsedMs": 766.7096999999999,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": -1.937,
+          "y": 1.571,
+          "theta": -38.60000000000002
+        },
+        "alternativeGap": 0.033339104388720675,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    },
+    {
+      "label": "S3-1",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": -2,
+        "theta": 110
+      },
+      "initialError": {
+        "translationM": 0.6774496291238189,
+        "angleDeg": 7.2999999999999545
+      },
+      "referenceSupport": 1,
+      "finalError": {
+        "translationM": 0.039217343102255046,
+        "angleDeg": 0.2999999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": -1.463,
+          "y": -2.413,
+          "theta": 117.29999999999995
+        },
+        "pose": {
+          "x": -1.963,
+          "y": -2.013,
+          "theta": 110.29999999999995
+        },
+        "before": {
+          "cost": 0.12685813406360225,
+          "score": 0.492567463745591,
+          "rmseM": 0.369237502851223,
+          "nearFraction": 0.2
+        },
+        "after": {
+          "cost": 0.0005177706322015773,
+          "score": 0.9979289174711937,
+          "rmseM": 0.02275457387431321,
+          "nearFraction": 1
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 360,
+        "segments": 10,
+        "elapsedMs": 419.8789999999999,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": -2.063,
+          "y": -1.9129999999999998,
+          "theta": 106.29999999999995
+        },
+        "alternativeGap": 0.03517598964550883,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    },
+    {
+      "label": "S3-2",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": -2,
+        "theta": 110
+      },
+      "initialError": {
+        "translationM": 0.7284023613360958,
+        "angleDeg": 8.200000000000045
+      },
+      "referenceSupport": 1,
+      "finalError": {
+        "translationM": 0.052630789467762965,
+        "angleDeg": 0.7999999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": -2.467,
+          "y": -1.4409999999999998,
+          "theta": 101.79999999999995
+        },
+        "pose": {
+          "x": -1.967,
+          "y": -2.041,
+          "theta": 110.79999999999995
+        },
+        "before": {
+          "cost": 0.14517230147119276,
+          "score": 0.419310794115229,
+          "rmseM": 0.41694253209261756,
+          "nearFraction": 0.18333333333333332
+        },
+        "after": {
+          "cost": 0.0011620793917406819,
+          "score": 0.9953516824330373,
+          "rmseM": 0.03408928558565993,
+          "nearFraction": 1
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 360,
+        "segments": 10,
+        "elapsedMs": 440.7157000000002,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": -2.067,
+          "y": -1.9409999999999998,
+          "theta": 106.79999999999995
+        },
+        "alternativeGap": 0.020637432758714103,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    },
+    {
+      "label": "S3-3",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": -2,
+        "theta": 110
+      },
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.399999999999977
+      },
+      "referenceSupport": 1,
+      "finalError": {
+        "translationM": 0.04701063709417252,
+        "angleDeg": 0.6000000000000227
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": -1.737,
+          "y": -1.629,
+          "theta": 115.39999999999998
+        },
+        "pose": {
+          "x": -2.037,
+          "y": -2.029,
+          "theta": 109.39999999999998
+        },
+        "before": {
+          "cost": 0.10626010338833347,
+          "score": 0.5749595864466661,
+          "rmseM": 0.34142229523616835,
+          "nearFraction": 0.2611111111111111
+        },
+        "after": {
+          "cost": 0.0011703327347596095,
+          "score": 0.9953186690609616,
+          "rmseM": 0.034210126202041544,
+          "nearFraction": 1
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 360,
+        "segments": 10,
+        "elapsedMs": 409.6699000000003,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": -1.937,
+          "y": -2.029,
+          "theta": 113.39999999999998
+        },
+        "alternativeGap": 0.021448633126944006,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    }
+  ],
+  "real": [
+    {
+      "label": "R1-1",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "referenceSupport": 0.9978118161925602,
+      "finalError": {
+        "translationM": 0.03921734310225517,
+        "angleDeg": 0.2999999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": 0.537,
+          "y": -0.413,
+          "theta": 7.2999999999999545
+        },
+        "pose": {
+          "x": 0.03700000000000003,
+          "y": -0.012999999999999956,
+          "theta": 0.2999999999999545
+        },
+        "before": {
+          "cost": 0.1346864117390534,
+          "score": 0.46125435304378637,
+          "rmseM": 0.5002193537674237,
+          "nearFraction": 0.2778993435448578
+        },
+        "after": {
+          "cost": 0.0019143514298614783,
+          "score": 0.992342594280554,
+          "rmseM": 0.04375330193095692,
+          "nearFraction": 0.9978118161925602
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 457,
+        "segments": 36,
+        "elapsedMs": 2045.2531,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": 0.03700000000000003,
+          "y": 0.2870000000000001,
+          "theta": -1.7000000000000455
+        },
+        "alternativeGap": 0.06319353527067462,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    },
+    {
+      "label": "R1-2",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "initialError": {
+        "translationM": 0.7284023613360957,
+        "angleDeg": 8.200000000000045
+      },
+      "referenceSupport": 0.9978118161925602,
+      "finalError": {
+        "translationM": 0.06760177512462233,
+        "angleDeg": 0.20000000000004547
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": -0.467,
+          "y": 0.559,
+          "theta": -8.200000000000045
+        },
+        "pose": {
+          "x": 0.032999999999999974,
+          "y": 0.05900000000000005,
+          "theta": -0.20000000000004547
+        },
+        "before": {
+          "cost": 0.13579522884430165,
+          "score": 0.4568190846227934,
+          "rmseM": 0.4766170769575663,
+          "nearFraction": 0.24945295404814005
+        },
+        "after": {
+          "cost": 0.0015601098331131942,
+          "score": 0.9937595606675472,
+          "rmseM": 0.03949822569575998,
+          "nearFraction": 0.9978118161925602
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 457,
+        "segments": 36,
+        "elapsedMs": 1901.5549,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": 0.032999999999999974,
+          "y": -0.241,
+          "theta": 1.7999999999999545
+        },
+        "alternativeGap": 0.06506207391091956,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    },
+    {
+      "label": "R1-3",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "initialError": {
+        "translationM": 0.4547636748905963,
+        "angleDeg": 5.399999999999977
+      },
+      "referenceSupport": 0.9978118161925602,
+      "finalError": {
+        "translationM": 0.08006247560499236,
+        "angleDeg": 0.6000000000000227
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": 0.263,
+          "y": 0.371,
+          "theta": 5.399999999999977
+        },
+        "pose": {
+          "x": -0.03700000000000003,
+          "y": 0.07099999999999995,
+          "theta": -0.6000000000000227
+        },
+        "before": {
+          "cost": 0.12651309995480675,
+          "score": 0.493947600180773,
+          "rmseM": 0.44827021710195225,
+          "nearFraction": 0.29321663019693656
+        },
+        "after": {
+          "cost": 0.002227972166732792,
+          "score": 0.9910881113330688,
+          "rmseM": 0.047201400050557736,
+          "nearFraction": 0.9978118161925602
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 457,
+        "segments": 36,
+        "elapsedMs": 2021.4159,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": -0.03700000000000003,
+          "y": -0.2290000000000001,
+          "theta": 1.3999999999999773
+        },
+        "alternativeGap": 0.06024566061257586,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    },
+    {
+      "label": "R2-1",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 3.2162682227295947,
+        "y": 1.3246240083357195,
+        "theta": -92.1245634897957
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "referenceSupport": 0.7286652078774617,
+      "finalError": {
+        "translationM": 0.03921734310225512,
+        "angleDeg": 0.2999999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": 3.7532682227295946,
+          "y": 0.9116240083357194,
+          "theta": -84.82456348979571
+        },
+        "pose": {
+          "x": 3.2532682227295946,
+          "y": 1.3116240083357193,
+          "theta": -91.82456348979571
+        },
+        "before": {
+          "cost": 0.16777301886157225,
+          "score": 0.328907924553711,
+          "rmseM": 1.1270824044634238,
+          "nearFraction": 0.24945295404814005
+        },
+        "after": {
+          "cost": 0.0646590360858752,
+          "score": 0.7413638556564992,
+          "rmseM": 1.0217238390588157,
+          "nearFraction": 0.7352297592997812
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 457,
+        "segments": 32,
+        "elapsedMs": 1784.1504999999997,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": 3.0532682227295944,
+          "y": 1.5116240083357195,
+          "theta": -90.82456348979571
+        },
+        "alternativeGap": 0.08153688254481728,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    },
+    {
+      "label": "R2-2",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 3.2162682227295947,
+        "y": 1.3246240083357195,
+        "theta": -92.1245634897957
+      },
+      "initialError": {
+        "translationM": 0.7284023613360956,
+        "angleDeg": 8.200000000000045
+      },
+      "referenceSupport": 0.7286652078774617,
+      "finalError": {
+        "translationM": 0.05263078946776313,
+        "angleDeg": 0.20000000000004547
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": 2.7492682227295946,
+          "y": 1.8836240083357194,
+          "theta": -100.32456348979571
+        },
+        "pose": {
+          "x": 3.2492682227295946,
+          "y": 1.2836240083357193,
+          "theta": -92.32456348979571
+        },
+        "before": {
+          "cost": 0.1759922028234489,
+          "score": 0.2960311887062044,
+          "rmseM": 1.0983844283455344,
+          "nearFraction": 0.20350109409190373
+        },
+        "after": {
+          "cost": 0.0652941266901706,
+          "score": 0.7388234932393176,
+          "rmseM": 1.020127256548647,
+          "nearFraction": 0.7330415754923414
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 457,
+        "segments": 32,
+        "elapsedMs": 2220.0637000000006,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": 3.0492682227295944,
+          "y": 1.4836240083357195,
+          "theta": -91.32456348979571
+        },
+        "alternativeGap": 0.07016755387803042,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    },
+    {
+      "label": "R2-3",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 3.2162682227295947,
+        "y": 1.3246240083357195,
+        "theta": -92.1245634897957
+      },
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.400000000000091
+      },
+      "referenceSupport": 0.7286652078774617,
+      "finalError": {
+        "translationM": 0.047010637094173004,
+        "angleDeg": 0.40000000000009095
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": 3.4792682227295946,
+          "y": 1.6956240083357195,
+          "theta": -86.72456348979568
+        },
+        "pose": {
+          "x": 3.1792682227295943,
+          "y": 1.2956240083357193,
+          "theta": -91.72456348979568
+        },
+        "before": {
+          "cost": 0.14942690042877202,
+          "score": 0.4022923982849119,
+          "rmseM": 1.06337717899602,
+          "nearFraction": 0.2800875273522976
+        },
+        "after": {
+          "cost": 0.06519091289952476,
+          "score": 0.7392363484019009,
+          "rmseM": 1.009569853118032,
+          "nearFraction": 0.7308533916849015
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 457,
+        "segments": 32,
+        "elapsedMs": 1845.6450000000004,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": 3.3792682227295945,
+          "y": 1.4956240083357195,
+          "theta": -91.72456348979568
+        },
+        "alternativeGap": 0.06978722953395056,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    },
+    {
+      "label": "R3-1",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.9820777772150278,
+        "y": 2.3296138030212745,
+        "theta": 4.337474888004696
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "referenceSupport": 0.5754923413566739,
+      "finalError": {
+        "translationM": 0.09454099639838767,
+        "angleDeg": 0.7000000000000455
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": 3.5190777772150277,
+          "y": 1.9166138030212745,
+          "theta": 11.637474888004704
+        },
+        "pose": {
+          "x": 3.0190777772150277,
+          "y": 2.4166138030212743,
+          "theta": 3.6374748880047036
+        },
+        "before": {
+          "cost": 0.17344301482815422,
+          "score": 0.3062279406873831,
+          "rmseM": 0.7618237607903312,
+          "nearFraction": 0.16411378555798686
+        },
+        "after": {
+          "cost": 0.07590221776325706,
+          "score": 0.6963911289469717,
+          "rmseM": 0.549643928597672,
+          "nearFraction": 0.6017505470459519
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 457,
+        "segments": 25,
+        "elapsedMs": 1457.7950999999994,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": 2.9190777772150276,
+          "y": 2.4166138030212743,
+          "theta": 7.637474888004704
+        },
+        "alternativeGap": 0.07410294445880583,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    },
+    {
+      "label": "R3-2",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.9820777772150278,
+        "y": 2.3296138030212745,
+        "theta": 4.337474888004696
+      },
+      "initialError": {
+        "translationM": 0.7284023613360958,
+        "angleDeg": 8.200000000000045
+      },
+      "referenceSupport": 0.5754923413566739,
+      "finalError": {
+        "translationM": 0.16238842323269254,
+        "angleDeg": 0.20000000000004547
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": 2.5150777772150277,
+          "y": 2.8886138030212747,
+          "theta": -3.8625251119952964
+        },
+        "pose": {
+          "x": 3.0150777772150277,
+          "y": 2.4886138030212748,
+          "theta": 4.137474888004704
+        },
+        "before": {
+          "cost": 0.17292478324100904,
+          "score": 0.3083008670359638,
+          "rmseM": 0.7762618988082185,
+          "nearFraction": 0.17943107221006566
+        },
+        "after": {
+          "cost": 0.07609835131755961,
+          "score": 0.6956065947297616,
+          "rmseM": 0.5560820144128655,
+          "nearFraction": 0.6170678336980306
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 457,
+        "segments": 25,
+        "elapsedMs": 1482.9588000000003,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": 2.815077777215028,
+          "y": 2.2886138030212746,
+          "theta": 5.137474888004704
+        },
+        "alternativeGap": 0.06167534644086614,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    },
+    {
+      "label": "R3-3",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.9820777772150278,
+        "y": 2.3296138030212745,
+        "theta": 4.337474888004696
+      },
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.400000000000091
+      },
+      "referenceSupport": 0.5754923413566739,
+      "finalError": {
+        "translationM": 0.0949210198006739,
+        "angleDeg": 0.599999999999909
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": 3.2450777772150277,
+          "y": 2.7006138030212745,
+          "theta": 9.737474888004726
+        },
+        "pose": {
+          "x": 3.0450777772150275,
+          "y": 2.4006138030212743,
+          "theta": 3.7374748880047264
+        },
+        "before": {
+          "cost": 0.1336350081068415,
+          "score": 0.46545996757263397,
+          "rmseM": 0.6774358353299951,
+          "nearFraction": 0.3413566739606127
+        },
+        "after": {
+          "cost": 0.07673827069893852,
+          "score": 0.6930469172042459,
+          "rmseM": 0.5498204150328306,
+          "nearFraction": 0.5842450765864332
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 457,
+        "segments": 25,
+        "elapsedMs": 1549.7927000000018,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": 2.7450777772150277,
+          "y": 2.4006138030212743,
+          "theta": 5.737474888004726
+        },
+        "alternativeGap": 0.061425405292340196,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    },
+    {
+      "label": "R4-1",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.7328356377830407,
+        "y": 1.3585822612448972,
+        "theta": 3.6140022517237904
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "referenceSupport": 0.8706140350877193,
+      "finalError": {
+        "translationM": 0.03921734310225512,
+        "angleDeg": 0.2999999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": 3.2698356377830406,
+          "y": 0.9455822612448972,
+          "theta": 10.914002251723787
+        },
+        "pose": {
+          "x": 2.7698356377830406,
+          "y": 1.345582261244897,
+          "theta": 3.9140022517237867
+        },
+        "before": {
+          "cost": 0.1338348630108242,
+          "score": 0.4646605479567032,
+          "rmseM": 0.8139907585795932,
+          "nearFraction": 0.3157894736842105
+        },
+        "after": {
+          "cost": 0.03304336210539097,
+          "score": 0.8678265515784361,
+          "rmseM": 0.6314339472815762,
+          "nearFraction": 0.8706140350877193
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 456,
+        "segments": 35,
+        "elapsedMs": 1969.6189000000013,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": 2.6698356377830406,
+          "y": 1.345582261244897,
+          "theta": -0.08599774827621331
+        },
+        "alternativeGap": 0.08790881396454775,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    },
+    {
+      "label": "R4-2",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.7328356377830407,
+        "y": 1.3585822612448972,
+        "theta": 3.6140022517237904
+      },
+      "initialError": {
+        "translationM": 0.7284023613360956,
+        "angleDeg": 8.200000000000045
+      },
+      "referenceSupport": 0.8706140350877193,
+      "finalError": {
+        "translationM": 0.05263078946776313,
+        "angleDeg": 0.20000000000004547
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": 2.2658356377830406,
+          "y": 1.9175822612448972,
+          "theta": -4.585997748276213
+        },
+        "pose": {
+          "x": 2.7658356377830406,
+          "y": 1.317582261244897,
+          "theta": 3.4140022517237867
+        },
+        "before": {
+          "cost": 0.15415332371347334,
+          "score": 0.3833867051461066,
+          "rmseM": 0.690049982270871,
+          "nearFraction": 0.2565789473684211
+        },
+        "after": {
+          "cost": 0.03351530353468952,
+          "score": 0.865938785861242,
+          "rmseM": 0.6278792433542056,
+          "nearFraction": 0.8662280701754386
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 456,
+        "segments": 35,
+        "elapsedMs": 1918.9422999999988,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": 2.5658356377830405,
+          "y": 1.5175822612448973,
+          "theta": 3.4140022517237867
+        },
+        "alternativeGap": 0.08367458160305641,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    },
+    {
+      "label": "R4-3",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.7328356377830407,
+        "y": 1.3585822612448972,
+        "theta": 3.6140022517237904
+      },
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.399999999999977
+      },
+      "referenceSupport": 0.8706140350877193,
+      "finalError": {
+        "translationM": 0.047010637094173004,
+        "angleDeg": 0.39999999999997726
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": 2.9958356377830406,
+          "y": 1.7295822612448972,
+          "theta": 9.01400225172381
+        },
+        "pose": {
+          "x": 2.6958356377830404,
+          "y": 1.329582261244897,
+          "theta": 4.014002251723809
+        },
+        "before": {
+          "cost": 0.12190241984343503,
+          "score": 0.5123903206262599,
+          "rmseM": 0.7445572010183771,
+          "nearFraction": 0.36403508771929827
+        },
+        "after": {
+          "cost": 0.03312850286618566,
+          "score": 0.8674859885352574,
+          "rmseM": 0.6278549764561575,
+          "nearFraction": 0.8728070175438597
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 456,
+        "segments": 35,
+        "elapsedMs": 2002.9969999999994,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": 2.6958356377830404,
+          "y": 1.329582261244897,
+          "theta": 0.014002251723809422
+        },
+        "alternativeGap": 0.08009836681210769,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    },
+    {
+      "label": "R5-1",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0.041338385695696575,
+        "y": -0.002933562901461178,
+        "theta": 8.024583484785612
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.300000000000068
+      },
+      "referenceSupport": 0.975929978118162,
+      "finalError": {
+        "translationM": 0.09454099639838798,
+        "angleDeg": 0.6999999999999318
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": 0.5783383856956966,
+          "y": -0.41593356290146116,
+          "theta": 15.324583484785649
+        },
+        "pose": {
+          "x": 0.07833838569569662,
+          "y": 0.08406643709853884,
+          "theta": 7.324583484785649
+        },
+        "before": {
+          "cost": 0.1308632633286694,
+          "score": 0.4765469466853224,
+          "rmseM": 0.5028989565726638,
+          "nearFraction": 0.3063457330415755
+        },
+        "after": {
+          "cost": 0.0037729710645532117,
+          "score": 0.9849081157417872,
+          "rmseM": 0.06142451517556497,
+          "nearFraction": 0.9934354485776805
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 457,
+        "segments": 38,
+        "elapsedMs": 1892.2975000000006,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": 0.07833838569569662,
+          "y": -0.21593356290146115,
+          "theta": 9.324583484785649
+        },
+        "alternativeGap": 0.05912398931281726,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    },
+    {
+      "label": "R5-2",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0.041338385695696575,
+        "y": -0.002933562901461178,
+        "theta": 8.024583484785612
+      },
+      "initialError": {
+        "translationM": 0.7284023613360957,
+        "angleDeg": 8.199999999999932
+      },
+      "referenceSupport": 0.975929978118162,
+      "finalError": {
+        "translationM": 0.06760177512462232,
+        "angleDeg": 0.1999999999999318
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": -0.42566161430430344,
+          "y": 0.5560664370985389,
+          "theta": -0.17541651521435142
+        },
+        "pose": {
+          "x": 0.07433838569569656,
+          "y": 0.05606643709853887,
+          "theta": 7.824583484785649
+        },
+        "before": {
+          "cost": 0.13448448195983984,
+          "score": 0.46206207216064066,
+          "rmseM": 0.4714635129439281,
+          "nearFraction": 0.26258205689277897
+        },
+        "after": {
+          "cost": 0.0031321282572488404,
+          "score": 0.9874714869710046,
+          "rmseM": 0.05596542019183667,
+          "nearFraction": 0.9890590809628009
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 457,
+        "segments": 38,
+        "elapsedMs": 1932.8307999999997,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": 0.07433838569569656,
+          "y": -0.24393356290146118,
+          "theta": 8.824583484785649
+        },
+        "alternativeGap": 0.07402550203303415,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    },
+    {
+      "label": "R5-3",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0.041338385695696575,
+        "y": -0.002933562901461178,
+        "theta": 8.024583484785612
+      },
+      "initialError": {
+        "translationM": 0.4547636748905963,
+        "angleDeg": 5.400000000000091
+      },
+      "referenceSupport": 0.975929978118162,
+      "finalError": {
+        "translationM": 0.08006247560499236,
+        "angleDeg": 0.599999999999909
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "exhaustive-point-to-finite-segments",
+        "complete": true,
+        "initial": {
+          "x": 0.3043383856956966,
+          "y": 0.3680664370985388,
+          "theta": 13.424583484785671
+        },
+        "pose": {
+          "x": 0.004338385695696556,
+          "y": 0.06806643709853877,
+          "theta": 7.424583484785671
+        },
+        "before": {
+          "cost": 0.1270886594989274,
+          "score": 0.49164536200429043,
+          "rmseM": 0.45801023059135704,
+          "nearFraction": 0.32166301969365424
+        },
+        "after": {
+          "cost": 0.0032795445876914707,
+          "score": 0.9868818216492341,
+          "rmseM": 0.05726730819316961,
+          "nearFraction": 0.9956236323851203
+        },
+        "tested": 13671,
+        "totalCandidates": 13671,
+        "axisCounts": {
+          "x": 21,
+          "y": 21,
+          "theta": 31
+        },
+        "acceptedPoints": 457,
+        "segments": 38,
+        "elapsedMs": 1940.2847000000038,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "alternative": {
+          "x": 0.004338385695696556,
+          "y": -0.23193356290146128,
+          "theta": 9.424583484785671
+        },
+        "alternativeGap": 0.07048605188226675,
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Minimum du coût tronqué sur le domaine discret, pas une preuve de pose physique exacte. La carte vectorielle ne décrit pas les espaces libres/inconnus."
+      }
+    }
+  ],
+  "caveats": [
+    "Synthetic accuracy is measured in a simulated known scene, not in the physical classroom.",
+    "Real query scan excluded from occupancy map; reference poses and training poses come from TP1 estimation using the complete group. This is not a fully independent ground-truth evaluation.",
+    "Three initial offsets per scan are correlated repeat trials, not independent acquisitions.",
+    "Search is local, not global, and thresholds have no probabilistic calibration."
+  ]
+}

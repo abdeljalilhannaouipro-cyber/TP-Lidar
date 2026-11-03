@@ -40,6 +40,7 @@ function draw() {
   const showVector = ['vector','vectorPoints'].includes($('viewMode').value) && state.vector;
   if (showGrid) drawGrid();
   updateGridStatus();
+  if(typeof updateVectorLocalisationStatus==='function')updateVectorLocalisationStatus();
   if(typeof updateLocalisationStatus==='function')updateLocalisationStatus();
   if(typeof updateSegmentsStatus==='function')updateSegmentsStatus();
   if(typeof updateVectorStatus==='function')updateVectorStatus();

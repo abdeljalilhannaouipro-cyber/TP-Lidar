@@ -14,6 +14,10 @@ Les [méthodes gradient, multi-résolution par pyramide et recuit simulé](local
 complètent la localisation sur grille. Les échecs du gradient sont conservés
 dans les bilans ; le recuit est évalué avec trois graines reproductibles.
 
+**TP 2, étape 2 :** [localisation sur carte vectorielle par recherche exhaustive](localisation/vectorielle/README.md).
+Distances directes aux segments finis, coût quadratique tronqué, 13 671 poses
+par essai, cartes construites sans le scan test et 24 essais chiffrés avec images.
+
 Le projet réunit les cinq étapes du TP : acquisitions réelles, affichage des scans
 avec poses indépendantes, grille d'occupation, manipulation de segments et carte
 vectorielle. Le **recalcul complet utilise 17 scans contrôlés** : les six captures
