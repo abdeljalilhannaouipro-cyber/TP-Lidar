@@ -3,6 +3,8 @@
 La [descente de gradient vectorielle](GRADIENT.md) est également disponible dans
 le même panneau. Elle minimise le même coût tronqué avec un gradient analytique,
 une recherche de pas et une évaluation sur les mêmes 24 configurations.
+La [méthode multi-résolution](MULTI_RESOLUTION.md) regroupe le scan à 40 puis
+20 cm avant de retrouver tous les points, avec des poses progressivement affinées.
 
 Cette étape estime la pose `(x, y, theta)` d'un scan en le comparant à une
 **carte de segments**, construite sans insérer ce scan. Elle suit les sections

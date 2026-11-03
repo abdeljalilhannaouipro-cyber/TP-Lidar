@@ -20,6 +20,9 @@ par essai, cartes construites sans le scan test et 24 essais chiffrés avec imag
 Une [descente de gradient sur les segments finis](localisation/vectorielle/GRADIENT.md)
 complète cette étape, avec gradient analytique, trace du coût et comparaison
 à la recherche exhaustive sur les mêmes cartes et scans.
+La [multi-résolution vectorielle](localisation/vectorielle/MULTI_RESOLUTION.md)
+ajoute un sous-échantillonnage progressif du scan et une recherche de pose affinée,
+avec ses bilans et figures des trois niveaux.
 
 Le projet réunit les cinq étapes du TP : acquisitions réelles, affichage des scans
 avec poses indépendantes, grille d'occupation, manipulation de segments et carte

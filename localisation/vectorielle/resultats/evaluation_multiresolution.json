@@ -1,0 +1,2657 @@
+{
+  "format": "tp2-vector-multiresolution-evaluation-v1",
+  "created": "2026-11-03T16:17:08.539Z",
+  "environment": {
+    "node": "v24.22.1",
+    "cpu": "Intel(R) Core(TM) i5-6300U CPU @ 2.40GHz"
+  },
+  "successCriterion": "translation <= 0.20 m and angle <= 2 deg relative to indicated reference",
+  "syntheticSummary": {
+    "cases": 9,
+    "success": 9,
+    "meanInitialTranslationM": 0.6202052217835037,
+    "meanFinalTranslationM": 0.01407304522626316,
+    "meanFinalAngleDeg": 0.12777777777777524,
+    "meanElapsedMs": 134.64242222222222,
+    "meanEvaluations": 4530,
+    "meanSupport": 1,
+    "maxFinalTranslationM": 0.017691806012954066
+  },
+  "realSummary": {
+    "cases": 15,
+    "success": 15,
+    "meanInitialTranslationM": 0.6202052217835038,
+    "meanFinalTranslationM": 0.046246634429424595,
+    "meanFinalAngleDeg": 0.23333333333331818,
+    "meanElapsedMs": 472.7810066666668,
+    "meanEvaluations": 4340.533333333334,
+    "meanSupport": 0.8407904334139504,
+    "maxFinalTranslationM": 0.12682665335015358
+  },
+  "synthetic": [
+    {
+      "label": "S1-1",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": 1.8,
+        "y": -1.5,
+        "theta": 22
+      },
+      "initialError": {
+        "translationM": 0.6774496291238191,
+        "angleDeg": 7.2999999999999545
+      },
+      "referenceSupport": 1,
+      "finalError": {
+        "translationM": 0.016970562748477313,
+        "angleDeg": 0.049999999999954525
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": 2.337,
+          "y": -1.913,
+          "theta": 29.299999999999955
+        },
+        "pose": {
+          "x": 1.8120000000000003,
+          "y": -1.488,
+          "theta": 22.049999999999955
+        },
+        "before": {
+          "cost": 0.18242746282065458,
+          "score": 0.27029014871738166,
+          "rmseM": 0.5169909755122565,
+          "nearFraction": 0.027777777777777776
+        },
+        "after": {
+          "cost": 0.00013983527689223548,
+          "score": 0.999440658892431,
+          "rmseM": 0.011825196695710203,
+          "nearFraction": 1
+        },
+        "tested": 4505,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 71,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.007716197930040529,
+            "pose": {
+              "x": 1.9370000000000003,
+              "y": -1.513,
+              "theta": 21.299999999999955
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 127,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1458,
+            "cost": 0.0007569544768401752,
+            "pose": {
+              "x": 1.8370000000000002,
+              "y": -1.513,
+              "theta": 22.299999999999955
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 360,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2872,
+            "cost": 0.00013983527689223548,
+            "pose": {
+              "x": 1.8120000000000003,
+              "y": -1.488,
+              "theta": 22.049999999999955
+            }
+          }
+        ],
+        "acceptedPoints": 360,
+        "segments": 10,
+        "elapsedMs": 174.5154,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    },
+    {
+      "label": "S1-2",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": 1.8,
+        "y": -1.5,
+        "theta": 22
+      },
+      "initialError": {
+        "translationM": 0.7284023613360957,
+        "angleDeg": 8.200000000000045
+      },
+      "referenceSupport": 1,
+      "finalError": {
+        "translationM": 0.012041594578792536,
+        "angleDeg": 0.049999999999954525
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": 1.333,
+          "y": -0.941,
+          "theta": 13.799999999999955
+        },
+        "pose": {
+          "x": 1.8080000000000003,
+          "y": -1.4909999999999999,
+          "theta": 22.049999999999955
+        },
+        "before": {
+          "cost": 0.18299796555194417,
+          "score": 0.2680081377922233,
+          "rmseM": 0.5406666159767679,
+          "nearFraction": 0.06944444444444445
+        },
+        "after": {
+          "cost": 0.00007275924460082551,
+          "score": 0.9997089630215967,
+          "rmseM": 0.008529902965498817,
+          "nearFraction": 1
+        },
+        "tested": 4397,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 71,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.017945339176069736,
+            "pose": {
+              "x": 1.733,
+              "y": -1.341,
+              "theta": 21.799999999999955
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 127,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1386,
+            "cost": 0.001332768615581525,
+            "pose": {
+              "x": 1.8330000000000002,
+              "y": -1.541,
+              "theta": 21.799999999999955
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 360,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2836,
+            "cost": 0.00007275924460082551,
+            "pose": {
+              "x": 1.8080000000000003,
+              "y": -1.4909999999999999,
+              "theta": 22.049999999999955
+            }
+          }
+        ],
+        "acceptedPoints": 360,
+        "segments": 10,
+        "elapsedMs": 134.08889999999997,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    },
+    {
+      "label": "S1-3",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": 1.8,
+        "y": -1.5,
+        "theta": 22
+      },
+      "initialError": {
+        "translationM": 0.4547636748905964,
+        "angleDeg": 5.399999999999977
+      },
+      "referenceSupport": 1,
+      "finalError": {
+        "translationM": 0.012649110640673316,
+        "angleDeg": 0.10000000000002274
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": 2.063,
+          "y": -1.129,
+          "theta": 27.399999999999977
+        },
+        "pose": {
+          "x": 1.7880000000000003,
+          "y": -1.504,
+          "theta": 21.899999999999977
+        },
+        "before": {
+          "cost": 0.09119799615206353,
+          "score": 0.6352080153917459,
+          "rmseM": 0.3036451038378974,
+          "nearFraction": 0.33055555555555555
+        },
+        "after": {
+          "cost": 0.00006583926770574103,
+          "score": 0.9997366429291771,
+          "rmseM": 0.008114139985589417,
+          "nearFraction": 1
+        },
+        "tested": 4568,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 71,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.01096112445517806,
+            "pose": {
+              "x": 1.6630000000000003,
+              "y": -1.529,
+              "theta": 19.399999999999977
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 127,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1521,
+            "cost": 0.0009043691539872701,
+            "pose": {
+              "x": 1.7630000000000003,
+              "y": -1.529,
+              "theta": 21.399999999999977
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 360,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2872,
+            "cost": 0.00006583926770574103,
+            "pose": {
+              "x": 1.7880000000000003,
+              "y": -1.504,
+              "theta": 21.899999999999977
+            }
+          }
+        ],
+        "acceptedPoints": 360,
+        "segments": 10,
+        "elapsedMs": 136.63660000000004,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    },
+    {
+      "label": "S2-1",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": 1.5,
+        "theta": -35
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "referenceSupport": 1,
+      "finalError": {
+        "translationM": 0.016970562748477157,
+        "angleDeg": 0.20000000000004547
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": -1.463,
+          "y": 1.087,
+          "theta": -27.700000000000045
+        },
+        "pose": {
+          "x": -1.988,
+          "y": 1.512,
+          "theta": -35.200000000000045
+        },
+        "before": {
+          "cost": 0.164844721784423,
+          "score": 0.340621112862308,
+          "rmseM": 0.47723840543457136,
+          "nearFraction": 0.09444444444444444
+        },
+        "after": {
+          "cost": 0.0001407507331776216,
+          "score": 0.9994369970672895,
+          "rmseM": 0.01186384141741711,
+          "nearFraction": 1
+        },
+        "tested": 4469,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 78,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.00937067407378819,
+            "pose": {
+              "x": -1.863,
+              "y": 1.487,
+              "theta": -35.700000000000045
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 140,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1458,
+            "cost": 0.0009463819184748735,
+            "pose": {
+              "x": -1.963,
+              "y": 1.487,
+              "theta": -35.700000000000045
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 360,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2836,
+            "cost": 0.0001407507331776216,
+            "pose": {
+              "x": -1.988,
+              "y": 1.512,
+              "theta": -35.200000000000045
+            }
+          }
+        ],
+        "acceptedPoints": 360,
+        "segments": 10,
+        "elapsedMs": 152.94039999999995,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    },
+    {
+      "label": "S2-2",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": 1.5,
+        "theta": -35
+      },
+      "initialError": {
+        "translationM": 0.7284023613360958,
+        "angleDeg": 8.200000000000045
+      },
+      "referenceSupport": 1,
+      "finalError": {
+        "translationM": 0.012041594578792553,
+        "angleDeg": 0.20000000000004547
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": -2.467,
+          "y": 2.059,
+          "theta": -43.19999999999999
+        },
+        "pose": {
+          "x": -1.992,
+          "y": 1.5090000000000003,
+          "theta": -35.19999999999999
+        },
+        "before": {
+          "cost": 0.18745818270520137,
+          "score": 0.2501672691791945,
+          "rmseM": 0.547344180525101,
+          "nearFraction": 0.044444444444444446
+        },
+        "after": {
+          "cost": 0.00007848058104561862,
+          "score": 0.9996860776758175,
+          "rmseM": 0.008858926630558503,
+          "nearFraction": 1
+        },
+        "tested": 4505,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 78,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.013533809456375535,
+            "pose": {
+              "x": -2.067,
+              "y": 1.6590000000000003,
+              "theta": -35.19999999999999
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 140,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1458,
+            "cost": 0.00133638761486381,
+            "pose": {
+              "x": -1.967,
+              "y": 1.4590000000000003,
+              "theta": -35.19999999999999
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 360,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2872,
+            "cost": 0.00007848058104561862,
+            "pose": {
+              "x": -1.992,
+              "y": 1.5090000000000003,
+              "theta": -35.19999999999999
+            }
+          }
+        ],
+        "acceptedPoints": 360,
+        "segments": 10,
+        "elapsedMs": 129.6422,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    },
+    {
+      "label": "S2-3",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": 1.5,
+        "theta": -35
+      },
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.399999999999977
+      },
+      "referenceSupport": 1,
+      "finalError": {
+        "translationM": 0.01264911064067353,
+        "angleDeg": 0.14999999999997726
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": -1.737,
+          "y": 1.871,
+          "theta": -29.600000000000023
+        },
+        "pose": {
+          "x": -2.012,
+          "y": 1.496,
+          "theta": -34.85000000000002
+        },
+        "before": {
+          "cost": 0.1270699900150197,
+          "score": 0.4917200399399212,
+          "rmseM": 0.3686740845992934,
+          "nearFraction": 0.18888888888888888
+        },
+        "after": {
+          "cost": 0.0000939684595297108,
+          "score": 0.9996241261618811,
+          "rmseM": 0.009693733002807061,
+          "nearFraction": 1
+        },
+        "tested": 4748,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 78,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.009376683372561135,
+            "pose": {
+              "x": -2.137,
+              "y": 1.471,
+              "theta": -33.60000000000002
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 140,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1701,
+            "cost": 0.0010301508116872468,
+            "pose": {
+              "x": -2.037,
+              "y": 1.471,
+              "theta": -34.60000000000002
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 360,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2872,
+            "cost": 0.0000939684595297108,
+            "pose": {
+              "x": -2.012,
+              "y": 1.496,
+              "theta": -34.85000000000002
+            }
+          }
+        ],
+        "acceptedPoints": 360,
+        "segments": 10,
+        "elapsedMs": 135.04719999999998,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    },
+    {
+      "label": "S3-1",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": -2,
+        "theta": 110
+      },
+      "initialError": {
+        "translationM": 0.6774496291238189,
+        "angleDeg": 7.2999999999999545
+      },
+      "referenceSupport": 1,
+      "finalError": {
+        "translationM": 0.017691806012954066,
+        "angleDeg": 0.20000000000004547
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": -1.463,
+          "y": -2.413,
+          "theta": 117.29999999999995
+        },
+        "pose": {
+          "x": -2.013,
+          "y": -1.988,
+          "theta": 109.79999999999995
+        },
+        "before": {
+          "cost": 0.12685813406360225,
+          "score": 0.492567463745591,
+          "rmseM": 0.369237502851223,
+          "nearFraction": 0.2
+        },
+        "after": {
+          "cost": 0.00012105899310393395,
+          "score": 0.9995157640275842,
+          "rmseM": 0.011002681177964485,
+          "nearFraction": 1
+        },
+        "tested": 4415,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 76,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.0117721199982545,
+            "pose": {
+              "x": -1.863,
+              "y": -2.013,
+              "theta": 109.29999999999995
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 137,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1404,
+            "cost": 0.0004927055755180246,
+            "pose": {
+              "x": -1.963,
+              "y": -2.013,
+              "theta": 110.29999999999995
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 360,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2836,
+            "cost": 0.00012105899310393395,
+            "pose": {
+              "x": -2.013,
+              "y": -1.988,
+              "theta": 109.79999999999995
+            }
+          }
+        ],
+        "acceptedPoints": 360,
+        "segments": 10,
+        "elapsedMs": 123.49149999999997,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    },
+    {
+      "label": "S3-2",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": -2,
+        "theta": 110
+      },
+      "initialError": {
+        "translationM": 0.7284023613360958,
+        "angleDeg": 8.200000000000045
+      },
+      "referenceSupport": 1,
+      "finalError": {
+        "translationM": 0.012041594578792388,
+        "angleDeg": 0.049999999999954525
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": -2.467,
+          "y": -1.4409999999999998,
+          "theta": 101.79999999999995
+        },
+        "pose": {
+          "x": -1.992,
+          "y": -1.9909999999999999,
+          "theta": 110.04999999999995
+        },
+        "before": {
+          "cost": 0.14517230147119276,
+          "score": 0.419310794115229,
+          "rmseM": 0.41694253209261756,
+          "nearFraction": 0.18333333333333332
+        },
+        "after": {
+          "cost": 0.00007502499149176439,
+          "score": 0.999699900034033,
+          "rmseM": 0.008661696802114722,
+          "nearFraction": 1
+        },
+        "tested": 4415,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 76,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.014347596318556127,
+            "pose": {
+              "x": -2.067,
+              "y": -1.8409999999999997,
+              "theta": 109.79999999999995
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 137,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1404,
+            "cost": 0.0010039516022857975,
+            "pose": {
+              "x": -1.967,
+              "y": -2.041,
+              "theta": 110.79999999999995
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 360,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2836,
+            "cost": 0.00007502499149176439,
+            "pose": {
+              "x": -1.992,
+              "y": -1.9909999999999999,
+              "theta": 110.04999999999995
+            }
+          }
+        ],
+        "acceptedPoints": 360,
+        "segments": 10,
+        "elapsedMs": 109.18939999999998,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    },
+    {
+      "label": "S3-3",
+      "kind": "synthetic",
+      "referenceType": "synthetic_ground_truth",
+      "referencePose": {
+        "x": -2,
+        "y": -2,
+        "theta": 110
+      },
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.399999999999977
+      },
+      "referenceSupport": 1,
+      "finalError": {
+        "translationM": 0.013601470508735562,
+        "angleDeg": 0.14999999999997726
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": -1.737,
+          "y": -1.629,
+          "theta": 115.39999999999998
+        },
+        "pose": {
+          "x": -1.9869999999999999,
+          "y": -2.004,
+          "theta": 110.14999999999998
+        },
+        "before": {
+          "cost": 0.10626010338833347,
+          "score": 0.5749595864466661,
+          "rmseM": 0.34142229523616835,
+          "nearFraction": 0.2611111111111111
+        },
+        "after": {
+          "cost": 0.00006307639810544118,
+          "score": 0.9997476944075783,
+          "rmseM": 0.007942065103324273,
+          "nearFraction": 1
+        },
+        "tested": 4748,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 76,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.012543571688579646,
+            "pose": {
+              "x": -2.137,
+              "y": -2.029,
+              "theta": 107.39999999999998
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 137,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1701,
+            "cost": 0.0013210680201176496,
+            "pose": {
+              "x": -2.037,
+              "y": -2.029,
+              "theta": 109.39999999999998
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 360,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2872,
+            "cost": 0.00006307639810544118,
+            "pose": {
+              "x": -1.9869999999999999,
+              "y": -2.004,
+              "theta": 110.14999999999998
+            }
+          }
+        ],
+        "acceptedPoints": 360,
+        "segments": 10,
+        "elapsedMs": 116.2302000000002,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    }
+  ],
+  "real": [
+    {
+      "label": "R1-1",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "referenceSupport": 0.9978118161925602,
+      "finalError": {
+        "translationM": 0.038897300677553495,
+        "angleDeg": 0.20000000000004547
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": 0.537,
+          "y": -0.413,
+          "theta": 7.2999999999999545
+        },
+        "pose": {
+          "x": 0.012000000000000004,
+          "y": 0.03700000000000005,
+          "theta": -0.20000000000004547
+        },
+        "before": {
+          "cost": 0.1346864117390534,
+          "score": 0.46125435304378637,
+          "rmseM": 0.5002193537674237,
+          "nearFraction": 0.2778993435448578
+        },
+        "after": {
+          "cost": 0.0008139399315388692,
+          "score": 0.9967442402738446,
+          "rmseM": 0.02852963251671618,
+          "nearFraction": 0.9978118161925602
+        },
+        "tested": 4298,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 110,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.013729566146994809,
+            "pose": {
+              "x": 0.137,
+              "y": -0.012999999999999956,
+              "theta": -0.7000000000000455
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 209,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1377,
+            "cost": 0.0021967655821888295,
+            "pose": {
+              "x": 0.037000000000000005,
+              "y": -0.012999999999999956,
+              "theta": 0.2999999999999545
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 457,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2746,
+            "cost": 0.0008139399315388692,
+            "pose": {
+              "x": 0.012000000000000004,
+              "y": 0.03700000000000005,
+              "theta": -0.20000000000004547
+            }
+          }
+        ],
+        "acceptedPoints": 457,
+        "segments": 36,
+        "elapsedMs": 513.6468,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    },
+    {
+      "label": "R1-2",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "initialError": {
+        "translationM": 0.7284023613360957,
+        "angleDeg": 8.200000000000045
+      },
+      "referenceSupport": 0.9978118161925602,
+      "finalError": {
+        "translationM": 0.03492849839314598,
+        "angleDeg": 0.20000000000004547
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": -0.467,
+          "y": 0.559,
+          "theta": -8.200000000000045
+        },
+        "pose": {
+          "x": 0.008,
+          "y": 0.03400000000000002,
+          "theta": -0.20000000000004547
+        },
+        "before": {
+          "cost": 0.13579522884430165,
+          "score": 0.4568190846227934,
+          "rmseM": 0.4766170769575663,
+          "nearFraction": 0.24945295404814005
+        },
+        "after": {
+          "cost": 0.0007724600303586134,
+          "score": 0.9969101598785656,
+          "rmseM": 0.02779316517344891,
+          "nearFraction": 0.9978118161925602
+        },
+        "tested": 4325,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 110,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.009898125560290728,
+            "pose": {
+              "x": -0.067,
+              "y": 0.15900000000000003,
+              "theta": -0.20000000000004547
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 209,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1404,
+            "cost": 0.0016570138080293803,
+            "pose": {
+              "x": 0.033,
+              "y": 0.059000000000000025,
+              "theta": -0.20000000000004547
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 457,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2746,
+            "cost": 0.0007724600303586134,
+            "pose": {
+              "x": 0.008,
+              "y": 0.03400000000000002,
+              "theta": -0.20000000000004547
+            }
+          }
+        ],
+        "acceptedPoints": 457,
+        "segments": 36,
+        "elapsedMs": 507.3143,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    },
+    {
+      "label": "R1-3",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "initialError": {
+        "translationM": 0.4547636748905963,
+        "angleDeg": 5.399999999999977
+      },
+      "referenceSupport": 0.9978118161925602,
+      "finalError": {
+        "translationM": 0.02469817807045692,
+        "angleDeg": 0.10000000000002274
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": 0.263,
+          "y": 0.371,
+          "theta": 5.399999999999977
+        },
+        "pose": {
+          "x": 0.012999999999999998,
+          "y": 0.020999999999999977,
+          "theta": -0.10000000000002274
+        },
+        "before": {
+          "cost": 0.12651309995480675,
+          "score": 0.493947600180773,
+          "rmseM": 0.44827021710195225,
+          "nearFraction": 0.29321663019693656
+        },
+        "after": {
+          "cost": 0.0008214222154765847,
+          "score": 0.9967143111380936,
+          "rmseM": 0.02866046432765151,
+          "nearFraction": 0.9978118161925602
+        },
+        "tested": 4622,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 110,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.018122809263814935,
+            "pose": {
+              "x": -0.137,
+              "y": -0.029000000000000026,
+              "theta": 1.3999999999999773
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 209,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1701,
+            "cost": 0.0028855451360065387,
+            "pose": {
+              "x": -0.037000000000000005,
+              "y": 0.07099999999999998,
+              "theta": -0.6000000000000227
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 457,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2746,
+            "cost": 0.0008214222154765847,
+            "pose": {
+              "x": 0.012999999999999998,
+              "y": 0.020999999999999977,
+              "theta": -0.10000000000002274
+            }
+          }
+        ],
+        "acceptedPoints": 457,
+        "segments": 36,
+        "elapsedMs": 533.4432999999999,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    },
+    {
+      "label": "R2-1",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 3.2162682227295947,
+        "y": 1.3246240083357195,
+        "theta": -92.1245634897957
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "referenceSupport": 0.7286652078774617,
+      "finalError": {
+        "translationM": 0.016970562748477,
+        "angleDeg": 0.2999999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": 3.7532682227295946,
+          "y": 0.9116240083357194,
+          "theta": -84.82456348979571
+        },
+        "pose": {
+          "x": 3.2282682227295947,
+          "y": 1.3366240083357193,
+          "theta": -91.82456348979571
+        },
+        "before": {
+          "cost": 0.16777301886157225,
+          "score": 0.328907924553711,
+          "rmseM": 1.1270824044634238,
+          "nearFraction": 0.24945295404814005
+        },
+        "after": {
+          "cost": 0.06404163703451496,
+          "score": 0.7438334518619402,
+          "rmseM": 1.0185435916668284,
+          "nearFraction": 0.7308533916849015
+        },
+        "tested": 4172,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 129,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.06422999789918768,
+            "pose": {
+              "x": 3.3532682227295947,
+              "y": 1.3116240083357193,
+              "theta": -92.82456348979571
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 217,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1287,
+            "cost": 0.04487318345766279,
+            "pose": {
+              "x": 3.2532682227295946,
+              "y": 1.3116240083357193,
+              "theta": -91.82456348979571
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 457,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2710,
+            "cost": 0.06404163703451496,
+            "pose": {
+              "x": 3.2282682227295947,
+              "y": 1.3366240083357193,
+              "theta": -91.82456348979571
+            }
+          }
+        ],
+        "acceptedPoints": 457,
+        "segments": 32,
+        "elapsedMs": 447.82169999999996,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    },
+    {
+      "label": "R2-2",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 3.2162682227295947,
+        "y": 1.3246240083357195,
+        "theta": -92.1245634897957
+      },
+      "initialError": {
+        "translationM": 0.7284023613360956,
+        "angleDeg": 8.200000000000045
+      },
+      "referenceSupport": 0.7286652078774617,
+      "finalError": {
+        "translationM": 0.012041594578792388,
+        "angleDeg": 0.2999999999999545
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": 2.7492682227295946,
+          "y": 1.8836240083357194,
+          "theta": -100.32456348979571
+        },
+        "pose": {
+          "x": 3.2242682227295947,
+          "y": 1.3336240083357196,
+          "theta": -91.82456348979571
+        },
+        "before": {
+          "cost": 0.1759922028234489,
+          "score": 0.2960311887062044,
+          "rmseM": 1.0983844283455344,
+          "nearFraction": 0.20350109409190373
+        },
+        "after": {
+          "cost": 0.06402146660042182,
+          "score": 0.7439141335983127,
+          "rmseM": 1.0179695548850105,
+          "nearFraction": 0.7308533916849015
+        },
+        "tested": 4085,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 129,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.0696632173254272,
+            "pose": {
+              "x": 3.1492682227295945,
+              "y": 1.4836240083357195,
+              "theta": -92.32456348979571
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 217,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1188,
+            "cost": 0.045688100914558986,
+            "pose": {
+              "x": 3.2492682227295946,
+              "y": 1.2836240083357195,
+              "theta": -92.32456348979571
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 457,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2722,
+            "cost": 0.06402146660042182,
+            "pose": {
+              "x": 3.2242682227295947,
+              "y": 1.3336240083357196,
+              "theta": -91.82456348979571
+            }
+          }
+        ],
+        "acceptedPoints": 457,
+        "segments": 32,
+        "elapsedMs": 450.5826000000002,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    },
+    {
+      "label": "R2-3",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 3.2162682227295947,
+        "y": 1.3246240083357195,
+        "theta": -92.1245634897957
+      },
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.400000000000091
+      },
+      "referenceSupport": 0.7286652078774617,
+      "finalError": {
+        "translationM": 0.024698178070456808,
+        "angleDeg": 0.15000000000009095
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": 3.4792682227295946,
+          "y": 1.6956240083357195,
+          "theta": -86.72456348979568
+        },
+        "pose": {
+          "x": 3.2292682227295946,
+          "y": 1.3456240083357194,
+          "theta": -91.97456348979568
+        },
+        "before": {
+          "cost": 0.14942690042877202,
+          "score": 0.4022923982849119,
+          "rmseM": 1.06337717899602,
+          "nearFraction": 0.2800875273522976
+        },
+        "after": {
+          "cost": 0.06409038736024306,
+          "score": 0.7436384505590278,
+          "rmseM": 1.0182198129334692,
+          "nearFraction": 0.7308533916849015
+        },
+        "tested": 4478,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 129,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.06584422520911842,
+            "pose": {
+              "x": 3.0792682227295947,
+              "y": 1.2956240083357193,
+              "theta": -90.72456348979568
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 217,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1521,
+            "cost": 0.04536874895354734,
+            "pose": {
+              "x": 3.1792682227295948,
+              "y": 1.2956240083357193,
+              "theta": -91.72456348979568
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 457,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2782,
+            "cost": 0.06409038736024306,
+            "pose": {
+              "x": 3.2292682227295946,
+              "y": 1.3456240083357194,
+              "theta": -91.97456348979568
+            }
+          }
+        ],
+        "acceptedPoints": 457,
+        "segments": 32,
+        "elapsedMs": 475.9467000000004,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    },
+    {
+      "label": "R3-1",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.9820777772150278,
+        "y": 2.3296138030212745,
+        "theta": 4.337474888004696
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "referenceSupport": 0.5754923413566739,
+      "finalError": {
+        "translationM": 0.1179533806213286,
+        "angleDeg": 0.4500000000000455
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": 3.5190777772150277,
+          "y": 1.9166138030212745,
+          "theta": 11.637474888004704
+        },
+        "pose": {
+          "x": 3.0190777772150277,
+          "y": 2.4416138030212746,
+          "theta": 3.8874748880047036
+        },
+        "before": {
+          "cost": 0.17344301482815422,
+          "score": 0.3062279406873831,
+          "rmseM": 0.7618237607903312,
+          "nearFraction": 0.16411378555798686
+        },
+        "after": {
+          "cost": 0.07548388282154816,
+          "score": 0.6980644687138073,
+          "rmseM": 0.5514549736338912,
+          "nearFraction": 0.6170678336980306
+        },
+        "tested": 4323,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 135,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.08542833499110951,
+            "pose": {
+              "x": 3.1190777772150278,
+              "y": 2.3166138030212746,
+              "theta": 3.6374748880047036
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 222,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1386,
+            "cost": 0.06755075884171313,
+            "pose": {
+              "x": 3.0190777772150277,
+              "y": 2.4166138030212747,
+              "theta": 3.6374748880047036
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 457,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2762,
+            "cost": 0.07548388282154816,
+            "pose": {
+              "x": 3.0190777772150277,
+              "y": 2.4416138030212746,
+              "theta": 3.8874748880047036
+            }
+          }
+        ],
+        "acceptedPoints": 457,
+        "segments": 25,
+        "elapsedMs": 378.60799999999927,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    },
+    {
+      "label": "R3-2",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.9820777772150278,
+        "y": 2.3296138030212745,
+        "theta": 4.337474888004696
+      },
+      "initialError": {
+        "translationM": 0.7284023613360958,
+        "angleDeg": 8.200000000000045
+      },
+      "referenceSupport": 0.5754923413566739,
+      "finalError": {
+        "translationM": 0.11388590782006346,
+        "angleDeg": 0.4500000000000455
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": 2.5150777772150277,
+          "y": 2.8886138030212747,
+          "theta": -3.8625251119952964
+        },
+        "pose": {
+          "x": 3.0150777772150277,
+          "y": 2.4386138030212745,
+          "theta": 3.8874748880047036
+        },
+        "before": {
+          "cost": 0.17292478324100904,
+          "score": 0.3083008670359638,
+          "rmseM": 0.7762618988082185,
+          "nearFraction": 0.17943107221006566
+        },
+        "after": {
+          "cost": 0.07546951492536984,
+          "score": 0.6981219402985206,
+          "rmseM": 0.5512296276058611,
+          "nearFraction": 0.6170678336980306
+        },
+        "tested": 4181,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 135,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.07936370083106067,
+            "pose": {
+              "x": 2.9150777772150276,
+              "y": 2.4886138030212748,
+              "theta": 4.137474888004704
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 222,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1296,
+            "cost": 0.06751404536022007,
+            "pose": {
+              "x": 3.0150777772150277,
+              "y": 2.3886138030212747,
+              "theta": 4.137474888004704
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 457,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2710,
+            "cost": 0.07546951492536984,
+            "pose": {
+              "x": 3.0150777772150277,
+              "y": 2.4386138030212745,
+              "theta": 3.8874748880047036
+            }
+          }
+        ],
+        "acceptedPoints": 457,
+        "segments": 25,
+        "elapsedMs": 357.8244000000004,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    },
+    {
+      "label": "R3-3",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.9820777772150278,
+        "y": 2.3296138030212745,
+        "theta": 4.337474888004696
+      },
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.400000000000091
+      },
+      "referenceSupport": 0.5754923413566739,
+      "finalError": {
+        "translationM": 0.12682665335015358,
+        "angleDeg": 0.34999999999990905
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": 3.2450777772150277,
+          "y": 2.7006138030212745,
+          "theta": 9.737474888004726
+        },
+        "pose": {
+          "x": 3.020077777215028,
+          "y": 2.4506138030212745,
+          "theta": 3.9874748880047264
+        },
+        "before": {
+          "cost": 0.1336350081068415,
+          "score": 0.46545996757263397,
+          "rmseM": 0.6774358353299951,
+          "nearFraction": 0.3413566739606127
+        },
+        "after": {
+          "cost": 0.07548984044619468,
+          "score": 0.6980406382152213,
+          "rmseM": 0.5523382109417926,
+          "nearFraction": 0.6192560175054704
+        },
+        "tested": 4638,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 135,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.08231445595280037,
+            "pose": {
+              "x": 2.8450777772150277,
+              "y": 2.3006138030212746,
+              "theta": 5.737474888004726
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 222,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1701,
+            "cost": 0.06800222495734276,
+            "pose": {
+              "x": 2.945077777215028,
+              "y": 2.4006138030212747,
+              "theta": 4.737474888004726
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 457,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2762,
+            "cost": 0.07548984044619468,
+            "pose": {
+              "x": 3.020077777215028,
+              "y": 2.4506138030212745,
+              "theta": 3.9874748880047264
+            }
+          }
+        ],
+        "acceptedPoints": 457,
+        "segments": 25,
+        "elapsedMs": 383.35100000000057,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    },
+    {
+      "label": "R4-1",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.7328356377830407,
+        "y": 1.3585822612448972,
+        "theta": 3.6140022517237904
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.2999999999999545
+      },
+      "referenceSupport": 0.8706140350877193,
+      "finalError": {
+        "translationM": 0.017691806012953917,
+        "angleDeg": 0.049999999999954525
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": 3.2698356377830406,
+          "y": 0.9455822612448972,
+          "theta": 10.914002251723787
+        },
+        "pose": {
+          "x": 2.719835637783041,
+          "y": 1.370582261244897,
+          "theta": 3.6640022517237867
+        },
+        "before": {
+          "cost": 0.1338348630108242,
+          "score": 0.4646605479567032,
+          "rmseM": 0.8139907585795932,
+          "nearFraction": 0.3157894736842105
+        },
+        "after": {
+          "cost": 0.03191080157703302,
+          "score": 0.8723567936918679,
+          "rmseM": 0.6261124767294156,
+          "nearFraction": 0.8728070175438597
+        },
+        "tested": 4217,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 117,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.04618180475870519,
+            "pose": {
+              "x": 2.8698356377830407,
+              "y": 1.345582261244897,
+              "theta": 2.9140022517237867
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 211,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1287,
+            "cost": 0.03220452532475853,
+            "pose": {
+              "x": 2.7698356377830406,
+              "y": 1.345582261244897,
+              "theta": 3.9140022517237867
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 456,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2755,
+            "cost": 0.03191080157703302,
+            "pose": {
+              "x": 2.719835637783041,
+              "y": 1.370582261244897,
+              "theta": 3.6640022517237867
+            }
+          }
+        ],
+        "acceptedPoints": 456,
+        "segments": 35,
+        "elapsedMs": 475.2556000000004,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    },
+    {
+      "label": "R4-2",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.7328356377830407,
+        "y": 1.3585822612448972,
+        "theta": 3.6140022517237904
+      },
+      "initialError": {
+        "translationM": 0.7284023613360956,
+        "angleDeg": 8.200000000000045
+      },
+      "referenceSupport": 0.8706140350877193,
+      "finalError": {
+        "translationM": 0.01923538406167121,
+        "angleDeg": 0.049999999999954525
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": 2.2658356377830406,
+          "y": 1.9175822612448972,
+          "theta": -4.585997748276213
+        },
+        "pose": {
+          "x": 2.715835637783041,
+          "y": 1.3675822612448971,
+          "theta": 3.6640022517237867
+        },
+        "before": {
+          "cost": 0.15415332371347334,
+          "score": 0.3833867051461066,
+          "rmseM": 0.690049982270871,
+          "nearFraction": 0.2565789473684211
+        },
+        "after": {
+          "cost": 0.03194561851143984,
+          "score": 0.8722175259542406,
+          "rmseM": 0.6258947234903056,
+          "nearFraction": 0.8728070175438597
+        },
+        "tested": 4001,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 117,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.049660788102423956,
+            "pose": {
+              "x": 2.6658356377830406,
+              "y": 1.5175822612448973,
+              "theta": 3.4140022517237867
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 211,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1188,
+            "cost": 0.03265822106465922,
+            "pose": {
+              "x": 2.7658356377830406,
+              "y": 1.4175822612448972,
+              "theta": 3.4140022517237867
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 456,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2638,
+            "cost": 0.03194561851143984,
+            "pose": {
+              "x": 2.715835637783041,
+              "y": 1.3675822612448971,
+              "theta": 3.6640022517237867
+            }
+          }
+        ],
+        "acceptedPoints": 456,
+        "segments": 35,
+        "elapsedMs": 463.78930000000037,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    },
+    {
+      "label": "R4-3",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 2.7328356377830407,
+        "y": 1.3585822612448972,
+        "theta": 3.6140022517237904
+      },
+      "initialError": {
+        "translationM": 0.4547636748905962,
+        "angleDeg": 5.399999999999977
+      },
+      "referenceSupport": 0.8706140350877193,
+      "finalError": {
+        "translationM": 0.024186773244895574,
+        "angleDeg": 0.14999999999997726
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": 2.9958356377830406,
+          "y": 1.7295822612448972,
+          "theta": 9.01400225172381
+        },
+        "pose": {
+          "x": 2.7208356377830407,
+          "y": 1.3795822612448971,
+          "theta": 3.7640022517238094
+        },
+        "before": {
+          "cost": 0.12190241984343503,
+          "score": 0.5123903206262599,
+          "rmseM": 0.7445572010183771,
+          "nearFraction": 0.36403508771929827
+        },
+        "after": {
+          "cost": 0.03198290765064608,
+          "score": 0.8720683693974157,
+          "rmseM": 0.6270634178959507,
+          "nearFraction": 0.8728070175438597
+        },
+        "tested": 4523,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 117,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.048133506514578615,
+            "pose": {
+              "x": 2.5958356377830407,
+              "y": 1.329582261244897,
+              "theta": 5.014002251723809
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 211,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1521,
+            "cost": 0.032196800229431694,
+            "pose": {
+              "x": 2.695835637783041,
+              "y": 1.329582261244897,
+              "theta": 4.014002251723809
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 456,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2827,
+            "cost": 0.03198290765064608,
+            "pose": {
+              "x": 2.7208356377830407,
+              "y": 1.3795822612448971,
+              "theta": 3.7640022517238094
+            }
+          }
+        ],
+        "acceptedPoints": 456,
+        "segments": 35,
+        "elapsedMs": 581.7507999999998,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    },
+    {
+      "label": "R5-1",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0.041338385695696575,
+        "y": -0.002933562901461178,
+        "theta": 8.024583484785612
+      },
+      "initialError": {
+        "translationM": 0.677449629123819,
+        "angleDeg": 7.300000000000068
+      },
+      "referenceSupport": 0.975929978118162,
+      "finalError": {
+        "translationM": 0.03921734310225519,
+        "angleDeg": 0.1999999999999318
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": 0.5783383856956966,
+          "y": -0.41593356290146116,
+          "theta": 15.324583484785649
+        },
+        "pose": {
+          "x": 0.02833838569569659,
+          "y": 0.03406643709853886,
+          "theta": 7.824583484785649
+        },
+        "before": {
+          "cost": 0.1308632633286694,
+          "score": 0.4765469466853224,
+          "rmseM": 0.5028989565726638,
+          "nearFraction": 0.3063457330415755
+        },
+        "after": {
+          "cost": 0.0022636935896747077,
+          "score": 0.9909452256413012,
+          "rmseM": 0.047578289057875,
+          "nearFraction": 0.9846827133479212
+        },
+        "tested": 4298,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 113,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.015732940646376134,
+            "pose": {
+              "x": 0.1783383856956966,
+              "y": -0.01593356290146114,
+              "theta": 7.324583484785649
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 214,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1377,
+            "cost": 0.0043485533343088825,
+            "pose": {
+              "x": 0.0783383856956966,
+              "y": -0.01593356290146114,
+              "theta": 8.324583484785649
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 457,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2746,
+            "cost": 0.0022636935896747077,
+            "pose": {
+              "x": 0.02833838569569659,
+              "y": 0.03406643709853886,
+              "theta": 7.824583484785649
+            }
+          }
+        ],
+        "acceptedPoints": 457,
+        "segments": 38,
+        "elapsedMs": 504.64550000000054,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    },
+    {
+      "label": "R5-2",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0.041338385695696575,
+        "y": -0.002933562901461178,
+        "theta": 8.024583484785612
+      },
+      "initialError": {
+        "translationM": 0.7284023613360957,
+        "angleDeg": 8.199999999999932
+      },
+      "referenceSupport": 0.975929978118162,
+      "finalError": {
+        "translationM": 0.03492849839314598,
+        "angleDeg": 0.1999999999999318
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": -0.42566161430430344,
+          "y": 0.5560664370985389,
+          "theta": -0.17541651521435142
+        },
+        "pose": {
+          "x": 0.04933838569569659,
+          "y": 0.03106643709853884,
+          "theta": 7.824583484785649
+        },
+        "before": {
+          "cost": 0.13448448195983984,
+          "score": 0.46206207216064066,
+          "rmseM": 0.4714635129439281,
+          "nearFraction": 0.26258205689277897
+        },
+        "after": {
+          "cost": 0.0022272923983411874,
+          "score": 0.9910908304066353,
+          "rmseM": 0.047194198778464154,
+          "nearFraction": 0.9846827133479212
+        },
+        "tested": 4325,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 113,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.013004679172877653,
+            "pose": {
+              "x": -0.025661614304303415,
+              "y": 0.15606643709853885,
+              "theta": 7.824583484785649
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 214,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1404,
+            "cost": 0.00370562933027601,
+            "pose": {
+              "x": 0.07433838569569659,
+              "y": 0.05606643709853884,
+              "theta": 7.824583484785649
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 457,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2746,
+            "cost": 0.0022272923983411874,
+            "pose": {
+              "x": 0.04933838569569659,
+              "y": 0.03106643709853884,
+              "theta": 7.824583484785649
+            }
+          }
+        ],
+        "acceptedPoints": 457,
+        "segments": 38,
+        "elapsedMs": 505.59560000000056,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    },
+    {
+      "label": "R5-3",
+      "kind": "real_leave_one_out",
+      "referenceType": "TP1_estimated_pseudo_reference_not_ground_truth",
+      "referencePose": {
+        "x": 0.041338385695696575,
+        "y": -0.002933562901461178,
+        "theta": 8.024583484785612
+      },
+      "initialError": {
+        "translationM": 0.4547636748905963,
+        "angleDeg": 5.400000000000091
+      },
+      "referenceSupport": 0.975929978118162,
+      "finalError": {
+        "translationM": 0.04753945729601882,
+        "angleDeg": 0.34999999999990905
+      },
+      "success": true,
+      "result": {
+        "format": "tp-lidar-vector-localisation-v1",
+        "method": "multiresolution-point-to-finite-segments",
+        "initial": {
+          "x": 0.3043383856956966,
+          "y": 0.3680664370985388,
+          "theta": 13.424583484785671
+        },
+        "pose": {
+          "x": 0.029338385695696585,
+          "y": 0.043066437098538794,
+          "theta": 7.674583484785671
+        },
+        "before": {
+          "cost": 0.1270886594989274,
+          "score": 0.49164536200429043,
+          "rmseM": 0.45801023059135704,
+          "nearFraction": 0.32166301969365424
+        },
+        "after": {
+          "cost": 0.0022504358464021136,
+          "score": 0.9909982566143916,
+          "rmseM": 0.047438758904529886,
+          "nearFraction": 0.9846827133479212
+        },
+        "tested": 4622,
+        "levels": [
+          {
+            "level": 1,
+            "voxelSizeM": 0.4,
+            "points": 113,
+            "translationStepM": 0.4,
+            "angleStepDeg": 4,
+            "candidates": 175,
+            "cost": 0.019620622165824053,
+            "pose": {
+              "x": -0.09566161430430342,
+              "y": -0.03193356290146121,
+              "theta": 9.424583484785671
+            }
+          },
+          {
+            "level": 2,
+            "voxelSizeM": 0.2,
+            "points": 214,
+            "translationStepM": 0.1,
+            "angleStepDeg": 1,
+            "candidates": 1701,
+            "cost": 0.004166157165047741,
+            "pose": {
+              "x": 0.004338385695696584,
+              "y": 0.0680664370985388,
+              "theta": 7.424583484785671
+            }
+          },
+          {
+            "level": 3,
+            "voxelSizeM": 0,
+            "points": 457,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "candidates": 2746,
+            "cost": 0.0022504358464021136,
+            "pose": {
+              "x": 0.029338385695696585,
+              "y": 0.043066437098538794,
+              "theta": 7.674583484785671
+            }
+          }
+        ],
+        "acceptedPoints": 457,
+        "segments": 38,
+        "elapsedMs": 512.1395000000002,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.3,
+          "stepXY": 0.1,
+          "stepTheta": 1,
+          "capM": 0.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Scans sous-échantillonnés puis pose affinée, carte vectorielle inchangée. Élagage heuristique : pas de garantie du minimum global."
+      }
+    }
+  ],
+  "caveats": [
+    "Synthetic accuracy is measured in a simulated known scene, not in the physical classroom.",
+    "Real query scan excluded from occupancy map; reference poses and training poses come from TP1 estimation using the complete group. This is not a fully independent ground-truth evaluation.",
+    "Three initial offsets per scan are correlated repeat trials, not independent acquisitions.",
+    "Search is local, not global, and thresholds have no probabilistic calibration."
+  ]
+}
