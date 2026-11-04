@@ -121,3 +121,7 @@ besoin de ces outils de recalcul pour ouvrir les données déjà fournies.
 ## Ajout des captures A/B : 19 scans et contexte réel
 
 Les nouvelles captures sont intégrées aux 17 précédentes : [résultats et limites](traitement_complet/resultats_19_scans/README.md), [photos de la salle](traitement_complet/contexte_salle/README.md). Le groupe principal contient 7 scans ; les sept groupes restent dans des repères indépendants. Le visualiseur propose le bouton **19 scans avec A/B** et des poses supplémentaires.
+
+## Rapport TP2 - Localisation et scan matching
+
+Le [rapport PDF](rapport/TP2/rapport_TP2.pdf) et sa [version Markdown](rapport/TP2/rapport_TP2.md) présentent les trois types de référence, les résultats simulés et réels, la sensibilité à l’initialisation et les limites des mesures A/B. Les [empreintes des sources](rapport/TP2/sources_rapport.json) assurent la traçabilité des tableaux et figures ; le script `rapport/generer_TP2.py` régénère le document à partir des bilans enregistrés.

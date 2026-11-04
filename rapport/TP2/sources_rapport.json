@@ -1,0 +1,31 @@
+{
+  "sourceFilesSha256": {
+    "localisation/grid/resultats/evaluation_exhaustive.json": "0ac8a1bc55b15307aac3c9b3dbb1ecb10f8dba978e7eed696f43449a453b7f15",
+    "localisation/grid/resultats/evaluation_gradient.json": "f7af8a3471025c9626151b3708dca71d3fb782290fa14d06938b26b7423e16c3",
+    "localisation/grid/resultats/evaluation_pyramid.json": "45b53ddcef996ca38e1965404edc196fd0bd32f1cf472f872bd5652242d001ef",
+    "localisation/grid/resultats/evaluation_annealing.json": "117262863221172e084963575ac285c39905777c92c8dccace961213aec94d62",
+    "localisation/grid/resultats/evaluation.json": "30090267fd19229215125e5f15c1f018147288211791e90d81ca222ff3e1711f",
+    "localisation/vectorielle/resultats/evaluation.json": "0dc82ab7d056e3b1b386f29c1fec364c12de2882617fe4a36a3d84f1f7e0a67a",
+    "localisation/vectorielle/resultats/evaluation_gradient.json": "52d8f5094778ad9d07e8a7cd72a57fc5d899fe6589aa9142edc16a646f7d7f2b",
+    "localisation/vectorielle/resultats/evaluation_multiresolution.json": "6a3aa3993d413008fada20e5e5bc5e1561efd59622f2c204fb088c1e16838395",
+    "localisation/vectorielle/resultats/evaluation_probabiliste.json": "2c780b9e26bcd939ee06b4d7d2e239062942599d93fcc19160710a3a9f80d415",
+    "localisation/vectorielle/resultats/evaluation_direct.json": "5b28ffe695a63ca5c673e0841325d393473cbc6e811243eb64caea10638e7182",
+    "localisation/entre_scans/resultats/evaluation.json": "406d20c01c42ea7865e1b0d317bfb9a5b3aa9bdca5d826c8f12d0e04faeb4fac",
+    "localisation/entre_scans/campagne_mesuree/evaluation.json": "36f9989f512409bb4d3d1bc4433db4132aa321eccb375366bd7a1ac0a10c95ba",
+    "traitement_complet/resultats_19_scans/qualite_integration.json": "ee9ab495dbfa55a88259c4dddeb930e66ba5ecdf70dc6ea5e3da9a4c005ab555",
+    "localisation/entre_scans/campagne_mesuree/mesures.json": "142bd2cbcb027cff5aadd351ffaf0cee973304ec984b86681dbe24295c9c99ca",
+    "localisation/grid/resultats/avant_apres_pyramid.png": "04062d717bf7929adab71c0c13ec1998851a39af10b219f1cfcbfb24e281040e",
+    "localisation/vectorielle/resultats/avant_apres_gradient.png": "cb69b14b4438fddc91a3677fc2547c8bcc8cc7f10f66bc620f04f5eafa69fe20",
+    "localisation/entre_scans/resultats/sensibilite_initialisation.png": "2a94906b7804e107eee25bb63eb0980ff4a559ec1a2b0204613b61918a2db022",
+    "localisation/entre_scans/campagne_mesuree/avant_apres.png": "64522e9e2022d200cea32e117d2b2b61d27f5633d9cd7b8cde64e0fb71bc7bb3",
+    "traitement_complet/resultats_19_scans/groupe_01/alignement.png": "ec90bfc58fceb10f04e8c4777f8f08bed59d6002a84ca540b3e77e5af9c91d8b",
+    "traitement_complet/contexte_salle/vue_02.jpeg": "84acbf0e595c8c93d24b56a86cc41592176b519ddc411cef5a98a42002115fd6"
+  },
+  "successThresholds": {
+    "positionM": 0.2,
+    "angleDeg": 2
+  },
+  "totalBetweenScanRuns": 252,
+  "measuredPairRuns": 42,
+  "physicalUncertainty": "unknown"
+}
