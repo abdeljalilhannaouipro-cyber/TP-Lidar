@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Robot + LIDAR Control & Map</title>
+<style>
+:root{
+    --bg:#0f172a;--panel:#111827;--ink:#e5e7eb;--muted:#94a3b8;
+    --accent:#38bdf8;--ok:#22c55e;--warn:#f59e0b;--danger:#ef4444;
+    --gridline:#d1d5db;
+}
+html,body{
+    margin:0; height:100%;
+    background:var(--bg); color:var(--ink);
+    font:14px/1.4 system-ui,Segoe UI,Roboto,Arial;
+}
+.app{
+    display:grid;
+    grid-template-columns: 1fr 360px; /* canvas à gauche, panneau à droite */
+    gap:16px;
+    padding:16px;
+    box-sizing:border-box;
+    height:100%;
+    position:relative;
+}
+.canvas-wrap{
+    background:#0b1220;
+    border-radius:12px;
+    box-shadow:0 0 0 1px #1f2937 inset;
+    display:flex;
+    min-height:0;
+}
+canvas{
+    flex:1;
+    width:100%;
+    height:100%;
+    background:white;
+    display:block;
+}
+.panel{
+    background:var(--panel);
+    border-radius:12px;
+    padding:14px;
+    box-shadow:0 0 0 1px #1f2937 inset;
+    overflow:auto;
+}
+.panel h2{
+    margin:.2rem 0 .6rem;
+    font-size:16px;
+    color:#fff;
+}
+label{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    color:var(--muted);
+    font-size:12px;
+    margin-bottom:8px;
+}
+input[type="number"]{
+    width:100%;
+    padding:8px 10px;
+    border-radius:8px;
+    border:1px solid #374151;
+    background:#0b1220;
+    color:#e5e7eb;
+    box-sizing:border-box;
+}
+input[type="checkbox"]{
+    transform:scale(1.1);
+    margin-right:6px;
+}
+button{
+    background:#0b1220;
+    border:1px solid #374151;
+    color:#e5e7eb;
+    border-radius:10px;
+    padding:8px 10px;
+    cursor:pointer;
+    font-size:13px;
+}
+button.primary{
+    border-color:var(--accent);
+    color:#e0f2fe;
+}
+button.ok{
+    border-color:var(--ok);
+    color:#dcfce7;
+}
+button.warn{
+    border-color:var(--warn);
+    color:#fef9c3;
+}
+button.danger{
+    border-color:var(--danger);
+    color:#fee2e2;
+}
+
+/* Croix de commande moteurs */
+.controlGrid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:6px;
+    margin-top:6px;
+}
+.controlGrid button{
+    height:42px;
+    font-size:18px;
+}
+
+/* Zone fichier import vectoriel */
+.file-input-wrapper{
+    position:relative;
+    overflow:hidden;
+    display:inline-block;
+    width:100%;
+    margin-top:6px;
+}
+.file-input-wrapper button{
+    width:100%;
+}
+.file-input-wrapper input[type=file]{
+    position:absolute;
+    left:0; top:0;
+    width:100%; height:100%;
+    opacity:0;
+    cursor:pointer;
+}
+
+/* Logs */
+#log{
+    background:#000;
+    color:#0f0;
+    padding:8px;
+    height:140px;
+    overflow-y:auto;
+    font-size:12px;
+    margin-top:10px;
+    border-radius:8px;
+}
+
+/* Copyright */
+.copyright{
+    position:absolute;
+    bottom:10px;
+    left:20px;
+    color:#cbd5e1;
+    font-size:11px;
+    opacity:0.85;
+    background:rgba(15,23,42,0.9);
+    padding:4px 8px;
+    border-radius:6px;
+}
+</style>
+</head>
+<body>
+<div class="app">
+
+    <!-- CANVAS À GAUCHE -->
+    <div class="canvas-wrap">
+        <canvas id="cv"></canvas>
+    </div>
+
+	<div class="panel">
+
+	<style>
+	.row { display:flex; gap:10px; }
+	.row > * { flex:1; }
+
+	/* Block moteur compact */
+	.controlGrid2 {
+		display:grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 48px);
+		gap:6px;
+	}
+	.controlGrid2 button{
+		font-size:18px;
+	}
+
+	/* Ligne Scanner + Export */
+	.flexLine{
+		display:flex;
+		gap:10px;
+		align-items:center;
+	}
+	.flexLine button{ flex:1; }
+
+	/* AutoScan + stats */
+	.autoBox{
+		display:flex;
+		align-items:center;
+		gap:10px;
+		margin-top:6px;
+	}
+	#scanStats{
+		font-size:12px;
+		color:#38bdf8;
+		min-width:80px;
+	}
+	</style>
+
+
+	<!-- ========================= -->
+	<!--        CARTE              -->
+	<!-- ========================= -->
+	<h2>Carte</h2>
+
+	<div class="row">
+		<label>Largeur (m)
+			<input id="inW" type="number" step="0.1" min="1" value="4">
+		</label>
+
+		<label>Hauteur (m)
+			<input id="inH" type="number" step="0.1" min="1" value="4">
+		</label>
+
+		<label>Grid (m)
+			<input id="inCell" type="number" step="0.01" min="0.05" value="0.10">
+		</label>
+	</div>
+	<div class="file-input-wrapper">
+		<button onclick="cmd('stop')">ARRÊT IMMÉDIAT</button>
+<button class="primary" onclick="applyScene()">Appliquer</button>
+	</div>
+	
+
+
+	<!-- ========================= -->
+	<!--         ROBOT             -->
+	<!-- ========================= -->
+	<h2>Robot</h2>
+
+	<div class="row">
+		<label>X (m)
+			<input id="inRX" type="number" step="0.01" value="2.00">
+		</label>
+
+		<label>Y (m)
+			<input id="inRY" type="number" step="0.01" value="2.00">
+		</label>
+
+		<label>θ (°)
+			<input id="inRTh" type="number" step="1" min="-180" max="180" value="0">
+		</label>
+	</div>
+	<div class="file-input-wrapper">
+		<button class="primary" onclick="sendPose()">Envoyer Pose</button>
+	</div>
+
+	<div style="font-size:12px;color:var(--muted);margin-bottom:6px;">
+		• Souris : déplacer le robot<br>
+		• Molette : rotation<br>
+		• Clavier : ↑ ↓ ← → et PageUp / PageDown
+	</div>
+
+
+	<!-- ========================= -->
+	<!--         MOTEURS           -->
+	<!-- ========================= -->
+	<h2>Moteurs</h2>
+
+	<div class="row">
+		<label>Durée (ms)
+			<input id="motorTime" type="number" step="50" value="300">
+		</label>
+	</div>
+
+	<!-- 2 LIGNES COMPACTES -->
+	<div class="controlGrid2">
+		<!-- rotation gauche, avant, rotation droite -->
+		<button onclick="cmd('rotateleft')">⟲</button>
+		<button onclick="cmd('forward')">↑</button>
+		<button onclick="cmd('rotateright')">⟳</button>
+
+		<!-- gauche, arrière, droite -->
+		<button onclick="cmd('left')">←</button>
+		<button onclick="cmd('backward')">↓</button>
+		<button onclick="cmd('right')">→</button>
+	</div>
+
+
+	<!-- ========================= -->
+	<!--          LIDAR            -->
+	<!-- ========================= -->
+	<h2>LIDAR</h2>
+
+	<!-- Boutons Scanner + Export sur même ligne -->
+	<div class="flexLine">
+		<button class="ok" onclick="manualScan()">📡 Scanner</button>
+		<button class="warn" onclick="exportScanCSV()">⬇ Export CSV</button>
+	</div>
+
+	<!-- Autoscan + stats -->
+	<div class="autoBox">
+		<label style="display:flex;align-items:center;gap:6px;">
+			<input id="autoScan" type="checkbox">
+			Auto
+		</label>
+
+		<div id="scanStats">0 pts – 0 Hz</div>
+	</div>
+
+
+	<!-- ========================= -->
+	<!--     CARTE VECTORIELLE     -->
+	<!-- ========================= -->
+	<h2>Carte vectorielle</h2>
+	<div class="file-input-wrapper">
+		<button class="primary">📂 Importer segments</button>
+		<input type="file" id="fileVector" accept=".txt,.csv">
+	</div>
+
+
+	<!-- ========================= -->
+	<!--           LOGS            -->
+	<!-- ========================= -->
+	<div id="log"></div>
+
+	</div>
+
+
+    <div class="copyright">© QUILLES Jonathan (2026)</div>
+</div>
+
+<script>
+// ================================
+// CONFIG
+// ================================
+const ROBOT_IP = "http://192.168.4.1";  // IP de l'ESP32 en AP
+
+// ================================
+// ÉTAT GLOBAL
+// ================================
+const state = {
+    W:4, H:4, cell:0.10,
+    robot:{x:2, y:2, thDeg:0},
+    view:{scale:100, ox:20, oy:20},
+    lidarPoints:[],      // {angle_cd, distance, intensity}
+    segments:[],         // {x1,y1,x2,y2}
+    draggingRobot:false
+};
+
+const cv = document.getElementById("cv");
+const ctx = cv.getContext("2d");
+
+let autoScanTimer = null;
+
+// ================================
+// LOG
+// ================================
+function log(msg){
+    const d = document.getElementById("log");
+    d.innerHTML += msg + "<br>";
+    d.scrollTop = d.scrollHeight;
+}
+
+// ================================
+// COORDONNÉES & VUE
+// ================================
+function fitCanvas(){
+    const r = cv.parentElement.getBoundingClientRect();
+    const dpr = window.devicePixelRatio || 1;
+    cv.width = r.width*dpr;
+    cv.height = r.height*dpr;
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    autoFitView();
+    draw();
+}
+
+function autoFitView(){
+    const margin = 20;
+    const w = cv.width/(window.devicePixelRatio||1);
+    const h = cv.height/(window.devicePixelRatio||1);
+
+    const sX = (w - 2*margin)/state.W;
+    const sY = (h - 2*margin)/state.H;
+    state.view.scale = Math.min(sX, sY);
+
+    const usedW = state.W * state.view.scale;
+    const usedH = state.H * state.view.scale;
+
+    state.view.ox = (w - usedW)/2;
+    state.view.oy = (h - usedH)/2;
+}
+
+// monde → écran
+function w2s(x,y){
+    const v = state.view;
+    const sx = v.ox + x*v.scale;
+    const sy = cv.height/(window.devicePixelRatio||1) - (v.oy + y*v.scale);
+    return [sx,sy];
+}
+
+// écran → monde
+function s2w(sx,sy){
+    const v = state.view;
+    const x = (sx - v.ox)/v.scale;
+    const y = (cv.height/(window.devicePixelRatio||1) - sy - v.oy)/v.scale;
+    return [x,y];
+}
+
+// ================================
+// DESSIN GLOBAL
+// ================================
+function draw(){
+    const w = cv.width/(window.devicePixelRatio||1);
+    const h = cv.height/(window.devicePixelRatio||1);
+
+    // fond
+    ctx.fillStyle = "#1e293b";
+    ctx.fillRect(0,0,w,h);
+
+    // zone blanche (carte)
+    const [sx0,sy0] = w2s(0,0);
+    const [sx1,sy1] = w2s(state.W,state.H);
+    ctx.fillStyle = "white";
+    ctx.fillRect(sx1,sy1,sx0-sx1,sy0-sy1);
+
+    drawGrid();
+    drawSegments();
+    drawRobot();
+    drawLidar();
+}
+
+function drawGrid(){
+    ctx.strokeStyle = "#d1d5db";
+    ctx.lineWidth = 1;
+
+    for(let x=0;x<=state.W+1e-6;x+=state.cell){
+        const [sx1,sy1] = w2s(x,0);
+        const [sx2,sy2] = w2s(x,state.H);
+        ctx.beginPath(); ctx.moveTo(sx1,sy1); ctx.lineTo(sx2,sy2); ctx.stroke();
+    }
+    for(let y=0;y<=state.H+1e-6;y+=state.cell){
+        const [sx1,sy1] = w2s(0,y);
+        const [sx2,sy2] = w2s(state.W,y);
+        ctx.beginPath(); ctx.moveTo(sx1,sy1); ctx.lineTo(sx2,sy2); ctx.stroke();
+    }
+}
+
+function drawSegments(){
+    ctx.strokeStyle = "#ef4444";
+    ctx.lineWidth = 2;
+    for(const s of state.segments){
+        const [sx1,sy1] = w2s(s.x1,s.y1);
+        const [sx2,sy2] = w2s(s.x2,s.y2);
+        ctx.beginPath();
+        ctx.moveTo(sx1,sy1);
+        ctx.lineTo(sx2,sy2);
+        ctx.stroke();
+    }
+}
+
+function drawRobot(){
+    const r = state.robot;
+    const [sx,sy] = w2s(r.x,r.y);
+    const size = 0.15 * state.view.scale;
+
+    ctx.save();
+    ctx.translate(sx,sy);
+    ctx.rotate(-r.thDeg * Math.PI/180);
+
+    ctx.fillStyle = "#38bdf8";
+    ctx.strokeStyle = "#0ea5e9";
+    ctx.lineWidth = 2;
+
+    ctx.beginPath();
+    ctx.moveTo(size,0);
+    ctx.lineTo(-size*0.6, size*0.5);
+    ctx.lineTo(-size*0.6,-size*0.5);
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.restore();
+}
+
+function drawLidar(){
+    const R = state.robot;
+    ctx.fillStyle = "#06b6d4";
+
+    for(const p of state.lidarPoints){
+        const angleRad = (p.angle_cd/100)*Math.PI/180 + R.thDeg*Math.PI/180;
+        const dist_m = p.distance / 1000.0;
+
+        const x = R.x + dist_m*Math.cos(angleRad);
+        const y = R.y + dist_m*Math.sin(angleRad);
+
+        const [sx,sy] = w2s(x,y);
+        ctx.beginPath();
+        ctx.arc(sx,sy,3,0,Math.PI*2);
+        ctx.fill();
+    }
+}
+
+// ================================
+// COMMANDE POSE
+// ================================
+function sendPose(){
+    const x = parseFloat(document.getElementById("inRX").value) || 0;
+    const y = parseFloat(document.getElementById("inRY").value) || 0;
+    const z = parseFloat(document.getElementById("inRTh").value) || 0;
+
+    // On envoie en mm et centi-degrés si tu veux être cohérent avec l'ESP
+    const x_mm = Math.round(x * 1000);
+    const y_mm = Math.round(y * 1000);
+    let z_cd = Math.round(z * 100);
+	while(z_cd <0) {
+		z_cd += 36000;
+	}
+
+    fetch(`${ROBOT_IP}/pose?x=${x_mm}&y=${y_mm}&z=${z_cd}`)
+        .then(r => {
+            if(!r.ok) throw new Error(r.status);
+            log(`POSE envoyée: x=${x_mm}mm y=${y_mm}mm z=${z_cd}cd`);
+        })
+        .catch(e => log(`CMD ERROR (POSE): ${e}`));
+}
+
+// ================================
+// COMMANDES MOTEURS
+// ================================
+function cmd(action){
+    const time = Math.max(0, Math.min(2000, Number(document.getElementById("motorTime").value) || 0));
+
+    fetch(`${ROBOT_IP}/${action}?time=${time}`)
+        .then(r => {
+            if(!r.ok) throw new Error(r.status);
+            log(`CMD OK: ${action} t=${time})`);
+        })
+        .catch(e => log(`CMD ERROR (${action}): ${e}`));
+}
+
+// ================================
+// LIDAR : SCAN / AUTO SCAN / DÉCODAGE
+// ================================
+let scanPending = false;
+async function manualScan(){
+    if (scanPending) return;
+    scanPending = true;
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 3000);
+    try{
+        const resp = await fetch(`${ROBOT_IP}/scan`, {signal: controller.signal});
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const buf = await resp.arrayBuffer();
+        decodeScan(buf);
+        log("Scan OK");
+    }catch(err){
+        log("Erreur scan : "+err);
+    }finally{
+        clearTimeout(timeout);
+        scanPending = false;
+    }
+}
+
+document.getElementById("autoScan").addEventListener("change", function(){
+    if(this.checked){
+        autoScanTimer = setInterval(manualScan, 100); // ~10 Hz
+        log("AutoScan ON");
+    }else{
+        clearInterval(autoScanTimer);
+        log("AutoScan OFF");
+    }
+});
+
+let lastScanTime = performance.now();
+let scanFreq = 0;
+
+function updateScanStats(){
+    const stats = document.getElementById("scanStats");
+    stats.textContent = `${state.lidarPoints.length} pts – ${scanFreq.toFixed(1)} Hz`;
+}
+
+function decodeScan(buffer){
+    if (buffer.byteLength < 8) throw new Error("En-tête de scan incomplet");
+    const count = new DataView(buffer).getUint16(6, true);
+    if (count < 1 || count > 460 || buffer.byteLength !== 8 + 5 * count)
+        throw new Error("Taille de scan invalide");
+    const now = performance.now();
+	if (now - lastScanTime < 200) return; // 5 Hz max
+    
+	const dt = (now - lastScanTime)/1000;
+    lastScanTime = now;
+
+    if(dt > 0) scanFreq = 1/dt;
+
+    // --- décodage existant ---
+    const view = new DataView(buffer);
+    const X = view.getInt16(0,true);
+	const Y = view.getInt16(2,true);
+	const Z = view.getUint16(4,true);
+	
+	// Met à jour la pose reçue du robot
+	
+	state.robot.x     = X / 1000.0;   // mm -> m
+	state.robot.y     = Y / 1000.0;   // mm -> m
+	state.robot.thDeg = Z / 100.0;    // centi-degrees -> degrees
+    
+	syncRobotInputs();
+	
+    const N = view.getUint16(6,true);
+    let off = 8;
+
+    const pts = [];
+    for(let i=0;i<N;i++){
+        const angCd = view.getUint16(off,true); off+=2;
+        const dist = view.getUint16(off,true); off+=2;
+        const inten = view.getUint8(off); off++;
+        pts.push({angle_cd:angCd, distance:dist, intensity:inten});
+    }
+
+    state.lidarPoints = pts;
+    updateScanStats();
+    draw();
+}
+
+// ================================
+// EXPORT SCAN CSV
+// ================================
+function exportScanCSV(){
+    if(state.lidarPoints.length===0){
+        log("⚠ Aucun scan à exporter");
+        return;
+    }
+    const r = state.robot;
+    let lines = [];
+    lines.push(`# Robot position: x=${r.x.toFixed(4)}m, y=${r.y.toFixed(4)}m, theta=${r.thDeg.toFixed(2)}deg`);
+    lines.push("angle_deg,distance_m,intensity");
+
+    for(const p of state.lidarPoints){
+        const a_deg = p.angle_cd/100.0;
+        const d_m = p.distance/1000.0;
+        lines.push(`${a_deg.toFixed(3)},${d_m.toFixed(4)},${p.intensity}`);
+    }
+
+    const blob = new Blob([lines.join("\n")], {type:"text/csv"});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "lidar_scan.csv";
+    a.click();
+    URL.revokeObjectURL(url);
+    log("⬇ Scan exporté en CSV");
+}
+
+// ================================
+// IMPORT CARTE VECTORIELLE
+// ================================
+document.getElementById("fileVector").addEventListener("change", e=>{
+    const file = e.target.files[0];
+    if(!file) return;
+
+    const reader = new FileReader();
+    reader.onload = ev=>{
+        const txt = ev.target.result;
+        importVectorMap(txt);
+    };
+    reader.readAsText(file);
+    e.target.value = "";
+});
+
+function importVectorMap(text){
+    const lines = text.split("\n");
+    const segs = [];
+
+    for(let line of lines){
+        line = line.trim();
+        if(!line || line.startsWith("#")) continue;
+
+        const parts = line.split(/[;,]/).map(p=>p.trim());
+        if(parts.length<4) continue;
+
+        const x1 = parseFloat(parts[0]);
+        const y1 = parseFloat(parts[1]);
+        const x2 = parseFloat(parts[2]);
+        const y2 = parseFloat(parts[3]);
+
+        if(!isNaN(x1) && !isNaN(y1) && !isNaN(x2) && !isNaN(y2)){
+            segs.push({x1,y1,x2,y2});
+        }
+    }
+
+    state.segments = segs;
+    log(`Carte vectorielle importée : ${segs.length} segment(s)`);
+    draw();
+}
+
+// ================================
+// INTERACTIONS ROBOT : SOURIS
+// ================================
+cv.addEventListener("mousedown", e=>{
+    const rect = cv.getBoundingClientRect();
+    const sx = e.clientX - rect.left;
+    const sy = e.clientY - rect.top;
+    const [wx,wy] = s2w(sx,sy);
+
+    const dx = wx - state.robot.x;
+    const dy = wy - state.robot.y;
+    if(Math.hypot(dx,dy) < 0.25){
+        state.draggingRobot = true;
+    }
+});
+
+cv.addEventListener("mousemove", e=>{
+    if(!state.draggingRobot) return;
+    const rect = cv.getBoundingClientRect();
+    const sx = e.clientX - rect.left;
+    const sy = e.clientY - rect.top;
+    const [wx,wy] = s2w(sx,sy);
+
+    state.robot.x = Math.max(0, Math.min(state.W, wx));
+    state.robot.y = Math.max(0, Math.min(state.H, wy));
+
+    syncRobotInputs();
+    draw();
+});
+
+cv.addEventListener("mouseup", ()=>{ state.draggingRobot=false; });
+cv.addEventListener("mouseleave", ()=>{ state.draggingRobot=false; });
+
+// molette = rotation
+cv.addEventListener("wheel", e=>{
+    const rect = cv.getBoundingClientRect();
+    const sx = e.clientX - rect.left;
+    const sy = e.clientY - rect.top;
+    const [wx,wy] = s2w(sx,sy);
+    const dx = wx - state.robot.x;
+    const dy = wy - state.robot.y;
+
+    if(Math.hypot(dx,dy) < 0.25){
+        state.robot.thDeg += (e.deltaY>0 ? -5 : 5);
+        syncRobotInputs();
+        draw();
+    }
+}, {passive:false});
+
+// ================================
+// INTERACTIONS ROBOT : CLAVIER
+// ================================
+document.addEventListener("keydown", e=>{
+    const r = state.robot;
+    const step = 0.05;
+
+    if(e.key === "ArrowUp")    r.y = Math.min(state.H, r.y+step);
+    if(e.key === "ArrowDown")  r.y = Math.max(0,      r.y-step);
+    if(e.key === "ArrowLeft")  r.x = Math.max(0,      r.x-step);
+    if(e.key === "ArrowRight") r.x = Math.min(state.W,r.x+step);
+
+    if(e.key === "PageUp")     r.thDeg += 5;
+    if(e.key === "PageDown")   r.thDeg -= 5;
+
+    syncRobotInputs();
+    draw();
+});
+
+// ================================
+// UI : CARTE & ROBOT
+// ================================
+function applyScene(){
+    const W = parseFloat(inW.value) || 4;
+    const H = parseFloat(inH.value) || 4;
+    const cell = parseFloat(inCell.value) || 0.1;
+
+    state.W = Math.max(1, W);
+    state.H = Math.max(1, H);
+    state.cell = Math.max(0.01, cell);
+
+    // recale le robot si en dehors
+    state.robot.x = Math.min(Math.max(state.robot.x, 0), state.W);
+    state.robot.y = Math.min(Math.max(state.robot.y, 0), state.H);
+    syncRobotInputs();
+
+    autoFitView();
+    draw();
+}
+
+function syncRobotInputs(){
+    document.getElementById("inRX").value = state.robot.x.toFixed(2);
+    document.getElementById("inRY").value = state.robot.y.toFixed(2);
+    document.getElementById("inRTh").value = state.robot.thDeg.toFixed(0);
+}
+
+// synchro inputs → état
+document.getElementById("inRX").addEventListener("input", e=>{
+    state.robot.x = parseFloat(e.target.value)||0;
+    draw();
+});
+document.getElementById("inRY").addEventListener("input", e=>{
+    state.robot.y = parseFloat(e.target.value)||0;
+    draw();
+});
+document.getElementById("inRTh").addEventListener("input", e=>{
+    state.robot.thDeg = parseFloat(e.target.value)||0;
+    draw();
+});
+
+// resize
+window.addEventListener("resize", fitCanvas);
+
+// ================================
+// INIT
+// ================================
+fitCanvas();
+syncRobotInputs();
+draw();
+</script>
+</body>
+</html>

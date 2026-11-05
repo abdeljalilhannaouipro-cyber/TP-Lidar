@@ -1,0 +1,53 @@
+{
+  "name": "reel_groupe_6_assiste",
+  "description": "Rejeu aidé par les poses estimées du TP1 pour initialiser chaque scan. Repère indépendant, ne constitue pas un parcours autonome.",
+  "inputScans": 1,
+  "acceptedScans": 1,
+  "rejectedScans": 0,
+  "errors": 0,
+  "initialisation": "Explicit TP1 estimated poses, assistance, not ground truth",
+  "truthAvailable": false,
+  "meanPositionM": null,
+  "meanAngleDeg": null,
+  "successCount": null,
+  "successDenominator": null,
+  "maxPositionM": null,
+  "finalError": null,
+  "meanTimeMs": 18.829200000000128,
+  "grid": {
+    "free": 4102,
+    "occupied": 209,
+    "unknown": 155689
+  },
+  "roomCoverageFraction": null,
+  "physicalUncertainty": "unknown",
+  "closedLoopOptimisation": false,
+  "rows": [
+    {
+      "index": 0,
+      "name": "scan_20261103_112700_205708.csv",
+      "checksum": "bcb87322",
+      "status": "anchor",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "initial": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "priorSource": "frame_definition",
+      "elapsedMs": 18.829200000000128,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 454,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "note": "Premier scan : origine choisie, sans localisation indépendante.",
+      "error": null
+    }
+  ]
+}

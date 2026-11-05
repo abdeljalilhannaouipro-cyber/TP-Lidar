@@ -1,0 +1,170 @@
+{
+  "name": "reel_groupe_4_assiste",
+  "description": "Rejeu aidé par les poses estimées du TP1 pour initialiser chaque scan. Repère indépendant, ne constitue pas un parcours autonome.",
+  "inputScans": 2,
+  "acceptedScans": 1,
+  "rejectedScans": 1,
+  "errors": 0,
+  "initialisation": "Explicit TP1 estimated poses, assistance, not ground truth",
+  "truthAvailable": false,
+  "meanPositionM": null,
+  "meanAngleDeg": null,
+  "successCount": null,
+  "successDenominator": null,
+  "maxPositionM": null,
+  "finalError": null,
+  "meanTimeMs": 192.01609999999891,
+  "grid": {
+    "free": 4977,
+    "occupied": 236,
+    "unknown": 154787
+  },
+  "roomCoverageFraction": null,
+  "physicalUncertainty": "unknown",
+  "closedLoopOptimisation": false,
+  "rows": [
+    {
+      "index": 0,
+      "name": "scan_20261103_113456_758311.csv",
+      "checksum": "7cf785fd",
+      "status": "anchor",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "initial": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "priorSource": "frame_definition",
+      "elapsedMs": 25.538899999999558,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 456,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "note": "Premier scan : origine choisie, sans localisation indépendante.",
+      "error": null
+    },
+    {
+      "index": 1,
+      "name": "scan_20261103_135540_914531.csv",
+      "checksum": "7ead9087",
+      "initial": {
+        "x": 0.7195404664256217,
+        "y": 0.14852590307312774,
+        "theta": 99.73139023559872
+      },
+      "priorSource": "explicit",
+      "status": "rejected",
+      "pose": {
+        "x": 0.21954046642562167,
+        "y": 0.02352590307312772,
+        "theta": 99.48139023559872
+      },
+      "diagnostics": {
+        "score": 0.25637081276818857,
+        "coverage": 0.6155555555555555,
+        "hitFraction": 0.37333333333333335,
+        "freeConflictFraction": 0.20222222222222222,
+        "outsideFraction": 0,
+        "alternativeGap": 0.0050659627594487056
+      },
+      "reasons": [
+        "score insuffisant",
+        "trop peu d’impacts proches des obstacles",
+        "contradictions avec l’espace libre",
+        "pose concurrente ambiguë"
+      ],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 0.7195404664256217,
+          "y": 0.14852590307312774,
+          "theta": 99.73139023559872
+        },
+        "pose": {
+          "x": 0.21954046642562167,
+          "y": 0.02352590307312772,
+          "theta": 99.48139023559872
+        },
+        "before": {
+          "score": 0.2563898900556174,
+          "coverage": 0.52,
+          "inside": 1,
+          "nearFraction": 0.37555555555555553,
+          "rmseM": 0.28073324589426374
+        },
+        "after": {
+          "score": 0.25637081276818857,
+          "coverage": 0.6155555555555555,
+          "inside": 1,
+          "nearFraction": 0.32222222222222224,
+          "rmseM": 0.3850645166386193
+        },
+        "tested": 6131,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3825
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 975
+          }
+        ],
+        "acceptedPoints": 450,
+        "sampledPoints": 240,
+        "elapsedMs": 343.77390000000014,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.0050659627594487056,
+        "alternative": {
+          "x": -0.10545953357437829,
+          "y": -0.07647409692687226,
+          "theta": 99.23139023559872
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Score de correspondance faible.",
+          "Une autre solution testée possède un score voisin."
+        ],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 358.49329999999827,
+      "error": null
+    }
+  ]
+}

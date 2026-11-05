@@ -1,0 +1,21 @@
+{
+  "target": "ESP32 Dev Module, ESP32 classique",
+  "esp32Core": "3.3.12",
+  "check": "ESP32 compiler -fsyntax-only, sketch and provided library source files",
+  "sketchExitCode": 0,
+  "libraryChecks": [
+    {
+      "file": "MecanumCar_v2.cpp",
+      "exitCode": 0
+    },
+    {
+      "file": "ld06.cpp",
+      "exitCode": 0
+    }
+  ],
+  "fullArduinoBuild": false,
+  "fullBuildLimitation": "Arduino CLI cannot access package/inventory paths in the current execution environment. Full build and link remain to be verified in Arduino IDE.",
+  "flashed": false,
+  "hardwareTested": false,
+  "sha256": "c77ea3078535c54be6b7caf660e6de662c985a8f321ab84c22a7d865bf649e1c"
+}

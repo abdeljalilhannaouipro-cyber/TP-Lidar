@@ -1,0 +1,169 @@
+{
+  "name": "reel_groupe_5_assiste",
+  "description": "Rejeu aidé par les poses estimées du TP1 pour initialiser chaque scan. Repère indépendant, ne constitue pas un parcours autonome.",
+  "inputScans": 2,
+  "acceptedScans": 1,
+  "rejectedScans": 1,
+  "errors": 0,
+  "initialisation": "Explicit TP1 estimated poses, assistance, not ground truth",
+  "truthAvailable": false,
+  "meanPositionM": null,
+  "meanAngleDeg": null,
+  "successCount": null,
+  "successDenominator": null,
+  "maxPositionM": null,
+  "finalError": null,
+  "meanTimeMs": 182.4069500000005,
+  "grid": {
+    "free": 4004,
+    "occupied": 261,
+    "unknown": 155735
+  },
+  "roomCoverageFraction": null,
+  "physicalUncertainty": "unknown",
+  "closedLoopOptimisation": false,
+  "rows": [
+    {
+      "index": 0,
+      "name": "scan_20261103_134622_010623.csv",
+      "checksum": "f41e7f67",
+      "status": "anchor",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "initial": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "priorSource": "frame_definition",
+      "elapsedMs": 26.06420000000071,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 452,
+        "filtered": 2,
+        "clipped": 0
+      },
+      "note": "Premier scan : origine choisie, sans localisation indépendante.",
+      "error": null
+    },
+    {
+      "index": 1,
+      "name": "scan_20261103_134930_813109.csv",
+      "checksum": "d3160068",
+      "initial": {
+        "x": -1.555290360110801,
+        "y": 1.5376483268337227,
+        "theta": -3.9790701284053966
+      },
+      "priorSource": "explicit",
+      "status": "rejected",
+      "pose": {
+        "x": -1.5802903601108012,
+        "y": 1.5126483268337227,
+        "theta": -3.9790701284053966
+      },
+      "diagnostics": {
+        "score": 0.2985506727437372,
+        "coverage": 0.5685840707964602,
+        "hitFraction": 0.5376106194690266,
+        "freeConflictFraction": 0.14601769911504425,
+        "outsideFraction": 0,
+        "alternativeGap": 0.08206924346608996
+      },
+      "reasons": [
+        "score insuffisant",
+        "zone connue insuffisante",
+        "trop peu d’impacts proches des obstacles"
+      ],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": -1.555290360110801,
+          "y": 1.5376483268337227,
+          "theta": -3.9790701284053966
+        },
+        "pose": {
+          "x": -1.5802903601108012,
+          "y": 1.5126483268337227,
+          "theta": -3.9790701284053966
+        },
+        "before": {
+          "score": 0.2678028537539944,
+          "coverage": 0.5464601769911505,
+          "inside": 1,
+          "nearFraction": 0.37610619469026546,
+          "rmseM": 0.2716259263324252
+        },
+        "after": {
+          "score": 0.2985506727437372,
+          "coverage": 0.5685840707964602,
+          "inside": 1,
+          "nearFraction": 0.4004424778761062,
+          "rmseM": 0.26394281776140543
+        },
+        "tested": 6135,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3829
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 975
+          }
+        ],
+        "acceptedPoints": 452,
+        "sampledPoints": 240,
+        "elapsedMs": 321.6538999999975,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.08206924346608996,
+        "alternative": {
+          "x": -1.6302903601108012,
+          "y": 1.3876483268337227,
+          "theta": 0.020929871594603355
+        },
+        "quality": "a_verifier",
+        "warnings": [
+          "Couverture insuffisante de cellules connues.",
+          "Score de correspondance faible."
+        ],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 338.7497000000003,
+      "error": null
+    }
+  ]
+}

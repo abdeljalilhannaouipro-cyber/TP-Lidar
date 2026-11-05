@@ -1,0 +1,3 @@
+
+# Preserve acquisition artifacts and their SHA256 checksums byte for byte.
+slam/resultats/fusion_finale/** -text

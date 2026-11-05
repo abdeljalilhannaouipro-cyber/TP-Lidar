@@ -1,0 +1,3835 @@
+{
+  "name": "simulation",
+  "description": "Trajet aller-retour simulé, scans indépendants, vérité utilisée seulement après estimation.",
+  "inputScans": 33,
+  "acceptedScans": 33,
+  "rejectedScans": 0,
+  "errors": 0,
+  "initialisation": "Previous accepted estimate only; first scan defines origin",
+  "truthAvailable": true,
+  "meanPositionM": 0.06718275823267558,
+  "meanAngleDeg": 0.0724386514414646,
+  "successCount": 33,
+  "successDenominator": 33,
+  "maxPositionM": 0.0707106781186548,
+  "finalError": {
+    "positionM": 0.07071067811865461,
+    "angleDeg": 0
+  },
+  "meanTimeMs": 292.0287454545454,
+  "grid": {
+    "free": 4292,
+    "occupied": 338,
+    "unknown": 155370
+  },
+  "roomCoverageFraction": null,
+  "physicalUncertainty": "unknown",
+  "closedLoopOptimisation": false,
+  "rows": [
+    {
+      "index": 0,
+      "name": "simulation_00.csv",
+      "checksum": "bf1d82f7",
+      "status": "anchor",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "initial": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "priorSource": "frame_definition",
+      "elapsedMs": 29.945300000000003,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "note": "Premier scan : origine choisie, sans localisation indépendante.",
+      "error": {
+        "positionM": 0,
+        "angleDeg": 0
+      }
+    },
+    {
+      "index": 1,
+      "name": "simulation_01.csv",
+      "checksum": "648a96c9",
+      "initial": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 0.25,
+        "y": -0.025,
+        "theta": 0.25
+      },
+      "diagnostics": {
+        "score": 0.7261477367385052,
+        "coverage": 0.8555555555555555,
+        "hitFraction": 1,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.10288306813481529
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 0,
+          "y": 0,
+          "theta": 0
+        },
+        "pose": {
+          "x": 0.25,
+          "y": -0.025,
+          "theta": 0.25
+        },
+        "before": {
+          "score": 0.46803203821881206,
+          "coverage": 0.6444444444444445,
+          "inside": 1,
+          "nearFraction": 0.5805555555555556,
+          "rmseM": 0.10951015610427067
+        },
+        "after": {
+          "score": 0.7261477367385052,
+          "coverage": 0.8555555555555555,
+          "inside": 1,
+          "nearFraction": 0.8555555555555555,
+          "rmseM": 0.04225771341406555
+        },
+        "tested": 5826,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3445
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 400.75100000000003,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.10288306813481529,
+        "alternative": {
+          "x": 0.325,
+          "y": 0,
+          "theta": 4.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 417.7237,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.025,
+        "angleDeg": 0.7301714032955715
+      }
+    },
+    {
+      "index": 2,
+      "name": "simulation_02.csv",
+      "checksum": "a7511c33",
+      "initial": {
+        "x": 0.25,
+        "y": -0.025,
+        "theta": 0.25
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 0.55,
+        "y": -0.05,
+        "theta": 2
+      },
+      "diagnostics": {
+        "score": 0.9075122092695567,
+        "coverage": 0.9611111111111111,
+        "hitFraction": 0.9972222222222222,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.26086632528248355
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 0.25,
+          "y": -0.025,
+          "theta": 0.25
+        },
+        "pose": {
+          "x": 0.55,
+          "y": -0.05,
+          "theta": 2
+        },
+        "before": {
+          "score": 0.4775182393329143,
+          "coverage": 0.6833333333333333,
+          "inside": 1,
+          "nearFraction": 0.6083333333333333,
+          "rmseM": 0.12037970119592066
+        },
+        "after": {
+          "score": 0.9075122092695567,
+          "coverage": 0.9611111111111111,
+          "inside": 1,
+          "nearFraction": 0.9611111111111111,
+          "rmseM": 0.032256200314883056
+        },
+        "tested": 6026,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3645
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 293.30190000000005,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.26086632528248355,
+        "alternative": {
+          "x": 0.45,
+          "y": 0,
+          "theta": -2
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 332.0798,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.0707106781186548,
+        "angleDeg": 0.04909677983869187
+      }
+    },
+    {
+      "index": 3,
+      "name": "simulation_03.csv",
+      "checksum": "d7186187",
+      "initial": {
+        "x": 0.55,
+        "y": -0.05,
+        "theta": 2
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 0.8,
+        "y": -0.05,
+        "theta": 3
+      },
+      "diagnostics": {
+        "score": 0.9585961851668301,
+        "coverage": 0.9916666666666667,
+        "hitFraction": 1,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.3214607344858835
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 0.55,
+          "y": -0.05,
+          "theta": 2
+        },
+        "pose": {
+          "x": 0.8,
+          "y": -0.05,
+          "theta": 3
+        },
+        "before": {
+          "score": 0.5426857530983735,
+          "coverage": 0.7277777777777777,
+          "inside": 1,
+          "nearFraction": 0.6972222222222222,
+          "rmseM": 0.097582474820056
+        },
+        "after": {
+          "score": 0.9585961851668301,
+          "coverage": 0.9916666666666667,
+          "inside": 1,
+          "nearFraction": 0.9916666666666667,
+          "rmseM": 0.021821789348769233
+        },
+        "tested": 6026,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3645
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 284.0199,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.3214607344858835,
+        "alternative": {
+          "x": 0.725,
+          "y": -0.025,
+          "theta": -1
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 321.09890000000007,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.0707106781186548,
+        "angleDeg": 0.09715322745535104
+      }
+    },
+    {
+      "index": 4,
+      "name": "simulation_04.csv",
+      "checksum": "a800166b",
+      "initial": {
+        "x": 0.8,
+        "y": -0.05,
+        "theta": 3
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 1.05,
+        "y": -0.05,
+        "theta": 3.75
+      },
+      "diagnostics": {
+        "score": 0.9640477959351971,
+        "coverage": 0.9888888888888889,
+        "hitFraction": 0.9944444444444445,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.323090764192591
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 0.8,
+          "y": -0.05,
+          "theta": 3
+        },
+        "pose": {
+          "x": 1.05,
+          "y": -0.05,
+          "theta": 3.75
+        },
+        "before": {
+          "score": 0.5695167316685331,
+          "coverage": 0.7444444444444445,
+          "inside": 1,
+          "nearFraction": 0.7138888888888889,
+          "rmseM": 0.09357271597684906
+        },
+        "after": {
+          "score": 0.9640477959351971,
+          "coverage": 0.9888888888888889,
+          "inside": 1,
+          "nearFraction": 0.9888888888888889,
+          "rmseM": 0.017578076494700057
+        },
+        "tested": 6026,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3645
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 325.6441,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.323090764192591,
+        "alternative": {
+          "x": 1.3,
+          "y": -0.05,
+          "theta": 3.75
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 340.3152,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.0707106781186548,
+        "angleDeg": 0.07683432365092813
+      }
+    },
+    {
+      "index": 5,
+      "name": "simulation_05.csv",
+      "checksum": "cf8fd98b",
+      "initial": {
+        "x": 1.05,
+        "y": -0.05,
+        "theta": 3.75
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 1.3,
+        "y": -0.05,
+        "theta": 4.75
+      },
+      "diagnostics": {
+        "score": 0.9645691317987426,
+        "coverage": 0.9861111111111112,
+        "hitFraction": 0.9916666666666667,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.32247851095047075
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 1.05,
+          "y": -0.05,
+          "theta": 3.75
+        },
+        "pose": {
+          "x": 1.3,
+          "y": -0.05,
+          "theta": 4.75
+        },
+        "before": {
+          "score": 0.5609632733771568,
+          "coverage": 0.75,
+          "inside": 1,
+          "nearFraction": 0.7166666666666667,
+          "rmseM": 0.09673500768248255
+        },
+        "after": {
+          "score": 0.9645691317987426,
+          "coverage": 0.9861111111111112,
+          "inside": 1,
+          "nearFraction": 0.9861111111111112,
+          "rmseM": 0.01913627952377677
+        },
+        "tested": 6026,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3645
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 290.4429,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.32247851095047075,
+        "alternative": {
+          "x": 1.55,
+          "y": -0.05,
+          "theta": 4.75
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 308.4981,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.0707106781186548,
+        "angleDeg": 0.03603263173999949
+      }
+    },
+    {
+      "index": 6,
+      "name": "simulation_06.csv",
+      "checksum": "ce821d64",
+      "initial": {
+        "x": 1.3,
+        "y": -0.05,
+        "theta": 4.75
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 1.55,
+        "y": -0.05,
+        "theta": 5.5
+      },
+      "diagnostics": {
+        "score": 0.9639583870916384,
+        "coverage": 0.9861111111111112,
+        "hitFraction": 0.9916666666666667,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.3284951758583581
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 1.3,
+          "y": -0.05,
+          "theta": 4.75
+        },
+        "pose": {
+          "x": 1.55,
+          "y": -0.05,
+          "theta": 5.5
+        },
+        "before": {
+          "score": 0.5716501347402521,
+          "coverage": 0.7555555555555555,
+          "inside": 1,
+          "nearFraction": 0.7305555555555555,
+          "rmseM": 0.09698173693921067
+        },
+        "after": {
+          "score": 0.9639583870916384,
+          "coverage": 0.9861111111111112,
+          "inside": 1,
+          "nearFraction": 0.9861111111111112,
+          "rmseM": 0.013000541894246353
+        },
+        "tested": 6026,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3645
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 305.1358,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.3284951758583581,
+        "alternative": {
+          "x": 1.8,
+          "y": -0.05,
+          "theta": 5.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 319.2066999999997,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.0707106781186548,
+        "angleDeg": 0.055702330196027106
+      }
+    },
+    {
+      "index": 7,
+      "name": "simulation_07.csv",
+      "checksum": "30c0753",
+      "initial": {
+        "x": 1.55,
+        "y": -0.05,
+        "theta": 5.5
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 1.8,
+        "y": -0.05,
+        "theta": 6.25
+      },
+      "diagnostics": {
+        "score": 0.9536099725631063,
+        "coverage": 0.9777777777777777,
+        "hitFraction": 0.9916666666666667,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.3169506124829349
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 1.55,
+          "y": -0.05,
+          "theta": 5.5
+        },
+        "pose": {
+          "x": 1.8,
+          "y": -0.05,
+          "theta": 6.25
+        },
+        "before": {
+          "score": 0.5903884140958928,
+          "coverage": 0.7777777777777778,
+          "inside": 1,
+          "nearFraction": 0.7527777777777778,
+          "rmseM": 0.09636241339368566
+        },
+        "after": {
+          "score": 0.9536099725631063,
+          "coverage": 0.9777777777777777,
+          "inside": 1,
+          "nearFraction": 0.9777777777777777,
+          "rmseM": 0.01305582439122428
+        },
+        "tested": 6278,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3897
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 283.18700000000035,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.3169506124829349,
+        "alternative": {
+          "x": 2.0500000000000003,
+          "y": -0.05,
+          "theta": 6.25
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 296.54449999999997,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.0707106781186548,
+        "angleDeg": 0.09393284163638782
+      }
+    },
+    {
+      "index": 8,
+      "name": "simulation_08.csv",
+      "checksum": "2a56c9c7",
+      "initial": {
+        "x": 1.8,
+        "y": -0.05,
+        "theta": 6.25
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 2.05,
+        "y": -0.05,
+        "theta": 7
+      },
+      "diagnostics": {
+        "score": 0.9581644987379769,
+        "coverage": 0.9777777777777777,
+        "hitFraction": 0.9861111111111112,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.3033153195324241
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 1.8,
+          "y": -0.05,
+          "theta": 6.25
+        },
+        "pose": {
+          "x": 2.05,
+          "y": -0.05,
+          "theta": 7
+        },
+        "before": {
+          "score": 0.6075260138217882,
+          "coverage": 0.8,
+          "inside": 1,
+          "nearFraction": 0.7666666666666667,
+          "rmseM": 0.09676303863256493
+        },
+        "after": {
+          "score": 0.9581644987379769,
+          "coverage": 0.9777777777777777,
+          "inside": 1,
+          "nearFraction": 0.9777777777777777,
+          "rmseM": 0.010660035976627433
+        },
+        "tested": 6026,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3645
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 274.8802999999998,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.3033153195324241,
+        "alternative": {
+          "x": 2.3000000000000003,
+          "y": -0.05,
+          "theta": 7
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 290.6635000000001,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.07106781186553235
+      }
+    },
+    {
+      "index": 9,
+      "name": "simulation_09.csv",
+      "checksum": "5d3c4963",
+      "initial": {
+        "x": 2.05,
+        "y": -0.05,
+        "theta": 7
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 2.3,
+        "y": -0.05,
+        "theta": 7.75
+      },
+      "diagnostics": {
+        "score": 0.9592474022084606,
+        "coverage": 0.9777777777777777,
+        "hitFraction": 0.9861111111111112,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.29318244323444564
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 2.05,
+          "y": -0.05,
+          "theta": 7
+        },
+        "pose": {
+          "x": 2.3,
+          "y": -0.05,
+          "theta": 7.75
+        },
+        "before": {
+          "score": 0.6243260647509014,
+          "coverage": 0.825,
+          "inside": 1,
+          "nearFraction": 0.8,
+          "rmseM": 0.09445929982768768
+        },
+        "after": {
+          "score": 0.9592474022084606,
+          "coverage": 0.9777777777777777,
+          "inside": 1,
+          "nearFraction": 0.9777777777777777,
+          "rmseM": 0.014101902080578868
+        },
+        "tested": 6026,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3645
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 257.3756000000003,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.29318244323444564,
+        "alternative": {
+          "x": 2.55,
+          "y": -0.05,
+          "theta": 7.75
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 270.55769999999984,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.019895466372645387
+      }
+    },
+    {
+      "index": 10,
+      "name": "simulation_10.csv",
+      "checksum": "df330fb6",
+      "initial": {
+        "x": 2.3,
+        "y": -0.05,
+        "theta": 7.75
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 2.55,
+        "y": -0.05,
+        "theta": 8.25
+      },
+      "diagnostics": {
+        "score": 0.955232914651652,
+        "coverage": 0.975,
+        "hitFraction": 0.975,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.2814859266233124
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 2.3,
+          "y": -0.05,
+          "theta": 7.75
+        },
+        "pose": {
+          "x": 2.55,
+          "y": -0.05,
+          "theta": 8.25
+        },
+        "before": {
+          "score": 0.6443392812017295,
+          "coverage": 0.8388888888888889,
+          "inside": 1,
+          "nearFraction": 0.8055555555555556,
+          "rmseM": 0.0983304359695922
+        },
+        "after": {
+          "score": 0.955232914651652,
+          "coverage": 0.975,
+          "inside": 1,
+          "nearFraction": 0.975,
+          "rmseM": 0.015097027346891178
+        },
+        "tested": 6026,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3645
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 285.4829,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.2814859266233124,
+        "alternative": {
+          "x": 2.3,
+          "y": -0.05,
+          "theta": 8.25
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 297.37289999999985,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.06469612302544192
+      }
+    },
+    {
+      "index": 11,
+      "name": "simulation_11.csv",
+      "checksum": "3d5d7819",
+      "initial": {
+        "x": 2.55,
+        "y": -0.05,
+        "theta": 8.25
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 2.8,
+        "y": -0.05,
+        "theta": 8.75
+      },
+      "diagnostics": {
+        "score": 0.9510342757755934,
+        "coverage": 0.9972222222222222,
+        "hitFraction": 0.9861111111111112,
+        "freeConflictFraction": 0.013888888888888888,
+        "outsideFraction": 0,
+        "alternativeGap": 0.283029702415571
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 2.55,
+          "y": -0.05,
+          "theta": 8.25
+        },
+        "pose": {
+          "x": 2.8,
+          "y": -0.05,
+          "theta": 8.75
+        },
+        "before": {
+          "score": 0.6393219724557561,
+          "coverage": 0.8583333333333333,
+          "inside": 1,
+          "nearFraction": 0.8111111111111111,
+          "rmseM": 0.10545890949751816
+        },
+        "after": {
+          "score": 0.9510342757755934,
+          "coverage": 0.9972222222222222,
+          "inside": 1,
+          "nearFraction": 0.9833333333333333,
+          "rmseM": 0.08591633676415875
+        },
+        "tested": 6350,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3969
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 272.71209999999974,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.283029702415571,
+        "alternative": {
+          "x": 2.55,
+          "y": -0.05,
+          "theta": 8.75
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 285.52700000000004,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.06921264348352452
+      }
+    },
+    {
+      "index": 12,
+      "name": "simulation_12.csv",
+      "checksum": "42e130b8",
+      "initial": {
+        "x": 2.8,
+        "y": -0.05,
+        "theta": 8.75
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 3.05,
+        "y": -0.05,
+        "theta": 9.25
+      },
+      "diagnostics": {
+        "score": 0.9753518214068932,
+        "coverage": 0.9972222222222222,
+        "hitFraction": 1,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.308398937509724
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 2.8,
+          "y": -0.05,
+          "theta": 8.75
+        },
+        "pose": {
+          "x": 3.05,
+          "y": -0.05,
+          "theta": 9.25
+        },
+        "before": {
+          "score": 0.6434032631527526,
+          "coverage": 0.8555555555555555,
+          "inside": 1,
+          "nearFraction": 0.8194444444444444,
+          "rmseM": 0.10251019410329115
+        },
+        "after": {
+          "score": 0.9753518214068932,
+          "coverage": 0.9972222222222222,
+          "inside": 1,
+          "nearFraction": 0.9972222222222222,
+          "rmseM": 0.017504476409433093
+        },
+        "tested": 6026,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3645
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 274.5336000000002,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.308398937509724,
+        "alternative": {
+          "x": 2.8,
+          "y": -0.05,
+          "theta": 9.25
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 286.06910000000016,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.011204674887153487
+      }
+    },
+    {
+      "index": 13,
+      "name": "simulation_13.csv",
+      "checksum": "30cf84d0",
+      "initial": {
+        "x": 3.05,
+        "y": -0.05,
+        "theta": 9.25
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 3.3,
+        "y": -0.05,
+        "theta": 9.5
+      },
+      "diagnostics": {
+        "score": 0.9757685132930709,
+        "coverage": 0.9972222222222222,
+        "hitFraction": 1,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.3211140889366464
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 3.05,
+          "y": -0.05,
+          "theta": 9.25
+        },
+        "pose": {
+          "x": 3.3,
+          "y": -0.05,
+          "theta": 9.5
+        },
+        "before": {
+          "score": 0.6401653633810671,
+          "coverage": 0.8472222222222222,
+          "inside": 1,
+          "nearFraction": 0.7944444444444444,
+          "rmseM": 0.10994139613153701
+        },
+        "after": {
+          "score": 0.9757685132930709,
+          "coverage": 0.9972222222222222,
+          "inside": 1,
+          "nearFraction": 0.9972222222222222,
+          "rmseM": 0.014927867639684077
+        },
+        "tested": 6026,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3645
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 259.64180000000033,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.3211140889366464,
+        "alternative": {
+          "x": 3.05,
+          "y": -0.05,
+          "theta": 9.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 272.1142,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.06940335732213043
+      }
+    },
+    {
+      "index": 14,
+      "name": "simulation_14.csv",
+      "checksum": "3951a3aa",
+      "initial": {
+        "x": 3.3,
+        "y": -0.05,
+        "theta": 9.5
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 3.55,
+        "y": -0.05,
+        "theta": 9.75
+      },
+      "diagnostics": {
+        "score": 0.9821423358158123,
+        "coverage": 1,
+        "hitFraction": 1,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.33244303799670794
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 3.3,
+          "y": -0.05,
+          "theta": 9.5
+        },
+        "pose": {
+          "x": 3.55,
+          "y": -0.05,
+          "theta": 9.75
+        },
+        "before": {
+          "score": 0.6375070927048587,
+          "coverage": 0.8527777777777777,
+          "inside": 1,
+          "nearFraction": 0.7944444444444444,
+          "rmseM": 0.11414603214744362
+        },
+        "after": {
+          "score": 0.9821423358158123,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0.01178511319538766
+        },
+        "tested": 6386,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 4005
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 338.3948999999993,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.33244303799670794,
+        "alternative": {
+          "x": 3.3,
+          "y": -0.05,
+          "theta": 9.75
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 351.1344999999992,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.05785280403233628
+      }
+    },
+    {
+      "index": 15,
+      "name": "simulation_15.csv",
+      "checksum": "13f7cfd2",
+      "initial": {
+        "x": 3.55,
+        "y": -0.05,
+        "theta": 9.75
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 3.8,
+        "y": -0.05,
+        "theta": 10
+      },
+      "diagnostics": {
+        "score": 0.9808213962146555,
+        "coverage": 1,
+        "hitFraction": 1,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.3407824694283056
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 3.55,
+          "y": -0.05,
+          "theta": 9.75
+        },
+        "pose": {
+          "x": 3.8,
+          "y": -0.05,
+          "theta": 10
+        },
+        "before": {
+          "score": 0.6333172108052979,
+          "coverage": 0.8527777777777777,
+          "inside": 1,
+          "nearFraction": 0.8111111111111111,
+          "rmseM": 0.1118398136339122
+        },
+        "after": {
+          "score": 0.9808213962146555,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0.01290994467973122
+        },
+        "tested": 6386,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 4005
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 281.47119999999995,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.3407824694283056,
+        "alternative": {
+          "x": 3.55,
+          "y": -0.05,
+          "theta": 10
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 294.9994999999999,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.04815273327801606
+      }
+    },
+    {
+      "index": 16,
+      "name": "simulation_16.csv",
+      "checksum": "62e2d00a",
+      "initial": {
+        "x": 3.8,
+        "y": -0.05,
+        "theta": 10
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 4.05,
+        "y": -0.05,
+        "theta": 10
+      },
+      "diagnostics": {
+        "score": 0.9838119613682139,
+        "coverage": 1,
+        "hitFraction": 1,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.3489731362452452
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 3.8,
+          "y": -0.05,
+          "theta": 10
+        },
+        "pose": {
+          "x": 4.05,
+          "y": -0.05,
+          "theta": 10
+        },
+        "before": {
+          "score": 0.6348388251229687,
+          "coverage": 0.8583333333333333,
+          "inside": 1,
+          "nearFraction": 0.7611111111111111,
+          "rmseM": 0.12796642342864611
+        },
+        "after": {
+          "score": 0.9838119613682139,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0.010540925690966629
+        },
+        "tested": 6386,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 4005
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 265.41969999999947,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.3489731362452452,
+        "alternative": {
+          "x": 3.8,
+          "y": -0.05,
+          "theta": 10
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 278.8671000000004,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0
+      }
+    },
+    {
+      "index": 17,
+      "name": "simulation_17.csv",
+      "checksum": "3f3570ed",
+      "initial": {
+        "x": 4.05,
+        "y": -0.05,
+        "theta": 10
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 3.8,
+        "y": -0.05,
+        "theta": 10
+      },
+      "diagnostics": {
+        "score": 0.975443411925257,
+        "coverage": 1,
+        "hitFraction": 1,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.3495417465169318
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 4.05,
+          "y": -0.05,
+          "theta": 10
+        },
+        "pose": {
+          "x": 3.8,
+          "y": -0.05,
+          "theta": 10
+        },
+        "before": {
+          "score": 0.6172418968105423,
+          "coverage": 0.775,
+          "inside": 1,
+          "nearFraction": 0.725,
+          "rmseM": 0.10538008421066695
+        },
+        "after": {
+          "score": 0.975443411925257,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0.015811388536449943
+        },
+        "tested": 5812,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3501
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 980
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 299.6718000000001,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.3495417465169318,
+        "alternative": {
+          "x": 3.55,
+          "y": -0.05,
+          "theta": 10
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 311.4883,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.04815273327801606
+      }
+    },
+    {
+      "index": 18,
+      "name": "simulation_18.csv",
+      "checksum": "52e945b0",
+      "initial": {
+        "x": 3.8,
+        "y": -0.05,
+        "theta": 10
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 3.55,
+        "y": -0.05,
+        "theta": 9.75
+      },
+      "diagnostics": {
+        "score": 0.9783000881589399,
+        "coverage": 1,
+        "hitFraction": 1,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.33047854946656685
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 3.8,
+          "y": -0.05,
+          "theta": 10
+        },
+        "pose": {
+          "x": 3.55,
+          "y": -0.05,
+          "theta": 9.75
+        },
+        "before": {
+          "score": 0.6185289804725259,
+          "coverage": 0.7888888888888889,
+          "inside": 1,
+          "nearFraction": 0.7722222222222223,
+          "rmseM": 0.09531268230113403
+        },
+        "after": {
+          "score": 0.9783000881589399,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0.01394433398335469
+        },
+        "tested": 5812,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3501
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 980
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 277.8588,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.33047854946656685,
+        "alternative": {
+          "x": 3.3,
+          "y": -0.05,
+          "theta": 9.75
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 290.54179999999997,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.05785280403233628
+      }
+    },
+    {
+      "index": 19,
+      "name": "simulation_19.csv",
+      "checksum": "320d3973",
+      "initial": {
+        "x": 3.55,
+        "y": -0.05,
+        "theta": 9.75
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 3.3,
+        "y": -0.05,
+        "theta": 9.5
+      },
+      "diagnostics": {
+        "score": 0.9788052756934656,
+        "coverage": 1,
+        "hitFraction": 1,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.3235133352272893
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 3.55,
+          "y": -0.05,
+          "theta": 9.75
+        },
+        "pose": {
+          "x": 3.3,
+          "y": -0.05,
+          "theta": 9.5
+        },
+        "before": {
+          "score": 0.6305821378084661,
+          "coverage": 0.8027777777777778,
+          "inside": 1,
+          "nearFraction": 0.7833333333333333,
+          "rmseM": 0.09647776356853305
+        },
+        "after": {
+          "score": 0.9788052756934656,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0.014907120072131994
+        },
+        "tested": 5956,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3645
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 980
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 260.28920000000016,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.3235133352272893,
+        "alternative": {
+          "x": 3.05,
+          "y": -0.05,
+          "theta": 9.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 277.0619999999999,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.06940335732213043
+      }
+    },
+    {
+      "index": 20,
+      "name": "simulation_20.csv",
+      "checksum": "72ce4806",
+      "initial": {
+        "x": 3.3,
+        "y": -0.05,
+        "theta": 9.5
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 3.05,
+        "y": -0.05,
+        "theta": 9.25
+      },
+      "diagnostics": {
+        "score": 0.9809358574517621,
+        "coverage": 1,
+        "hitFraction": 1,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.30870947088390444
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 3.3,
+          "y": -0.05,
+          "theta": 9.5
+        },
+        "pose": {
+          "x": 3.05,
+          "y": -0.05,
+          "theta": 9.25
+        },
+        "before": {
+          "score": 0.6304577016759729,
+          "coverage": 0.8111111111111111,
+          "inside": 1,
+          "nearFraction": 0.7888888888888889,
+          "rmseM": 0.09648415978454818
+        },
+        "after": {
+          "score": 0.9809358574517621,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0.01394433398335469
+        },
+        "tested": 5956,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3645
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 980
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 267.3626999999997,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.30870947088390444,
+        "alternative": {
+          "x": 2.8,
+          "y": -0.05,
+          "theta": 9.25
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 283.6187,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.011204674887153487
+      }
+    },
+    {
+      "index": 21,
+      "name": "simulation_21.csv",
+      "checksum": "57e040b9",
+      "initial": {
+        "x": 3.05,
+        "y": -0.05,
+        "theta": 9.25
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 2.8,
+        "y": -0.05,
+        "theta": 8.75
+      },
+      "diagnostics": {
+        "score": 0.9745963775839412,
+        "coverage": 1,
+        "hitFraction": 0.9944444444444445,
+        "freeConflictFraction": 0.005555555555555556,
+        "outsideFraction": 0,
+        "alternativeGap": 0.2944336505336008
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 3.05,
+          "y": -0.05,
+          "theta": 9.25
+        },
+        "pose": {
+          "x": 2.8,
+          "y": -0.05,
+          "theta": 8.75
+        },
+        "before": {
+          "score": 0.6266065037060536,
+          "coverage": 0.8138888888888889,
+          "inside": 1,
+          "nearFraction": 0.7916666666666666,
+          "rmseM": 0.09546008789008574
+        },
+        "after": {
+          "score": 0.9745963775839412,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 0.9944444444444445,
+          "rmseM": 0.08249580328073697
+        },
+        "tested": 5956,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3645
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 980
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 262.9416000000001,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.2944336505336008,
+        "alternative": {
+          "x": 2.55,
+          "y": -0.05,
+          "theta": 8.75
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 274.0781999999999,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.06921264348352452
+      }
+    },
+    {
+      "index": 22,
+      "name": "simulation_22.csv",
+      "checksum": "5daf03ea",
+      "initial": {
+        "x": 2.8,
+        "y": -0.05,
+        "theta": 8.75
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 2.55,
+        "y": -0.05,
+        "theta": 8.25
+      },
+      "diagnostics": {
+        "score": 0.9686161548645955,
+        "coverage": 1,
+        "hitFraction": 0.9944444444444445,
+        "freeConflictFraction": 0.005555555555555556,
+        "outsideFraction": 0,
+        "alternativeGap": 0.2783584632799937
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 2.8,
+          "y": -0.05,
+          "theta": 8.75
+        },
+        "pose": {
+          "x": 2.55,
+          "y": -0.05,
+          "theta": 8.25
+        },
+        "before": {
+          "score": 0.6332139986499126,
+          "coverage": 0.8194444444444444,
+          "inside": 1,
+          "nearFraction": 0.7888888888888889,
+          "rmseM": 0.09566892291825665
+        },
+        "after": {
+          "score": 0.9686161548645955,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 0.9944444444444445,
+          "rmseM": 0.035746018066074164
+        },
+        "tested": 5956,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3645
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 980
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 263.9295999999995,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.2783584632799937,
+        "alternative": {
+          "x": 2.3,
+          "y": -0.05,
+          "theta": 8.25
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 277.72360000000026,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.06469612302544192
+      }
+    },
+    {
+      "index": 23,
+      "name": "simulation_23.csv",
+      "checksum": "5352c05b",
+      "initial": {
+        "x": 2.55,
+        "y": -0.05,
+        "theta": 8.25
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 2.3,
+        "y": -0.05,
+        "theta": 7.75
+      },
+      "diagnostics": {
+        "score": 0.9796484143827865,
+        "coverage": 1,
+        "hitFraction": 1,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.29885961218790125
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 2.55,
+          "y": -0.05,
+          "theta": 8.25
+        },
+        "pose": {
+          "x": 2.3,
+          "y": -0.05,
+          "theta": 7.75
+        },
+        "before": {
+          "score": 0.6416525710612148,
+          "coverage": 0.8444444444444444,
+          "inside": 1,
+          "nearFraction": 0.8194444444444444,
+          "rmseM": 0.0961427140268717
+        },
+        "after": {
+          "score": 0.9796484143827865,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0.015811388536449943
+        },
+        "tested": 6026,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3645
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 256.1878999999999,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.29885961218790125,
+        "alternative": {
+          "x": 2.05,
+          "y": -0.05,
+          "theta": 7.75
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 269.9498000000003,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.019895466372645387
+      }
+    },
+    {
+      "index": 24,
+      "name": "simulation_24.csv",
+      "checksum": "31a9502b",
+      "initial": {
+        "x": 2.3,
+        "y": -0.05,
+        "theta": 7.75
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 2.05,
+        "y": -0.05,
+        "theta": 7
+      },
+      "diagnostics": {
+        "score": 0.981161307659373,
+        "coverage": 1,
+        "hitFraction": 1,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.29868112905663
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 2.3,
+          "y": -0.05,
+          "theta": 7.75
+        },
+        "pose": {
+          "x": 2.05,
+          "y": -0.05,
+          "theta": 7
+        },
+        "before": {
+          "score": 0.6240257185762066,
+          "coverage": 0.8555555555555555,
+          "inside": 1,
+          "nearFraction": 0.8222222222222222,
+          "rmseM": 0.10139559725393284
+        },
+        "after": {
+          "score": 0.981161307659373,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0.01178511319538766
+        },
+        "tested": 6026,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3645
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 270.5025999999998,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.29868112905663,
+        "alternative": {
+          "x": 1.7999999999999998,
+          "y": -0.05,
+          "theta": 7
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 281.3778000000002,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.07106781186553235
+      }
+    },
+    {
+      "index": 25,
+      "name": "simulation_25.csv",
+      "checksum": "27390143",
+      "initial": {
+        "x": 2.05,
+        "y": -0.05,
+        "theta": 7
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 1.7999999999999998,
+        "y": -0.05,
+        "theta": 6.25
+      },
+      "diagnostics": {
+        "score": 0.975627443106262,
+        "coverage": 1,
+        "hitFraction": 1,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.3187963035832976
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 2.05,
+          "y": -0.05,
+          "theta": 7
+        },
+        "pose": {
+          "x": 1.7999999999999998,
+          "y": -0.05,
+          "theta": 6.25
+        },
+        "before": {
+          "score": 0.6161333873428299,
+          "coverage": 0.8611111111111112,
+          "inside": 1,
+          "nearFraction": 0.8333333333333334,
+          "rmseM": 0.10549423080879972
+        },
+        "after": {
+          "score": 0.975627443106262,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0.01394433398335469
+        },
+        "tested": 6026,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3645
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 326.6779999999999,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.3187963035832976,
+        "alternative": {
+          "x": 1.5499999999999998,
+          "y": -0.05,
+          "theta": 6.25
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 338.7660999999998,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.09393284163638782
+      }
+    },
+    {
+      "index": 26,
+      "name": "simulation_26.csv",
+      "checksum": "a6e63bd5",
+      "initial": {
+        "x": 1.7999999999999998,
+        "y": -0.05,
+        "theta": 6.25
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 1.5499999999999998,
+        "y": -0.05,
+        "theta": 5.5
+      },
+      "diagnostics": {
+        "score": 0.9806211576097588,
+        "coverage": 1,
+        "hitFraction": 1,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.3314077882176748
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 1.7999999999999998,
+          "y": -0.05,
+          "theta": 6.25
+        },
+        "pose": {
+          "x": 1.5499999999999998,
+          "y": -0.05,
+          "theta": 5.5
+        },
+        "before": {
+          "score": 0.6118857727033415,
+          "coverage": 0.8638888888888889,
+          "inside": 1,
+          "nearFraction": 0.8361111111111111,
+          "rmseM": 0.10803715201294063
+        },
+        "after": {
+          "score": 0.9806211576097588,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0.01178511319538766
+        },
+        "tested": 6026,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3645
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 260.58550000000105,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.3314077882176748,
+        "alternative": {
+          "x": 1.7999999999999998,
+          "y": -0.05,
+          "theta": 5.5
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 271.91239999999925,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.055702330196027106
+      }
+    },
+    {
+      "index": 27,
+      "name": "simulation_27.csv",
+      "checksum": "12fd4ae2",
+      "initial": {
+        "x": 1.5499999999999998,
+        "y": -0.05,
+        "theta": 5.5
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 1.2999999999999998,
+        "y": -0.05,
+        "theta": 4.75
+      },
+      "diagnostics": {
+        "score": 0.9815093838519314,
+        "coverage": 1,
+        "hitFraction": 1,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.3290639462622936
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 1.5499999999999998,
+          "y": -0.05,
+          "theta": 5.5
+        },
+        "pose": {
+          "x": 1.2999999999999998,
+          "y": -0.05,
+          "theta": 4.75
+        },
+        "before": {
+          "score": 0.6036206546915885,
+          "coverage": 0.8583333333333333,
+          "inside": 1,
+          "nearFraction": 0.8194444444444444,
+          "rmseM": 0.11277609317404097
+        },
+        "after": {
+          "score": 0.9815093838519314,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0.01290994467973122
+        },
+        "tested": 6350,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3969
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 254.30539999999928,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.3290639462622936,
+        "alternative": {
+          "x": 1.5499999999999998,
+          "y": -0.05,
+          "theta": 4.75
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 272.3088000000007,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.03603263173999949
+      }
+    },
+    {
+      "index": 28,
+      "name": "simulation_28.csv",
+      "checksum": "b800d30a",
+      "initial": {
+        "x": 1.2999999999999998,
+        "y": -0.05,
+        "theta": 4.75
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 1.0499999999999998,
+        "y": -0.05,
+        "theta": 3.75
+      },
+      "diagnostics": {
+        "score": 0.9788762720088754,
+        "coverage": 1,
+        "hitFraction": 1,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.32733832308593835
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 1.2999999999999998,
+          "y": -0.05,
+          "theta": 4.75
+        },
+        "pose": {
+          "x": 1.0499999999999998,
+          "y": -0.05,
+          "theta": 3.75
+        },
+        "before": {
+          "score": 0.6088040545485551,
+          "coverage": 0.875,
+          "inside": 1,
+          "nearFraction": 0.8305555555555556,
+          "rmseM": 0.11392401338241832
+        },
+        "after": {
+          "score": 0.9788762720088754,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0.015811388536449943
+        },
+        "tested": 6350,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3969
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 264.34319999999934,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.32733832308593835,
+        "alternative": {
+          "x": 1.2999999999999998,
+          "y": -0.05,
+          "theta": 3.75
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 276.66690000000017,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.07683432365092813
+      }
+    },
+    {
+      "index": 29,
+      "name": "simulation_29.csv",
+      "checksum": "6ae68ebf",
+      "initial": {
+        "x": 1.0499999999999998,
+        "y": -0.05,
+        "theta": 3.75
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 0.7999999999999998,
+        "y": -0.05,
+        "theta": 3
+      },
+      "diagnostics": {
+        "score": 0.9599067633994578,
+        "coverage": 1,
+        "hitFraction": 0.9833333333333333,
+        "freeConflictFraction": 0.013888888888888888,
+        "outsideFraction": 0,
+        "alternativeGap": 0.32872488203013517
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 1.0499999999999998,
+          "y": -0.05,
+          "theta": 3.75
+        },
+        "pose": {
+          "x": 0.7999999999999998,
+          "y": -0.05,
+          "theta": 3
+        },
+        "before": {
+          "score": 0.5934797399475354,
+          "coverage": 0.8638888888888889,
+          "inside": 1,
+          "nearFraction": 0.8194444444444444,
+          "rmseM": 0.11613902573956755
+        },
+        "after": {
+          "score": 0.9599067633994578,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 0.9833333333333333,
+          "rmseM": 0.09923453127115756
+        },
+        "tested": 6026,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3645
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 268.59230000000025,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.32872488203013517,
+        "alternative": {
+          "x": 1.0499999999999998,
+          "y": -0.05,
+          "theta": 3
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 282.6443999999992,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.09715322745535104
+      }
+    },
+    {
+      "index": 30,
+      "name": "simulation_30.csv",
+      "checksum": "10c771a9",
+      "initial": {
+        "x": 0.7999999999999998,
+        "y": -0.05,
+        "theta": 3
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 0.5499999999999998,
+        "y": -0.05,
+        "theta": 2
+      },
+      "diagnostics": {
+        "score": 0.9765075075295434,
+        "coverage": 1,
+        "hitFraction": 1,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.3315423360401343
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 0.7999999999999998,
+          "y": -0.05,
+          "theta": 3
+        },
+        "pose": {
+          "x": 0.5499999999999998,
+          "y": -0.05,
+          "theta": 2
+        },
+        "before": {
+          "score": 0.5733831899695337,
+          "coverage": 0.8583333333333333,
+          "inside": 1,
+          "nearFraction": 0.8138888888888889,
+          "rmseM": 0.11878566003774817
+        },
+        "after": {
+          "score": 0.9765075075295434,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0.021081851381933258
+        },
+        "tested": 6350,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3969
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 320.9953000000005,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.3315423360401343,
+        "alternative": {
+          "x": 0.4749999999999998,
+          "y": 0,
+          "theta": -2
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 332.2066999999988,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.04909677983869187
+      }
+    },
+    {
+      "index": 31,
+      "name": "simulation_31.csv",
+      "checksum": "9107a843",
+      "initial": {
+        "x": 0.5499999999999998,
+        "y": -0.05,
+        "theta": 2
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 0.2999999999999998,
+        "y": -0.05,
+        "theta": 1
+      },
+      "diagnostics": {
+        "score": 0.9758007745416702,
+        "coverage": 1,
+        "hitFraction": 1,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.3373798898320779
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 0.5499999999999998,
+          "y": -0.05,
+          "theta": 2
+        },
+        "pose": {
+          "x": 0.2999999999999998,
+          "y": -0.05,
+          "theta": 1
+        },
+        "before": {
+          "score": 0.5585665879677433,
+          "coverage": 0.8555555555555555,
+          "inside": 1,
+          "nearFraction": 0.7888888888888889,
+          "rmseM": 0.1252454937892391
+        },
+        "after": {
+          "score": 0.9758007745416702,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0.021081851381933258
+        },
+        "tested": 6186,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3805
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 310.2658999999985,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.3373798898320779,
+        "alternative": {
+          "x": 0.22499999999999978,
+          "y": -0.025,
+          "theta": -3
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 323.2428,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865463,
+        "angleDeg": 0.01982859670442849
+      }
+    },
+    {
+      "index": 32,
+      "name": "simulation_32.csv",
+      "checksum": "8d72d31e",
+      "initial": {
+        "x": 0.2999999999999998,
+        "y": -0.05,
+        "theta": 1
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 0.04999999999999981,
+        "y": -0.05,
+        "theta": 0
+      },
+      "diagnostics": {
+        "score": 0.9787619579368766,
+        "coverage": 1,
+        "hitFraction": 1,
+        "freeConflictFraction": 0,
+        "outsideFraction": 0,
+        "alternativeGap": 0.3321851827736467
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 0.2999999999999998,
+          "y": -0.05,
+          "theta": 1
+        },
+        "pose": {
+          "x": 0.04999999999999981,
+          "y": -0.05,
+          "theta": 0
+        },
+        "before": {
+          "score": 0.5513795956441472,
+          "coverage": 0.8527777777777777,
+          "inside": 1,
+          "nearFraction": 0.7916666666666666,
+          "rmseM": 0.1262480019890626
+        },
+        "after": {
+          "score": 0.9787619579368766,
+          "coverage": 1,
+          "inside": 1,
+          "nearFraction": 1,
+          "rmseM": 0.01972026623752025
+        },
+        "tested": 6186,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3805
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 360,
+        "sampledPoints": 240,
+        "elapsedMs": 269.0722999999998,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.3321851827736467,
+        "alternative": {
+          "x": -0.025000000000000196,
+          "y": 0,
+          "theta": -4
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 280.6425999999992,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 360,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": {
+        "positionM": 0.07071067811865461,
+        "angleDeg": 0
+      }
+    }
+  ]
+}

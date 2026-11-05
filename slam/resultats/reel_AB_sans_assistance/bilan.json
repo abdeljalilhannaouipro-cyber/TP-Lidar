@@ -1,0 +1,168 @@
+{
+  "name": "reel_AB_sans_assistance",
+  "description": "Deux captures A/B, initialisation par la dernière pose, déplacement déclaré de 50 cm non transmis au moteur.",
+  "inputScans": 2,
+  "acceptedScans": 2,
+  "rejectedScans": 0,
+  "errors": 0,
+  "initialisation": "Previous accepted estimate only; first scan defines origin",
+  "truthAvailable": false,
+  "meanPositionM": null,
+  "meanAngleDeg": null,
+  "successCount": null,
+  "successDenominator": null,
+  "maxPositionM": null,
+  "finalError": null,
+  "meanTimeMs": 230.73299999999836,
+  "grid": {
+    "free": 8379,
+    "occupied": 461,
+    "unknown": 151160
+  },
+  "roomCoverageFraction": null,
+  "physicalUncertainty": "unknown",
+  "closedLoopOptimisation": false,
+  "rows": [
+    {
+      "index": 0,
+      "name": "scan_20261103_180804_809310.csv",
+      "checksum": "6b06aa10",
+      "status": "anchor",
+      "pose": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "initial": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "priorSource": "frame_definition",
+      "elapsedMs": 28.303799999997864,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 455,
+        "filtered": 1,
+        "clipped": 0
+      },
+      "note": "Premier scan : origine choisie, sans localisation indépendante.",
+      "error": null
+    },
+    {
+      "index": 1,
+      "name": "scan_20261103_181437_335740.csv",
+      "checksum": "d38b089c",
+      "initial": {
+        "x": 0,
+        "y": 0,
+        "theta": 0
+      },
+      "priorSource": "previous_estimate",
+      "status": "accepted",
+      "pose": {
+        "x": 0.5,
+        "y": 0,
+        "theta": -1.25
+      },
+      "diagnostics": {
+        "score": 0.4594221154799721,
+        "coverage": 0.75,
+        "hitFraction": 0.7368421052631579,
+        "freeConflictFraction": 0.15789473684210525,
+        "outsideFraction": 0,
+        "alternativeGap": 0.1870929373855067
+      },
+      "reasons": [],
+      "match": {
+        "format": "tp-lidar-grid-localisation-v1",
+        "method": "coarse-to-fine-correlative-chamfer",
+        "initial": {
+          "x": 0,
+          "y": 0,
+          "theta": 0
+        },
+        "pose": {
+          "x": 0.5,
+          "y": 0,
+          "theta": -1.25
+        },
+        "before": {
+          "score": 0.03795027470559903,
+          "coverage": 0.48903508771929827,
+          "inside": 1,
+          "nearFraction": 0.08333333333333333,
+          "rmseM": 0.5821773521730114
+        },
+        "after": {
+          "score": 0.4594221154799721,
+          "coverage": 0.75,
+          "inside": 1,
+          "nearFraction": 0.5833333333333334,
+          "rmseM": 0.436715365482679
+        },
+        "tested": 6074,
+        "stages": [
+          {
+            "level": 1,
+            "translationStepM": 0.2,
+            "angleStepDeg": 3,
+            "sigmaM": 0.3,
+            "candidates": 1331
+          },
+          {
+            "level": 2,
+            "translationStepM": 0.05,
+            "angleStepDeg": 0.75,
+            "sigmaM": 0.15,
+            "candidates": 3693
+          },
+          {
+            "level": 3,
+            "translationStepM": 0.025,
+            "angleStepDeg": 0.25,
+            "sigmaM": 0.1,
+            "candidates": 1050
+          }
+        ],
+        "acceptedPoints": 456,
+        "sampledPoints": 240,
+        "elapsedMs": 418.8184000000001,
+        "options": {
+          "windowXY": 1,
+          "windowTheta": 15,
+          "maxRange": 12,
+          "minIntensity": 0,
+          "maxPoints": 240,
+          "minCoverage": 0.6,
+          "minScore": 0.45,
+          "resolution": 0.1,
+          "x": -20,
+          "y": -20,
+          "width": 40,
+          "height": 40,
+          "minHitFraction": 0.55,
+          "maxFreeConflict": 0.2,
+          "minAlternativeGap": 0.015
+        },
+        "alternativeGap": 0.1870929373855067,
+        "alternative": {
+          "x": 0.5,
+          "y": -0.25,
+          "theta": -1
+        },
+        "quality": "criteres_satisfaits",
+        "warnings": [],
+        "caveat": "Recherche locale heuristique. Score non probabiliste ; absence de concurrent dans la liste limitée ne prouve pas une solution unique."
+      },
+      "elapsedMs": 433.16219999999885,
+      "insertion": {
+        "duplicate": false,
+        "accepted": 456,
+        "filtered": 0,
+        "clipped": 0
+      },
+      "error": null
+    }
+  ]
+}

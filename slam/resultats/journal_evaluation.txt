@@ -1,0 +1,328 @@
+simulation 1 anchor 
+simulation 2 accepted 
+simulation 3 accepted 
+simulation 4 accepted 
+simulation 5 accepted 
+simulation 6 accepted 
+simulation 7 accepted 
+simulation 8 accepted 
+simulation 9 accepted 
+simulation 10 accepted 
+simulation 11 accepted 
+simulation 12 accepted 
+simulation 13 accepted 
+simulation 14 accepted 
+simulation 15 accepted 
+simulation 16 accepted 
+simulation 17 accepted 
+simulation 18 accepted 
+simulation 19 accepted 
+simulation 20 accepted 
+simulation 21 accepted 
+simulation 22 accepted 
+simulation 23 accepted 
+simulation 24 accepted 
+simulation 25 accepted 
+simulation 26 accepted 
+simulation 27 accepted 
+simulation 28 accepted 
+simulation 29 accepted 
+simulation 30 accepted 
+simulation 31 accepted 
+simulation 32 accepted 
+simulation 33 accepted 
+reel_19_sans_assistance 1 anchor 
+reel_19_sans_assistance 2 rejected score insuffisant;zone connue insuffisante;trop peu d’impacts proches des obstacles;pose concurrente ambiguë
+reel_19_sans_assistance 3 rejected score insuffisant;zone connue insuffisante;trop peu d’impacts proches des obstacles;pose concurrente ambiguë
+reel_19_sans_assistance 4 rejected score insuffisant;zone connue insuffisante;trop peu d’impacts proches des obstacles;contradictions avec l’espace libre;pose concurrente ambiguë;solution au bord de la fenêtre
+reel_19_sans_assistance 5 rejected score insuffisant;zone connue insuffisante;trop peu d’impacts proches des obstacles;contradictions avec l’espace libre;solution au bord de la fenêtre
+reel_19_sans_assistance 6 rejected score insuffisant;zone connue insuffisante;trop peu d’impacts proches des obstacles;pose concurrente ambiguë
+reel_19_sans_assistance 7 rejected score insuffisant;trop peu d’impacts proches des obstacles;contradictions avec l’espace libre;pose concurrente ambiguë
+reel_19_sans_assistance 8 rejected score insuffisant;zone connue insuffisante;trop peu d’impacts proches des obstacles;pose concurrente ambiguë
+reel_19_sans_assistance 9 rejected score insuffisant;trop peu d’impacts proches des obstacles;contradictions avec l’espace libre;pose concurrente ambiguë
+reel_19_sans_assistance 10 rejected score insuffisant;zone connue insuffisante;trop peu d’impacts proches des obstacles;pose concurrente ambiguë
+reel_19_sans_assistance 11 rejected score insuffisant;zone connue insuffisante;trop peu d’impacts proches des obstacles;contradictions avec l’espace libre;pose concurrente ambiguë
+reel_19_sans_assistance 12 rejected score insuffisant;zone connue insuffisante;trop peu d’impacts proches des obstacles;contradictions avec l’espace libre;solution au bord de la fenêtre
+reel_19_sans_assistance 13 rejected score insuffisant;zone connue insuffisante;trop peu d’impacts proches des obstacles;contradictions avec l’espace libre;pose concurrente ambiguë
+reel_19_sans_assistance 14 rejected score insuffisant;zone connue insuffisante;trop peu d’impacts proches des obstacles;pose concurrente ambiguë
+reel_19_sans_assistance 15 rejected score insuffisant;zone connue insuffisante;trop peu d’impacts proches des obstacles;pose concurrente ambiguë
+reel_19_sans_assistance 16 rejected score insuffisant;zone connue insuffisante;trop peu d’impacts proches des obstacles;pose concurrente ambiguë
+reel_19_sans_assistance 17 rejected score insuffisant;zone connue insuffisante;trop peu d’impacts proches des obstacles;pose concurrente ambiguë;solution au bord de la fenêtre
+reel_19_sans_assistance 18 rejected score insuffisant;zone connue insuffisante;trop peu d’impacts proches des obstacles;pose concurrente ambiguë
+reel_19_sans_assistance 19 rejected score insuffisant;zone connue insuffisante;trop peu d’impacts proches des obstacles;pose concurrente ambiguë
+reel_AB_sans_assistance 1 anchor 
+reel_AB_sans_assistance 2 accepted 
+reel_groupe_1_assiste 1 anchor 
+reel_groupe_1_assiste 2 rejected score insuffisant;contradictions avec l’espace libre
+reel_groupe_1_assiste 3 rejected score insuffisant;contradictions avec l’espace libre
+reel_groupe_1_assiste 4 rejected score insuffisant
+reel_groupe_1_assiste 5 accepted 
+reel_groupe_1_assiste 6 rejected score insuffisant;trop peu d’impacts proches des obstacles;contradictions avec l’espace libre
+reel_groupe_1_assiste 7 rejected score insuffisant;trop peu d’impacts proches des obstacles;contradictions avec l’espace libre
+reel_groupe_2_assiste 1 anchor 
+reel_groupe_2_assiste 2 accepted 
+reel_groupe_2_assiste 3 rejected score insuffisant;trop peu d’impacts proches des obstacles;contradictions avec l’espace libre
+reel_groupe_3_assiste 1 anchor 
+reel_groupe_3_assiste 2 rejected score insuffisant;zone connue insuffisante
+reel_groupe_3_assiste 3 rejected score insuffisant;trop peu d’impacts proches des obstacles;contradictions avec l’espace libre
+reel_groupe_4_assiste 1 anchor 
+reel_groupe_4_assiste 2 rejected score insuffisant;trop peu d’impacts proches des obstacles;contradictions avec l’espace libre;pose concurrente ambiguë
+reel_groupe_5_assiste 1 anchor 
+reel_groupe_5_assiste 2 rejected score insuffisant;zone connue insuffisante;trop peu d’impacts proches des obstacles
+reel_groupe_6_assiste 1 anchor 
+reel_groupe_7_assiste 1 anchor 
+[
+  {
+    "name": "simulation",
+    "description": "Trajet aller-retour simulé, scans indépendants, vérité utilisée seulement après estimation.",
+    "inputScans": 33,
+    "acceptedScans": 33,
+    "rejectedScans": 0,
+    "errors": 0,
+    "initialisation": "Previous accepted estimate only; first scan defines origin",
+    "truthAvailable": true,
+    "meanPositionM": 0.06718275823267558,
+    "meanAngleDeg": 0.0724386514414646,
+    "successCount": 33,
+    "successDenominator": 33,
+    "maxPositionM": 0.0707106781186548,
+    "finalError": {
+      "positionM": 0.07071067811865461,
+      "angleDeg": 0
+    },
+    "meanTimeMs": 292.0287454545454,
+    "grid": {
+      "free": 4292,
+      "occupied": 338,
+      "unknown": 155370
+    },
+    "roomCoverageFraction": null,
+    "physicalUncertainty": "unknown",
+    "closedLoopOptimisation": false
+  },
+  {
+    "name": "reel_19_sans_assistance",
+    "description": "Ordre chronologique, sans poses TP1 ni réinitialisation après rejet. Les refus ne sont pas masqués.",
+    "inputScans": 19,
+    "acceptedScans": 1,
+    "rejectedScans": 18,
+    "errors": 0,
+    "initialisation": "Previous accepted estimate only; first scan defines origin",
+    "truthAvailable": false,
+    "meanPositionM": null,
+    "meanAngleDeg": null,
+    "successCount": null,
+    "successDenominator": null,
+    "maxPositionM": null,
+    "finalError": null,
+    "meanTimeMs": 316.4518578947366,
+    "grid": {
+      "free": 4102,
+      "occupied": 209,
+      "unknown": 155689
+    },
+    "roomCoverageFraction": null,
+    "physicalUncertainty": "unknown",
+    "closedLoopOptimisation": false
+  },
+  {
+    "name": "reel_AB_sans_assistance",
+    "description": "Deux captures A/B, initialisation par la dernière pose, déplacement déclaré de 50 cm non transmis au moteur.",
+    "inputScans": 2,
+    "acceptedScans": 2,
+    "rejectedScans": 0,
+    "errors": 0,
+    "initialisation": "Previous accepted estimate only; first scan defines origin",
+    "truthAvailable": false,
+    "meanPositionM": null,
+    "meanAngleDeg": null,
+    "successCount": null,
+    "successDenominator": null,
+    "maxPositionM": null,
+    "finalError": null,
+    "meanTimeMs": 230.73299999999836,
+    "grid": {
+      "free": 8379,
+      "occupied": 461,
+      "unknown": 151160
+    },
+    "roomCoverageFraction": null,
+    "physicalUncertainty": "unknown",
+    "closedLoopOptimisation": false
+  },
+  {
+    "name": "reel_groupe_1_assiste",
+    "description": "Rejeu aidé par les poses estimées du TP1 pour initialiser chaque scan. Repère indépendant, ne constitue pas un parcours autonome.",
+    "inputScans": 7,
+    "acceptedScans": 2,
+    "rejectedScans": 5,
+    "errors": 0,
+    "initialisation": "Explicit TP1 estimated poses, assistance, not ground truth",
+    "truthAvailable": false,
+    "meanPositionM": null,
+    "meanAngleDeg": null,
+    "successCount": null,
+    "successDenominator": null,
+    "maxPositionM": null,
+    "finalError": null,
+    "meanTimeMs": 387.5395000000005,
+    "grid": {
+      "free": 10766,
+      "occupied": 415,
+      "unknown": 148819
+    },
+    "roomCoverageFraction": null,
+    "physicalUncertainty": "unknown",
+    "closedLoopOptimisation": false
+  },
+  {
+    "name": "reel_groupe_2_assiste",
+    "description": "Rejeu aidé par les poses estimées du TP1 pour initialiser chaque scan. Repère indépendant, ne constitue pas un parcours autonome.",
+    "inputScans": 3,
+    "acceptedScans": 2,
+    "rejectedScans": 1,
+    "errors": 0,
+    "initialisation": "Explicit TP1 estimated poses, assistance, not ground truth",
+    "truthAvailable": false,
+    "meanPositionM": null,
+    "meanAngleDeg": null,
+    "successCount": null,
+    "successDenominator": null,
+    "maxPositionM": null,
+    "finalError": null,
+    "meanTimeMs": 382.3053000000012,
+    "grid": {
+      "free": 3974,
+      "occupied": 307,
+      "unknown": 155719
+    },
+    "roomCoverageFraction": null,
+    "physicalUncertainty": "unknown",
+    "closedLoopOptimisation": false
+  },
+  {
+    "name": "reel_groupe_3_assiste",
+    "description": "Rejeu aidé par les poses estimées du TP1 pour initialiser chaque scan. Repère indépendant, ne constitue pas un parcours autonome.",
+    "inputScans": 3,
+    "acceptedScans": 1,
+    "rejectedScans": 2,
+    "errors": 0,
+    "initialisation": "Explicit TP1 estimated poses, assistance, not ground truth",
+    "truthAvailable": false,
+    "meanPositionM": null,
+    "meanAngleDeg": null,
+    "successCount": null,
+    "successDenominator": null,
+    "maxPositionM": null,
+    "finalError": null,
+    "meanTimeMs": 228.94430000000042,
+    "grid": {
+      "free": 2274,
+      "occupied": 222,
+      "unknown": 157504
+    },
+    "roomCoverageFraction": null,
+    "physicalUncertainty": "unknown",
+    "closedLoopOptimisation": false
+  },
+  {
+    "name": "reel_groupe_4_assiste",
+    "description": "Rejeu aidé par les poses estimées du TP1 pour initialiser chaque scan. Repère indépendant, ne constitue pas un parcours autonome.",
+    "inputScans": 2,
+    "acceptedScans": 1,
+    "rejectedScans": 1,
+    "errors": 0,
+    "initialisation": "Explicit TP1 estimated poses, assistance, not ground truth",
+    "truthAvailable": false,
+    "meanPositionM": null,
+    "meanAngleDeg": null,
+    "successCount": null,
+    "successDenominator": null,
+    "maxPositionM": null,
+    "finalError": null,
+    "meanTimeMs": 192.01609999999891,
+    "grid": {
+      "free": 4977,
+      "occupied": 236,
+      "unknown": 154787
+    },
+    "roomCoverageFraction": null,
+    "physicalUncertainty": "unknown",
+    "closedLoopOptimisation": false
+  },
+  {
+    "name": "reel_groupe_5_assiste",
+    "description": "Rejeu aidé par les poses estimées du TP1 pour initialiser chaque scan. Repère indépendant, ne constitue pas un parcours autonome.",
+    "inputScans": 2,
+    "acceptedScans": 1,
+    "rejectedScans": 1,
+    "errors": 0,
+    "initialisation": "Explicit TP1 estimated poses, assistance, not ground truth",
+    "truthAvailable": false,
+    "meanPositionM": null,
+    "meanAngleDeg": null,
+    "successCount": null,
+    "successDenominator": null,
+    "maxPositionM": null,
+    "finalError": null,
+    "meanTimeMs": 182.4069500000005,
+    "grid": {
+      "free": 4004,
+      "occupied": 261,
+      "unknown": 155735
+    },
+    "roomCoverageFraction": null,
+    "physicalUncertainty": "unknown",
+    "closedLoopOptimisation": false
+  },
+  {
+    "name": "reel_groupe_6_assiste",
+    "description": "Rejeu aidé par les poses estimées du TP1 pour initialiser chaque scan. Repère indépendant, ne constitue pas un parcours autonome.",
+    "inputScans": 1,
+    "acceptedScans": 1,
+    "rejectedScans": 0,
+    "errors": 0,
+    "initialisation": "Explicit TP1 estimated poses, assistance, not ground truth",
+    "truthAvailable": false,
+    "meanPositionM": null,
+    "meanAngleDeg": null,
+    "successCount": null,
+    "successDenominator": null,
+    "maxPositionM": null,
+    "finalError": null,
+    "meanTimeMs": 18.829200000000128,
+    "grid": {
+      "free": 4102,
+      "occupied": 209,
+      "unknown": 155689
+    },
+    "roomCoverageFraction": null,
+    "physicalUncertainty": "unknown",
+    "closedLoopOptimisation": false
+  },
+  {
+    "name": "reel_groupe_7_assiste",
+    "description": "Rejeu aidé par les poses estimées du TP1 pour initialiser chaque scan. Repère indépendant, ne constitue pas un parcours autonome.",
+    "inputScans": 1,
+    "acceptedScans": 1,
+    "rejectedScans": 0,
+    "errors": 0,
+    "initialisation": "Explicit TP1 estimated poses, assistance, not ground truth",
+    "truthAvailable": false,
+    "meanPositionM": null,
+    "meanAngleDeg": null,
+    "successCount": null,
+    "successDenominator": null,
+    "maxPositionM": null,
+    "finalError": null,
+    "meanTimeMs": 23.95499999999811,
+    "grid": {
+      "free": 2722,
+      "occupied": 199,
+      "unknown": 157079
+    },
+    "roomCoverageFraction": null,
+    "physicalUncertainty": "unknown",
+    "closedLoopOptimisation": false
+  }
+]

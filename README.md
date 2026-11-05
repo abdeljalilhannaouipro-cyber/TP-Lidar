@@ -125,3 +125,11 @@ Les nouvelles captures sont intégrées aux 17 précédentes : [résultats et li
 ## Rapport TP2 - Localisation et scan matching
 
 Le [rapport PDF](rapport/TP2/rapport_TP2.pdf) et sa [version Markdown](rapport/TP2/rapport_TP2.md) présentent les trois types de référence, les résultats simulés et réels, la sensibilité à l’initialisation et les limites des mesures A/B. Les [empreintes des sources](rapport/TP2/sources_rapport.json) assurent la traçabilité des tableaux et figures ; le script `rapport/generer_TP2.py` régénère le document à partir des bilans enregistrés.
+
+## TP3 - Intégration SLAM locale
+
+L’[outil de localisation et cartographie incrémentales](slam/index.html) réutilise les moteurs TP1/TP2 et contrôle les poses avant insertion. Les [résultats et limites](slam/README.md) incluent un parcours simulé de 33 scans, la paire A/B et les refus sur les anciennes acquisitions. La [préparation du robot ESP32](slam/MATERIEL.md) décrit le programme RobotControl fourni. La couverture complète de la classe et le déplacement autonome restent à valider matériellement.
+
+## Scan final fusionne
+
+[Image du nuage final](slam/resultats/fusion_finale/scan_final.png) · [CSV](slam/resultats/fusion_finale/scan_final.csv) · [Vue HTML autonome a telecharger](slam/resultats/fusion_finale/scan_final.html) · [Methode et limites](slam/resultats/fusion_finale/LIRE_MOI.md). Sur 507 captures analysees, 203 sont fusionnees en 7 013 points ; 304 restent exclues faute de recalage assez fiable. La couverture complete de la salle et l exactitude des poses physiques ne sont pas certifiees.
