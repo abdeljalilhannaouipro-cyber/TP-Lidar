@@ -1,0 +1,32 @@
+[
+  {
+    "file": "acquisitions_slam_cockpit (2).json",
+    "sha256": "ade2a3f5f5926b2a0b195ba4d669031a3b43672fc60fe59ac33546b95fe0ad9d",
+    "bytes": 2448281
+  },
+  {
+    "file": "acquisitions_slam_cockpit (3).json",
+    "sha256": "0ce78ac0ff8f9c16e2a36612572ec26301f2653d64cda540b6cb486ac7eaac1f",
+    "bytes": 3396764
+  },
+  {
+    "file": "acquisitions_slam_cockpit (4).json",
+    "sha256": "39c282001a4c49244325b6d1935bca8b1809ad7c5098f70b8b1a357a72da22c5",
+    "bytes": 3754066
+  },
+  {
+    "file": "acquisitions_slam_cockpit (5).json",
+    "sha256": "d8f89aa10eff213cb4a94470934cd7f63f6cf28d0eb8f0c17718ff6537a1e1f7",
+    "bytes": 6311526
+  },
+  {
+    "file": "session_slam_cockpit (2).json",
+    "sha256": "92efb00c9bc5f70fc2437d740791885f7df060b4c492795ca90a1fe2053840f5",
+    "bytes": 723337
+  },
+  {
+    "file": "session_slam_cockpit (3).json",
+    "sha256": "539dbcfa9748348fa27c51ceef7eddc213bdbb1c494d34ed18bd24c7dde17698",
+    "bytes": 1082332
+  }
+]

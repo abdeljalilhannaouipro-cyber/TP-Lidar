@@ -133,3 +133,7 @@ L’[outil de localisation et cartographie incrémentales](slam/index.html) réu
 ## Scan final fusionne
 
 [Image du nuage final](slam/resultats/fusion_finale/scan_final.png) · [CSV](slam/resultats/fusion_finale/scan_final.csv) · [Vue HTML autonome a telecharger](slam/resultats/fusion_finale/scan_final.html) · [Methode et limites](slam/resultats/fusion_finale/LIRE_MOI.md). Sur 507 captures analysees, 203 sont fusionnees en 7 013 points ; 304 restent exclues faute de recalage assez fiable. La couverture complete de la salle et l exactitude des poses physiques ne sont pas certifiees.
+
+## Fusion du 10 novembre 2026
+
+Le dossier rassemble 975 captures uniques et la carte fusionnée de 220 scans, dont 17 nouveaux recalages retenus. [Résultats et procédure de reproduction](slam/resultats/fusion_20261110/README.md).

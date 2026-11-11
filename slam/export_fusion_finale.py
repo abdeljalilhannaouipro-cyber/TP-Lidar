@@ -1,7 +1,7 @@
 """Exporter un nuage cartesien unique depuis les poses retenues hors ligne."""
 from pathlib import Path
-import json,csv,math,collections
-OUT=Path(__file__).resolve().parent/'resultats'/'fusion_finale'
+import json,csv,math,collections,sys
+OUT=Path(sys.argv[1]).resolve() if len(sys.argv)>1 else Path(__file__).resolve().parent/'resultats'/'fusion_finale'
 data=json.loads((OUT/'fusion.json').read_text(encoding='utf-8'));summary=data['summary'];vox={};input_points=0;filtered=0
 for scan in data['scans']:
  pose=scan['pose'];a=math.radians(pose['theta']);co,si=math.cos(a),math.sin(a)
